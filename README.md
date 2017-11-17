@@ -1,7 +1,9 @@
 # TTKit
 
-[![Build Status](https://travis-ci.org/devxoul/UITextView-Placeholder.svg?branch=master)](https://travis-ci.org/devxoul/UITextView-Placeholder)
-
+[![Build Status](https://travis-ci.org/devxoul/UITextView-Placeholder.svg?branch=master)]()
+[![License](https://img.shields.io/cocoapods/l/ImagePicker.svg?style=flat)]()
+![Swift](https://img.shields.io/badge/%20in-swift%204.0-orange.svg)
+![](https://img.shields.io/badge/support-iOS%209.0%2B-green.svg)
 ## How To Get Started
 
 You can use this class through one line code.
