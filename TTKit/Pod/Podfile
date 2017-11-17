@@ -1,0 +1,31 @@
+project '##Fashion##.xcodeproj' //改为自己的工程名
+platform:ios,'9.0'
+target '##GoldLiving##' do //改为自己的工程名
+
+ # use_frameworks!  //Swift打开
+
+pod 'MJRefresh'
+pod 'SDWebImage'
+pod 'AFNetworking'
+pod 'Masonry'
+pod 'IQKeyboardManager'
+pod 'DZNEmptyDataSet'
+#pod 'YYKit' //YY框架
+
+
+#pod 'LinkedME-iOS-Deep-Linking-Demo_Pod',
+:git=>"https://github.com/WFC-LinkedME/LinkedME-iOS-Deep-Linking-Demo.git" // 深度链接
+#pod 'SSZipArchive'  //压缩文件
+#pod 'Shimmer'	//闪光
+#pod 'BarrageRenderer' //弹幕
+#pod 'iCarousel' //轮播图
+#pod 'SDCycleScrollView' //普通轮播图
+#pod 'IAPHelper' //内购
+#pod 'lottie-ios' //AE动画
+#pod 'XHLaunchAd' //广告
+#pod 'TOWebViewController' //网页浏览器
+#pod 'FDFullscreenPopGesture' //导航栏手势
+#pod 'RATreeView' //折叠cell
+
+end
+
