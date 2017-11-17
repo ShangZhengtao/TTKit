@@ -574,8 +574,8 @@
 		189E29651FBD9A3B008D9027 /* LRDPopAlert */ = {
 			isa = PBXGroup;
 			children = (
-				189E29661FBD9A3B008D9027 /* LrdOutputView.m */,
 				189E29671FBD9A3B008D9027 /* LrdOutputView.h */,
+				189E29661FBD9A3B008D9027 /* LrdOutputView.m */,
 			);
 			path = LRDPopAlert;
 			sourceTree = "<group>";
