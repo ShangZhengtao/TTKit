@@ -10,7 +10,14 @@
 #import "QRCScannerViewController.h"
 #import "BDImagePicker.h"
 #import "WSDatePickerView.h"
-@interface ViewController ()<QRCodeScannerViewControllerDelegate>
+#import "STPickerArea.h"
+#import "SlideViewController.h"
+@interface ViewController ()
+<
+QRCodeScannerViewControllerDelegate,
+STPickerAreaDelegate
+>
+@property (weak, nonatomic) IBOutlet UIButton *areaPickerButton;
 
 @end
 
@@ -36,12 +43,6 @@
 }
 
 
-
-#pragma mark - QRCodeScannerViewControllerDelegate
--(void)scannerViewControllerDidFinshedScanning:(NSString *)result {
-    NSLog(@"扫描结果：%@",result);
-}
-
 - (IBAction)pickerDateTapped:(UIButton *)sender {
     WSDatePickerView *datepicker = [[WSDatePickerView alloc] initWithDateStyle:DateStyleShowYearMonthDayHourMinute CompleteBlock:^(NSDate *selectDate) {
         
@@ -56,5 +57,29 @@
     [datepicker show];
 }
 
+- (IBAction)areaPickerTapped:(UIButton *)sender {
+    STPickerArea *pickerArea = [[STPickerArea alloc]init];
+    [pickerArea setDelegate:self];
+    [pickerArea setSaveHistory:YES];
+    [pickerArea setContentMode:STPickerContentModeBottom];
+    [pickerArea show];
+}
+
+#pragma mark - QRCodeScannerViewControllerDelegate
+
+-(void)scannerViewControllerDidFinshedScanning:(NSString *)result {
+    NSLog(@"扫描结果：%@",result);
+}
+
+#pragma mark - STPickerAreaDelegate
+
+- (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city area:(NSString *)area {
+    [self.areaPickerButton setTitle:[NSString stringWithFormat:@"%@ %@ %@",province,city,area] forState:UIControlStateNormal];
+    
+}
+- (IBAction)PagedControllerButtonTapped:(UIButton *)sender {
+    SlideViewController *slideVC = [[SlideViewController alloc]init];
+    [self.navigationController pushViewController:slideVC animated:YES];
+}
 
 @end
