@@ -1145,7 +1145,10 @@ return style. _attr_;
 }
 
 - (void)setCharacterShape:(NSNumber *)characterShape range:(NSRange)range {
-    [self setAttribute:(id)kCTCharacterShapeAttributeName value:characterShape range:range];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+   [self setAttribute:(id)kCTCharacterShapeAttributeName value:characterShape range:range];
+#pragma clang diagnostic pop
 }
 
 - (void)setRunDelegate:(CTRunDelegateRef)runDelegate range:(NSRange)range {

@@ -21,7 +21,6 @@
 
 @implementation TTSlideView
 
-
 - (DLCustomSlideView *)slideView {
     if (!_slideView) {
         _slideView = [[DLCustomSlideView alloc]init];
@@ -70,16 +69,16 @@
 
 - (instancetype)initWithTarget:(UIViewController *)target {
     self = [super initWithFrame:CGRectZero];
-    self.slideBarHeight =  44;
-    self.tabItemNormalColor = [UIColor grayColor];
-    self.tabItemSelectedColor = [UIColor blackColor];
-    self.trackColor = [UIColor blackColor];
-    self.tabBackgroundColor = [UIColor whiteColor];
-    self.tabItemNormalFontSize = 14;
-    self.tabbarBottomSpacing = 0;
-    self.selectedIndex = 0;
-    self.target = target;
-    self.tabItemWidth = 0;
+    _slideBarHeight =  44;
+    _tabItemNormalColor = [UIColor grayColor];
+    _tabItemSelectedColor = [UIColor blackColor];
+    _trackColor = [UIColor blackColor];
+    _tabBackgroundColor = [UIColor whiteColor];
+    _tabItemNormalFontSize = 14;
+    _tabbarBottomSpacing = 0;
+    _selectedIndex = 0;
+    _target = target;
+    _tabItemWidth = 0;
     [self addSubview:self.slideView];
     return self;
 }
