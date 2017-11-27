@@ -3,7 +3,7 @@ platform:ios,'9.0'
 target '##GoldLiving##' do //改为自己的工程名
 
  # use_frameworks!  //Swift打开
-
+ # inhibit_all_warnings! //消除警告 http://blog.csdn.net/bluewindaa/article/details/48493261
 pod 'MJRefresh'
 pod 'SDWebImage'
 pod 'AFNetworking'

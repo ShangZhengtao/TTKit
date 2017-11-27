@@ -132,6 +132,12 @@
 		185B0D6B1FBE8A4B00FC5072 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 185B0D621FBE8A4B00FC5072 /* area.plist */; };
 		185B0D721FBED45A00FC5072 /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0D6F1FBED45900FC5072 /* UIBarButtonItem+Badge.m */; };
 		185B0D731FBED45A00FC5072 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0D701FBED45900FC5072 /* UIButton+Badge.m */; };
+		1877045D1FC7B9270021C3CB /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704541FC7B9270021C3CB /* jpush-ios-3.0.7.a */; };
+		1877045E1FC7B9270021C3CB /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704551FC7B9270021C3CB /* jcore-ios-1.1.6.a */; };
+		1877045F1FC7B9270021C3CB /* jpush-extension-ios-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704561FC7B9270021C3CB /* jpush-extension-ios-1.0.0.a */; };
+		187704601FC7B9270021C3CB /* CoreJPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 187704591FC7B9270021C3CB /* CoreJPush.m */; };
+		187704611FC7B9270021C3CB /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 1877045C1FC7B9270021C3CB /* AppDelegate+JPush.m */; };
+		187704661FC7BB170021C3CB /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704651FC7BB170021C3CB /* libresolv.tbd */; };
 		189E28D91FBD22B6008D9027 /* UIView+Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28D81FBD22B6008D9027 /* UIView+Corner.m */; };
 		189E28DE1FBD26E1008D9027 /* ZTCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28DC1FBD26E1008D9027 /* ZTCountdownButton.m */; };
 		189E28E21FBD2B57008D9027 /* LaunchIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28E01FBD2B57008D9027 /* LaunchIntroductionView.m */; };
@@ -445,6 +451,19 @@
 		185B0D6F1FBED45900FC5072 /* UIBarButtonItem+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Badge.m"; sourceTree = "<group>"; };
 		185B0D701FBED45900FC5072 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
 		185B0D711FBED45900FC5072 /* UIBarButtonItem+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Badge.h"; sourceTree = "<group>"; };
+		187704521FC7B9270021C3CB /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
+		187704531FC7B9270021C3CB /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		187704541FC7B9270021C3CB /* jpush-ios-3.0.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.7.a"; sourceTree = "<group>"; };
+		187704551FC7B9270021C3CB /* jcore-ios-1.1.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.6.a"; sourceTree = "<group>"; };
+		187704561FC7B9270021C3CB /* jpush-extension-ios-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-extension-ios-1.0.0.a"; sourceTree = "<group>"; };
+		187704571FC7B9270021C3CB /* CoreJPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreJPush.h; sourceTree = "<group>"; };
+		187704581FC7B9270021C3CB /* AppDelegate+JPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JPush.h"; sourceTree = "<group>"; };
+		187704591FC7B9270021C3CB /* CoreJPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreJPush.m; sourceTree = "<group>"; };
+		1877045C1FC7B9270021C3CB /* AppDelegate+JPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+JPush.m"; sourceTree = "<group>"; };
+		187704621FC7BAD60021C3CB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		187704631FC7BAED0021C3CB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		187704651FC7BB170021C3CB /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		187704671FC7F6C10021C3CB /* TTKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TTKitDemo.entitlements; sourceTree = "<group>"; };
 		189E28D71FBD22B5008D9027 /* UIView+Corner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Corner.h"; sourceTree = "<group>"; };
 		189E28D81FBD22B6008D9027 /* UIView+Corner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Corner.m"; sourceTree = "<group>"; };
 		189E28DC1FBD26E1008D9027 /* ZTCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTCountdownButton.m; sourceTree = "<group>"; };
@@ -579,6 +598,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1877045F1FC7B9270021C3CB /* jpush-extension-ios-1.0.0.a in Frameworks */,
+				187704661FC7BB170021C3CB /* libresolv.tbd in Frameworks */,
+				1877045E1FC7B9270021C3CB /* jcore-ios-1.1.6.a in Frameworks */,
+				1877045D1FC7B9270021C3CB /* jpush-ios-3.0.7.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,6 +917,9 @@
 		180022DB1FC2DE1C00C5E414 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				187704651FC7BB170021C3CB /* libresolv.tbd */,
+				187704631FC7BAED0021C3CB /* Security.framework */,
+				187704621FC7BAD60021C3CB /* CFNetwork.framework */,
 				18A94BF91FC422F600032B5B /* SystemConfiguration.framework */,
 				18A94BF51FC422BF00032B5B /* AssetsLibrary.framework */,
 				18A94BF41FC422B300032B5B /* ImageIO.framework */,
@@ -931,6 +957,7 @@
 		1818E98E1FBC49FA00C35A8A /* TTKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				187704671FC7F6C10021C3CB /* TTKitDemo.entitlements */,
 				1818E98F1FBC49FA00C35A8A /* AppDelegate.h */,
 				1818E9901FBC49FA00C35A8A /* AppDelegate.m */,
 				1818E9921FBC49FA00C35A8A /* ViewController.h */,
@@ -949,9 +976,10 @@
 		1818E9E71FBC4D1B00C35A8A /* TTKit */ = {
 			isa = PBXGroup;
 			children = (
-				18A94BFB1FC4305400032B5B /* BaseClasses */,
+				1877044F1FC7B9270021C3CB /* CoreJPush */,
 				18A94BA21FC41AC600032B5B /* Networking */,
 				180021D91FC2DDC200C5E414 /* YYKit */,
+				18A94BFB1FC4305400032B5B /* BaseClasses */,
 				189E28ED1FBD37CB008D9027 /* Account */,
 				1818E9E81FBC4D1B00C35A8A /* Categories */,
 				189E28FF1FBD3A26008D9027 /* Tools */,
@@ -1121,6 +1149,38 @@
 				185B0D6F1FBED45900FC5072 /* UIBarButtonItem+Badge.m */,
 			);
 			path = Badge;
+			sourceTree = "<group>";
+		};
+		1877044F1FC7B9270021C3CB /* CoreJPush */ = {
+			isa = PBXGroup;
+			children = (
+				187704501FC7B9270021C3CB /* jpush-ios-3.0.7 */,
+				187704571FC7B9270021C3CB /* CoreJPush.h */,
+				187704591FC7B9270021C3CB /* CoreJPush.m */,
+				187704581FC7B9270021C3CB /* AppDelegate+JPush.h */,
+				1877045C1FC7B9270021C3CB /* AppDelegate+JPush.m */,
+			);
+			path = CoreJPush;
+			sourceTree = "<group>";
+		};
+		187704501FC7B9270021C3CB /* jpush-ios-3.0.7 */ = {
+			isa = PBXGroup;
+			children = (
+				187704511FC7B9270021C3CB /* Lib */,
+			);
+			path = "jpush-ios-3.0.7";
+			sourceTree = "<group>";
+		};
+		187704511FC7B9270021C3CB /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				187704521FC7B9270021C3CB /* JPushNotificationExtensionService.h */,
+				187704531FC7B9270021C3CB /* JPUSHService.h */,
+				187704541FC7B9270021C3CB /* jpush-ios-3.0.7.a */,
+				187704551FC7B9270021C3CB /* jcore-ios-1.1.6.a */,
+				187704561FC7B9270021C3CB /* jpush-extension-ios-1.0.0.a */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 		189E28DA1FBD26E1008D9027 /* CustomView */ = {
@@ -1484,6 +1544,11 @@
 					1818E98B1FBC49FA00C35A8A = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -1634,6 +1699,7 @@
 				180022D21FC2DDC200C5E414 /* YYSentinel.m in Sources */,
 				180022A31FC2DDC200C5E414 /* YYTextLine.m in Sources */,
 				18A94C011FC430B100032B5B /* BaseTabBarViewController.m in Sources */,
+				187704601FC7B9270021C3CB /* CoreJPush.m in Sources */,
 				1818EA291FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.m in Sources */,
 				189E29271FBD3A27008D9027 /* UIViewController+LewPopupViewController.m in Sources */,
 				180022B11FC2DDC200C5E414 /* UITextField+YYAdd.m in Sources */,
@@ -1673,6 +1739,7 @@
 				189E29491FBD7F1E008D9027 /* BDImagePicker.m in Sources */,
 				180022941FC2DDC200C5E414 /* _YYWebImageSetter.m in Sources */,
 				180022BC1FC2DDC200C5E414 /* UIImage+YYAdd.m in Sources */,
+				187704611FC7B9270021C3CB /* AppDelegate+JPush.m in Sources */,
 				180022B81FC2DDC200C5E414 /* UIScreen+YYAdd.m in Sources */,
 				1818EA1D1FBC4D1B00C35A8A /* UIButton+LXMImagePosition.m in Sources */,
 				1818E9911FBC49FA00C35A8A /* AppDelegate.m in Sources */,
@@ -1838,14 +1905,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TTKitDemo/TTKitDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28S87GSRGJ;
+				DEVELOPMENT_TEAM = 9Y8B7ULTGR;
 				INFOPLIST_FILE = TTKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tao.TTKitDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tao.TTKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1853,14 +1921,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TTKitDemo/TTKitDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28S87GSRGJ;
+				DEVELOPMENT_TEAM = 9Y8B7ULTGR;
 				INFOPLIST_FILE = TTKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tao.TTKitDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tao.TTKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

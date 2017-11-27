@@ -12,6 +12,8 @@
 #import "WSDatePickerView.h"
 #import "STPickerArea.h"
 #import "SlideViewController.h"
+#import "CoreJPush.h"
+#import "TTMacros.h"
 @interface ViewController ()
 <
 QRCodeScannerViewControllerDelegate,

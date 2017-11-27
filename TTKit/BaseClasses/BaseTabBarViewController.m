@@ -9,7 +9,11 @@
 #import "BaseTabBarViewController.h"
 #import "BaseTableViewController.h"
 #import "TTMacros.h"
-@interface BaseTabBarViewController ()<UITabBarControllerDelegate>
+#import "CoreJPush.h"
+@interface BaseTabBarViewController ()
+<UITabBarControllerDelegate,
+CoreJPushDelegate
+>
 /**index*/
 @property (nonatomic, assign) NSInteger indexFlag;
 @end
@@ -23,13 +27,12 @@
     tabBar.shadowImage = [UIImage new];
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupAllChildViewController];
     self.delegate = self;
+    [CoreJPush addJPushObserver:self];
 }
-
 
 #pragma mark -
 
@@ -90,6 +93,19 @@
     spring.mass = 5; //质量，影响图层运动时的弹簧惯性，质量越大，弹簧拉伸和压缩的幅度越大 Defaults to one
     spring.initialVelocity = 20; ///初始速率，动画视图的初始速度大小 Defaults to zero 速率为正数时，速度方向与运动方向一致，速率为负数时，速度方向与运动方向相反
     [[tabbarbuttonArray[index] layer] addAnimation:spring forKey:nil];
+}
+
+
+#pragma mark - Push
+- (void)didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    NSLog(@"推送消息：\n%@",userInfo);
+//    NSDictionary *apns = [userInfo objectForKey:@"aps"];
+    NSString *msg = [NSString stringWithFormat:@"%@",userInfo];
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"推送测试" message:msg preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
+    [alertVC addAction:cancel];
+    [self presentViewController:alertVC animated:YES completion:nil];
+
 }
 
 @end

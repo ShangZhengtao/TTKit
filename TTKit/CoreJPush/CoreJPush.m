@@ -1,130 +1,159 @@
 //
 //  CoreJPush.m
-//  CoreJPush
+//  TTKitDemo
 //
-//  Created by 冯成林 on 15/9/17.
-//  Copyright (c) 2015年 冯成林. All rights reserved.
+//  Created by apple on 2017/11/21.
+//  Copyright © 2017年 shang. All rights reserved.
 //
 
 #import "CoreJPush.h"
 #import "JPUSHService.h"
 #import <UIKit/UIKit.h>
+#import <UserNotifications/UserNotifications.h>
+#import "AppDelegate+JPush.h"
 
-
-#define JPushAppKey @"16fa191a1669ad798889e5f1"
+#define JPushAppKey @"092c4cd3687381404725c339"
 #define JPushChannel @"AppStore"
-#define JPushIsProduction YES
+#define JPushIsProduction NO  //YES生产环境，NO测试环境
 
 @interface CoreJPush ()
 
-@property (nonatomic,strong) NSMutableArray *listenerM;
-
-@property (nonatomic,copy) void(^ResBlock)(BOOL res, NSSet *tags,NSString *alias);
+@property (nonatomic,strong) NSMutableArray *observers;
 
 @end
 
-
-
 @implementation CoreJPush
-HMSingletonM(CoreJPush)
 
+static id _instace;
+
++ (id)allocWithZone:(struct _NSZone *)zone
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instace = [super allocWithZone:zone];
+    });
+    return _instace;
+}
+
++ (instancetype)sharedCoreJPush {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instace = [[self alloc] init];
+    });
+    return _instace;
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    return _instace;
+}
+
+- (NSMutableArray *)observers {
+    
+    if(_observers==nil){
+        _observers = [NSMutableArray array];
+    }
+    return _observers;
+}
+
+#pragma mark - Public
 
 /** 注册JPush */
-+(void)registerJPush:(NSDictionary *)launchOptions{
++ (void)registerJPush:(NSDictionary *)launchOptions{
+    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        // 可以添加自定义categories
+        //entity.categories = [NSSet setWithObjects:@"", nil];
+        // NSSet<UNNotificationCategory *> *categories for iOS10 or later
+        // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
+    }
+    //注册
+    id delegate = (id<JPUSHRegisterDelegate>)[UIApplication sharedApplication].delegate;
+    [JPUSHService registerForRemoteNotificationConfig:entity delegate:delegate];
+
+    //配置
+    [JPUSHService setupWithOption:launchOptions appKey:JPushAppKey
+                          channel:JPushChannel
+                 apsForProduction:JPushIsProduction
+            advertisingIdentifier:nil];
     
-    // Required
-    //可以添加自定义categories
-    [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
-                                                      UIUserNotificationTypeSound |
-                                                      UIUserNotificationTypeAlert)
-                                          categories:nil];
-    [JPUSHService setupWithOption:launchOptions appKey:JPushAppKey channel:JPushChannel apsForProduction:JPushIsProduction];
-    
+    //自定义消息通知
+//    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+//    [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
 }
-
-
 
 /** 添加监听者 */
-+(void)addJPushListener:(id<CoreJPushProtocol>)listener{
-    
++ (void)addJPushObserver:(id<CoreJPushDelegate>)observer{
     CoreJPush *jpush = [CoreJPush sharedCoreJPush];
-    
-    if([jpush.listenerM containsObject:listener]) return;
-    
-    [jpush.listenerM addObject:listener];
+    if([jpush.observers containsObject:observer]) return;
+    [jpush.observers addObject:observer];
 }
-
 
 /** 移除监听者 */
-+(void)removeJPushListener:(id<CoreJPushProtocol>)listener{
++ (void)removeJPushObserver:(id<CoreJPushDelegate>)observer{
     
     CoreJPush *jpush = [CoreJPush sharedCoreJPush];
-    
-    if(![jpush.listenerM containsObject:listener]) return;
-    
-    [jpush.listenerM removeObject:listener];
+    if(![jpush.observers containsObject:observer]) return;
+    [jpush.observers removeObject:observer];
 }
 
-
--(NSMutableArray *)listenerM{
-    
-    if(_listenerM==nil){
-        _listenerM = [NSMutableArray array];
-    }
-    
-    return _listenerM;
-}
-
-
--(void)didReceiveRemoteNotification:(NSDictionary *)userInfo{
+- (void)didReceiveRemoteNotification:(NSDictionary *)userInfo{
     
     [self handleBadge:[userInfo[@"aps"][@"badge"] integerValue]];
     
-    if(self.listenerM.count==0) return;
+    if(self.observers.count == 0) return;
     
-    [self.listenerM enumerateObjectsUsingBlock:^(id<CoreJPushProtocol> listener, NSUInteger idx, BOOL *stop) {
+    [self.observers enumerateObjectsUsingBlock:^(id<CoreJPushDelegate> observer, NSUInteger idx, BOOL *stop) {
         
-        if([listener respondsToSelector:@selector(didReceiveRemoteNotification:)]) [listener didReceiveRemoteNotification:userInfo];
+        if([observer respondsToSelector:@selector(didReceiveRemoteNotification:)]) [observer didReceiveRemoteNotification:userInfo];
     }];
 }
 
+/** 处理badge */
++ (void)handleWithBadge:(NSInteger)badge {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    NSInteger now = badge;
+    if (@available(iOS 10,*)) [[UNUserNotificationCenter currentNotificationCenter] removeAllPendingNotificationRequests];
+    else [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    [UIApplication sharedApplication].applicationIconBadgeNumber = now;
+    [JPUSHService setBadge:now];
+#pragma clang diagnostic pop
+}
 
++ (void)setAlias:(NSString *)alias completionHandler:(JPUSHAliasOperationCompletion)hander {
+    [JPUSHService setAlias:alias completion:hander seq:666];
+}
+
++ (void)setTags:(NSSet<NSString *> *)tags completionHandler:(JPUSHTagsOperationCompletion)hander {
+    [JPUSHService setTags:tags completion:hander seq:666];
+}
+
+#pragma mark - Private
 
 /** 处理badge */
--(void)handleBadge:(NSInteger)badge{
-    
-    NSInteger now = badge-1;
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    [UIApplication sharedApplication].applicationIconBadgeNumber=0;
-    [UIApplication sharedApplication].applicationIconBadgeNumber=now;
+- (void)handleBadge:(NSInteger)badge{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    NSInteger now = badge - 1;
+    if (@available(iOS 10,*)) [[UNUserNotificationCenter currentNotificationCenter] removeAllPendingNotificationRequests];
+    else [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    [UIApplication sharedApplication].applicationIconBadgeNumber = now;
     [JPUSHService setBadge:now];
+#pragma clang diagnostic pop
 }
 
-
-+(void)handleWithBadge:(NSInteger)badge{
-    
-    NSInteger now = badge;
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    [UIApplication sharedApplication].applicationIconBadgeNumber=0;
-    [UIApplication sharedApplication].applicationIconBadgeNumber=now;
-    [JPUSHService setBadge:now];
+/**
+ 只有在前端运行的时候才能收到自定义消息的推送。
+ 从jpush服务器获取用户推送的自定义消息内容和标题以及附加字段等。
+ 
+ @param notification 自定义消息通知
+ */
++ (void)networkDidReceiveMessage:(NSNotification *)notification {
+    NSDictionary * userInfo = [notification userInfo];
+    NSLog(@"自定义消息%@",userInfo);
 }
-
-
-+(void)setTags:(NSSet *)tags alias:(NSString *)alias resBlock:(void(^)(BOOL res, NSSet *tags,NSString *alias))resBlock{
-    
-    CoreJPush *jpush = [CoreJPush sharedCoreJPush];
-
-    [JPUSHService setTags:tags alias:alias callbackSelector:@selector(tagsAliasCallback:tags:alias:) object:jpush];
-    
-    jpush.ResBlock=resBlock;
-}
-
-
--(void)tagsAliasCallback:(int)iResCode tags:(NSSet *)tags alias:(NSString *)alias{
-
-    if(self.ResBlock != nil) self.ResBlock(iResCode==0,tags,alias);
-}
-
 
 @end

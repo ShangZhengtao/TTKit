@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BaseTabBarViewController.h"
+#import "CoreJPush.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,7 @@
     BaseTabBarViewController *rootVC = [[BaseTabBarViewController alloc]init];
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
+    [CoreJPush registerJPush:launchOptions];
     
     return YES;
 }
