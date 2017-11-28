@@ -138,7 +138,6 @@
 		187704601FC7B9270021C3CB /* CoreJPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 187704591FC7B9270021C3CB /* CoreJPush.m */; };
 		187704611FC7B9270021C3CB /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 1877045C1FC7B9270021C3CB /* AppDelegate+JPush.m */; };
 		187704661FC7BB170021C3CB /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704651FC7BB170021C3CB /* libresolv.tbd */; };
-		189E28D91FBD22B6008D9027 /* UIView+Corner.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28D81FBD22B6008D9027 /* UIView+Corner.m */; };
 		189E28DE1FBD26E1008D9027 /* ZTCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28DC1FBD26E1008D9027 /* ZTCountdownButton.m */; };
 		189E28E21FBD2B57008D9027 /* LaunchIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28E01FBD2B57008D9027 /* LaunchIntroductionView.m */; };
 		189E28E81FBD3288008D9027 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28E71FBD3288008D9027 /* NSDictionary+Log.m */; };
@@ -194,6 +193,7 @@
 		18D6D0AF1FC56285005305ED /* UITableView+RegisterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D0AE1FC56285005305ED /* UITableView+RegisterCell.m */; };
 		18D6D0B21FC56393005305ED /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D0B11FC56393005305ED /* BaseTableViewController.m */; };
 		18D6D0B51FC563C8005305ED /* BaseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D0B41FC563C8005305ED /* BaseListModel.m */; };
+		18E372D81FCCF1CC00EF45FC /* UIView+TTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E372D71FCCF1CC00EF45FC /* UIView+TTKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -464,8 +464,6 @@
 		187704631FC7BAED0021C3CB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		187704651FC7BB170021C3CB /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		187704671FC7F6C10021C3CB /* TTKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TTKitDemo.entitlements; sourceTree = "<group>"; };
-		189E28D71FBD22B5008D9027 /* UIView+Corner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Corner.h"; sourceTree = "<group>"; };
-		189E28D81FBD22B6008D9027 /* UIView+Corner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Corner.m"; sourceTree = "<group>"; };
 		189E28DC1FBD26E1008D9027 /* ZTCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTCountdownButton.m; sourceTree = "<group>"; };
 		189E28DD1FBD26E1008D9027 /* ZTCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTCountdownButton.h; sourceTree = "<group>"; };
 		189E28E01FBD2B57008D9027 /* LaunchIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchIntroductionView.m; sourceTree = "<group>"; };
@@ -591,6 +589,8 @@
 		18D6D0B11FC56393005305ED /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		18D6D0B31FC563C8005305ED /* BaseListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseListModel.h; sourceTree = "<group>"; };
 		18D6D0B41FC563C8005305ED /* BaseListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseListModel.m; sourceTree = "<group>"; };
+		18E372D61FCCF1CC00EF45FC /* UIView+TTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+TTKit.h"; sourceTree = "<group>"; };
+		18E372D71FCCF1CC00EF45FC /* UIView+TTKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+TTKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1063,8 +1063,8 @@
 		1818EA051FBC4D1B00C35A8A /* UIVIew */ = {
 			isa = PBXGroup;
 			children = (
-				189E28D71FBD22B5008D9027 /* UIView+Corner.h */,
-				189E28D81FBD22B6008D9027 /* UIView+Corner.m */,
+				18E372D61FCCF1CC00EF45FC /* UIView+TTKit.h */,
+				18E372D71FCCF1CC00EF45FC /* UIView+TTKit.m */,
 			);
 			path = UIVIew;
 			sourceTree = "<group>";
@@ -1083,10 +1083,10 @@
 		1818EA0C1FBC4D1B00C35A8A /* NSArray */ = {
 			isa = PBXGroup;
 			children = (
+				1818EA101FBC4D1B00C35A8A /* NSArray+SafeAccess.h */,
 				1818EA0D1FBC4D1B00C35A8A /* NSArray+SafeAccess.m */,
 				1818EA0E1FBC4D1B00C35A8A /* NSArray+Block.h */,
 				1818EA0F1FBC4D1B00C35A8A /* NSArray+Block.m */,
-				1818EA101FBC4D1B00C35A8A /* NSArray+SafeAccess.h */,
 			);
 			path = NSArray;
 			sourceTree = "<group>";
@@ -1692,7 +1692,6 @@
 				1818EA1E1FBC4D1B00C35A8A /* UIButton+CountDown.m in Sources */,
 				189E29231FBD3A27008D9027 /* LewPopupViewAnimationFade.m in Sources */,
 				180022D31FC2DDC200C5E414 /* YYTransaction.m in Sources */,
-				189E28D91FBD22B6008D9027 /* UIView+Corner.m in Sources */,
 				18A94BDE1FC420AF00032B5B /* UIProgressView+AFNetworking.m in Sources */,
 				1818E99F1FBC49FA00C35A8A /* main.m in Sources */,
 				189E29241FBD3A27008D9027 /* LewPopupViewAnimationSpring.m in Sources */,
@@ -1730,6 +1729,7 @@
 				180022A11FC2DDC200C5E414 /* YYTextInput.m in Sources */,
 				180022971FC2DDC200C5E414 /* MKAnnotationView+YYWebImage.m in Sources */,
 				1818EA211FBC4D1B00C35A8A /* UIButton+Submitting.m in Sources */,
+				18E372D81FCCF1CC00EF45FC /* UIView+TTKit.m in Sources */,
 				180021D21FC282F200C5E414 /* DLSlideView.m in Sources */,
 				18A94BB21FC41DB900032B5B /* PPNetworkHelper.m in Sources */,
 				189E29251FBD3A27008D9027 /* LewPopupViewAnimationDrop.m in Sources */,
