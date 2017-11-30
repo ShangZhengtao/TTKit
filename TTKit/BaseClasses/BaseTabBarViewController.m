@@ -25,6 +25,7 @@ CoreJPushDelegate
     tabBar.tintColor = kThemeColor;
     [tabBar setBackgroundColor:[UIColor whiteColor]];
     tabBar.shadowImage = [UIImage new];
+    tabBar.backgroundImage = [UIImage new];
 }
 
 - (void)viewDidLoad {

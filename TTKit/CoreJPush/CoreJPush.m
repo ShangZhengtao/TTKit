@@ -22,9 +22,7 @@
 #endif
 
 @interface CoreJPush ()
-
 @property (nonatomic,strong) NSMutableArray *observers;
-
 @end
 
 @implementation CoreJPush

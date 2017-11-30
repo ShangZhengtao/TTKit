@@ -22,6 +22,10 @@
 
 @interface CoreJPush : NSObject<CoreJPushDelegate>
 
+- (instancetype)init NS_UNAVAILABLE;
+
++ (instancetype)new NS_UNAVAILABLE;
+
 + (instancetype)sharedCoreJPush;
 /** 注册JPush */
 + (void)registerJPush:(NSDictionary *)launchOptions;

@@ -262,20 +262,20 @@
     coefficient = MIN(1, coefficient);
     coefficient = MAX(0, coefficient);
     
-    CGFloat startRed = [UIColor es_redValueWithUIColor:startColor];
-    CGFloat startGreen = [UIColor es_greenValueWithUIColor:startColor];
-    CGFloat startBlue = [UIColor es_blueValueWithUIColor:startColor];
-    CGFloat startAlpha = [UIColor es_alphaValueWithUIColor:startColor];
+    CGFloat startRed    = [UIColor es_redValueWithUIColor:startColor];
+    CGFloat startGreen  = [UIColor es_greenValueWithUIColor:startColor];
+    CGFloat startBlue   = [UIColor es_blueValueWithUIColor:startColor];
+    CGFloat startAlpha  = [UIColor es_alphaValueWithUIColor:startColor];
     
-    CGFloat endRed = [UIColor es_redValueWithUIColor:endColor];
-    CGFloat endGreen = [UIColor es_greenValueWithUIColor:endColor];
-    CGFloat endBlue = [UIColor es_blueValueWithUIColor:endColor];
-    CGFloat endAlpha = [UIColor es_alphaValueWithUIColor:endColor];
+    CGFloat endRed      = [UIColor es_redValueWithUIColor:endColor];
+    CGFloat endGreen    = [UIColor es_greenValueWithUIColor:endColor];
+    CGFloat endBlue     = [UIColor es_blueValueWithUIColor:endColor];
+    CGFloat endAlpha    = [UIColor es_alphaValueWithUIColor:endColor];
     
-    CGFloat red = startRed - (startRed - endRed) * coefficient;
-    CGFloat green = startGreen - (startGreen - endGreen) * coefficient;
-    CGFloat blue = startBlue - (startBlue - endBlue) * coefficient;
-    CGFloat alpha = startAlpha - (startAlpha - endAlpha) * coefficient;
+    CGFloat red     = startRed - (startRed - endRed) * coefficient;
+    CGFloat green   = startGreen - (startGreen - endGreen) * coefficient;
+    CGFloat blue    = startBlue - (startBlue - endBlue) * coefficient;
+    CGFloat alpha   = startAlpha - (startAlpha - endAlpha) * coefficient;
     
     UIColor *transitionColor = [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
     return transitionColor;
