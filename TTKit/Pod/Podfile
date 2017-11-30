@@ -27,5 +27,9 @@ pod 'DZNEmptyDataSet'
 #pod 'FDFullscreenPopGesture' //导航栏手势
 #pod 'RATreeView' //折叠cell
 #pod 'YTKNetwork' //猿题库网络库
+#pod 'TZImagePickerController'// 选择图片
+#pod "SkeletonView" //类似支付宝的占位View
+#pod "Koloda" //卡片view
+#pod 'Harpy' // 提示更新app
 end
 

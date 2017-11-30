@@ -14,7 +14,12 @@
 
 #define JPushAppKey @"092c4cd3687381404725c339"
 #define JPushChannel @"AppStore"
-#define JPushIsProduction NO  //YES生产环境，NO测试环境
+
+#ifdef DEBUG
+#define JPushIsProduction NO  //NO测试环境
+#else
+#define JPushIsProduction YES //YES生产环境
+#endif
 
 @interface CoreJPush ()
 

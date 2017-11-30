@@ -1094,9 +1094,9 @@
 		1818EA111FBC4D1B00C35A8A /* NSUserDefaults */ = {
 			isa = PBXGroup;
 			children = (
+				1818EA141FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.h */,
 				1818EA121FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.m */,
 				1818EA131FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.h */,
-				1818EA141FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.h */,
 				1818EA151FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m */,
 			);
 			path = NSUserDefaults;
