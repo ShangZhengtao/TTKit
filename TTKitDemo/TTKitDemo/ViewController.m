@@ -14,6 +14,8 @@
 #import "SlideViewController.h"
 #import "CoreJPush.h"
 #import "TTMacros.h"
+#import "PPNetworkHelper.h"
+#import "WRNavigationBar.h"
 @interface ViewController ()
 <
 QRCodeScannerViewControllerDelegate,
@@ -28,6 +30,7 @@ STPickerAreaDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Demo";
+    
 }
 
 
@@ -83,5 +86,19 @@ STPickerAreaDelegate
     SlideViewController *slideVC = [[SlideViewController alloc]init];
     [self.navigationController pushViewController:slideVC animated:YES];
 }
+
+- (IBAction)requestButtonTapped:(UIButton *)sender {
+    [PPNetworkHelper openLog];
+    [PPNetworkHelper POST:@"http://zgqz.zhiguyg.com/APP/GetVersion" parameters:nil responseCache:^(id responseCache) {
+        
+    } success:^(id responseObject) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
+}
+
+
 
 @end

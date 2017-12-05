@@ -8,6 +8,7 @@
 
 #import "BaseNavigationController.h"
 #import "TTMacros.h"
+#import "WRNavigationBar.h"
 @interface BaseNavigationController ()<UINavigationControllerDelegate>
 
 @end
@@ -25,10 +26,15 @@
     navBar.tintColor = [UIColor whiteColor];
     [navBar setTitleTextAttributes:@{
                                      NSForegroundColorAttributeName :[UIColor whiteColor],
-                                     NSFontAttributeName : [UIFont systemFontOfSize:18]
+                                     NSFontAttributeName : [UIFont systemFontOfSize:30]
                                      }];
     //去掉阴影线
     [navBar setShadowImage:[UIImage new]];
+    
+    [WRNavigationBar wr_setDefaultNavBarBarTintColor:kThemeColor];
+    [WRNavigationBar wr_setDefaultNavBarTintColor:[UIColor whiteColor]];
+    [WRNavigationBar wr_setDefaultNavBarTitleColor:[UIColor whiteColor]];
+    [WRNavigationBar wr_setDefaultStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
 - (void)viewDidLoad {

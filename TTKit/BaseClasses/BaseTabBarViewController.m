@@ -38,7 +38,7 @@ CoreJPushDelegate
 #pragma mark -
 
 -(void)setupAllChildViewController{
-    UIViewController *demoVC = [UIStoryboard storyboardWithName:@"Main" bundle:nil].instantiateInitialViewController;
+    UINavigationController *demoVC = [UIStoryboard storyboardWithName:@"Main" bundle:nil].instantiateInitialViewController;
     [self setupChildViewController:demoVC title:@"Demo" imageName:@"tabbar_icon_video_nor" seleceImageName:@"tabbar_icon_video_sel"];
     
     BaseTableViewController *msgVC = [BaseTableViewController new];

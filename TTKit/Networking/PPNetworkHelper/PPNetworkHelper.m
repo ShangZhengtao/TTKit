@@ -325,7 +325,8 @@ static AFHTTPSessionManager *_sessionManager;
  *  原理参考地址:http://www.jianshu.com/p/5969bbb4af9f
  */
 + (void)initialize {
-    _sessionManager = [AFHTTPSessionManager manager];
+    NSURL *baseURL = [NSURL URLWithString:@""];
+    _sessionManager = [[AFHTTPSessionManager alloc]initWithBaseURL:baseURL];
     _sessionManager.requestSerializer.timeoutInterval = 30.f;
     _sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", @"text/xml", @"image/*", nil];
     // 打开状态栏的等待菊花

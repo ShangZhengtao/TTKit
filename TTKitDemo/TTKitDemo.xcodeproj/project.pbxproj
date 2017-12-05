@@ -194,8 +194,8 @@
 		18D6D0B21FC56393005305ED /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D0B11FC56393005305ED /* BaseTableViewController.m */; };
 		18D6D0B51FC563C8005305ED /* BaseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D0B41FC563C8005305ED /* BaseListModel.m */; };
 		18E372D81FCCF1CC00EF45FC /* UIView+TTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E372D71FCCF1CC00EF45FC /* UIView+TTKit.m */; };
-		18FAC7441FD546BE0024A4D2 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7401FD546BE0024A4D2 /* WRNavigationBar.m */; };
-		18FAC7451FD546BE0024A4D2 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7431FD546BE0024A4D2 /* WRCustomNavigationBar.m */; };
+		18E89F381FD6478D00A77EA7 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7401FD546BE0024A4D2 /* WRNavigationBar.m */; };
+		18E89F391FD6479000A77EA7 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7431FD546BE0024A4D2 /* WRCustomNavigationBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1715,7 +1715,7 @@
 				189E29241FBD3A27008D9027 /* LewPopupViewAnimationSpring.m in Sources */,
 				180022D21FC2DDC200C5E414 /* YYSentinel.m in Sources */,
 				180022A31FC2DDC200C5E414 /* YYTextLine.m in Sources */,
-				18FAC7451FD546BE0024A4D2 /* WRCustomNavigationBar.m in Sources */,
+				18E89F391FD6479000A77EA7 /* WRCustomNavigationBar.m in Sources */,
 				18A94C011FC430B100032B5B /* BaseTabBarViewController.m in Sources */,
 				187704601FC7B9270021C3CB /* CoreJPush.m in Sources */,
 				1818EA291FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.m in Sources */,
@@ -1733,7 +1733,7 @@
 				1800229B1FC2DDC200C5E414 /* NSObject+YYModel.m in Sources */,
 				180022A61FC2DDC200C5E414 /* YYTextDebugOption.m in Sources */,
 				180022A51FC2DDC200C5E414 /* YYTextKeyboardManager.m in Sources */,
-				18FAC7441FD546BE0024A4D2 /* WRNavigationBar.m in Sources */,
+				18E89F381FD6478D00A77EA7 /* WRNavigationBar.m in Sources */,
 				189E29221FBD3A27008D9027 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				180021CC1FC282F200C5E414 /* DLLRUCache.m in Sources */,
 				189E29451FBD76A3008D9027 /* QRCScannerViewController.m in Sources */,
