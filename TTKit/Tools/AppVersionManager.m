@@ -33,18 +33,17 @@ static NSString *const VERSION_STATE = @"MY_APP_VERSION_STATE";
 }
 
 + (NSString *)appDownloadURLWithAppleId:(NSString *)appleId {
-    
     return [NSString stringWithFormat:APPLE_STORE_UPDATE_API,appleId];
 }
 
 + (void)checkOnlineWithURL:(NSString *)urlString {
-    
+     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kIsOnline];
     __block dispatch_semaphore_t disp = dispatch_semaphore_create(0);
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.timeoutInterval = 10;
     NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (!error) {
+        if (!error){
             NSError *err;
             NSString *appBuild = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
@@ -53,19 +52,14 @@ static NSString *const VERSION_STATE = @"MY_APP_VERSION_STATE";
                 NSInteger version = [[dic objectForKey:@"remark"] integerValue];
                 if (appBuild.integerValue == version) {
                     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:kIsOnline]; //审核中
-                }else {
-                    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kIsOnline];
+                    [[NSUserDefaults standardUserDefaults] synchronize];
                 }
-                [[NSUserDefaults standardUserDefaults] synchronize];
-            }else{
-                [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kIsOnline];
             }
         }
         dispatch_semaphore_signal(disp);
     }];
     [dataTask resume];
     dispatch_semaphore_wait(disp, DISPATCH_TIME_FOREVER);
-    
 }
 
 @end

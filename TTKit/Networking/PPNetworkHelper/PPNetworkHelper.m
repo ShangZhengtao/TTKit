@@ -71,6 +71,10 @@ static AFHTTPSessionManager *_sessionManager;
     _isOpenLog = NO;
 }
 
++ (AFHTTPSessionManager *)sharedManager{
+    return _sessionManager;
+}
+
 + (void)cancelAllRequest {
     // 锁操作
     @synchronized(self) {

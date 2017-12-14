@@ -96,7 +96,6 @@ STPickerAreaDelegate
     } failure:^(NSError *error) {
         
     }];
-    
 }
 
 

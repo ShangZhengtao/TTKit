@@ -47,7 +47,6 @@
     if (topVC.presentedViewController) {
         topVC = topVC.presentedViewController;
     }
-    
     return topVC;
 }
 

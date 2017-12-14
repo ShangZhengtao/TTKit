@@ -109,6 +109,8 @@ typedef void(^PPNetworkStatus)(PPNetworkStatusType status);
 /// 关闭日志打印,默认关闭
 + (void)closeLog;
 
+/// 请求管理单例
++ (AFHTTPSessionManager *)sharedManager;
 
 /**
  *  GET请求,无缓存

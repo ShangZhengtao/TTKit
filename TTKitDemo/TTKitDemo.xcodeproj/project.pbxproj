@@ -190,6 +190,7 @@
 		18A94BE61FC420AF00032B5B /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A94BDD1FC420AE00032B5B /* AFImageDownloader.m */; };
 		18A94BFE1FC4307F00032B5B /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A94BFD1FC4307F00032B5B /* BaseNavigationController.m */; };
 		18A94C011FC430B100032B5B /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A94C001FC430B100032B5B /* BaseTabBarViewController.m */; };
+		18B12E131FE26A280031D757 /* AFHTTPSessionManager+Synchronous.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B12E121FE26A270031D757 /* AFHTTPSessionManager+Synchronous.m */; };
 		18D6D0AF1FC56285005305ED /* UITableView+RegisterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D0AE1FC56285005305ED /* UITableView+RegisterCell.m */; };
 		18D6D0B21FC56393005305ED /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D0B11FC56393005305ED /* BaseTableViewController.m */; };
 		18D6D0B51FC563C8005305ED /* BaseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D0B41FC563C8005305ED /* BaseListModel.m */; };
@@ -585,6 +586,8 @@
 		18A94BFD1FC4307F00032B5B /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		18A94BFF1FC430B100032B5B /* BaseTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarViewController.h; sourceTree = "<group>"; };
 		18A94C001FC430B100032B5B /* BaseTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarViewController.m; sourceTree = "<group>"; };
+		18B12E111FE26A270031D757 /* AFHTTPSessionManager+Synchronous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+Synchronous.h"; sourceTree = "<group>"; };
+		18B12E121FE26A270031D757 /* AFHTTPSessionManager+Synchronous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPSessionManager+Synchronous.m"; sourceTree = "<group>"; };
 		18D6D0AD1FC56285005305ED /* UITableView+RegisterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+RegisterCell.h"; sourceTree = "<group>"; };
 		18D6D0AE1FC56285005305ED /* UITableView+RegisterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+RegisterCell.m"; sourceTree = "<group>"; };
 		18D6D0B01FC56393005305ED /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
@@ -1443,6 +1446,7 @@
 		18A94BB41FC41E8D00032B5B /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				18B12E101FE26A270031D757 /* Synchronous */,
 				18A94BC91FC420AE00032B5B /* UIKit+AFNetworking */,
 				18A94BB51FC41E8D00032B5B /* AFSecurityPolicy.h */,
 				18A94BB61FC41E8D00032B5B /* AFNetworkReachabilityManager.h */,
@@ -1501,6 +1505,15 @@
 				18D6D0B41FC563C8005305ED /* BaseListModel.m */,
 			);
 			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		18B12E101FE26A270031D757 /* Synchronous */ = {
+			isa = PBXGroup;
+			children = (
+				18B12E111FE26A270031D757 /* AFHTTPSessionManager+Synchronous.h */,
+				18B12E121FE26A270031D757 /* AFHTTPSessionManager+Synchronous.m */,
+			);
+			path = Synchronous;
 			sourceTree = "<group>";
 		};
 		18D6D0AB1FC5626C005305ED /* UITableView */ = {
@@ -1640,6 +1653,7 @@
 				189E29211FBD3A27008D9027 /* FJWaterfallFlowLayout.m in Sources */,
 				18A94BC31FC41E8D00032B5B /* AFHTTPSessionManager.m in Sources */,
 				180022C61FC2DDC200C5E414 /* NSTimer+YYAdd.m in Sources */,
+				18B12E131FE26A280031D757 /* AFHTTPSessionManager+Synchronous.m in Sources */,
 				180022D51FC2DDC200C5E414 /* YYKeychain.m in Sources */,
 				189E291E1FBD3A27008D9027 /* UITableView+XSAnimationKit.m in Sources */,
 				189E29281FBD3A27008D9027 /* LewPopupBackgroundView.m in Sources */,
