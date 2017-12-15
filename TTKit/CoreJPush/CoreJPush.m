@@ -6,19 +6,19 @@
 //  Copyright © 2017年 shang. All rights reserved.
 //
 
-#import "CoreJPush.h"
-#import "JPUSHService.h"
+#import "AppDelegate+JPush.h"
 #import <UIKit/UIKit.h>
 #import <UserNotifications/UserNotifications.h>
-#import "AppDelegate+JPush.h"
+#import "JPUSHService.h"
+#import "CoreJPush.h"
 
-#define JPushAppKey @"092c4cd3687381404725c339"
-#define JPushChannel @"AppStore"
+#define kJPushAppKey @"092c4cd3687381404725c339"
+#define kJPushChannel @"AppStore"
 
 #ifdef DEBUG
-#define JPushIsProduction NO  //NO测试环境
+#define kJPushIsProduction NO  //NO测试环境
 #else
-#define JPushIsProduction YES //YES生产环境
+#define kJPushIsProduction YES //YES生产环境
 #endif
 
 @interface CoreJPush ()
@@ -73,17 +73,44 @@ static id _instace;
     //注册
     id delegate = (id<JPUSHRegisterDelegate>)[UIApplication sharedApplication].delegate;
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:delegate];
-
+    
     //配置
-    [JPUSHService setupWithOption:launchOptions appKey:JPushAppKey
-                          channel:JPushChannel
-                 apsForProduction:JPushIsProduction
+    [JPUSHService setupWithOption:launchOptions appKey:kJPushAppKey
+                          channel:kJPushChannel
+                 apsForProduction:kJPushIsProduction
             advertisingIdentifier:nil];
     
     //自定义消息通知
-//    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-//    [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
+    //    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    //    [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
 }
+
++ (void)registerJPushWithOption:(NSDictionary *)launchOptions appKey:(NSString *)JPushAppKey apsForProduction:(BOOL)isProduction {
+    
+    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        // 可以添加自定义categories
+        //entity.categories = [NSSet setWithObjects:@"", nil];
+        // NSSet<UNNotificationCategory *> *categories for iOS10 or later
+        // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
+    }
+    //注册
+    id delegate = (id<JPUSHRegisterDelegate>)[UIApplication sharedApplication].delegate;
+    [JPUSHService registerForRemoteNotificationConfig:entity delegate:delegate];
+    
+    //配置
+    [JPUSHService setupWithOption:launchOptions appKey:JPushAppKey
+                          channel:kJPushChannel
+                 apsForProduction:isProduction
+            advertisingIdentifier:nil];
+    
+    //自定义消息通知
+    //    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    //    [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
+    
+}
+
 
 /** 添加监听者 */
 + (void)addJPushObserver:(id<CoreJPushDelegate>)observer{
@@ -117,8 +144,12 @@ static id _instace;
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     NSInteger now = badge;
-    if (@available(iOS 10,*)) [[UNUserNotificationCenter currentNotificationCenter] removeAllPendingNotificationRequests];
-    else [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    if (@available(iOS 10,*)) {
+        [[UNUserNotificationCenter currentNotificationCenter] removeAllPendingNotificationRequests];
+    }
+    else{
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    }
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     [UIApplication sharedApplication].applicationIconBadgeNumber = now;
     [JPUSHService setBadge:now];
@@ -140,8 +171,12 @@ static id _instace;
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     NSInteger now = badge - 1;
-    if (@available(iOS 10,*)) [[UNUserNotificationCenter currentNotificationCenter] removeAllPendingNotificationRequests];
-    else [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    if (@available(iOS 10,*)) {
+        [[UNUserNotificationCenter currentNotificationCenter] removeAllPendingNotificationRequests];
+    }
+    else{
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+    }
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     [UIApplication sharedApplication].applicationIconBadgeNumber = now;
     [JPUSHService setBadge:now];

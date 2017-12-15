@@ -110,7 +110,7 @@ _Pragma("clang diagnostic pop") \
 
 //*****************config************************
 
-//appid 上架后由Apple指定
+//appid 由开发者账号后台创建应用时生成
 #define kAppID @"122321"
 
 

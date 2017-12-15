@@ -12,7 +12,7 @@
 @required
 
 /**
- 有消息推送时 会调起次方法 （app在前台时也会调用需要自己判断）
+ 有消息推送时 会调起此方法 （app在前台时也会调用需要自己判断）
  
  @param userInfo 通知信息
  */
@@ -27,8 +27,13 @@
 + (instancetype)new NS_UNAVAILABLE;
 
 + (instancetype)sharedCoreJPush;
+
 /** 注册JPush */
 + (void)registerJPush:(NSDictionary *)launchOptions;
+
++ (void)registerJPushWithOption:(NSDictionary *)launchOptions
+                         appKey:(NSString *)JPushAppKey
+               apsForProduction:(BOOL) isProduction;
 
 /** 添加监听者 配合removeJPushObserver使用*/
 + (void)addJPushObserver:(id<CoreJPushDelegate>)observer;
