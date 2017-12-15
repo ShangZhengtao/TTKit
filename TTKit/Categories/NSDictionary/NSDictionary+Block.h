@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDictionary (Block)
+
 #pragma mark - Manipulation
+
 - (NSDictionary *)dictionaryByAddingEntriesFromDictionary:(NSDictionary *)dictionary;
 - (NSDictionary *)dictionaryByRemovingEntriesWithKeys:(NSSet *)keys;
 
 #pragma mark - RX
+
 - (void)each:(void (^)(id k, id v))block;
 - (void)eachKey:(void (^)(id k))block;
 - (void)eachValue:(void (^)(id v))block;

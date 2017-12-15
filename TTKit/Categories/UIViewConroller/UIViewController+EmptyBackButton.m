@@ -33,6 +33,7 @@
 }
 
 #pragma mark - Method Swizzling
+
 - (void)mob_viewDidLoad {
     [self mob_viewDidLoad];
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];

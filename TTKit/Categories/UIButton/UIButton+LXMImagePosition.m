@@ -18,7 +18,6 @@
     CGFloat labelWidth = [self.titleLabel.text sizeWithFont:self.titleLabel.font].width;
     CGFloat labelHeight = [self.titleLabel.text sizeWithFont:self.titleLabel.font].height;
 #pragma clang diagnostic pop
-    
     CGFloat imageOffsetX = (imageWith + labelWidth) / 2 - imageWith / 2;//image中心移动的x距离
     CGFloat imageOffsetY = imageHeight / 2 + spacing / 2;//image中心移动的y距离
     CGFloat labelOffsetX = (imageWith + labelWidth / 2) - (imageWith + labelWidth) / 2;//label中心移动的x距离
@@ -48,7 +47,6 @@
         default:
             break;
     }
-    
 }
 
 @end

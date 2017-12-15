@@ -9,23 +9,18 @@
 #import <objc/runtime.h>
 #import <Foundation/Foundation.h>
 
-
 #ifndef NULLSAFE_ENABLED
 #define NULLSAFE_ENABLED 1
 #endif
 
-
 #pragma GCC diagnostic ignored "-Wgnu-conditional-omitted-operand"
-
 
 @implementation NSNull (NullSafe)
 
 #if NULLSAFE_ENABLED
 
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector
-{
-    @synchronized([self class])
-    {
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector {
+    @synchronized([self class]) {
         //look up method signature
         NSMethodSignature *signature = [super methodSignatureForSelector:selector];
         if (!signature)
@@ -99,12 +94,10 @@
     }
 }
 
-- (void)forwardInvocation:(NSInvocation *)invocation
-{
+- (void)forwardInvocation:(NSInvocation *)invocation {
     invocation.target = nil;
     [invocation invoke];
 }
-
 #endif
 
 @end

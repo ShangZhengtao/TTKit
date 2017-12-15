@@ -288,10 +288,11 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 }
 
 // Badge has a bounce animation when value changes
--(BOOL) shouldAnimateBadge {
+- (BOOL) shouldAnimateBadge {
     NSNumber *number = objc_getAssociatedObject(self, &UIBarButtonItem_shouldAnimateBadgeKey);
     return number.boolValue;
 }
+
 - (void)setShouldAnimateBadge:(BOOL)shouldAnimateBadge
 {
     NSNumber *number = [NSNumber numberWithBool:shouldAnimateBadge];
@@ -300,7 +301,6 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
         [self refreshBadge];
     }
 }
-
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 11000
 
@@ -328,8 +328,5 @@ NSString const *UIBarButtonItem_badgeValueKey = @"UIBarButtonItem_badgeValueKey"
 
 #endif
 
-
-
-
-
 @end
+

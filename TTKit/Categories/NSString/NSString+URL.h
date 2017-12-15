@@ -16,4 +16,5 @@
  @return 参数键值对
  */
 - (NSMutableDictionary *)getURLParameters;
+
 @end

@@ -10,7 +10,8 @@
 #import <UIKit/UIKit.h>
 
 @interface NSArray (SafeAccess)
--(id)objectWithIndex:(NSUInteger)index;
+
+- (id)objectWithIndex:(NSUInteger)index;
 
 - (NSString*)stringWithIndex:(NSUInteger)index;
 
@@ -51,6 +52,7 @@
 - (CGSize)sizeWithIndex:(NSUInteger)index;
 
 - (CGRect)rectWithIndex:(NSUInteger)index;
+
 @end
 
 
@@ -81,4 +83,5 @@
 -(void)addSize:(CGSize)o;
 
 -(void)addRect:(CGRect)o;
+
 @end

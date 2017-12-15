@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface ESEncryptor : NSObject
+
 /**
  加密字符串 保存为二进制数据在本地
  
@@ -34,11 +35,10 @@
  解密字典
  */
 + (NSDictionary*)es_decryptDictionary:(NSData*)decryptionData;
+
 @end
 
-
 @interface NSData (ESEncryptor)
-
 
 - (NSData *)es_AES256EncryptWithKey:(NSString *)key;   //加密
 
@@ -47,6 +47,5 @@
 - (NSString *)es_newStringInBase64FromData;            //追加64编码
 
 + (NSString*)es_base64encode:(NSString*)str;           //同上64编码
-
 
 @end

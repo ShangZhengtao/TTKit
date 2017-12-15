@@ -141,8 +141,8 @@
     return [NSString stringWithFormat:@"#%@%@%@%@",r,g,b,a];
 }
 
-
 #pragma mark Hex String From UIColor
+
 +(NSString *)es_hexStringWithUIColor:(UIColor *)color{
     NSString *r = [NSString stringWithFormat:@"%@", [self decimalConvertToHexString:ceil([UIColor es_redValueWithUIColor:color] * 255)]];
     NSString *g = [NSString stringWithFormat:@"%@", [self decimalConvertToHexString:ceil([UIColor es_greenValueWithUIColor:color] * 255)]];
@@ -152,16 +152,14 @@
     return [NSString stringWithFormat:@"#%@%@%@%@",r,g,b,a];
 }
 
-
-
 #pragma mark r g b a value
 //red value
-+ (CGFloat)es_redValueWithUIColor:(UIColor *)color{
++ (CGFloat)es_redValueWithUIColor:(UIColor *)color {
     return CGColorGetComponents(color.CGColor)[0];
 }
 
 //green value
-+ (CGFloat)es_greenValueWithUIColor:(UIColor *)color{
++ (CGFloat)es_greenValueWithUIColor:(UIColor *)color {
     NSUInteger count = CGColorGetNumberOfComponents(color.CGColor);
     if (count == 2) {
         return CGColorGetComponents(color.CGColor)[0];
@@ -186,32 +184,29 @@
     return CGColorGetComponents(color.CGColor)[count - 1];
 }
 
-
-
 #pragma mark r g b a string
-+ (NSString *)es_redStringWithUIColor:(UIColor *)color{
++ (NSString *)es_redStringWithUIColor:(UIColor *)color {
     return [NSString stringWithFormat:@"%lf", [[self class] es_redValueWithUIColor:color]];
 }
 
 /** green From UIColor */
-+ (NSString *)es_greenStringWithUIColor:(UIColor *)color{
++ (NSString *)es_greenStringWithUIColor:(UIColor *)color {
     return [NSString stringWithFormat:@"%lf", [[self class] es_greenValueWithUIColor:color]];
 }
 
 /** blue From UIColor */
-+ (NSString *)es_blueStringWithUIColor:(UIColor *)color{
++ (NSString *)es_blueStringWithUIColor:(UIColor *)color {
     return [NSString stringWithFormat:@"%lf", [[self class] es_blueValueWithUIColor:color]];
 }
 
-+ (NSString *)es_alphaStringWithUIColor:(UIColor *)color{
++ (NSString *)es_alphaStringWithUIColor:(UIColor *)color {
     return [NSString stringWithFormat:@"%lf", [[self class] es_alphaValueWithUIColor:color]];
 }
 
 
 #pragma mark decimal convert to hexadecimal
 //十进制转十六进制 decimal convert to hexadecimal
-+(NSString *)decimalConvertToHexString:(int)tmpid
-{
++(NSString *)decimalConvertToHexString:(int)tmpid {
     NSString *endtmp=@"";
     NSString *nLetterValue;
     NSString *nStrat;
@@ -232,7 +227,6 @@
         case 15:
             nLetterValue =@"F";break;
         default:nLetterValue=[[NSString alloc]initWithFormat:@"%i",ttmpig];
-            
     }
     switch (tmp)
     {
@@ -249,7 +243,6 @@
         case 15:
             nStrat =@"F";break;
         default:nStrat=[[NSString alloc]initWithFormat:@"%i",tmp];
-            
     }
     endtmp=[[NSString alloc]initWithFormat:@"%@%@",nStrat,nLetterValue];
     return endtmp;
@@ -257,8 +250,7 @@
 
 + (UIColor *)es_transitionStartColor:(UIColor *)startColor
                             endColor:(UIColor *)endColor
-                         coefficient:(double)coefficient
-{
+                         coefficient:(double)coefficient {
     coefficient = MIN(1, coefficient);
     coefficient = MAX(0, coefficient);
     
@@ -281,6 +273,4 @@
     return transitionColor;
 }
 
-
 @end
-

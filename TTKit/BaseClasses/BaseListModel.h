@@ -13,4 +13,5 @@
 @property (nonatomic, strong) NSArray *allListModels;
 /**模拟数据*/
 +(instancetype)defaultData;
+
 @end

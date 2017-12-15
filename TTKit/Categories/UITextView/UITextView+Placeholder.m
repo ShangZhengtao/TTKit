@@ -49,7 +49,6 @@
     [self swizzledDealloc];
 }
 
-
 #pragma mark - Class Methods
 #pragma mark `defaultPlaceholderColor`
 
@@ -64,7 +63,6 @@
     return color;
 }
 
-
 #pragma mark - `observingKeys`
 
 + (NSArray *)observingKeys {
@@ -76,7 +74,6 @@
              @"textAlignment",
              @"textContainerInset"];
 }
-
 
 #pragma mark - Properties
 #pragma mark `placeholderLabel`
@@ -141,7 +138,6 @@
     self.placeholderLabel.textColor = placeholderColor;
 }
 
-
 #pragma mark `needsUpdateFont`
 
 - (BOOL)needsUpdateFont {
@@ -151,7 +147,6 @@
 - (void)setNeedsUpdateFont:(BOOL)needsUpdate {
     objc_setAssociatedObject(self, @selector(needsUpdateFont), @(needsUpdate), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-
 
 #pragma mark - KVO
 

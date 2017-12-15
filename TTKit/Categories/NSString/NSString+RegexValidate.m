@@ -10,7 +10,6 @@
 
 @implementation NSString (RegexValidate)
 
-
 // Validate Code
 - (BOOL)isValidNumber{
     NSCharacterSet * cs = [[NSCharacterSet characterSetWithCharactersInString:@"0123456789."] invertedSet];
@@ -24,15 +23,11 @@
     return ([self length] <= 32);
 }
 
-
 - (BOOL)isValidEmail{
-    
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:self];
 }
-
-
 
 - (BOOL)isValidMobile{
     
@@ -86,8 +81,7 @@
 }
 
 //判断手机号码，1开头的十一位数字
--(BOOL)checkMobile
-{
+-(BOOL)checkMobile {
     NSString *Regex = @"1\\d{10}";
     NSPredicate *Test = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", Regex];
     return [Test evaluateWithObject:self];
@@ -95,11 +89,11 @@
 
 
 //**判断密码，6－20位*/
-- (BOOL)isValidPassword{
+- (BOOL)isValidPassword {
     return ([self length] >= 6 && [self length] <= 20);
 }
 
-- (BOOL)isValidZipCode{
+- (BOOL)isValidZipCode {
     const char *cvalue = [self UTF8String];
     int len = (int)strlen(cvalue);
     if (len != 6) {
@@ -114,9 +108,7 @@
     return YES;
 }
 
-
-- (BOOL)isValidateIdentityCard
-{
+- (BOOL)isValidateIdentityCard {
     BOOL flag;
     if (self.length <= 0) {
         flag = NO;
@@ -126,7 +118,6 @@
     NSPredicate *identityCardPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
     return [identityCardPredicate evaluateWithObject:self];
 }
-
 
 //http://www.faceye.net/search/90801.html
 //http://www.jianshu.com/p/2597d4c3a183
@@ -139,8 +130,6 @@
                                                           withTemplate:@""];
     return modifiedString;
 }
-
-
 
 - (NSString *)filterEmoji_ForString {
     NSUInteger len = [self lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
@@ -188,44 +177,6 @@
 
 //https://my.oschina.net/xohome/blog/700546
 - (BOOL)isContainsEmoji{
-//    __block BOOL returnValue = NO;
-//    
-//    [self enumerateSubstringsInRange:NSMakeRange(0, [self length])
-//                               options:NSStringEnumerationByComposedCharacterSequences
-//                            usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
-//                                const unichar hs = [substring characterAtIndex:0];
-//                                if (0xd800 <= hs && hs <= 0xdbff) {
-//                                    if (substring.length > 1) {
-//                                        const unichar ls = [substring characterAtIndex:1];
-//                                        const int uc = ((hs - 0xd800) * 0x400) + (ls - 0xdc00) + 0x10000;
-//                                        if (0x1d000 <= uc && uc <= 0x1f77f) {
-//                                            returnValue = YES;
-//                                        }
-//                                    }
-//                                } else if (substring.length > 1) {
-//                                    const unichar ls = [substring characterAtIndex:1];
-//                                    if (ls == 0x20e3) {
-//                                        returnValue = YES;
-//                                    }
-//                                } else {
-//                                    if (0x2100 <= hs && hs <= 0x27ff) {
-//                                        returnValue = YES;
-//                                    } else if (0x2B05 <= hs && hs <= 0x2b07) {
-//                                        returnValue = YES;
-//                                    } else if (0x2934 <= hs && hs <= 0x2935) {
-//                                        returnValue = YES;
-//                                    } else if (0x3297 <= hs && hs <= 0x3299) {
-//                                        returnValue = YES;
-//                                    } else if (hs == 0xa9 || hs == 0xae || hs == 0x303d || hs == 0x3030 || hs == 0x2b55 || hs == 0x2b1c || hs == 0x2b1b || hs == 0x2b50) {
-//                                        returnValue = YES;
-//                                    }
-//                                }
-//                            }];
-//    
-//    return returnValue;
-    
-    
-    
     NSUInteger len = [self lengthOfBytesUsingEncoding:NSUTF8StringEncoding];
     if (len < 3) {  // 大于2个字符需要验证Emoji(有些Emoji仅三个字符)
         return NO;
@@ -254,31 +205,21 @@
             v |= bts[i + 1] & 0x3F;
             v = v << 6;
             v |= bts[i + 2] & 0x3F;
-            
-            //            NSLog(@"%02X%02X", (Byte)(v >> 8), (Byte)(v & 0xFF));
-            
             if ([self emojiInSoftBankUnicode:v] || [self emojiInUnicode:v]) {
                 return YES;
             }
-            
             i += 2;
             continue;
         }
         if ((bt | 0x3F) == 0xBF) {  // 10xxxxxx  10开头,为数据字节,直接过滤
             continue;
         }
-        
         return YES;                 // 不是以上情况的字符全部超过三个字节,做Emoji处理
     }
-    
     return NO;
-    
 }
 
-
-
-- (BOOL) emojiInUnicode:(short)code
-{
+- (BOOL) emojiInUnicode:(short)code {
     if (code == 0x0023
         || code == 0x002A
         || (code >= 0x0030 && code <= 0x0039)
@@ -375,8 +316,6 @@
     return NO;
 }
 
-
-
 /**
  * 一种非官方的, 采用私有Unicode 区域
  * e0 - e5  01 - 59
@@ -385,8 +324,6 @@
 {
     return ((code >> 8) >= 0xE0 && (code >> 8) <= 0xE5 && (Byte)(code & 0xFF) < 0x60);
 }
-
-
 
 - (BOOL)isBlankString{
     if (self == nil || self == NULL) return YES;
@@ -415,28 +352,24 @@
 }
 
 - (BOOL)includeEnglish{
-//    NSString *perchar;
+    //    NSString *perchar;
     int alength = (int)[self length];
     for (int i = 0; i<alength; i++) {
         char commitChar = [self characterAtIndex:i];
-//        NSString *temp = [self substringWithRange:NSMakeRange(i,1)];
-//        const char *u8Temp = [temp UTF8String];
-         if((commitChar>64)&&(commitChar<91)){
-//            NSLog(@"字符串中含有大写英文字母");
-             return YES;
+        //        NSString *temp = [self substringWithRange:NSMakeRange(i,1)];
+        //        const char *u8Temp = [temp UTF8String];
+        if((commitChar>64)&&(commitChar<91)){
+            //            NSLog(@"字符串中含有大写英文字母");
+            return YES;
         }else if((commitChar>96)&&(commitChar<123)){
-//            NSLog(@"字符串中含有小写英文字母");
+            //            NSLog(@"字符串中含有小写英文字母");
             return YES;
         }else if((commitChar>47)&&(commitChar<58)){
-//            NSLog(@"字符串中含有数字");
+            //            NSLog(@"字符串中含有数字");
             return YES;
         }
     }
-
-    
     return NO;
 }
-
-
 
 @end

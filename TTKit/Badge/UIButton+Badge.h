@@ -11,7 +11,6 @@
 @interface UIButton (Badge)
 
 @property (strong, nonatomic) UILabel *badge;
-
 // Badge value to be display
 @property (nonatomic) NSString *badgeValue;
 // Badge background color

@@ -10,7 +10,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface NSUserDefaults (iCloudSync)
 
 -(void)setValue:(id)value  forKey:(NSString *)key iCloudSync:(BOOL)sync;

@@ -14,8 +14,10 @@
 <UITabBarControllerDelegate,
 CoreJPushDelegate
 >
+
 /**index*/
 @property (nonatomic, assign) NSInteger indexFlag;
+
 @end
 
 @implementation BaseTabBarViewController
@@ -96,8 +98,8 @@ CoreJPushDelegate
     [[tabbarbuttonArray[index] layer] addAnimation:spring forKey:nil];
 }
 
-
 #pragma mark - Push
+
 - (void)didReceiveRemoteNotification:(NSDictionary *)userInfo {
     NSLog(@"推送消息：\n%@",userInfo);
 //    NSDictionary *apns = [userInfo objectForKey:@"aps"];
@@ -106,7 +108,6 @@ CoreJPushDelegate
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
     [alertVC addAction:cancel];
     [self presentViewController:alertVC animated:YES completion:nil];
-
 }
 
 @end

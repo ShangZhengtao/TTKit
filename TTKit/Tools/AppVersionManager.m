@@ -22,14 +22,12 @@ static NSString *const VERSION_STATE = @"MY_APP_VERSION_STATE";
 }
 
 + (void)updateAPPWithAppleId:(NSString *)appleId{
-    
-    //http://fuckingclangwarnings.com/
+//http://fuckingclangwarnings.com/
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     [[UIApplication sharedApplication]openURL:[NSURL URLWithString:\
                                                [NSString stringWithFormat:APPLE_STORE_UPDATE_API,appleId]]];
 #pragma clang diagnostic pop
-    
 }
 
 + (NSString *)appDownloadURLWithAppleId:(NSString *)appleId {
@@ -37,7 +35,7 @@ static NSString *const VERSION_STATE = @"MY_APP_VERSION_STATE";
 }
 
 + (void)checkOnlineWithURL:(NSString *)urlString {
-     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kIsOnline];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kIsOnline];
     __block dispatch_semaphore_t disp = dispatch_semaphore_create(0);
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];

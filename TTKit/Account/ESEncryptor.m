@@ -8,7 +8,6 @@
 
 #import "ESEncryptor.h"
 
-
 #define kEncryptionKey  @"5E29C2DD8C8176BB480D46CBFAD916E3"
 
 @implementation ESEncryptor
@@ -22,7 +21,6 @@
 + (NSData*)es_encrypt:(NSString*)encryptionString{
     NSData *plain = [encryptionString dataUsingEncoding:NSUTF8StringEncoding];
     NSData *cipher = [plain es_AES256EncryptWithKey:kEncryptionKey];
-    
     return cipher;
 }
 
@@ -63,9 +61,7 @@
 
 static char base64[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 
-
 @implementation NSData(ESEncryptor)
-
 
 - (NSData *)es_AES256EncryptWithKey:(NSString *)key {
     // 'key' should be 32 bytes for AES256, will be null-padded otherwise

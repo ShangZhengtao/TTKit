@@ -9,17 +9,19 @@
 #import "LocationManager.h"
 
 @interface LocationManager ()<CLLocationManagerDelegate>
+
 @property (nonatomic, strong) CLLocationManager *clmanager;
 @property (nonatomic, copy) void(^placeMarkHandler)(CLPlacemark *placeMark);
 @property (nonatomic, copy) void(^locationHandler)(CLLocation *location);
 @property (nonatomic, strong) MKLocalSearch *localSearch;
+
 @end
 
 @implementation LocationManager
 
 static LocationManager * manager = nil;
 
--(CLLocationManager *)clmanager{
+-(CLLocationManager *)clmanager {
     if (!_clmanager) {
         _clmanager = [[CLLocationManager alloc]init];
         _clmanager.delegate = self;
@@ -35,7 +37,7 @@ static LocationManager * manager = nil;
     return _localSearch;
 }
 
-+ (instancetype)shareManager{
++ (instancetype)shareManager {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[LocationManager alloc]init];
@@ -58,8 +60,7 @@ static LocationManager * manager = nil;
 
 - (void)localSearchWithString:(NSString *)searchText
                        region:(CLCircularRegion *)region
-            completionHandler:(void (^)(MKLocalSearchResponse *)) handler{
-    
+            completionHandler:(void (^)(MKLocalSearchResponse *)) handler {
     MKCoordinateRegion mkregion = MKCoordinateRegionMakeWithDistance(region.center, region.radius, region.radius);
     MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc]init];
     request.naturalLanguageQuery = searchText;
@@ -77,7 +78,7 @@ static LocationManager * manager = nil;
 
 - (void)nearLocalSearchByString:(NSString *)searchText
                    searchRadius:(double)radius
-              completionHandler:(void (^)(MKLocalSearchResponse *)) handler{
+              completionHandler:(void (^)(MKLocalSearchResponse *)) handler {
     __weak typeof(self) weakSelf = self;
     [self getCurrentPlacemark:^(CLPlacemark *mark) {
         CLCircularRegion *region = [[CLCircularRegion alloc]initWithCenter:mark.location.coordinate radius:radius identifier:@""];
@@ -86,7 +87,6 @@ static LocationManager * manager = nil;
             !handler ?: handler(response);
         }];
     }];
-    
 }
 
 #pragma mark - CLLocationManagerDelegate
@@ -101,7 +101,6 @@ static LocationManager * manager = nil;
         
         !self.placeMarkHandler ?:  self.placeMarkHandler(placeMark);
     }];
-    
     [self.clmanager stopUpdatingLocation];
     self.clmanager = nil;
 }

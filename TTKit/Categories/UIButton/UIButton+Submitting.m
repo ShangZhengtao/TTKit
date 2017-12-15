@@ -56,7 +56,6 @@
     if (!self.isSubmitting.boolValue) {
         return;
     }
-    
     self.submitting = @NO;
     self.hidden = NO;
     
@@ -85,7 +84,6 @@
 
 - (UIView *)modalView {
     return objc_getAssociatedObject(self, @selector(setModalView:));
-
 }
 
 - (void)setModalView:(UIView *)modalView {

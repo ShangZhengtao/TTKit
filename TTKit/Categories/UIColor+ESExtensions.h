@@ -27,7 +27,6 @@
 /** UIColor from hex  alpha = 1.0 */
 + (UIColor *)es_colorWithHex:(long)hex alpha:(float)alpha;
 
-
 #pragma mark  UIColor From Hex String 颜色转十六进制字符串
 /** UIColor from hex string  alpha = 1.0 */
 + (UIColor *)es_colorWithHexString: (NSString *)hexString;

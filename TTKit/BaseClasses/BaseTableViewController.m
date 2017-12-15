@@ -9,6 +9,7 @@
 #import "BaseTableViewController.h"
 #import "BaseListModel.h"
 #import "TTMacros.h"
+
 NSString *const kTableViewDefaultCellID = @"kTableViewDefaultCellID"; //缺省cell
 
 @interface BaseTableViewController ()
@@ -17,7 +18,7 @@ NSString *const kTableViewDefaultCellID = @"kTableViewDefaultCellID"; //缺省ce
 
 @implementation BaseTableViewController
 
-- (UITableView *)tableView{
+- (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.backgroundColor = [UIColor whiteColor];
@@ -60,7 +61,6 @@ NSString *const kTableViewDefaultCellID = @"kTableViewDefaultCellID"; //缺省ce
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTableViewDefaultCellID forIndexPath:indexPath];
     cell.backgroundColor = kRandomColor;
     return cell;
@@ -69,7 +69,6 @@ NSString *const kTableViewDefaultCellID = @"kTableViewDefaultCellID"; //缺省ce
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 
 //- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    return 44;
@@ -82,7 +81,5 @@ NSString *const kTableViewDefaultCellID = @"kTableViewDefaultCellID"; //缺省ce
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0.000001;
 }
-
-
 
 @end

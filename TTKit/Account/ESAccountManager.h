@@ -31,12 +31,9 @@ typedef NS_ENUM(NSInteger, ESGenderType) {
 /** 用户性别 默认 保密*/
 @property (nonatomic, copy) NSString *genderDescription;
 
-
 + (ESAccountManager *)defaultManager;
 
-
 #pragma mark getters
-
 
 /** 登录类型 默认 ESAccountTypeAppPlatfrom */
 - (ESAccountType)accountType;
@@ -69,7 +66,6 @@ typedef NS_ENUM(NSInteger, ESGenderType) {
 
 #pragma mark reset
 
-
 /**重置登录类型*/
 - (void)resetAccountType:(ESAccountType) newAccountType;
 /**重置用户ID*/
@@ -98,7 +94,6 @@ typedef NS_ENUM(NSInteger, ESGenderType) {
 - (void)resetEmail:(NSString *)newEmail;
 /** 重置第三方登录数据*/
 - (void)resetVendorData:(NSDictionary *)newVendorData;
-
 /** 重置所有用户信息*/
 - (void)resetAccountInfo;
 
@@ -123,6 +118,5 @@ typedef NS_ENUM(NSInteger, ESGenderType) {
 @property (nonatomic, copy) NSString *birthday;
 @property (nonatomic, copy) NSString *email;
 @property (nonatomic, strong) NSDictionary *vendorData;
-
 
 @end

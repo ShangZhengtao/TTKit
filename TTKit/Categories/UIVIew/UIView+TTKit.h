@@ -8,14 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-
 typedef NS_OPTIONS(NSUInteger, TTMotionEffectOptions) {
     TTMotionEffectOptionHorizontal    = 1 << 0,
     TTMotionEffectOptionVertical      = 1 << 1,
 };
 
 @interface UIView (TTKit)
-
 
 /**
  请在frame 设置之后调用
@@ -32,7 +30,6 @@ typedef NS_OPTIONS(NSUInteger, TTMotionEffectOptions) {
  @param radius 圆角半径
  */
 - (void)setCornerAtCorner:(UIRectCorner)corner withRadius:(CGFloat)radius;
-
 
 /**
  为 view 添加 透视特效

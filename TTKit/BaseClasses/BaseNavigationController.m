@@ -9,6 +9,7 @@
 #import "BaseNavigationController.h"
 #import "TTMacros.h"
 #import "WRNavigationBar.h"
+
 @interface BaseNavigationController ()<UINavigationControllerDelegate>
 
 @end
@@ -56,7 +57,7 @@
     //    self.tabBarController.tabBar.frame = frame;
 }
 
-- (void)back{
+- (void)back {
     [self popViewControllerAnimated:YES];
 }
 

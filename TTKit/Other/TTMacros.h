@@ -21,23 +21,23 @@
 
 //✨设备尺寸
 #define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
-#define kNavBarHeight 44.0
-#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
-#define kTopHeight (kStatusBarHeight + kNavBarHeight)
+#define kNavBarHeight   44.0
+#define kTabBarHeight   ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define kTopHeight      (kStatusBarHeight + kNavBarHeight)
 
 #define kScreenWidth    [[UIScreen mainScreen] bounds].size.width
 #define kScreenHeight   [[UIScreen mainScreen] bounds].size.height
 #define kScreenBounds   [UIScreen mainScreen].bounds
 
-#define kiPhone6ScaleWidth KScreenWidth/375.0
-#define kiPhone6ScaleHeight KScreenHeight/667.0
-#define kRealValue(with) ((with)*(KScreenWidth/375.0f)) //根据iPhone6(4.7寸)的屏幕来拉伸
+#define kiPhone6ScaleWidth  (kScreenWidth/375.0)
+#define kiPhone6ScaleHeight (kScreenHeight/667.0)
+#define kRealValue(with)    ((with)*(kScreenWidth/375.0f)) //根据iPhone6(4.7寸)的屏幕来拉伸
 
-#define kiPhone4  ([UIScreen mainScreen].bounds.size.height == 480)
-#define kiPhone5  ([UIScreen mainScreen].bounds.size.height == 568)
-#define kiPhone6  ([UIScreen mainScreen].bounds.size.height == 667)
-#define kiPhone6Plus  ([UIScreen mainScreen].bounds.size.height == 736)
-#define kiPhoneX ([UIScreen mainScreen].bounds.size.height == 812)
+#define kiPhone4        ([UIScreen mainScreen].bounds.size.height == 480)
+#define kiPhone5        ([UIScreen mainScreen].bounds.size.height == 568)
+#define kiPhone6        ([UIScreen mainScreen].bounds.size.height == 667)
+#define kiPhone6Plus    ([UIScreen mainScreen].bounds.size.height == 736)
+#define kiPhoneX        ([UIScreen mainScreen].bounds.size.height == 812)
 
 //✨系统信息
 //iOS 版本判断

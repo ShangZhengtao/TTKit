@@ -4,24 +4,18 @@
 //  Created by Riccardo Paolillo on 09/05/13.
 //  Copyright (c) 2013. All rights reserved.
 //
-
-
 #import "NSUserDefaults+iCloudSync.h"
-
 
 @implementation NSUserDefaults (iCloudSync)
 
-
--(void)setValue:(id)value forKey:(NSString *)key iCloudSync:(BOOL)sync
-{
+- (void)setValue:(id)value forKey:(NSString *)key iCloudSync:(BOOL)sync {
     if (sync)
         [[NSUbiquitousKeyValueStore defaultStore] setValue:value forKey:key];
     
     [self setValue:value forKey:key];
 }
 
--(id)valueForKey:(NSString *)key iCloudSync:(BOOL)sync
-{
+- (id)valueForKey:(NSString *)key iCloudSync:(BOOL)sync {
     if (sync)
     {
         //Get value from iCloud
@@ -37,23 +31,18 @@
     return [self valueForKey:key];
 }
 
-- (void)removeValueForKey:(NSString *)key iCloudSync:(BOOL)sync
-{
+- (void)removeValueForKey:(NSString *)key iCloudSync:(BOOL)sync {
     [self removeObjectForKey:key iCloudSync:sync];
 }
 
-
-
--(void)setObject:(id)value forKey:(NSString *)defaultName iCloudSync:(BOOL)sync
-{
+-(void)setObject:(id)value forKey:(NSString *)defaultName iCloudSync:(BOOL)sync {
     if (sync)
         [[NSUbiquitousKeyValueStore defaultStore] setObject:value forKey:defaultName];
     
     [self setObject:value forKey:defaultName];
 }
 
--(id)objectForKey:(NSString *)key iCloudSync:(BOOL)sync
-{
+-(id)objectForKey:(NSString *)key iCloudSync:(BOOL)sync {
     if (sync)
     {
         //Get value from iCloud
@@ -69,8 +58,7 @@
     return [self objectForKey:key];
 }
 
-- (void)removeObjectForKey:(NSString *)key iCloudSync:(BOOL)sync
-{
+- (void)removeObjectForKey:(NSString *)key iCloudSync:(BOOL)sync {
     if (sync)
         [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:key];
     
@@ -78,10 +66,7 @@
     return [self removeObjectForKey:key];
 }
 
-
-
-- (BOOL)synchronizeAlsoiCloudSync:(BOOL)sync
-{
+- (BOOL)synchronizeAlsoiCloudSync:(BOOL)sync {
     BOOL res = true;
     
     if (sync)

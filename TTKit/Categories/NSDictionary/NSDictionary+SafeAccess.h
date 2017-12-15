@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NSDictionary (SafeAccess)
+
 - (BOOL)hasKey:(NSString *)key;
 
 - (NSString*)stringForKey:(id)key;
@@ -56,6 +57,7 @@
 - (CGSize)sizeForKey:(id)key;
 
 - (CGRect)rectForKey:(id)key;
+
 @end
 
 #pragma --mark NSMutableDictionary setter
@@ -89,4 +91,5 @@
 -(void)setSize:(CGSize)o forKey:(NSString*)key;
 
 -(void)setRect:(CGRect)o forKey:(NSString*)key;
+
 @end

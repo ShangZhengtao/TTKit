@@ -38,7 +38,6 @@
                        region:(CLCircularRegion *)region
             completionHandler:(void (^)(MKLocalSearchResponse *)) handler;
 
-
 /**
  搜索附近
 

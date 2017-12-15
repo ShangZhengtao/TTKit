@@ -9,14 +9,11 @@
 #import "ESAccountManager.h"
 #import "ESEncryptor.h"
 
-
 @implementation ESAccountInfo
-
 
 - (instancetype)init{
     self = [super init];
     if (self) {
-        
         _accountType = [[ESEncryptor es_decrypt:[self objectInUserDefaultsForKey:@"accountType"]] integerValue];
         _userID = [ESEncryptor es_decrypt:[self objectInUserDefaultsForKey:@"userID"]];
         _password = [ESEncryptor es_decrypt:[self objectInUserDefaultsForKey:@"password"]];
@@ -35,16 +32,17 @@
     return self;
 }
 
-
 #pragma mark geters
 /** 登录类型 默认 ESSignedInTypeMytee */
 //- (ESSignedInType)signedInType{
 //    return _signedInType;
 //}
+
 /** 用户ID 默认 ""*/
 - (NSString *)userID{
     return _userID;
 }
+
 /** 用户密码 默认 ""*/
 - (NSString *)password{
     return _password;
@@ -107,14 +105,15 @@
     NSData *encryptSignedType = [ESEncryptor es_encrypt:[NSString stringWithFormat:@"%ld", (long)_accountType]];
    [self setObjectInUserDefaults:encryptSignedType withKey:@"accountType"];
 }
+
 /**重置用户ID*/
 - (void)resetUserID:(NSString *)newUserID{
     _userID = newUserID;
-    
+
     NSData *encryptUserID = [ESEncryptor es_encrypt:_userID];
     [self setObjectInUserDefaults:encryptUserID withKey:@"userID"];
-    
 }
+
 /** 重置用户密码*/
 - (void)resetPassword:(NSString *)newPassword{
     _password = newPassword;
@@ -122,6 +121,7 @@
     NSData *encryptPassword = [ESEncryptor es_encrypt:_password];
     [self setObjectInUserDefaults:encryptPassword withKey:@"password"];
 }
+
 /** 重置token*/
 - (void)resetToken:(NSString *)newToken{
     _token = newToken;
@@ -129,6 +129,7 @@
     NSData *encryptToken = [ESEncryptor es_encrypt:_token];
     [self setObjectInUserDefaults:encryptToken withKey:@"token"];
 }
+
 /** 重置 refresh token*/
 - (void)resetRefreshToken:(NSString *)newRefreshToken{
     _refreshToken = newRefreshToken;
@@ -145,6 +146,7 @@
     NSData *encryptUsername = [ESEncryptor es_encrypt:_username];
     [self setObjectInUserDefaults:encryptUsername withKey:@"username"];
 }
+
 /** 重置用户手机号*/
 - (void)resetPhoneNumber:(NSString *)newPhoneNumber{
     _phoneNumber = newPhoneNumber;
@@ -153,12 +155,12 @@
     [self setObjectInUserDefaults:encryptPhoneNumber withKey:@"phoneNumber"];
 }
 
-
 - (void)resetGenderType:(ESGenderType)newGenderType{
     _genderType = newGenderType;
     NSData *encryptGenderType = [ESEncryptor es_encrypt:[NSString stringWithFormat:@"%ld", (long)_genderType]];
     [self setObjectInUserDefaults:encryptGenderType withKey:@"genderType"];
 }
+
 /** 重置用户昵称*/
 - (void)resetNickname:(NSString *)newNickname{
     _nickname = newNickname;
@@ -166,6 +168,7 @@
     NSData *encryptNickname = [ESEncryptor es_encrypt:_nickname];
     [self setObjectInUserDefaults:encryptNickname withKey:@"nickname"];
 }
+
 /** 重置用户头像地址*/
 - (void)resetAvatarURLPath:(NSString *)newAvatarURLPath{
     _avatarURLPath = newAvatarURLPath;
@@ -173,6 +176,7 @@
     NSData *encryptAvartarURLPath = [ESEncryptor es_encrypt:_avatarURLPath];
     [self setObjectInUserDefaults:encryptAvartarURLPath withKey:@"avatarURLPath"];
 }
+
 /** 重置用户个性签名*/
 - (void)resetSignture:(NSString *)newSignture{
     _signature = newSignture;
@@ -180,14 +184,15 @@
     NSData *encryptSignture = [ESEncryptor es_encrypt:_signature];
     [self setObjectInUserDefaults:encryptSignture withKey:@"signature"];
 }
+
 /** 重置用户生日*/
 - (void)resetBirthday:(NSString *)newBirthday{
     _birthday = newBirthday;
     
     NSData *encryptBirthday = [ESEncryptor es_encrypt:_birthday];
     [self setObjectInUserDefaults:encryptBirthday withKey:@"birthday"];
-    
 }
+
 /** 重置用户邮件地址*/
 - (void)resetEmail:(NSString *)newEmail{
     _email = newEmail;
@@ -203,10 +208,8 @@
     [self setObjectInUserDefaults:encryptVendorData withKey:@"vendorData"];
 }
 
-
 /** 重置所有用户信息*/
 - (void)resetAccountInfo{
-    
     [self resetAccountType:ESAccountTypeAppPlatfrom];
     [self resetUserID:@""];
     [self resetPassword:@""];
@@ -223,7 +226,6 @@
     [self resetVendorData:@{}];
 }
 
-
 #pragma mark private
 //目前采样NSUserDefaults存取账号信息
 - (id)objectInUserDefaultsForKey:(NSString*)key{
@@ -237,9 +239,7 @@
     [ud synchronize];
 }
 
-
 @end
-
 
 @interface ESAccountManager ()
 
@@ -247,19 +247,15 @@
 
 @end
 
-
 static ESAccountManager *_defaultManagerInstance = nil;
 
 @implementation ESAccountManager
-
-
 
 + (ESAccountManager *)defaultManager{
         static dispatch_once_t predicate;
         dispatch_once(&predicate, ^{
             _defaultManagerInstance = [[ESAccountManager alloc] init];
         });
-
     return _defaultManagerInstance;
 }
 
@@ -270,7 +266,6 @@ static ESAccountManager *_defaultManagerInstance = nil;
     }
     return self;
 }
-
 
 /** 用户是否登录 默认 NO*/
 - (BOOL)isSignedIn{
@@ -287,29 +282,28 @@ static ESAccountManager *_defaultManagerInstance = nil;
     }
 }
 
-
-
-
 /** 登录类型 默认 ESSignedInTypeMytee */
 - (ESAccountType)accountType{
     return _accountInfo.accountType;
 }
+
 /** 用户ID 默认 ""*/
 - (NSString *)userID{
     return _accountInfo.userID;
 }
+
 /** 用户密码 默认 ""*/
-- (NSString *)password{
+- (NSString *)password {
     return _accountInfo.password;
 }
 
 /** token 默认 ""*/
-- (NSString *)token{
+- (NSString *)token {
     return _accountInfo.token;
 }
 
 /** refresh token 默认 ""*/
-- (NSString *)refreshToken{
+- (NSString *)refreshToken {
     return _accountInfo.refreshToken;
 }
 
@@ -351,6 +345,7 @@ static ESAccountManager *_defaultManagerInstance = nil;
 - (NSString *)email{
     return _accountInfo.email;
 }
+
 /** 用户第三方登录数据 默认 @{} ""*/
 - (NSDictionary *)vendorData{
     return _accountInfo.vendorData;
@@ -362,18 +357,22 @@ static ESAccountManager *_defaultManagerInstance = nil;
 - (void)resetAccountType:(ESAccountType)newAccountType{
     [_accountInfo resetAccountType:newAccountType];
 }
+
 /**重置用户ID*/
 - (void)resetUserID:(NSString *)newUserID{
     [_accountInfo resetUserID:newUserID];
 }
+
 /** 重置用户密码*/
 - (void)resetPassword:(NSString *)newPassword{
     [_accountInfo resetPassword:newPassword];
 }
+
 /** 重置token*/
 - (void)resetToken:(NSString *)newToken{
     [_accountInfo resetToken:newToken];
 }
+
 /** 重置 refresh token*/
 - (void)resetRefreshToken:(NSString *)newRefreshToken{
     [_accountInfo resetRefreshToken:newRefreshToken];
@@ -383,6 +382,7 @@ static ESAccountManager *_defaultManagerInstance = nil;
 - (void)resetUsername:(NSString *)newUsername{
     [_accountInfo resetUsername:newUsername];
 }
+
 /** 重置用户手机号*/
 - (void)resetPhoneNumber:(NSString *)newPhoneNumber{
     [_accountInfo resetPhoneNumber:newPhoneNumber];
@@ -395,34 +395,36 @@ static ESAccountManager *_defaultManagerInstance = nil;
 - (void)resetNickname:(NSString *)newNickname{
     [_accountInfo resetNickname:newNickname];
 }
+
 /** 重置用户头像地址*/
 - (void)resetAvatarURLPath:(NSString *)newAvatarURLPath{
     [_accountInfo resetAvatarURLPath:newAvatarURLPath];
 }
+
 /** 重置用户个性签名*/
 - (void)resetSignture:(NSString *)newSignture{
     [_accountInfo resetSignture:newSignture];
 }
+
 /** 重置用户生日*/
 - (void)resetBirthday:(NSString *)newBirthday{
     [_accountInfo resetBirthday:newBirthday];
 }
+
 /** 重置用户邮件地址*/
 - (void)resetEmail:(NSString *)newEmail{
     [_accountInfo resetEmail:newEmail];
 }
+
 /** 重置第三方登录数据*/
 - (void)resetVendorData:(NSDictionary *)newVendorData {
     [_accountInfo resetVendorData:newVendorData];
 }
 
-#pragma mark 
 
 /** 重置所有用户信息*/
 - (void)resetAccountInfo{
     [_accountInfo resetAccountInfo];
 }
-
-
 
 @end

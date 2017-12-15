@@ -34,8 +34,7 @@
 
 @implementation UIButton (MiddleAligning)
 
-- (void)middleAlignButtonWithSpacing:(CGFloat)spacing
-{
+- (void)middleAlignButtonWithSpacing:(CGFloat)spacing {
     NSString *titleString = [self titleForState:UIControlStateNormal]?:@"";
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:titleString attributes:@{NSFontAttributeName : self.titleLabel.font}];
     CGSize titleSize = [attributedString boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
