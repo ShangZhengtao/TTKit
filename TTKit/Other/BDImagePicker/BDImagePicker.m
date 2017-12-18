@@ -9,14 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "BDImagePicker.h"
 
-@interface BDImagePicker()<UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface BDImagePicker()
+<UIActionSheetDelegate,
+UIImagePickerControllerDelegate,
+UINavigationControllerDelegate>
 
 @property (nonatomic, weak) UIViewController *viewController;
 @property (nonatomic, copy) BDImagePickerFinishAction finishAction;
 @property (nonatomic, assign) BOOL allowsEditing;
 
 @end
-
 
 static BDImagePicker *bdImagePickerInstance = nil;
 
@@ -90,9 +92,7 @@ static BDImagePicker *bdImagePickerInstance = nil;
     if (_finishAction) {
         _finishAction(image);
     }
-    
     [picker dismissViewControllerAnimated:YES completion:^{}];
-    
     bdImagePickerInstance = nil;
 }
 
@@ -100,9 +100,7 @@ static BDImagePicker *bdImagePickerInstance = nil;
     if (_finishAction) {
         _finishAction(nil);
     }
-    
     [picker dismissViewControllerAnimated:YES completion:^{}];
-    
     bdImagePickerInstance = nil;
 }
 

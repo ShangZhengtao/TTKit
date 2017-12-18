@@ -44,12 +44,10 @@
         CGFloat tableViewH = MIN([UIScreen mainScreen].bounds.size.height * 0.5, height *_dataArray.count);
         if (direction == kLrdOutputViewDirectionLeft) {
             self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(origin.x, origin.y, width, tableViewH) style:UITableViewStylePlain];
-        }else {
+        } else {
             self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(origin.x, origin.y, -width, tableViewH) style:UITableViewStylePlain];
         }
         
-//        _tableView.separatorColor = [UIColor clearColor];
-//        _tableView.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.5];
         _tableView.separatorColor = [UIColor colorWithRed:26/255.0 green:26/255.0 blue:26/255.0 alpha:1];
         _tableView.backgroundColor = [UIColor blackColor]; //修改
         _tableView.bounces = NO;
@@ -181,9 +179,8 @@
 @end
 
 
-
-
 #pragma mark - LrdCellModel
+
 @implementation LrdCellModel
 
 - (instancetype)initWithTitle:(NSString *)title imageName:(NSString *)imageName {

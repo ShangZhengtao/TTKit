@@ -18,4 +18,5 @@
 @property (nonatomic, copy) void(^popUpBlock)(void);
 /** 消失回调*/
 @property (nonatomic, copy) void(^dismissBlock)(void);
+
 @end

@@ -9,7 +9,10 @@
 #import "QRCScannerViewController.h"
 #import "QRCScanner.h"
 
-@interface QRCScannerViewController ()<QRCodeScanneDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface QRCScannerViewController ()
+<QRCodeScanneDelegate,
+UIImagePickerControllerDelegate,
+UINavigationControllerDelegate>
 
 @end
 
@@ -36,9 +39,7 @@
     
 }
 
-
 //back_background_icon
-
 #pragma mark - 扫描二维码成功后结果的代理方法
 - (void)didFinshedScanningQRCode:(NSString *)result{
     if (!result.length) {
@@ -79,4 +80,5 @@
     }
     [self backAction:nil];
 }
+
 @end

@@ -34,7 +34,6 @@
     
     if (toViewController.isBeingPresented) { // present
         ZTPopUpViewController *toVC = (ZTPopUpViewController *)toViewController;
-        
         [containerView addSubview:toView]; //require
         
         UIView *popView = toView.subviews.firstObject;
@@ -45,13 +44,11 @@
         [UIView animateWithDuration:transitionDuration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
             toView.backgroundColor = self.presentedBackgroundColor;
             popView.transform = CGAffineTransformIdentity;
-            
         } completion:^(BOOL finished) {
             BOOL wasCancelled = [transitionContext transitionWasCancelled];
             [transitionContext completeTransition:!wasCancelled];// require
             !toVC.popUpBlock ?: toVC.popUpBlock();
         }];
-        
     }
     
     if (fromViewController.isBeingDismissed) { //dismiss
@@ -64,14 +61,11 @@
             CGFloat bottom = toView.bounds.size.height - popView.frame.origin.y;
             popView.transform = CGAffineTransformTranslate(popView.transform, 0, bottom);
         } completion:^(BOOL finished) {
-            
             BOOL wasCancelled = [transitionContext transitionWasCancelled];
             [transitionContext completeTransition:!wasCancelled];
             !fromeVC.dismissBlock ?: fromeVC.dismissBlock();
         }];
     }
-
 }
-
 
 @end

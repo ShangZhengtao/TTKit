@@ -45,6 +45,4 @@ static YYCache *_dataCache;
     return [NSString stringWithFormat:@"%@%@",URL,paraString];
 }
 
-
 @end
-

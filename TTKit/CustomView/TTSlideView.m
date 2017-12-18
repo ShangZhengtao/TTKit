@@ -151,6 +151,7 @@
         return 0;
     }
 }
+
 - (UIViewController *)DLCustomSlideView:(DLCustomSlideView *)sender controllerAt:(NSInteger)index {
     UIViewController *vc = nil;
     if ([self.dataSource respondsToSelector:@selector(slideView:controllerAtPageIndex:)]) {

@@ -23,6 +23,7 @@
 
     [JPUSHService registerDeviceToken:deviceToken];
 }
+
 #pragma mark - 注册deviceToken失败
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
@@ -87,6 +88,5 @@
     [jpush didReceiveRemoteNotification:dictionary];
     [JPUSHService handleRemoteNotification:userInfo];
 }
-
 
 @end

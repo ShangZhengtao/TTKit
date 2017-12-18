@@ -50,7 +50,6 @@
     }
 }
 
-
 /**
  点击背景 dismiss
 
@@ -62,9 +61,8 @@
     CGPoint point = [tap locationInView:self.view];
     if (!CGRectContainsPoint(self.view.subviews.firstObject.frame, point)) { //targetView outside;
         [self dismissViewControllerAnimated:YES completion:nil];
-        
     }
-    
+
 }
 
 //- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {

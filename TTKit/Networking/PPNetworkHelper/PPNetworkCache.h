@@ -55,7 +55,6 @@
 /// 获取网络缓存的总大小 bytes(字节)
 + (NSInteger)getAllHttpCacheSize;
 
-
 /// 删除所有网络缓存
 + (void)removeAllHttpCache;
 
