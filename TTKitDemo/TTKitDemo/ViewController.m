@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "QRCScannerViewController.h"
 #import "BDImagePicker.h"
+#import "LrdOutputView.h"
 #import "WSDatePickerView.h"
 #import "STPickerArea.h"
 #import "SlideViewController.h"
@@ -30,9 +31,7 @@ STPickerAreaDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Demo";
-    
 }
-
 
 - (IBAction)scannerButtonTapped:(UIButton *)sender {
     QRCScannerViewController *scannerVC = [[QRCScannerViewController alloc]init];
@@ -44,9 +43,7 @@ STPickerAreaDelegate
     [BDImagePicker showImagePickerFromViewController:self allowsEditing:YES finishAction:^(UIImage *image) {
         [sender setBackgroundImage:image forState:UIControlStateNormal];
     }];
-    
 }
-
 
 - (IBAction)pickerDateTapped:(UIButton *)sender {
     WSDatePickerView *datepicker = [[WSDatePickerView alloc] initWithDateStyle:DateStyleShowYearMonthDayHourMinute CompleteBlock:^(NSDate *selectDate) {
@@ -80,8 +77,8 @@ STPickerAreaDelegate
 
 - (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city area:(NSString *)area {
     [self.areaPickerButton setTitle:[NSString stringWithFormat:@"%@ %@ %@",province,city,area] forState:UIControlStateNormal];
-    
 }
+
 - (IBAction)PagedControllerButtonTapped:(UIButton *)sender {
     SlideViewController *slideVC = [[SlideViewController alloc]init];
     [self.navigationController pushViewController:slideVC animated:YES];
@@ -92,12 +89,19 @@ STPickerAreaDelegate
     [PPNetworkHelper POST:@"http://zgqz.zhiguyg.com/APP/GetVersion" parameters:nil responseCache:^(id responseCache) {
         
     } success:^(id responseObject) {
-        
+        NSLog(@"%@",responseObject);
     } failure:^(NSError *error) {
         
     }];
 }
 
-
+- (IBAction)popoverButtonTapped:(UIButton *)sender {
+    LrdCellModel *model1 = [[LrdCellModel alloc]initWithTitle:@"tittle1" imageName:@"tabbar_icon_shop"];
+    LrdCellModel *model2 = [[LrdCellModel alloc]initWithTitle:@"tittle2" imageName:@"tabbar_icon_shop"];
+    NSArray *items = @[model1, model2];
+    CGPoint point = CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame));
+    LrdOutputView *view = [[LrdOutputView alloc]initWithDataArray:items origin:point width:100 rowHeight:44 direction:kLrdOutputViewDirectionRight];
+    [view pop];
+}
 
 @end

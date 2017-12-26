@@ -27,7 +27,7 @@ typedef NS_ENUM(NSUInteger, LrdOutputViewDirection) {
 - (instancetype)initWithDataArray:(NSArray *)dataArray
                            origin:(CGPoint)origin
                             width:(CGFloat)width
-                           height:(CGFloat)height
+                        rowHeight:(CGFloat)rowHeight
                         direction:(LrdOutputViewDirection)direction;
 
 //弹出

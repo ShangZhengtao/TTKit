@@ -9,13 +9,12 @@
 #import "LrdOutputView.h"
 
 #define CellLineEdgeInsets UIEdgeInsetsMake(0, 10, 0, 10)
-#define LeftToView 10.f
-#define TopToView 10.f
+static const NSInteger kMaxViewHeight  = 200;
 
 @interface LrdOutputView () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, assign) CGPoint origin;
-@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) CGFloat rowHeight;
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, strong) NSArray *dataArray;
 @property (nonatomic, assign) LrdOutputViewDirection direction;
@@ -26,36 +25,34 @@
 - (instancetype)initWithDataArray:(NSArray *)dataArray
                            origin:(CGPoint)origin
                             width:(CGFloat)width
-                           height:(CGFloat)height
+                           rowHeight:(CGFloat)rowHeight
                         direction:(LrdOutputViewDirection)direction {
     if (self = [super initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)]) {
         //背景色为clearColor
         self.backgroundColor = [UIColor clearColor];
        
         self.origin = origin;
-        self.height = height;
+        self.rowHeight = rowHeight;
         self.width = width;
         self.direction = direction;
         self.dataArray = dataArray;
-        if (height <= 0) {
-            height = 44;
+        if (rowHeight <= 0) {
+            rowHeight = 44;
         }
         
-        CGFloat tableViewH = MIN([UIScreen mainScreen].bounds.size.height * 0.5, height *_dataArray.count);
+        CGFloat tableViewH = MIN(kMaxViewHeight, rowHeight *_dataArray.count);
         if (direction == kLrdOutputViewDirectionLeft) {
             self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(origin.x, origin.y, width, tableViewH) style:UITableViewStylePlain];
         } else {
             self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(origin.x, origin.y, -width, tableViewH) style:UITableViewStylePlain];
         }
         
-        _tableView.separatorColor = [UIColor colorWithRed:26/255.0 green:26/255.0 blue:26/255.0 alpha:1];
-        _tableView.backgroundColor = [UIColor blackColor]; //修改
+        _tableView.separatorColor = [UIColor  clearColor];
+        _tableView.backgroundColor = [UIColor blackColor];
         _tableView.bounces = NO;
         _tableView.layer.cornerRadius = 2;
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        
-        //注册cell
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
         
         [self addSubview:self.tableView];
@@ -77,7 +74,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return self.height;
+    return self.rowHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -120,14 +117,13 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     //利用path进行绘制三角形
     CGContextBeginPath(context);//标记
-    
     if (self.direction == kLrdOutputViewDirectionLeft) {
         CGFloat startX = self.origin.x + 20;
         CGFloat startY = self.origin.y;
         CGContextMoveToPoint(context, startX, startY);//设置起点
         CGContextAddLineToPoint(context, startX + 5, startY - 5);
         CGContextAddLineToPoint(context, startX + 10, startY);
-    }else {
+    } else {
         CGFloat startX = self.origin.x - 20;
         CGFloat startY = self.origin.y;
         CGContextMoveToPoint(context, startX, startY);//设置起点
@@ -177,7 +173,6 @@
 }
 
 @end
-
 
 #pragma mark - LrdCellModel
 
