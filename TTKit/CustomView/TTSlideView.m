@@ -141,7 +141,6 @@
     [self initializationUI:self.slideView];
 }
 
-
 #pragma mark - delegate
 
 -(NSInteger)numberOfTabsInDLCustomSlideView:(DLCustomSlideView *)sender {
