@@ -140,6 +140,7 @@
 		185BD7591FF24F48002F77F9 /* TOWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD7541FF24F2A002F77F9 /* TOWebViewController.m */; };
 		185BD75A1FF24F57002F77F9 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD7471FF24F2A002F77F9 /* NJKWebViewProgress.m */; };
 		185BD75B1FF24F5A002F77F9 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD7491FF24F2A002F77F9 /* NJKWebViewProgressView.m */; };
+		186D792C1FF33DF5000F7B4F /* UIView+GlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D792B1FF33DF5000F7B4F /* UIView+GlowView.m */; };
 		1877045D1FC7B9270021C3CB /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704541FC7B9270021C3CB /* jpush-ios-3.0.7.a */; };
 		1877045E1FC7B9270021C3CB /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704551FC7B9270021C3CB /* jcore-ios-1.1.6.a */; };
 		1877045F1FC7B9270021C3CB /* jpush-extension-ios-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704561FC7B9270021C3CB /* jpush-extension-ios-1.0.0.a */; };
@@ -489,6 +490,8 @@
 		185BD7531FF24F2A002F77F9 /* TOActivityChrome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOActivityChrome.h; sourceTree = "<group>"; };
 		185BD7541FF24F2A002F77F9 /* TOWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOWebViewController.m; sourceTree = "<group>"; };
 		185BD7551FF24F2A002F77F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		186D792A1FF33DF5000F7B4F /* UIView+GlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GlowView.h"; sourceTree = "<group>"; };
+		186D792B1FF33DF5000F7B4F /* UIView+GlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GlowView.m"; sourceTree = "<group>"; };
 		187704521FC7B9270021C3CB /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
 		187704531FC7B9270021C3CB /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		187704541FC7B9270021C3CB /* jpush-ios-3.0.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.7.a"; sourceTree = "<group>"; };
@@ -1107,6 +1110,8 @@
 			children = (
 				18E372D61FCCF1CC00EF45FC /* UIView+TTKit.h */,
 				18E372D71FCCF1CC00EF45FC /* UIView+TTKit.m */,
+				186D792A1FF33DF5000F7B4F /* UIView+GlowView.h */,
+				186D792B1FF33DF5000F7B4F /* UIView+GlowView.m */,
 			);
 			path = UIVIew;
 			sourceTree = "<group>";
@@ -1786,6 +1791,7 @@
 				1818EA271FBC4D1B00C35A8A /* NSArray+SafeAccess.m in Sources */,
 				189E292D1FBD3BD3008D9027 /* AppVersionManager.m in Sources */,
 				1800229D1FC2DDC200C5E414 /* YYTextView.m in Sources */,
+				186D792C1FF33DF5000F7B4F /* UIView+GlowView.m in Sources */,
 				180022C11FC2DDC200C5E414 /* NSBundle+YYAdd.m in Sources */,
 				180022D71FC2DDC200C5E414 /* YYFileHash.m in Sources */,
 				1818EA181FBC4D1B00C35A8A /* NSDictionary+Block.m in Sources */,
