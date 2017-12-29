@@ -21,8 +21,8 @@
     BaseTabBarViewController *rootVC = [[BaseTabBarViewController alloc]init];
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
-    //    [CoreJPush registerJPush:launchOptions];
-    [self setupNotification:launchOptions];
+    [CoreJPush registerJPush:launchOptions];
+    //    [self setupNotification:launchOptions];
     return YES;
 }
 
