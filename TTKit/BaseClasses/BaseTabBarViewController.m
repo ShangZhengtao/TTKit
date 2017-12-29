@@ -8,11 +8,12 @@
 
 #import "BaseTabBarViewController.h"
 #import "BaseTableViewController.h"
+#import "NSDictionary+SafeAccess.h"
 #import "TTMacros.h"
 #import "CoreJPush.h"
 @interface BaseTabBarViewController ()
 <UITabBarControllerDelegate,
-CoreJPushDelegate
+CoreJPushProtocal
 >
 
 /**index*/
@@ -52,20 +53,20 @@ CoreJPushDelegate
 
 -(void)setupChildViewController:(UIViewController*)controller title:(NSString *)title imageName:(NSString *)imageName seleceImageName:(NSString *)selectImageName{
     [self addChildViewController:controller];
-//    controller.title = title;
+    //    controller.title = title;
     controller.tabBarItem.title = title;
     controller.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     controller.tabBarItem.selectedImage = [[UIImage imageNamed:selectImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//    //未选中字体颜色
-//    [controller.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:kTextColorDark,NSFontAttributeName:SYSTEMFONT(10.0f)} forState:UIControlStateNormal];
-//    //选中字体颜色
-//    [controller.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:kTextColorDark,NSFontAttributeName:SYSTEMFONT(10.0f)} forState:UIControlStateSelected];
+    //    //未选中字体颜色
+    //    [controller.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:kTextColorDark,NSFontAttributeName:SYSTEMFONT(10.0f)} forState:UIControlStateNormal];
+    //    //选中字体颜色
+    //    [controller.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:kTextColorDark,NSFontAttributeName:SYSTEMFONT(10.0f)} forState:UIControlStateSelected];
 }
 
 #pragma mark - UITabBarControllerDelegate
 
 -(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
-//        NSLog(@"选中 %ld",tabBarController.selectedIndex);
+    //        NSLog(@"选中 %ld",tabBarController.selectedIndex);
 }
 
 #pragma mark - tabBarItemAnimation
@@ -102,7 +103,7 @@ CoreJPushDelegate
 
 - (void)didReceiveRemoteNotification:(NSDictionary *)userInfo {
     NSLog(@"推送消息：\n%@",userInfo);
-//    NSDictionary *apns = [userInfo objectForKey:@"aps"];
+    //    NSDictionary *apns = [userInfo objectForKey:@"aps"];
     NSString *msg = [NSString stringWithFormat:@"%@",userInfo];
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"推送测试" message:msg preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil];
@@ -110,4 +111,25 @@ CoreJPushDelegate
     [self presentViewController:alertVC animated:YES completion:nil];
 }
 
+- (void)handleAction:(NSDictionary *)userInfo actionIdentifier:(NSString *)identifier {
+    
+    NSDictionary *apns = [userInfo objectForKey:@"aps"];
+    NSString *categoryID = [apns stringForKey:@"category"];
+    if ([categoryID isEqualToString:@"comment-reply"]) { //注册通知时配置ID
+        if ([identifier isEqualToString:@"close"]) {
+            [kUserDefaults setObject:@"close" forKey: @"handleAction"];
+            NSLog(@"关闭");
+        }else if ([identifier isEqualToString:@"enter"]) {
+            NSLog(@"进入");
+        }else if ([identifier isEqualToString:@"unLock"]) {
+            NSLog(@"解锁");
+        }else if ([identifier isEqualToString:@"input"]) {
+            NSString * userText = [userInfo stringForKey:kHandleActionUserTextKey];
+            NSLog(@"输入的内容为：%@",userText);
+        }else if ([identifier isEqualToString:@""]) {
+            
+        }
+    }
+    
+}
 @end

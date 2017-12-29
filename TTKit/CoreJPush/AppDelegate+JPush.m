@@ -19,8 +19,7 @@
     token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
     token = [token stringByReplacingOccurrencesOfString:@">" withString:@""];
     token = [token stringByReplacingOccurrencesOfString:@"<" withString:@""];
-    [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"deviceToken"];
-
+    [[NSUserDefaults standardUserDefaults] setObject:token forKey:kUserDefaultsDeviceToken];
     [JPUSHService registerDeviceToken:deviceToken];
 }
 
@@ -61,6 +60,12 @@
         [dictionary setObject:@(application.applicationState) forKey:@"applicationState"];
         CoreJPush *jpush = [CoreJPush sharedCoreJPush];
         [jpush didReceiveRemoteNotification:dictionary];
+        //处理Action
+        if ([response isKindOfClass:[UNTextInputNotificationResponse class]]) {
+            UNTextInputNotificationResponse *res = (UNTextInputNotificationResponse *)response;
+            [dictionary setObject:res.userText forKey:kHandleActionUserTextKey];
+        }
+        [jpush handleAction:dictionary actionIdentifier:response.actionIdentifier];
     }else{
         //本地通知
     }
@@ -87,6 +92,30 @@
     CoreJPush *jpush = [CoreJPush sharedCoreJPush];
     [jpush didReceiveRemoteNotification:dictionary];
     [JPUSHService handleRemoteNotification:userInfo];
+}
+
+#pragma mark - HandleAction
+// iOS 8 ..< iOS 10 Support
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo completionHandler:(void (^)(void))completionHandler {
+    //处理Action
+    NSMutableDictionary *newUserInfo = [NSMutableDictionary dictionaryWithDictionary:userInfo];
+    [newUserInfo setObject:@"" forKey:kHandleActionUserTextKey];
+    CoreJPush *jpush = [CoreJPush sharedCoreJPush];
+    [jpush handleAction:newUserInfo actionIdentifier:identifier];
+    completionHandler();
+}
+// iOS 9 ..< iOS 10
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(nullable NSString *)identifier forRemoteNotification:(NSDictionary *)userInfo withResponseInfo:(NSDictionary *)responseInfo completionHandler:(void(^)(void))completionHandler {
+    //对输入的文字作处理
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    NSString *response = responseInfo[UIUserNotificationActionResponseTypedTextKey];
+#pragma clang diagnostic pop
+    NSMutableDictionary *newUserInfo = [NSMutableDictionary dictionaryWithDictionary:userInfo];
+    [newUserInfo setObject:response forKey:kHandleActionUserTextKey];
+    CoreJPush *jpush = [CoreJPush sharedCoreJPush];
+    [jpush handleAction:newUserInfo actionIdentifier:identifier];
+    completionHandler();
 }
 
 @end

@@ -122,6 +122,8 @@
 		1818EA281FBC4D1B00C35A8A /* NSArray+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818EA0F1FBC4D1B00C35A8A /* NSArray+Block.m */; };
 		1818EA291FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818EA121FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.m */; };
 		1818EA2A1FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818EA151FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m */; };
+		185084C91FF4CE1300931509 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 185084C81FF4CE1300931509 /* NotificationService.m */; };
+		185084CD1FF4CE1300931509 /* imageNotification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 185084C51FF4CE1300931509 /* imageNotification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		185B0D631FBE8A4B00FC5072 /* STPickerDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0D511FBE8A4B00FC5072 /* STPickerDate.m */; };
 		185B0D641FBE8A4B00FC5072 /* STPickerArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0D541FBE8A4B00FC5072 /* STPickerArea.m */; };
 		185B0D651FBE8A4B00FC5072 /* STPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0D551FBE8A4B00FC5072 /* STPickerView.m */; };
@@ -205,6 +207,30 @@
 		18E89F381FD6478D00A77EA7 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7401FD546BE0024A4D2 /* WRNavigationBar.m */; };
 		18E89F391FD6479000A77EA7 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7431FD546BE0024A4D2 /* WRCustomNavigationBar.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		185084CB1FF4CE1300931509 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1818E9841FBC49FA00C35A8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 185084C41FF4CE1300931509;
+			remoteInfo = imageNotification;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		185084D11FF4CE1400931509 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				185084CD1FF4CE1300931509 /* imageNotification.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		180021BA1FC282F200C5E414 /* DLTabedSlideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabedSlideView.h; sourceTree = "<group>"; };
@@ -394,6 +420,7 @@
 		180022DC1FC2DE1C00C5E414 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		180022DE1FC2DE4C00C5E414 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		180022E01FC2DE6300C5E414 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		18065EC71FF5F36000B984A0 /* imageNotification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = imageNotification.entitlements; sourceTree = "<group>"; };
 		1818E98C1FBC49FA00C35A8A /* TTKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1818E98F1FBC49FA00C35A8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1818E9901FBC49FA00C35A8A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -442,6 +469,10 @@
 		1818EA141FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+SafeAccess.h"; sourceTree = "<group>"; };
 		1818EA151FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+iCloudSync.m"; sourceTree = "<group>"; };
 		1818EA161FBC4D1B00C35A8A /* UIColor+ESExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ESExtensions.h"; sourceTree = "<group>"; };
+		185084C51FF4CE1300931509 /* imageNotification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = imageNotification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		185084C71FF4CE1300931509 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
+		185084C81FF4CE1300931509 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
+		185084CA1FF4CE1300931509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185B0D511FBE8A4B00FC5072 /* STPickerDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPickerDate.m; sourceTree = "<group>"; };
 		185B0D521FBE8A4B00FC5072 /* STPickerSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerSingle.h; sourceTree = "<group>"; };
 		185B0D531FBE8A4B00FC5072 /* STPickerViewUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPickerViewUI.h; sourceTree = "<group>"; };
@@ -645,6 +676,13 @@
 				187704661FC7BB170021C3CB /* libresolv.tbd in Frameworks */,
 				1877045E1FC7B9270021C3CB /* jcore-ios-1.1.6.a in Frameworks */,
 				1877045D1FC7B9270021C3CB /* jpush-ios-3.0.7.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		185084C21FF4CE1300931509 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -984,6 +1022,7 @@
 			children = (
 				1818E9E71FBC4D1B00C35A8A /* TTKit */,
 				1818E98E1FBC49FA00C35A8A /* TTKitDemo */,
+				185084C61FF4CE1300931509 /* imageNotification */,
 				1818E98D1FBC49FA00C35A8A /* Products */,
 				180022DB1FC2DE1C00C5E414 /* Frameworks */,
 			);
@@ -993,6 +1032,7 @@
 			isa = PBXGroup;
 			children = (
 				1818E98C1FBC49FA00C35A8A /* TTKitDemo.app */,
+				185084C51FF4CE1300931509 /* imageNotification.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1147,6 +1187,17 @@
 				1818EA151FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m */,
 			);
 			path = NSUserDefaults;
+			sourceTree = "<group>";
+		};
+		185084C61FF4CE1300931509 /* imageNotification */ = {
+			isa = PBXGroup;
+			children = (
+				18065EC71FF5F36000B984A0 /* imageNotification.entitlements */,
+				185084C71FF4CE1300931509 /* NotificationService.h */,
+				185084C81FF4CE1300931509 /* NotificationService.m */,
+				185084CA1FF4CE1300931509 /* Info.plist */,
+			);
+			path = imageNotification;
 			sourceTree = "<group>";
 		};
 		185B0D4F1FBE8A4B00FC5072 /* STPickerView */ = {
@@ -1620,15 +1671,34 @@
 				1818E9881FBC49FA00C35A8A /* Sources */,
 				1818E9891FBC49FA00C35A8A /* Frameworks */,
 				1818E98A1FBC49FA00C35A8A /* Resources */,
+				185084D11FF4CE1400931509 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				185084CC1FF4CE1300931509 /* PBXTargetDependency */,
 			);
 			name = TTKitDemo;
 			productName = TTKitDemo;
 			productReference = 1818E98C1FBC49FA00C35A8A /* TTKitDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		185084C41FF4CE1300931509 /* imageNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 185084D01FF4CE1400931509 /* Build configuration list for PBXNativeTarget "imageNotification" */;
+			buildPhases = (
+				185084C11FF4CE1300931509 /* Sources */,
+				185084C21FF4CE1300931509 /* Frameworks */,
+				185084C31FF4CE1300931509 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = imageNotification;
+			productName = imageNotification;
+			productReference = 185084C51FF4CE1300931509 /* imageNotification.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -1641,6 +1711,15 @@
 				TargetAttributes = {
 					1818E98B1FBC49FA00C35A8A = {
 						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					185084C41FF4CE1300931509 = {
+						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -1675,6 +1754,7 @@
 			projectRoot = "";
 			targets = (
 				1818E98B1FBC49FA00C35A8A /* TTKitDemo */,
+				185084C41FF4CE1300931509 /* imageNotification */,
 			);
 		};
 /* End PBXProject section */
@@ -1689,6 +1769,13 @@
 				189E29611FBD9743008D9027 /* WSDatePickerView.xib in Resources */,
 				1818E9971FBC49FA00C35A8A /* Main.storyboard in Resources */,
 				185B0D6B1FBE8A4B00FC5072 /* area.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		185084C31FF4CE1300931509 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1890,7 +1977,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		185084C11FF4CE1300931509 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				185084C91FF4CE1300931509 /* NotificationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		185084CC1FF4CE1300931509 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 185084C41FF4CE1300931509 /* imageNotification */;
+			targetProxy = 185084CB1FF4CE1300931509 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1818E9951FBC49FA00C35A8A /* Main.storyboard */ = {
@@ -2071,6 +2174,38 @@
 			};
 			name = Release;
 		};
+		185084CE1FF4CE1400931509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = imageNotification/imageNotification.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Y8B7ULTGR;
+				INFOPLIST_FILE = imageNotification/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tao.TTKit.imageNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		185084CF1FF4CE1400931509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = imageNotification/imageNotification.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9Y8B7ULTGR;
+				INFOPLIST_FILE = imageNotification/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tao.TTKit.imageNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2088,6 +2223,15 @@
 			buildConfigurations = (
 				1818E9A31FBC49FA00C35A8A /* Debug */,
 				1818E9A41FBC49FA00C35A8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		185084D01FF4CE1400931509 /* Build configuration list for PBXNativeTarget "imageNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				185084CE1FF4CE1400931509 /* Debug */,
+				185084CF1FF4CE1400931509 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

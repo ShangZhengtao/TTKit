@@ -7,10 +7,11 @@
 //
 
 #import "AppDelegate+JPush.h"
-#import <UIKit/UIKit.h>
-#import <UserNotifications/UserNotifications.h>
 #import "JPUSHService.h"
 #import "CoreJPush.h"
+
+NSString *const kUserDefaultsDeviceToken = @"kUserDefaultDeviceToken";
+NSString *const kHandleActionUserTextKey = @"kHandleActionUserTextKey";
 
 #define kJPushAppKey @"092c4cd3687381404725c339"
 #define kJPushChannel @"AppStore"
@@ -52,7 +53,7 @@ static id _instace;
 
 - (NSMutableArray *)observers {
     
-    if(_observers==nil){
+    if(_observers == nil) {
         _observers = [NSMutableArray array];
     }
     return _observers;
@@ -60,83 +61,73 @@ static id _instace;
 
 #pragma mark - Public
 
-/** 注册JPush */
 + (void)registerJPush:(NSDictionary *)launchOptions{
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
-    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
-        // 可以添加自定义categories
-        //entity.categories = [NSSet setWithObjects:@"", nil];
-        // NSSet<UNNotificationCategory *> *categories for iOS10 or later
-        // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
-    }
     //注册
     id delegate = (id<JPUSHRegisterDelegate>)[UIApplication sharedApplication].delegate;
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:delegate];
-    
-    //配置
     [JPUSHService setupWithOption:launchOptions appKey:kJPushAppKey
                           channel:kJPushChannel
                  apsForProduction:kJPushIsProduction
             advertisingIdentifier:nil];
-    
     //自定义消息通知
     //    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     //    [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
 }
 
-+ (void)registerJPushWithOption:(NSDictionary *)launchOptions appKey:(NSString *)JPushAppKey apsForProduction:(BOOL)isProduction {
++ (void)registerJPushWithOption:(NSDictionary *)launchOptions
+                         appKey:(NSString *)JPushAppKey
+               apsForProduction:(BOOL)isProduction
+         notificationCategories:(NSSet *)categories {
     
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
-        // 可以添加自定义categories
-        //entity.categories = [NSSet setWithObjects:@"", nil];
-        // NSSet<UNNotificationCategory *> *categories for iOS10 or later
-        // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
+        entity.categories = categories;
     }
     //注册
     id delegate = (id<JPUSHRegisterDelegate>)[UIApplication sharedApplication].delegate;
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:delegate];
-    
     //配置
     [JPUSHService setupWithOption:launchOptions appKey:JPushAppKey
                           channel:kJPushChannel
                  apsForProduction:isProduction
             advertisingIdentifier:nil];
-    
-    //自定义消息通知
-    //    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-    //    [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
-    
 }
 
 
 /** 添加监听者 */
-+ (void)addJPushObserver:(id<CoreJPushDelegate>)observer{
++ (void)addJPushObserver:(id<CoreJPushProtocal>)observer{
     CoreJPush *jpush = [CoreJPush sharedCoreJPush];
     if([jpush.observers containsObject:observer]) return;
     [jpush.observers addObject:observer];
 }
 
 /** 移除监听者 */
-+ (void)removeJPushObserver:(id<CoreJPushDelegate>)observer{
-    
++ (void)removeJPushObserver:(id<CoreJPushProtocal>)observer{
     CoreJPush *jpush = [CoreJPush sharedCoreJPush];
     if(![jpush.observers containsObject:observer]) return;
     [jpush.observers removeObject:observer];
 }
 
 - (void)didReceiveRemoteNotification:(NSDictionary *)userInfo{
-    
     [self handleBadge:[userInfo[@"aps"][@"badge"] integerValue]];
-    
     if(self.observers.count == 0) return;
-    
-    [self.observers enumerateObjectsUsingBlock:^(id<CoreJPushDelegate> observer, NSUInteger idx, BOOL *stop) {
-        
+    [self.observers enumerateObjectsUsingBlock:^(id<CoreJPushProtocal> observer, NSUInteger idx, BOOL *stop) {
         if([observer respondsToSelector:@selector(didReceiveRemoteNotification:)]) [observer didReceiveRemoteNotification:userInfo];
+      
     }];
+}
+
+- (void)handleAction:(NSDictionary *)userInfo actionIdentifier:(NSString *)identifier {
+    if(self.observers.count == 0) return;
+    [self.observers enumerateObjectsUsingBlock:^(id<CoreJPushProtocal> observer, NSUInteger idx, BOOL *stop) {
+        if([observer respondsToSelector:@selector(handleAction:actionIdentifier:)]) {
+            [observer handleAction:userInfo actionIdentifier:identifier];
+        }
+    }];
+    
 }
 
 /** 处理badge */

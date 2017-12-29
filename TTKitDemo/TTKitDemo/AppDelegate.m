@@ -21,9 +21,48 @@
     BaseTabBarViewController *rootVC = [[BaseTabBarViewController alloc]init];
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
-    [CoreJPush registerJPush:launchOptions];
-    
+    //    [CoreJPush registerJPush:launchOptions];
+    [self setupNotification:launchOptions];
     return YES;
+}
+
+//注册带有分类的通知
+- (void)setupNotification:(NSDictionary *) launchOptions{
+    NSSet *categories = nil;
+    if (@available(iOS 10, *)) {
+        UNNotificationAction *closeAction = [UNNotificationAction actionWithIdentifier:@"close" title:@"关闭" options:UNNotificationActionOptionDestructive];
+        UNNotificationAction *enterAction = [UNNotificationAction actionWithIdentifier:@"enter" title:@"进入" options:UNNotificationActionOptionForeground];
+        UNNotificationAction *unLockAction = [UNNotificationAction actionWithIdentifier:@"unLock" title:@"解锁" options:UNNotificationActionOptionAuthenticationRequired];
+        UNTextInputNotificationAction *inputAction = [UNTextInputNotificationAction actionWithIdentifier:@"input" title:@"输入" options:UNNotificationActionOptionAuthenticationRequired];
+        UNNotificationCategory *category = [UNNotificationCategory categoryWithIdentifier:@"comment-reply" actions:@[inputAction,enterAction,unLockAction,closeAction] intentIdentifiers:@[] options:UNNotificationCategoryOptionNone];
+        categories = [NSSet setWithObjects:category, nil];
+    }else if (@available(iOS 9, *)) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        UIMutableUserNotificationCategory * category = [[UIMutableUserNotificationCategory alloc]init];
+        category.identifier = @"comment-reply";
+        UIMutableUserNotificationAction *closeAction = [[UIMutableUserNotificationAction alloc]init];
+        closeAction.identifier = @"close";
+        closeAction.title = @"关闭";
+        
+        UIMutableUserNotificationAction *enterAction = [[UIMutableUserNotificationAction alloc]init];
+        enterAction.identifier = @"enter";
+        enterAction.title = @"进入";
+        enterAction.behavior = UIUserNotificationActionBehaviorDefault;
+        enterAction.activationMode = UIUserNotificationActivationModeForeground;
+        
+        UIMutableUserNotificationAction *inputAction = [[UIMutableUserNotificationAction alloc]init];
+        inputAction.identifier = @"input";
+        inputAction.title = @"输入";
+        //         UIUserNotificationActionResponseTypedTextKey
+        inputAction.behavior = UIUserNotificationActionBehaviorTextInput;
+        [category setActions:@[enterAction, inputAction, closeAction] forContext:UIUserNotificationActionContextDefault];
+        categories = [NSSet setWithObject:category];
+#pragma clang diagnostic pop
+        
+    }
+    [CoreJPush registerJPushWithOption: launchOptions appKey:@"092c4cd3687381404725c339" apsForProduction:NO notificationCategories:categories];
+    
 }
 
 
@@ -31,7 +70,6 @@
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
-
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
