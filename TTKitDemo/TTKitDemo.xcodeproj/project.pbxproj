@@ -142,6 +142,7 @@
 		185BD7591FF24F48002F77F9 /* TOWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD7541FF24F2A002F77F9 /* TOWebViewController.m */; };
 		185BD75A1FF24F57002F77F9 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD7471FF24F2A002F77F9 /* NJKWebViewProgress.m */; };
 		185BD75B1FF24F5A002F77F9 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD7491FF24F2A002F77F9 /* NJKWebViewProgressView.m */; };
+		1862EBF21FFB2D990072F306 /* ZTProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EBF01FFB2D990072F306 /* ZTProgressHUD.m */; };
 		186D792C1FF33DF5000F7B4F /* UIView+GlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D792B1FF33DF5000F7B4F /* UIView+GlowView.m */; };
 		1877045D1FC7B9270021C3CB /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704541FC7B9270021C3CB /* jpush-ios-3.0.7.a */; };
 		1877045E1FC7B9270021C3CB /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704551FC7B9270021C3CB /* jcore-ios-1.1.6.a */; };
@@ -521,6 +522,8 @@
 		185BD7531FF24F2A002F77F9 /* TOActivityChrome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOActivityChrome.h; sourceTree = "<group>"; };
 		185BD7541FF24F2A002F77F9 /* TOWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOWebViewController.m; sourceTree = "<group>"; };
 		185BD7551FF24F2A002F77F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1862EBF01FFB2D990072F306 /* ZTProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTProgressHUD.m; sourceTree = "<group>"; };
+		1862EBF11FFB2D990072F306 /* ZTProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTProgressHUD.h; sourceTree = "<group>"; };
 		186D792A1FF33DF5000F7B4F /* UIView+GlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GlowView.h"; sourceTree = "<group>"; };
 		186D792B1FF33DF5000F7B4F /* UIView+GlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GlowView.m"; sourceTree = "<group>"; };
 		187704521FC7B9270021C3CB /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
@@ -1398,6 +1401,8 @@
 				189E29001FBD3A26008D9027 /* LocationManager.m */,
 				189E292B1FBD3BD3008D9027 /* AppVersionManager.h */,
 				189E292C1FBD3BD3008D9027 /* AppVersionManager.m */,
+				1862EBF11FFB2D990072F306 /* ZTProgressHUD.h */,
+				1862EBF01FFB2D990072F306 /* ZTProgressHUD.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1932,6 +1937,7 @@
 				180022971FC2DDC200C5E414 /* MKAnnotationView+YYWebImage.m in Sources */,
 				1818EA211FBC4D1B00C35A8A /* UIButton+Submitting.m in Sources */,
 				18E372D81FCCF1CC00EF45FC /* UIView+TTKit.m in Sources */,
+				1862EBF21FFB2D990072F306 /* ZTProgressHUD.m in Sources */,
 				180021D21FC282F200C5E414 /* DLSlideView.m in Sources */,
 				18A94BB21FC41DB900032B5B /* PPNetworkHelper.m in Sources */,
 				189E29251FBD3A27008D9027 /* LewPopupViewAnimationDrop.m in Sources */,
@@ -2150,7 +2156,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Y8B7ULTGR;
 				INFOPLIST_FILE = TTKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tao.TTKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2166,7 +2172,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Y8B7ULTGR;
 				INFOPLIST_FILE = TTKitDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9;
+				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tao.TTKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";

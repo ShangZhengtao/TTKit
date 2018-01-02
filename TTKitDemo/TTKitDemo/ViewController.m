@@ -17,6 +17,7 @@
 #import "TTMacros.h"
 #import "PPNetworkHelper.h"
 #import "WRNavigationBar.h"
+#import "ZTProgressHUD.h"
 @interface ViewController ()
 <
 QRCodeScannerViewControllerDelegate,
@@ -102,6 +103,15 @@ STPickerAreaDelegate
     CGPoint point = CGPointMake(CGRectGetMidX(sender.frame), CGRectGetMaxY(sender.frame));
     LrdOutputView *view = [[LrdOutputView alloc]initWithDataArray:items origin:point width:100 rowHeight:44 direction:kLrdOutputViewDirectionRight];
     [view pop];
+}
+
+- (IBAction)hudButtonTapped:(UIButton *)sender {
+    UIAlertController *alertvc = [UIAlertController alertControllerWithTitle:@"提示" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [ZTProgressHUD showInfo:@"在iOS当中，所有的视图都从一个叫做UIView的基类派生而来，UIView可以处理触摸事件，可以支持基于Core Graphics绘图，可以做仿射变换（例如旋转或者缩放），或者简单的类似于滑动或者渐变的动画"];
+    }];
+    [alertvc addAction:action];
+    [self presentViewController:alertvc animated:YES completion:nil];
 }
 
 @end
