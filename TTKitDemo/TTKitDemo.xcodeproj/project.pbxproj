@@ -143,6 +143,7 @@
 		185BD75A1FF24F57002F77F9 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD7471FF24F2A002F77F9 /* NJKWebViewProgress.m */; };
 		185BD75B1FF24F5A002F77F9 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD7491FF24F2A002F77F9 /* NJKWebViewProgressView.m */; };
 		1862EBF21FFB2D990072F306 /* ZTProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EBF01FFB2D990072F306 /* ZTProgressHUD.m */; };
+		1862EBF51FFB85AE0072F306 /* TTAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EBF41FFB85AE0072F306 /* TTAnimationKit.m */; };
 		186D792C1FF33DF5000F7B4F /* UIView+GlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D792B1FF33DF5000F7B4F /* UIView+GlowView.m */; };
 		1877045D1FC7B9270021C3CB /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704541FC7B9270021C3CB /* jpush-ios-3.0.7.a */; };
 		1877045E1FC7B9270021C3CB /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704551FC7B9270021C3CB /* jcore-ios-1.1.6.a */; };
@@ -524,6 +525,8 @@
 		185BD7551FF24F2A002F77F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1862EBF01FFB2D990072F306 /* ZTProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTProgressHUD.m; sourceTree = "<group>"; };
 		1862EBF11FFB2D990072F306 /* ZTProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTProgressHUD.h; sourceTree = "<group>"; };
+		1862EBF31FFB85AE0072F306 /* TTAnimationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTAnimationKit.h; sourceTree = "<group>"; };
+		1862EBF41FFB85AE0072F306 /* TTAnimationKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAnimationKit.m; sourceTree = "<group>"; };
 		186D792A1FF33DF5000F7B4F /* UIView+GlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GlowView.h"; sourceTree = "<group>"; };
 		186D792B1FF33DF5000F7B4F /* UIView+GlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GlowView.m"; sourceTree = "<group>"; };
 		187704521FC7B9270021C3CB /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
@@ -1403,6 +1406,8 @@
 				189E292C1FBD3BD3008D9027 /* AppVersionManager.m */,
 				1862EBF11FFB2D990072F306 /* ZTProgressHUD.h */,
 				1862EBF01FFB2D990072F306 /* ZTProgressHUD.m */,
+				1862EBF31FFB85AE0072F306 /* TTAnimationKit.h */,
+				1862EBF41FFB85AE0072F306 /* TTAnimationKit.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1928,6 +1933,7 @@
 				185B0D651FBE8A4B00FC5072 /* STPickerView.m in Sources */,
 				180021CF1FC282F200C5E414 /* DLFixedTabbarView.m in Sources */,
 				18D6D0B21FC56393005305ED /* BaseTableViewController.m in Sources */,
+				1862EBF51FFB85AE0072F306 /* TTAnimationKit.m in Sources */,
 				1800229E1FC2DDC200C5E414 /* YYTextMagnifier.m in Sources */,
 				18A94BDF1FC420AF00032B5B /* UIRefreshControl+AFNetworking.m in Sources */,
 				185B0D641FBE8A4B00FC5072 /* STPickerArea.m in Sources */,
