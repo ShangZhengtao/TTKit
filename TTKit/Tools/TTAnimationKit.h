@@ -17,4 +17,27 @@
  */
 + (void)floatViews:(NSArray <__kindof UIView *>*)views;
 
+
+/**                  _________
+                    |         |
+ 沿边框移动动画。      |         |
+                    |____<=___|
+
+ @param view 目标view
+ @param color 颜色
+ @param duration 动画时间
+ */
++ (void)pathAnimationForView:(UIView *)view color:(UIColor *)color duration:(NSTimeInterval) duration;
+
+
+
+/**
+ 边框渐变闪光效果
+
+ @param view 目标view
+ @param color 颜色
+ @param duration 动画时间
+ */
++ (void)borderGradientAnimationForView:(UIView *)view color:(UIColor *)color duration:(NSTimeInterval) duration;
+
 @end

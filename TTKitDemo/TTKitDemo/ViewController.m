@@ -18,6 +18,7 @@
 #import "PPNetworkHelper.h"
 #import "WRNavigationBar.h"
 #import "ZTProgressHUD.h"
+#import "UIButton+Event.h"
 @interface ViewController ()
 <
 QRCodeScannerViewControllerDelegate,
@@ -32,6 +33,7 @@ STPickerAreaDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Demo";
+//    self.areaPickerButton.eventTimeInterval = 3;
 }
 
 - (IBAction)scannerButtonTapped:(UIButton *)sender {

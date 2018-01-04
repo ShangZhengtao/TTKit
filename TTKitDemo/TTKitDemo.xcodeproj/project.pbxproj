@@ -97,6 +97,9 @@
 		180022D81FC2DDC200C5E414 /* YYTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 180022861FC2DDC200C5E414 /* YYTimer.m */; };
 		180022D91FC2DDC200C5E414 /* YYThreadSafeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 180022871FC2DDC200C5E414 /* YYThreadSafeArray.m */; };
 		180022DA1FC2DDC200C5E414 /* YYReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 180022881FC2DDC200C5E414 /* YYReachability.m */; };
+		180048E51FFC817F0071E46D /* AnimationKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180048E41FFC817F0071E46D /* AnimationKitViewController.m */; };
+		180048E81FFC81B30071E46D /* PathAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180048E71FFC81B30071E46D /* PathAnimationViewController.m */; };
+		180048EB1FFC85210071E46D /* FloatAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180048EA1FFC85210071E46D /* FloatAnimationViewController.m */; };
 		1818E9911FBC49FA00C35A8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818E9901FBC49FA00C35A8A /* AppDelegate.m */; };
 		1818E9941FBC49FA00C35A8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818E9931FBC49FA00C35A8A /* ViewController.m */; };
 		1818E9971FBC49FA00C35A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1818E9951FBC49FA00C35A8A /* Main.storyboard */; };
@@ -122,6 +125,7 @@
 		1818EA281FBC4D1B00C35A8A /* NSArray+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818EA0F1FBC4D1B00C35A8A /* NSArray+Block.m */; };
 		1818EA291FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818EA121FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.m */; };
 		1818EA2A1FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818EA151FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m */; };
+		184E56161FFDBE6400E5EB41 /* UIButton+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E56151FFDBE6400E5EB41 /* UIButton+Event.m */; };
 		185084C91FF4CE1300931509 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 185084C81FF4CE1300931509 /* NotificationService.m */; };
 		185084CD1FF4CE1300931509 /* imageNotification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 185084C51FF4CE1300931509 /* imageNotification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		185B0D631FBE8A4B00FC5072 /* STPickerDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0D511FBE8A4B00FC5072 /* STPickerDate.m */; };
@@ -422,6 +426,12 @@
 		180022DC1FC2DE1C00C5E414 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		180022DE1FC2DE4C00C5E414 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		180022E01FC2DE6300C5E414 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		180048E31FFC817F0071E46D /* AnimationKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationKitViewController.h; sourceTree = "<group>"; };
+		180048E41FFC817F0071E46D /* AnimationKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationKitViewController.m; sourceTree = "<group>"; };
+		180048E61FFC81B30071E46D /* PathAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathAnimationViewController.h; sourceTree = "<group>"; };
+		180048E71FFC81B30071E46D /* PathAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathAnimationViewController.m; sourceTree = "<group>"; };
+		180048E91FFC85210071E46D /* FloatAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatAnimationViewController.h; sourceTree = "<group>"; };
+		180048EA1FFC85210071E46D /* FloatAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatAnimationViewController.m; sourceTree = "<group>"; };
 		18065EC71FF5F36000B984A0 /* imageNotification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = imageNotification.entitlements; sourceTree = "<group>"; };
 		1818E98C1FBC49FA00C35A8A /* TTKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1818E98F1FBC49FA00C35A8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -471,6 +481,8 @@
 		1818EA141FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+SafeAccess.h"; sourceTree = "<group>"; };
 		1818EA151FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+iCloudSync.m"; sourceTree = "<group>"; };
 		1818EA161FBC4D1B00C35A8A /* UIColor+ESExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ESExtensions.h"; sourceTree = "<group>"; };
+		184E56141FFDBE6400E5EB41 /* UIButton+Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Event.h"; sourceTree = "<group>"; };
+		184E56151FFDBE6400E5EB41 /* UIButton+Event.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Event.m"; sourceTree = "<group>"; };
 		185084C51FF4CE1300931509 /* imageNotification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = imageNotification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		185084C71FF4CE1300931509 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		185084C81FF4CE1300931509 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
@@ -1053,6 +1065,12 @@
 				1818E9931FBC49FA00C35A8A /* ViewController.m */,
 				180021D31FC283BB00C5E414 /* SlideViewController.h */,
 				180021D41FC283BB00C5E414 /* SlideViewController.m */,
+				180048E31FFC817F0071E46D /* AnimationKitViewController.h */,
+				180048E41FFC817F0071E46D /* AnimationKitViewController.m */,
+				180048E61FFC81B30071E46D /* PathAnimationViewController.h */,
+				180048E71FFC81B30071E46D /* PathAnimationViewController.m */,
+				180048E91FFC85210071E46D /* FloatAnimationViewController.h */,
+				180048EA1FFC85210071E46D /* FloatAnimationViewController.m */,
 				1818E9951FBC49FA00C35A8A /* Main.storyboard */,
 				1818E9981FBC49FA00C35A8A /* Assets.xcassets */,
 				1818E99A1FBC49FA00C35A8A /* LaunchScreen.storyboard */,
@@ -1133,6 +1151,8 @@
 			children = (
 				1818E9F71FBC4D1B00C35A8A /* UIButton+Submitting.h */,
 				1818E9FD1FBC4D1B00C35A8A /* UIButton+Submitting.m */,
+				184E56141FFDBE6400E5EB41 /* UIButton+Event.h */,
+				184E56151FFDBE6400E5EB41 /* UIButton+Event.m */,
 				1818EA011FBC4D1B00C35A8A /* UIButton+CountDown.h */,
 				1818E9F81FBC4D1B00C35A8A /* UIButton+CountDown.m */,
 				1818E9FF1FBC4D1B00C35A8A /* UIButton+BackgroundColor.h */,
@@ -1822,6 +1842,7 @@
 				180022B21FC2DDC200C5E414 /* UIBezierPath+YYAdd.m in Sources */,
 				185BD7381FF24E6A002F77F9 /* QRCScanner.m in Sources */,
 				180022961FC2DDC200C5E414 /* UIImageView+YYWebImage.m in Sources */,
+				180048EB1FFC85210071E46D /* FloatAnimationViewController.m in Sources */,
 				189E29201FBD3A27008D9027 /* LocationManager.m in Sources */,
 				180021D51FC283BB00C5E414 /* SlideViewController.m in Sources */,
 				180022B41FC2DDC200C5E414 /* UIDevice+YYAdd.m in Sources */,
@@ -1896,6 +1917,7 @@
 				18A94BC51FC41E8D00032B5B /* AFURLRequestSerialization.m in Sources */,
 				180022D11FC2DDC200C5E414 /* YYThreadSafeDictionary.m in Sources */,
 				189E292A1FBD3A27008D9027 /* PresentAnimator.m in Sources */,
+				180048E81FFC81B30071E46D /* PathAnimationViewController.m in Sources */,
 				180022B31FC2DDC200C5E414 /* UIColor+YYAdd.m in Sources */,
 				1818EA191FBC4D1B00C35A8A /* NSDictionary+SafeAccess.m in Sources */,
 				18D6D0B51FC563C8005305ED /* BaseListModel.m in Sources */,
@@ -1904,6 +1926,7 @@
 				189E29231FBD3A27008D9027 /* LewPopupViewAnimationFade.m in Sources */,
 				180022D31FC2DDC200C5E414 /* YYTransaction.m in Sources */,
 				18A94BDE1FC420AF00032B5B /* UIProgressView+AFNetworking.m in Sources */,
+				184E56161FFDBE6400E5EB41 /* UIButton+Event.m in Sources */,
 				1818E99F1FBC49FA00C35A8A /* main.m in Sources */,
 				189E29241FBD3A27008D9027 /* LewPopupViewAnimationSpring.m in Sources */,
 				180022D21FC2DDC200C5E414 /* YYSentinel.m in Sources */,
@@ -1932,6 +1955,7 @@
 				189E29291FBD3A27008D9027 /* ZTPopUpViewController.m in Sources */,
 				185B0D651FBE8A4B00FC5072 /* STPickerView.m in Sources */,
 				180021CF1FC282F200C5E414 /* DLFixedTabbarView.m in Sources */,
+				180048E51FFC817F0071E46D /* AnimationKitViewController.m in Sources */,
 				18D6D0B21FC56393005305ED /* BaseTableViewController.m in Sources */,
 				1862EBF51FFB85AE0072F306 /* TTAnimationKit.m in Sources */,
 				1800229E1FC2DDC200C5E414 /* YYTextMagnifier.m in Sources */,

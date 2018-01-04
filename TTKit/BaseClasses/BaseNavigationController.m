@@ -27,7 +27,7 @@
     navBar.tintColor = [UIColor whiteColor];
     [navBar setTitleTextAttributes:@{
                                      NSForegroundColorAttributeName :[UIColor whiteColor],
-                                     NSFontAttributeName : [UIFont systemFontOfSize:30]
+                                     NSFontAttributeName : [UIFont systemFontOfSize:16]
                                      }];
     //去掉阴影线
     [navBar setShadowImage:[UIImage new]];
