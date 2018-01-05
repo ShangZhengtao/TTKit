@@ -107,6 +107,14 @@ vc.automaticallyAdjustsScrollViewInsets = NO;\
 _Pragma("clang diagnostic pop") \
 } while (0)
 
+/**
+ 属性转字符串 辅助有代码提示
+
+ @param objc 实例对象
+ @param keyPath 属性名
+ @return keyPath 字符串
+ */
+#define keyPath(objc,keyPath) @(((void)objc.keyPath,#keyPath))
 
 //*****************config************************
 
