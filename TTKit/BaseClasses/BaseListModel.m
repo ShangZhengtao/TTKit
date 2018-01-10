@@ -12,7 +12,7 @@
 
 + (instancetype)defaultData {
     BaseListModel *model = [[BaseListModel alloc]init];
-    model.allListModels = @[@"",@"",@"",@"",@""];
+    model.allListModels = @[@"",@"",@"",@"",@""].mutableCopy;
     return model;
 }
 

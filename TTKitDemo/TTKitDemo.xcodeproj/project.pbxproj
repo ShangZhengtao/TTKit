@@ -148,6 +148,7 @@
 		185BD75B1FF24F5A002F77F9 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD7491FF24F2A002F77F9 /* NJKWebViewProgressView.m */; };
 		1862EBF21FFB2D990072F306 /* ZTProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EBF01FFB2D990072F306 /* ZTProgressHUD.m */; };
 		1862EBF51FFB85AE0072F306 /* TTAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EBF41FFB85AE0072F306 /* TTAnimationKit.m */; };
+		186D682C2004BFF500E256EB /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D682B2004BFF500E256EB /* YYFPSLabel.m */; };
 		186D792C1FF33DF5000F7B4F /* UIView+GlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D792B1FF33DF5000F7B4F /* UIView+GlowView.m */; };
 		1877045D1FC7B9270021C3CB /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704541FC7B9270021C3CB /* jpush-ios-3.0.7.a */; };
 		1877045E1FC7B9270021C3CB /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704551FC7B9270021C3CB /* jcore-ios-1.1.6.a */; };
@@ -155,6 +156,26 @@
 		187704601FC7B9270021C3CB /* CoreJPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 187704591FC7B9270021C3CB /* CoreJPush.m */; };
 		187704611FC7B9270021C3CB /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 1877045C1FC7B9270021C3CB /* AppDelegate+JPush.m */; };
 		187704661FC7BB170021C3CB /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704651FC7BB170021C3CB /* libresolv.tbd */; };
+		187769E22005B1BC00CDD115 /* CountdownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769C92005B1BC00CDD115 /* CountdownLabel.swift */; };
+		187769E32005B1BC00CDD115 /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769CB2005B1BC00CDD115 /* LTMorphingLabel+Fall.swift */; };
+		187769E42005B1BC00CDD115 /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769CD2005B1BC00CDD115 /* LTEasing.swift */; };
+		187769E52005B1BC00CDD115 /* LTEmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769CE2005B1BC00CDD115 /* LTEmitterView.swift */; };
+		187769E62005B1BC00CDD115 /* LTCharacterLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769CF2005B1BC00CDD115 /* LTCharacterLimbo.swift */; };
+		187769E72005B1BC00CDD115 /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 187769D12005B1BC00CDD115 /* Fire.png */; };
+		187769E82005B1BC00CDD115 /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 187769D22005B1BC00CDD115 /* Sparkle.png */; };
+		187769E92005B1BC00CDD115 /* Fragment.png in Resources */ = {isa = PBXBuildFile; fileRef = 187769D32005B1BC00CDD115 /* Fragment.png */; };
+		187769EA2005B1BC00CDD115 /* Smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 187769D42005B1BC00CDD115 /* Smoke.png */; };
+		187769EB2005B1BC00CDD115 /* tvOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 187769D52005B1BC00CDD115 /* tvOS-Info.plist */; };
+		187769EC2005B1BC00CDD115 /* LTCharacterDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769D62005B1BC00CDD115 /* LTCharacterDiffResult.swift */; };
+		187769ED2005B1BC00CDD115 /* LTMorphingLabel+Evaporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769D72005B1BC00CDD115 /* LTMorphingLabel+Evaporate.swift */; };
+		187769EE2005B1BC00CDD115 /* LTStringDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769D82005B1BC00CDD115 /* LTStringDiffResult.swift */; };
+		187769EF2005B1BC00CDD115 /* LTMorphingLabel+Burn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769D92005B1BC00CDD115 /* LTMorphingLabel+Burn.swift */; };
+		187769F02005B1BC00CDD115 /* LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DA2005B1BC00CDD115 /* LTMorphingLabel.swift */; };
+		187769F12005B1BC00CDD115 /* LTMorphingLabel+Anvil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DB2005B1BC00CDD115 /* LTMorphingLabel+Anvil.swift */; };
+		187769F22005B1BC00CDD115 /* LTMorphingLabel+Sparkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DC2005B1BC00CDD115 /* LTMorphingLabel+Sparkle.swift */; };
+		187769F32005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DD2005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift */; };
+		187769F42005B1BC00CDD115 /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DE2005B1BC00CDD115 /* LTMorphingEffect.swift */; };
+		187769FB2005C0E800CDD115 /* TTCountdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769FA2005C0E800CDD115 /* TTCountdownCell.swift */; };
 		189E28DE1FBD26E1008D9027 /* ZTCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28DC1FBD26E1008D9027 /* ZTCountdownButton.m */; };
 		189E28E21FBD2B57008D9027 /* LaunchIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28E01FBD2B57008D9027 /* LaunchIntroductionView.m */; };
 		189E28E81FBD3288008D9027 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28E71FBD3288008D9027 /* NSDictionary+Log.m */; };
@@ -212,6 +233,8 @@
 		18E372D81FCCF1CC00EF45FC /* UIView+TTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E372D71FCCF1CC00EF45FC /* UIView+TTKit.m */; };
 		18E89F381FD6478D00A77EA7 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7401FD546BE0024A4D2 /* WRNavigationBar.m */; };
 		18E89F391FD6479000A77EA7 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7431FD546BE0024A4D2 /* WRCustomNavigationBar.m */; };
+		18F2A8391FFF6AE800D1CB29 /* CountdownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F2A8381FFF6AE800D1CB29 /* CountdownListViewController.m */; };
+		18F2A83F1FFF742600D1CB29 /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F2A83E1FFF742600D1CB29 /* CellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -539,6 +562,8 @@
 		1862EBF11FFB2D990072F306 /* ZTProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTProgressHUD.h; sourceTree = "<group>"; };
 		1862EBF31FFB85AE0072F306 /* TTAnimationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTAnimationKit.h; sourceTree = "<group>"; };
 		1862EBF41FFB85AE0072F306 /* TTAnimationKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAnimationKit.m; sourceTree = "<group>"; };
+		186D682A2004BFF500E256EB /* YYFPSLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		186D682B2004BFF500E256EB /* YYFPSLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		186D792A1FF33DF5000F7B4F /* UIView+GlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GlowView.h"; sourceTree = "<group>"; };
 		186D792B1FF33DF5000F7B4F /* UIView+GlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GlowView.m"; sourceTree = "<group>"; };
 		187704521FC7B9270021C3CB /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
@@ -554,6 +579,31 @@
 		187704631FC7BAED0021C3CB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		187704651FC7BB170021C3CB /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		187704671FC7F6C10021C3CB /* TTKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TTKitDemo.entitlements; sourceTree = "<group>"; };
+		187769C92005B1BC00CDD115 /* CountdownLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownLabel.swift; sourceTree = "<group>"; };
+		187769CB2005B1BC00CDD115 /* LTMorphingLabel+Fall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Fall.swift"; sourceTree = "<group>"; };
+		187769CC2005B1BC00CDD115 /* LTMorphingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMorphingLabel.h; sourceTree = "<group>"; };
+		187769CD2005B1BC00CDD115 /* LTEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEasing.swift; sourceTree = "<group>"; };
+		187769CE2005B1BC00CDD115 /* LTEmitterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEmitterView.swift; sourceTree = "<group>"; };
+		187769CF2005B1BC00CDD115 /* LTCharacterLimbo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCharacterLimbo.swift; sourceTree = "<group>"; };
+		187769D12005B1BC00CDD115 /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
+		187769D22005B1BC00CDD115 /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sparkle.png; sourceTree = "<group>"; };
+		187769D32005B1BC00CDD115 /* Fragment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fragment.png; sourceTree = "<group>"; };
+		187769D42005B1BC00CDD115 /* Smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Smoke.png; sourceTree = "<group>"; };
+		187769D52005B1BC00CDD115 /* tvOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tvOS-Info.plist"; sourceTree = "<group>"; };
+		187769D62005B1BC00CDD115 /* LTCharacterDiffResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCharacterDiffResult.swift; sourceTree = "<group>"; };
+		187769D72005B1BC00CDD115 /* LTMorphingLabel+Evaporate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Evaporate.swift"; sourceTree = "<group>"; };
+		187769D82005B1BC00CDD115 /* LTStringDiffResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTStringDiffResult.swift; sourceTree = "<group>"; };
+		187769D92005B1BC00CDD115 /* LTMorphingLabel+Burn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Burn.swift"; sourceTree = "<group>"; };
+		187769DA2005B1BC00CDD115 /* LTMorphingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMorphingLabel.swift; sourceTree = "<group>"; };
+		187769DB2005B1BC00CDD115 /* LTMorphingLabel+Anvil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Anvil.swift"; sourceTree = "<group>"; };
+		187769DC2005B1BC00CDD115 /* LTMorphingLabel+Sparkle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Sparkle.swift"; sourceTree = "<group>"; };
+		187769DD2005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Pixelate.swift"; sourceTree = "<group>"; };
+		187769DE2005B1BC00CDD115 /* LTMorphingEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMorphingEffect.swift; sourceTree = "<group>"; };
+		187769DF2005B1BC00CDD115 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187769E02005B1BC00CDD115 /* CountdownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownLabel.h; sourceTree = "<group>"; };
+		187769E12005B1BC00CDD115 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187769FA2005C0E800CDD115 /* TTCountdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCountdownCell.swift; sourceTree = "<group>"; };
+		187769FE2005C35F00CDD115 /* Bridge_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge_Header.h; sourceTree = "<group>"; };
 		189E28DC1FBD26E1008D9027 /* ZTCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTCountdownButton.m; sourceTree = "<group>"; };
 		189E28DD1FBD26E1008D9027 /* ZTCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTCountdownButton.h; sourceTree = "<group>"; };
 		189E28E01FBD2B57008D9027 /* LaunchIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchIntroductionView.m; sourceTree = "<group>"; };
@@ -679,6 +729,10 @@
 		18D6D0B41FC563C8005305ED /* BaseListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseListModel.m; sourceTree = "<group>"; };
 		18E372D61FCCF1CC00EF45FC /* UIView+TTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+TTKit.h"; sourceTree = "<group>"; };
 		18E372D71FCCF1CC00EF45FC /* UIView+TTKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+TTKit.m"; sourceTree = "<group>"; };
+		18F2A8371FFF6AE800D1CB29 /* CountdownListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountdownListViewController.h; sourceTree = "<group>"; };
+		18F2A8381FFF6AE800D1CB29 /* CountdownListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountdownListViewController.m; sourceTree = "<group>"; };
+		18F2A83D1FFF742600D1CB29 /* CellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellModel.h; sourceTree = "<group>"; };
+		18F2A83E1FFF742600D1CB29 /* CellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellModel.m; sourceTree = "<group>"; };
 		18FAC7401FD546BE0024A4D2 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
 		18FAC7411FD546BE0024A4D2 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
 		18FAC7421FD546BE0024A4D2 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
@@ -985,6 +1039,8 @@
 		180022711FC2DDC200C5E414 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				186D682A2004BFF500E256EB /* YYFPSLabel.h */,
+				186D682B2004BFF500E256EB /* YYFPSLabel.m */,
 				180022721FC2DDC200C5E414 /* YYWeakProxy.m */,
 				180022731FC2DDC200C5E414 /* YYAsyncLayer.m */,
 				180022741FC2DDC200C5E414 /* YYKeychain.h */,
@@ -1071,6 +1127,11 @@
 				180048E71FFC81B30071E46D /* PathAnimationViewController.m */,
 				180048E91FFC85210071E46D /* FloatAnimationViewController.h */,
 				180048EA1FFC85210071E46D /* FloatAnimationViewController.m */,
+				18F2A8371FFF6AE800D1CB29 /* CountdownListViewController.h */,
+				18F2A8381FFF6AE800D1CB29 /* CountdownListViewController.m */,
+				187769FA2005C0E800CDD115 /* TTCountdownCell.swift */,
+				18F2A83D1FFF742600D1CB29 /* CellModel.h */,
+				18F2A83E1FFF742600D1CB29 /* CellModel.m */,
 				1818E9951FBC49FA00C35A8A /* Main.storyboard */,
 				1818E9981FBC49FA00C35A8A /* Assets.xcassets */,
 				1818E99A1FBC49FA00C35A8A /* LaunchScreen.storyboard */,
@@ -1348,11 +1409,58 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		187769C82005B1BC00CDD115 /* CountdownLabel */ = {
+			isa = PBXGroup;
+			children = (
+				187769C92005B1BC00CDD115 /* CountdownLabel.swift */,
+				187769CA2005B1BC00CDD115 /* LTMorphingLabel */,
+				187769E02005B1BC00CDD115 /* CountdownLabel.h */,
+				187769E12005B1BC00CDD115 /* Info.plist */,
+			);
+			path = CountdownLabel;
+			sourceTree = "<group>";
+		};
+		187769CA2005B1BC00CDD115 /* LTMorphingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				187769CB2005B1BC00CDD115 /* LTMorphingLabel+Fall.swift */,
+				187769CC2005B1BC00CDD115 /* LTMorphingLabel.h */,
+				187769CD2005B1BC00CDD115 /* LTEasing.swift */,
+				187769CE2005B1BC00CDD115 /* LTEmitterView.swift */,
+				187769CF2005B1BC00CDD115 /* LTCharacterLimbo.swift */,
+				187769D02005B1BC00CDD115 /* Particles */,
+				187769D52005B1BC00CDD115 /* tvOS-Info.plist */,
+				187769D62005B1BC00CDD115 /* LTCharacterDiffResult.swift */,
+				187769D72005B1BC00CDD115 /* LTMorphingLabel+Evaporate.swift */,
+				187769D82005B1BC00CDD115 /* LTStringDiffResult.swift */,
+				187769D92005B1BC00CDD115 /* LTMorphingLabel+Burn.swift */,
+				187769DA2005B1BC00CDD115 /* LTMorphingLabel.swift */,
+				187769DB2005B1BC00CDD115 /* LTMorphingLabel+Anvil.swift */,
+				187769DC2005B1BC00CDD115 /* LTMorphingLabel+Sparkle.swift */,
+				187769DD2005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift */,
+				187769DE2005B1BC00CDD115 /* LTMorphingEffect.swift */,
+				187769DF2005B1BC00CDD115 /* Info.plist */,
+			);
+			path = LTMorphingLabel;
+			sourceTree = "<group>";
+		};
+		187769D02005B1BC00CDD115 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				187769D12005B1BC00CDD115 /* Fire.png */,
+				187769D22005B1BC00CDD115 /* Sparkle.png */,
+				187769D32005B1BC00CDD115 /* Fragment.png */,
+				187769D42005B1BC00CDD115 /* Smoke.png */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
 		189E28DA1FBD26E1008D9027 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
 				180021D61FC2879800C5E414 /* TTSlideView.h */,
 				180021D71FC2879800C5E414 /* TTSlideView.m */,
+				187769C82005B1BC00CDD115 /* CountdownLabel */,
 				189E28DB1FBD26E1008D9027 /* CountDownBtn */,
 			);
 			path = CustomView;
@@ -1516,6 +1624,7 @@
 				185BD7331FF24E50002F77F9 /* QRCodeScanner */,
 				189E29461FBD7F1E008D9027 /* BDImagePicker */,
 				18A94B9E1FC40A3400032B5B /* TTMacros.h */,
+				187769FE2005C35F00CDD115 /* Bridge_Header.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1736,7 +1845,7 @@
 		1818E9841FBC49FA00C35A8A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = shang;
 				TargetAttributes = {
 					1818E98B1FBC49FA00C35A8A = {
@@ -1794,11 +1903,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187769EB2005B1BC00CDD115 /* tvOS-Info.plist in Resources */,
 				1818E99C1FBC49FA00C35A8A /* LaunchScreen.storyboard in Resources */,
 				1818E9991FBC49FA00C35A8A /* Assets.xcassets in Resources */,
 				189E29611FBD9743008D9027 /* WSDatePickerView.xib in Resources */,
+				187769E92005B1BC00CDD115 /* Fragment.png in Resources */,
+				187769E72005B1BC00CDD115 /* Fire.png in Resources */,
 				1818E9971FBC49FA00C35A8A /* Main.storyboard in Resources */,
+				187769E82005B1BC00CDD115 /* Sparkle.png in Resources */,
 				185B0D6B1FBE8A4B00FC5072 /* area.plist in Resources */,
+				187769EA2005B1BC00CDD115 /* Smoke.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1818,13 +1932,16 @@
 			files = (
 				18A94BC41FC41E8D00032B5B /* AFURLSessionManager.m in Sources */,
 				180021CE1FC282F200C5E414 /* DLScrollTabbarView.m in Sources */,
+				187769EE2005B1BC00CDD115 /* LTStringDiffResult.swift in Sources */,
 				180022AF1FC2DDC200C5E414 /* YYTextArchiver.m in Sources */,
 				1800228F1FC2DDC200C5E414 /* YYWebImageManager.m in Sources */,
 				18A94BFE1FC4307F00032B5B /* BaseNavigationController.m in Sources */,
+				187769E62005B1BC00CDD115 /* LTCharacterLimbo.swift in Sources */,
 				189E28F31FBD37CB008D9027 /* ESAccountManager.m in Sources */,
 				180022DA1FC2DDC200C5E414 /* YYReachability.m in Sources */,
 				18A94BE31FC420AF00032B5B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				18A94BB31FC41DB900032B5B /* PPNetworkCache.m in Sources */,
+				187769F32005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift in Sources */,
 				189E29261FBD3A27008D9027 /* LewPopupViewAnimationSlide.m in Sources */,
 				180022901FC2DDC200C5E414 /* YYSpriteSheetImage.m in Sources */,
 				1818EA2A1FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m in Sources */,
@@ -1842,6 +1959,7 @@
 				180022B21FC2DDC200C5E414 /* UIBezierPath+YYAdd.m in Sources */,
 				185BD7381FF24E6A002F77F9 /* QRCScanner.m in Sources */,
 				180022961FC2DDC200C5E414 /* UIImageView+YYWebImage.m in Sources */,
+				187769EC2005B1BC00CDD115 /* LTCharacterDiffResult.swift in Sources */,
 				180048EB1FFC85210071E46D /* FloatAnimationViewController.m in Sources */,
 				189E29201FBD3A27008D9027 /* LocationManager.m in Sources */,
 				180021D51FC283BB00C5E414 /* SlideViewController.m in Sources */,
@@ -1852,6 +1970,8 @@
 				18A94BC31FC41E8D00032B5B /* AFHTTPSessionManager.m in Sources */,
 				180022C61FC2DDC200C5E414 /* NSTimer+YYAdd.m in Sources */,
 				18B12E131FE26A280031D757 /* AFHTTPSessionManager+Synchronous.m in Sources */,
+				186D682C2004BFF500E256EB /* YYFPSLabel.m in Sources */,
+				187769F12005B1BC00CDD115 /* LTMorphingLabel+Anvil.swift in Sources */,
 				180022D51FC2DDC200C5E414 /* YYKeychain.m in Sources */,
 				189E291E1FBD3A27008D9027 /* UITableView+XSAnimationKit.m in Sources */,
 				189E29281FBD3A27008D9027 /* LewPopupBackgroundView.m in Sources */,
@@ -1866,6 +1986,7 @@
 				1818EA231FBC4D1B00C35A8A /* UIButton+Indicator.m in Sources */,
 				180021CD1FC282F200C5E414 /* DLTabedSlideView.m in Sources */,
 				189E29541FBD9000008D9027 /* UITextView+Placeholder.m in Sources */,
+				187769ED2005B1BC00CDD115 /* LTMorphingLabel+Evaporate.swift in Sources */,
 				1818EA1B1FBC4D1B00C35A8A /* NSDictionary+Merge.m in Sources */,
 				1800228C1FC2DDC200C5E414 /* YYKVStorage.m in Sources */,
 				180022911FC2DDC200C5E414 /* YYImage.m in Sources */,
@@ -1879,6 +2000,7 @@
 				180022CF1FC2DDC200C5E414 /* YYWeakProxy.m in Sources */,
 				18A94BE11FC420AF00032B5B /* UIImageView+AFNetworking.m in Sources */,
 				185B0D691FBE8A4B00FC5072 /* NSCalendar+STPicker.m in Sources */,
+				187769F42005B1BC00CDD115 /* LTMorphingEffect.swift in Sources */,
 				189E29581FBD91EB008D9027 /* UIViewController+EmptyBackButton.m in Sources */,
 				1818EA1A1FBC4D1B00C35A8A /* NSDictionary+JSONString.m in Sources */,
 				189E29641FBD9743008D9027 /* UIView+Extension.m in Sources */,
@@ -1895,6 +2017,7 @@
 				1818EA261FBC4D1B00C35A8A /* NSString+URL.m in Sources */,
 				189E29621FBD9743008D9027 /* WSDatePickerView.m in Sources */,
 				189E291D1FBD3A27008D9027 /* TableViewAnimationKit.m in Sources */,
+				187769E22005B1BC00CDD115 /* CountdownLabel.swift in Sources */,
 				1818E9941FBC49FA00C35A8A /* ViewController.m in Sources */,
 				1818EA1C1FBC4D1B00C35A8A /* UIButton+BackgroundColor.m in Sources */,
 				1818EA221FBC4D1B00C35A8A /* UIButton+TouchAreaInsets.m in Sources */,
@@ -1907,6 +2030,7 @@
 				1800228D1FC2DDC200C5E414 /* YYMemoryCache.m in Sources */,
 				185B0D721FBED45A00FC5072 /* UIBarButtonItem+Badge.m in Sources */,
 				1818EA271FBC4D1B00C35A8A /* NSArray+SafeAccess.m in Sources */,
+				187769FB2005C0E800CDD115 /* TTCountdownCell.swift in Sources */,
 				189E292D1FBD3BD3008D9027 /* AppVersionManager.m in Sources */,
 				1800229D1FC2DDC200C5E414 /* YYTextView.m in Sources */,
 				186D792C1FF33DF5000F7B4F /* UIView+GlowView.m in Sources */,
@@ -1922,6 +2046,7 @@
 				1818EA191FBC4D1B00C35A8A /* NSDictionary+SafeAccess.m in Sources */,
 				18D6D0B51FC563C8005305ED /* BaseListModel.m in Sources */,
 				185BD7571FF24F3F002F77F9 /* UIImage+TOWebViewControllerIcons.m in Sources */,
+				187769E52005B1BC00CDD115 /* LTEmitterView.swift in Sources */,
 				1818EA1E1FBC4D1B00C35A8A /* UIButton+CountDown.m in Sources */,
 				189E29231FBD3A27008D9027 /* LewPopupViewAnimationFade.m in Sources */,
 				180022D31FC2DDC200C5E414 /* YYTransaction.m in Sources */,
@@ -1953,11 +2078,14 @@
 				189E29221FBD3A27008D9027 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				180021CC1FC282F200C5E414 /* DLLRUCache.m in Sources */,
 				189E29291FBD3A27008D9027 /* ZTPopUpViewController.m in Sources */,
+				187769EF2005B1BC00CDD115 /* LTMorphingLabel+Burn.swift in Sources */,
 				185B0D651FBE8A4B00FC5072 /* STPickerView.m in Sources */,
 				180021CF1FC282F200C5E414 /* DLFixedTabbarView.m in Sources */,
+				187769F02005B1BC00CDD115 /* LTMorphingLabel.swift in Sources */,
 				180048E51FFC817F0071E46D /* AnimationKitViewController.m in Sources */,
 				18D6D0B21FC56393005305ED /* BaseTableViewController.m in Sources */,
 				1862EBF51FFB85AE0072F306 /* TTAnimationKit.m in Sources */,
+				187769F22005B1BC00CDD115 /* LTMorphingLabel+Sparkle.swift in Sources */,
 				1800229E1FC2DDC200C5E414 /* YYTextMagnifier.m in Sources */,
 				18A94BDF1FC420AF00032B5B /* UIRefreshControl+AFNetworking.m in Sources */,
 				185B0D641FBE8A4B00FC5072 /* STPickerArea.m in Sources */,
@@ -1967,6 +2095,7 @@
 				180022971FC2DDC200C5E414 /* MKAnnotationView+YYWebImage.m in Sources */,
 				1818EA211FBC4D1B00C35A8A /* UIButton+Submitting.m in Sources */,
 				18E372D81FCCF1CC00EF45FC /* UIView+TTKit.m in Sources */,
+				18F2A8391FFF6AE800D1CB29 /* CountdownListViewController.m in Sources */,
 				1862EBF21FFB2D990072F306 /* ZTProgressHUD.m in Sources */,
 				180021D21FC282F200C5E414 /* DLSlideView.m in Sources */,
 				18A94BB21FC41DB900032B5B /* PPNetworkHelper.m in Sources */,
@@ -1976,6 +2105,7 @@
 				180022BA1FC2DDC200C5E414 /* UIBarButtonItem+YYAdd.m in Sources */,
 				180022D61FC2DDC200C5E414 /* YYGestureRecognizer.m in Sources */,
 				189E29491FBD7F1E008D9027 /* BDImagePicker.m in Sources */,
+				187769E42005B1BC00CDD115 /* LTEasing.swift in Sources */,
 				180022941FC2DDC200C5E414 /* _YYWebImageSetter.m in Sources */,
 				180022BC1FC2DDC200C5E414 /* UIImage+YYAdd.m in Sources */,
 				187704611FC7B9270021C3CB /* AppDelegate+JPush.m in Sources */,
@@ -1983,6 +2113,7 @@
 				1818EA1D1FBC4D1B00C35A8A /* UIButton+LXMImagePosition.m in Sources */,
 				1818E9911FBC49FA00C35A8A /* AppDelegate.m in Sources */,
 				180022A81FC2DDC200C5E414 /* YYTextRunDelegate.m in Sources */,
+				187769E32005B1BC00CDD115 /* LTMorphingLabel+Fall.swift in Sources */,
 				1800228E1FC2DDC200C5E414 /* YYImageCache.m in Sources */,
 				180022B01FC2DDC200C5E414 /* YYTextRubyAnnotation.m in Sources */,
 				180021D11FC282F200C5E414 /* DLCustomSlideView.m in Sources */,
@@ -2003,6 +2134,7 @@
 				180022BE1FC2DDC200C5E414 /* UIFont+YYAdd.m in Sources */,
 				180022CE1FC2DDC200C5E414 /* CALayer+YYAdd.m in Sources */,
 				180022D41FC2DDC200C5E414 /* YYDispatchQueuePool.m in Sources */,
+				18F2A83F1FFF742600D1CB29 /* CellModel.m in Sources */,
 				18A94BE61FC420AF00032B5B /* AFImageDownloader.m in Sources */,
 				180022A21FC2DDC200C5E414 /* YYTextLayout.m in Sources */,
 				180022BB1FC2DDC200C5E414 /* UIGestureRecognizer+YYAdd.m in Sources */,
@@ -2174,6 +2306,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -2190,6 +2323,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tao.TTKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ../TTKit/Other/Bridge_Header.h;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2206,6 +2341,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tao.TTKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ../TTKit/Other/Bridge_Header.h;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -8,6 +8,7 @@
 
 #import "BaseTabBarViewController.h"
 #import "BaseTableViewController.h"
+#import "CountdownListViewController.h"
 #import "NSDictionary+SafeAccess.h"
 #import "TTMacros.h"
 #import "CoreJPush.h"
@@ -44,7 +45,7 @@ CoreJPushProtocal
     UINavigationController *demoVC = [UIStoryboard storyboardWithName:@"Main" bundle:nil].instantiateInitialViewController;
     [self setupChildViewController:demoVC title:@"Demo" imageName:@"tabbar_icon_video_nor" seleceImageName:@"tabbar_icon_video_sel"];
     
-    BaseTableViewController *msgVC = [BaseTableViewController new];
+    CountdownListViewController *msgVC = [[CountdownListViewController alloc]init];
     [self setupChildViewController:msgVC title:@"首页" imageName:@"tabbar_icon_home_nor" seleceImageName:@"tabbar_icon_home_sel"];
     
     UIViewController *mineVC = [[UIViewController alloc]init];

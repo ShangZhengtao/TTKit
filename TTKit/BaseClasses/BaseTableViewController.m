@@ -39,7 +39,7 @@ NSString *const kTableViewDefaultCellID = @"kTableViewDefaultCellID"; //缺省ce
     [super viewDidLoad];
    
     self.view.backgroundColor = [UIColor whiteColor];
-    self.model = [BaseListModel defaultData];
+//    self.model = [BaseListModel defaultData];
     [self.view addSubview:self.tableView];
     self.tableView.layer.transform = CATransform3DMakeScale(0.95, 0.95, 1);
     self.tableView.layer.opacity = 0;

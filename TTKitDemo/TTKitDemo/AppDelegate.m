@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "BaseTabBarViewController.h"
 #import "CoreJPush.h"
+#import "YYFPSLabel.h"
 @interface AppDelegate ()
 
 @end
@@ -23,9 +24,16 @@
     [self.window makeKeyAndVisible];
     [CoreJPush registerJPush:launchOptions];
     //    [self setupNotification:launchOptions];
+    [self setupFPSLable]; //测试FPS
     return YES;
 }
 
+- (void)setupFPSLable {
+    YYFPSLabel* label = [[YYFPSLabel alloc]initWithFrame:CGRectMake(60, 20, 55, 20)];
+    [self.window addSubview:label];
+}
+    
+    
 //注册带有分类的通知
 - (void)setupNotification:(NSDictionary *) launchOptions{
     NSSet *categories = nil;

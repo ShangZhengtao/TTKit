@@ -41,7 +41,7 @@ static BDImagePicker *bdImagePickerInstance = nil;
     _finishAction = finishAction;
     _allowsEditing = allowsEditing;
     
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"" message:@"选择图片" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction *camera = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self actionSheet:action];

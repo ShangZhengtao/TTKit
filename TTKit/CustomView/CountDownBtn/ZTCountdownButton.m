@@ -112,6 +112,7 @@
 
 - (void)stopCountDown {
     [self.timer invalidate];
+    self.timer = nil;
     [self setTitle:self.normalTitle forState:UIControlStateNormal];
     self.backgroundColor = self.normalBackgroundColor;
     self.userInteractionEnabled = YES;
@@ -156,6 +157,11 @@
 #pragma clang diagnostic pop
     }
     [self startCountDown];
+}
+
+- (void)dealloc {
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 @end

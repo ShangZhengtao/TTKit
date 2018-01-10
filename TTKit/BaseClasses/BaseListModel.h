@@ -10,7 +10,7 @@
 
 @interface BaseListModel : NSObject
 
-@property (nonatomic, strong) NSArray *allListModels;
+@property (nonatomic, strong) NSMutableArray *allListModels;
 /**模拟数据*/
 +(instancetype)defaultData;
 
