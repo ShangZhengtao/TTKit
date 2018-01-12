@@ -25,4 +25,10 @@
  */
 - (UIViewController *)getPresentedViewController;
 
+/**
+ 切换rootViewController
+
+ @param rootViewController rootViewController
+ */
+- (void)restoreRootViewController:(UIViewController *)rootViewController;
 @end

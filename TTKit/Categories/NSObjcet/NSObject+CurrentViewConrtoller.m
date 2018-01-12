@@ -43,4 +43,22 @@
     return topVC;
 }
 
+- (void)restoreRootViewController:(UIViewController *)rootViewController {
+    
+    UIWindow* window = [UIApplication sharedApplication].keyWindow;
+    rootViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    void (^animation)(void) = ^{
+        BOOL oldState = [UIView areAnimationsEnabled];
+        [UIView setAnimationsEnabled:NO];
+        [UIApplication sharedApplication].keyWindow.rootViewController = rootViewController;
+        [UIView setAnimationsEnabled:oldState];
+    };
+    
+    [UIView transitionWithView:window
+                      duration:0.5f
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:animation
+                    completion:nil];
+}
+
 @end

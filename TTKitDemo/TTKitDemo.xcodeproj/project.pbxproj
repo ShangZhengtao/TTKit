@@ -150,11 +150,6 @@
 		1862EBF51FFB85AE0072F306 /* TTAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EBF41FFB85AE0072F306 /* TTAnimationKit.m */; };
 		186D682C2004BFF500E256EB /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D682B2004BFF500E256EB /* YYFPSLabel.m */; };
 		186D792C1FF33DF5000F7B4F /* UIView+GlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D792B1FF33DF5000F7B4F /* UIView+GlowView.m */; };
-		1877045D1FC7B9270021C3CB /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704541FC7B9270021C3CB /* jpush-ios-3.0.7.a */; };
-		1877045E1FC7B9270021C3CB /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704551FC7B9270021C3CB /* jcore-ios-1.1.6.a */; };
-		1877045F1FC7B9270021C3CB /* jpush-extension-ios-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704561FC7B9270021C3CB /* jpush-extension-ios-1.0.0.a */; };
-		187704601FC7B9270021C3CB /* CoreJPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 187704591FC7B9270021C3CB /* CoreJPush.m */; };
-		187704611FC7B9270021C3CB /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 1877045C1FC7B9270021C3CB /* AppDelegate+JPush.m */; };
 		187704661FC7BB170021C3CB /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704651FC7BB170021C3CB /* libresolv.tbd */; };
 		187769E22005B1BC00CDD115 /* CountdownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769C92005B1BC00CDD115 /* CountdownLabel.swift */; };
 		187769E32005B1BC00CDD115 /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769CB2005B1BC00CDD115 /* LTMorphingLabel+Fall.swift */; };
@@ -176,6 +171,11 @@
 		187769F32005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DD2005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift */; };
 		187769F42005B1BC00CDD115 /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DE2005B1BC00CDD115 /* LTMorphingEffect.swift */; };
 		187769FB2005C0E800CDD115 /* TTCountdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769FA2005C0E800CDD115 /* TTCountdownCell.swift */; };
+		187F4DD720084BD300DB1AEA /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F4DD020084BD300DB1AEA /* jpush-ios-3.0.7.a */; };
+		187F4DD820084BD300DB1AEA /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F4DD120084BD300DB1AEA /* jcore-ios-1.1.6.a */; };
+		187F4DD920084BD300DB1AEA /* jpush-extension-ios-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F4DD220084BD300DB1AEA /* jpush-extension-ios-1.0.0.a */; };
+		187F4DDA20084BD300DB1AEA /* CoreJPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 187F4DD520084BD300DB1AEA /* CoreJPush.m */; };
+		187F4DDB20084BD300DB1AEA /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 187F4DD620084BD300DB1AEA /* AppDelegate+JPush.m */; };
 		189E28DE1FBD26E1008D9027 /* ZTCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28DC1FBD26E1008D9027 /* ZTCountdownButton.m */; };
 		189E28E21FBD2B57008D9027 /* LaunchIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28E01FBD2B57008D9027 /* LaunchIntroductionView.m */; };
 		189E28E81FBD3288008D9027 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28E71FBD3288008D9027 /* NSDictionary+Log.m */; };
@@ -566,15 +566,6 @@
 		186D682B2004BFF500E256EB /* YYFPSLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		186D792A1FF33DF5000F7B4F /* UIView+GlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GlowView.h"; sourceTree = "<group>"; };
 		186D792B1FF33DF5000F7B4F /* UIView+GlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GlowView.m"; sourceTree = "<group>"; };
-		187704521FC7B9270021C3CB /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
-		187704531FC7B9270021C3CB /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
-		187704541FC7B9270021C3CB /* jpush-ios-3.0.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.7.a"; sourceTree = "<group>"; };
-		187704551FC7B9270021C3CB /* jcore-ios-1.1.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.6.a"; sourceTree = "<group>"; };
-		187704561FC7B9270021C3CB /* jpush-extension-ios-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-extension-ios-1.0.0.a"; sourceTree = "<group>"; };
-		187704571FC7B9270021C3CB /* CoreJPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreJPush.h; sourceTree = "<group>"; };
-		187704581FC7B9270021C3CB /* AppDelegate+JPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JPush.h"; sourceTree = "<group>"; };
-		187704591FC7B9270021C3CB /* CoreJPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreJPush.m; sourceTree = "<group>"; };
-		1877045C1FC7B9270021C3CB /* AppDelegate+JPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+JPush.m"; sourceTree = "<group>"; };
 		187704621FC7BAD60021C3CB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		187704631FC7BAED0021C3CB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		187704651FC7BB170021C3CB /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
@@ -604,6 +595,15 @@
 		187769E12005B1BC00CDD115 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187769FA2005C0E800CDD115 /* TTCountdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCountdownCell.swift; sourceTree = "<group>"; };
 		187769FE2005C35F00CDD115 /* Bridge_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge_Header.h; sourceTree = "<group>"; };
+		187F4DCE20084BD300DB1AEA /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
+		187F4DCF20084BD300DB1AEA /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		187F4DD020084BD300DB1AEA /* jpush-ios-3.0.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.7.a"; sourceTree = "<group>"; };
+		187F4DD120084BD300DB1AEA /* jcore-ios-1.1.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.6.a"; sourceTree = "<group>"; };
+		187F4DD220084BD300DB1AEA /* jpush-extension-ios-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-extension-ios-1.0.0.a"; sourceTree = "<group>"; };
+		187F4DD320084BD300DB1AEA /* CoreJPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreJPush.h; sourceTree = "<group>"; };
+		187F4DD420084BD300DB1AEA /* AppDelegate+JPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JPush.h"; sourceTree = "<group>"; };
+		187F4DD520084BD300DB1AEA /* CoreJPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreJPush.m; sourceTree = "<group>"; };
+		187F4DD620084BD300DB1AEA /* AppDelegate+JPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+JPush.m"; sourceTree = "<group>"; };
 		189E28DC1FBD26E1008D9027 /* ZTCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTCountdownButton.m; sourceTree = "<group>"; };
 		189E28DD1FBD26E1008D9027 /* ZTCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTCountdownButton.h; sourceTree = "<group>"; };
 		189E28E01FBD2B57008D9027 /* LaunchIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchIntroductionView.m; sourceTree = "<group>"; };
@@ -744,10 +744,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1877045F1FC7B9270021C3CB /* jpush-extension-ios-1.0.0.a in Frameworks */,
+				187F4DD920084BD300DB1AEA /* jpush-extension-ios-1.0.0.a in Frameworks */,
 				187704661FC7BB170021C3CB /* libresolv.tbd in Frameworks */,
-				1877045E1FC7B9270021C3CB /* jcore-ios-1.1.6.a in Frameworks */,
-				1877045D1FC7B9270021C3CB /* jpush-ios-3.0.7.a in Frameworks */,
+				187F4DD820084BD300DB1AEA /* jcore-ios-1.1.6.a in Frameworks */,
+				187F4DD720084BD300DB1AEA /* jpush-ios-3.0.7.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1144,7 +1144,7 @@
 		1818E9E71FBC4D1B00C35A8A /* TTKit */ = {
 			isa = PBXGroup;
 			children = (
-				1877044F1FC7B9270021C3CB /* CoreJPush */,
+				187F4DCB20084BD300DB1AEA /* CoreJPush */,
 				18A94BA21FC41AC600032B5B /* Networking */,
 				180021D91FC2DDC200C5E414 /* YYKit */,
 				18A94BFB1FC4305400032B5B /* BaseClasses */,
@@ -1377,38 +1377,6 @@
 			path = NJKWebViewProgress;
 			sourceTree = "<group>";
 		};
-		1877044F1FC7B9270021C3CB /* CoreJPush */ = {
-			isa = PBXGroup;
-			children = (
-				187704501FC7B9270021C3CB /* jpush-ios-3.0.7 */,
-				187704571FC7B9270021C3CB /* CoreJPush.h */,
-				187704591FC7B9270021C3CB /* CoreJPush.m */,
-				187704581FC7B9270021C3CB /* AppDelegate+JPush.h */,
-				1877045C1FC7B9270021C3CB /* AppDelegate+JPush.m */,
-			);
-			path = CoreJPush;
-			sourceTree = "<group>";
-		};
-		187704501FC7B9270021C3CB /* jpush-ios-3.0.7 */ = {
-			isa = PBXGroup;
-			children = (
-				187704511FC7B9270021C3CB /* Lib */,
-			);
-			path = "jpush-ios-3.0.7";
-			sourceTree = "<group>";
-		};
-		187704511FC7B9270021C3CB /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				187704521FC7B9270021C3CB /* JPushNotificationExtensionService.h */,
-				187704531FC7B9270021C3CB /* JPUSHService.h */,
-				187704541FC7B9270021C3CB /* jpush-ios-3.0.7.a */,
-				187704551FC7B9270021C3CB /* jcore-ios-1.1.6.a */,
-				187704561FC7B9270021C3CB /* jpush-extension-ios-1.0.0.a */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
 		187769C82005B1BC00CDD115 /* CountdownLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1453,6 +1421,38 @@
 				187769D42005B1BC00CDD115 /* Smoke.png */,
 			);
 			path = Particles;
+			sourceTree = "<group>";
+		};
+		187F4DCB20084BD300DB1AEA /* CoreJPush */ = {
+			isa = PBXGroup;
+			children = (
+				187F4DCC20084BD300DB1AEA /* jpush-ios-3.0.7 */,
+				187F4DD320084BD300DB1AEA /* CoreJPush.h */,
+				187F4DD420084BD300DB1AEA /* AppDelegate+JPush.h */,
+				187F4DD520084BD300DB1AEA /* CoreJPush.m */,
+				187F4DD620084BD300DB1AEA /* AppDelegate+JPush.m */,
+			);
+			path = CoreJPush;
+			sourceTree = "<group>";
+		};
+		187F4DCC20084BD300DB1AEA /* jpush-ios-3.0.7 */ = {
+			isa = PBXGroup;
+			children = (
+				187F4DCD20084BD300DB1AEA /* Lib */,
+			);
+			path = "jpush-ios-3.0.7";
+			sourceTree = "<group>";
+		};
+		187F4DCD20084BD300DB1AEA /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				187F4DCE20084BD300DB1AEA /* JPushNotificationExtensionService.h */,
+				187F4DCF20084BD300DB1AEA /* JPUSHService.h */,
+				187F4DD020084BD300DB1AEA /* jpush-ios-3.0.7.a */,
+				187F4DD120084BD300DB1AEA /* jcore-ios-1.1.6.a */,
+				187F4DD220084BD300DB1AEA /* jpush-extension-ios-1.0.0.a */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 		189E28DA1FBD26E1008D9027 /* CustomView */ = {
@@ -2027,6 +2027,7 @@
 				180022BD1FC2DDC200C5E414 /* UIControl+YYAdd.m in Sources */,
 				180022D01FC2DDC200C5E414 /* YYAsyncLayer.m in Sources */,
 				180022BF1FC2DDC200C5E414 /* NSArray+YYAdd.m in Sources */,
+				187F4DDA20084BD300DB1AEA /* CoreJPush.m in Sources */,
 				1800228D1FC2DDC200C5E414 /* YYMemoryCache.m in Sources */,
 				185B0D721FBED45A00FC5072 /* UIBarButtonItem+Badge.m in Sources */,
 				1818EA271FBC4D1B00C35A8A /* NSArray+SafeAccess.m in Sources */,
@@ -2058,7 +2059,6 @@
 				180022A31FC2DDC200C5E414 /* YYTextLine.m in Sources */,
 				18E89F391FD6479000A77EA7 /* WRCustomNavigationBar.m in Sources */,
 				18A94C011FC430B100032B5B /* BaseTabBarViewController.m in Sources */,
-				187704601FC7B9270021C3CB /* CoreJPush.m in Sources */,
 				1818EA291FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.m in Sources */,
 				189E29271FBD3A27008D9027 /* UIViewController+LewPopupViewController.m in Sources */,
 				180022B11FC2DDC200C5E414 /* UITextField+YYAdd.m in Sources */,
@@ -2085,6 +2085,7 @@
 				180048E51FFC817F0071E46D /* AnimationKitViewController.m in Sources */,
 				18D6D0B21FC56393005305ED /* BaseTableViewController.m in Sources */,
 				1862EBF51FFB85AE0072F306 /* TTAnimationKit.m in Sources */,
+				187F4DDB20084BD300DB1AEA /* AppDelegate+JPush.m in Sources */,
 				187769F22005B1BC00CDD115 /* LTMorphingLabel+Sparkle.swift in Sources */,
 				1800229E1FC2DDC200C5E414 /* YYTextMagnifier.m in Sources */,
 				18A94BDF1FC420AF00032B5B /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -2108,7 +2109,6 @@
 				187769E42005B1BC00CDD115 /* LTEasing.swift in Sources */,
 				180022941FC2DDC200C5E414 /* _YYWebImageSetter.m in Sources */,
 				180022BC1FC2DDC200C5E414 /* UIImage+YYAdd.m in Sources */,
-				187704611FC7B9270021C3CB /* AppDelegate+JPush.m in Sources */,
 				180022B81FC2DDC200C5E414 /* UIScreen+YYAdd.m in Sources */,
 				1818EA1D1FBC4D1B00C35A8A /* UIButton+LXMImagePosition.m in Sources */,
 				1818E9911FBC49FA00C35A8A /* AppDelegate.m in Sources */,
