@@ -173,7 +173,6 @@
 		187769FB2005C0E800CDD115 /* TTCountdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769FA2005C0E800CDD115 /* TTCountdownCell.swift */; };
 		187F4DD720084BD300DB1AEA /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F4DD020084BD300DB1AEA /* jpush-ios-3.0.7.a */; };
 		187F4DD820084BD300DB1AEA /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F4DD120084BD300DB1AEA /* jcore-ios-1.1.6.a */; };
-		187F4DD920084BD300DB1AEA /* jpush-extension-ios-1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F4DD220084BD300DB1AEA /* jpush-extension-ios-1.0.0.a */; };
 		187F4DDA20084BD300DB1AEA /* CoreJPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 187F4DD520084BD300DB1AEA /* CoreJPush.m */; };
 		187F4DDB20084BD300DB1AEA /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 187F4DD620084BD300DB1AEA /* AppDelegate+JPush.m */; };
 		189E28DE1FBD26E1008D9027 /* ZTCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28DC1FBD26E1008D9027 /* ZTCountdownButton.m */; };
@@ -599,7 +598,6 @@
 		187F4DCF20084BD300DB1AEA /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		187F4DD020084BD300DB1AEA /* jpush-ios-3.0.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.7.a"; sourceTree = "<group>"; };
 		187F4DD120084BD300DB1AEA /* jcore-ios-1.1.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.6.a"; sourceTree = "<group>"; };
-		187F4DD220084BD300DB1AEA /* jpush-extension-ios-1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-extension-ios-1.0.0.a"; sourceTree = "<group>"; };
 		187F4DD320084BD300DB1AEA /* CoreJPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreJPush.h; sourceTree = "<group>"; };
 		187F4DD420084BD300DB1AEA /* AppDelegate+JPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JPush.h"; sourceTree = "<group>"; };
 		187F4DD520084BD300DB1AEA /* CoreJPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreJPush.m; sourceTree = "<group>"; };
@@ -744,7 +742,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187F4DD920084BD300DB1AEA /* jpush-extension-ios-1.0.0.a in Frameworks */,
 				187704661FC7BB170021C3CB /* libresolv.tbd in Frameworks */,
 				187F4DD820084BD300DB1AEA /* jcore-ios-1.1.6.a in Frameworks */,
 				187F4DD720084BD300DB1AEA /* jpush-ios-3.0.7.a in Frameworks */,
@@ -1450,7 +1447,6 @@
 				187F4DCF20084BD300DB1AEA /* JPUSHService.h */,
 				187F4DD020084BD300DB1AEA /* jpush-ios-3.0.7.a */,
 				187F4DD120084BD300DB1AEA /* jcore-ios-1.1.6.a */,
-				187F4DD220084BD300DB1AEA /* jpush-extension-ios-1.0.0.a */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
