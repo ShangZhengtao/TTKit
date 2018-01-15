@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "QRCScannerViewController.h"
+#import "PresentViewController.h"
 #import "BDImagePicker.h"
 #import "LrdOutputView.h"
 #import "WSDatePickerView.h"
@@ -34,6 +35,7 @@ STPickerAreaDelegate
     [super viewDidLoad];
     self.title = @"Demo";
 //    self.areaPickerButton.eventTimeInterval = 3;
+    self.modalPresentationStyle =  UIModalPresentationCustom;
 }
 
 - (IBAction)scannerButtonTapped:(UIButton *)sender {
@@ -117,6 +119,12 @@ STPickerAreaDelegate
     }];
     [alertvc addAction:action];
     [self presentViewController:alertvc animated:YES completion:nil];
+}
+
+
+- (IBAction)presentButtonTapped:(UIButton *)sender {
+    PresentViewController *vc = [[PresentViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end

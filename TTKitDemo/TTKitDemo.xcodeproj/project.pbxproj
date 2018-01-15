@@ -14,7 +14,6 @@
 		180021D01FC282F200C5E414 /* DLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 180021C91FC282F200C5E414 /* DLUtility.m */; };
 		180021D11FC282F200C5E414 /* DLCustomSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180021CA1FC282F200C5E414 /* DLCustomSlideView.m */; };
 		180021D21FC282F200C5E414 /* DLSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180021CB1FC282F200C5E414 /* DLSlideView.m */; };
-		180021D51FC283BB00C5E414 /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180021D41FC283BB00C5E414 /* SlideViewController.m */; };
 		180021D81FC2879800C5E414 /* TTSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180021D71FC2879800C5E414 /* TTSlideView.m */; };
 		1800228A1FC2DDC200C5E414 /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 180021DB1FC2DDC200C5E414 /* YYDiskCache.m */; };
 		1800228B1FC2DDC200C5E414 /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 180021DD1FC2DDC200C5E414 /* YYCache.m */; };
@@ -97,11 +96,7 @@
 		180022D81FC2DDC200C5E414 /* YYTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 180022861FC2DDC200C5E414 /* YYTimer.m */; };
 		180022D91FC2DDC200C5E414 /* YYThreadSafeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 180022871FC2DDC200C5E414 /* YYThreadSafeArray.m */; };
 		180022DA1FC2DDC200C5E414 /* YYReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 180022881FC2DDC200C5E414 /* YYReachability.m */; };
-		180048E51FFC817F0071E46D /* AnimationKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180048E41FFC817F0071E46D /* AnimationKitViewController.m */; };
-		180048E81FFC81B30071E46D /* PathAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180048E71FFC81B30071E46D /* PathAnimationViewController.m */; };
-		180048EB1FFC85210071E46D /* FloatAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180048EA1FFC85210071E46D /* FloatAnimationViewController.m */; };
 		1818E9911FBC49FA00C35A8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818E9901FBC49FA00C35A8A /* AppDelegate.m */; };
-		1818E9941FBC49FA00C35A8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818E9931FBC49FA00C35A8A /* ViewController.m */; };
 		1818E9971FBC49FA00C35A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1818E9951FBC49FA00C35A8A /* Main.storyboard */; };
 		1818E9991FBC49FA00C35A8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1818E9981FBC49FA00C35A8A /* Assets.xcassets */; };
 		1818E99C1FBC49FA00C35A8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1818E99A1FBC49FA00C35A8A /* LaunchScreen.storyboard */; };
@@ -170,11 +165,20 @@
 		187769F22005B1BC00CDD115 /* LTMorphingLabel+Sparkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DC2005B1BC00CDD115 /* LTMorphingLabel+Sparkle.swift */; };
 		187769F32005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DD2005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift */; };
 		187769F42005B1BC00CDD115 /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DE2005B1BC00CDD115 /* LTMorphingEffect.swift */; };
-		187769FB2005C0E800CDD115 /* TTCountdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769FA2005C0E800CDD115 /* TTCountdownCell.swift */; };
 		187F4DD720084BD300DB1AEA /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F4DD020084BD300DB1AEA /* jpush-ios-3.0.7.a */; };
 		187F4DD820084BD300DB1AEA /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F4DD120084BD300DB1AEA /* jcore-ios-1.1.6.a */; };
 		187F4DDA20084BD300DB1AEA /* CoreJPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 187F4DD520084BD300DB1AEA /* CoreJPush.m */; };
 		187F4DDB20084BD300DB1AEA /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 187F4DD620084BD300DB1AEA /* AppDelegate+JPush.m */; };
+		189AF37520089FA2009A26E5 /* TTCountdownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189AF36420089FA1009A26E5 /* TTCountdownCell.swift */; };
+		189AF37620089FA2009A26E5 /* FloatAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AF36920089FA1009A26E5 /* FloatAnimationViewController.m */; };
+		189AF37720089FA2009A26E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AF36A20089FA1009A26E5 /* ViewController.m */; };
+		189AF37820089FA2009A26E5 /* CountdownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AF36B20089FA1009A26E5 /* CountdownListViewController.m */; };
+		189AF37920089FA2009A26E5 /* PathAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AF36C20089FA1009A26E5 /* PathAnimationViewController.m */; };
+		189AF37A20089FA2009A26E5 /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AF36D20089FA1009A26E5 /* SlideViewController.m */; };
+		189AF37B20089FA2009A26E5 /* AnimationKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AF36E20089FA1009A26E5 /* AnimationKitViewController.m */; };
+		189AF37C20089FA2009A26E5 /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AF37320089FA2009A26E5 /* CellModel.m */; };
+		189AF37F2008A004009A26E5 /* PresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AF37E2008A004009A26E5 /* PresentViewController.m */; };
+		189AF3822008A597009A26E5 /* OpenDoorAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AF3812008A597009A26E5 /* OpenDoorAnimator.m */; };
 		189E28DE1FBD26E1008D9027 /* ZTCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28DC1FBD26E1008D9027 /* ZTCountdownButton.m */; };
 		189E28E21FBD2B57008D9027 /* LaunchIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28E01FBD2B57008D9027 /* LaunchIntroductionView.m */; };
 		189E28E81FBD3288008D9027 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28E71FBD3288008D9027 /* NSDictionary+Log.m */; };
@@ -232,8 +236,6 @@
 		18E372D81FCCF1CC00EF45FC /* UIView+TTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E372D71FCCF1CC00EF45FC /* UIView+TTKit.m */; };
 		18E89F381FD6478D00A77EA7 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7401FD546BE0024A4D2 /* WRNavigationBar.m */; };
 		18E89F391FD6479000A77EA7 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7431FD546BE0024A4D2 /* WRCustomNavigationBar.m */; };
-		18F2A8391FFF6AE800D1CB29 /* CountdownListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F2A8381FFF6AE800D1CB29 /* CountdownListViewController.m */; };
-		18F2A83F1FFF742600D1CB29 /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F2A83E1FFF742600D1CB29 /* CellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,8 +279,6 @@
 		180021C91FC282F200C5E414 /* DLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLUtility.m; sourceTree = "<group>"; };
 		180021CA1FC282F200C5E414 /* DLCustomSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLCustomSlideView.m; sourceTree = "<group>"; };
 		180021CB1FC282F200C5E414 /* DLSlideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLSlideView.m; sourceTree = "<group>"; };
-		180021D31FC283BB00C5E414 /* SlideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SlideViewController.h; sourceTree = "<group>"; };
-		180021D41FC283BB00C5E414 /* SlideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
 		180021D61FC2879800C5E414 /* TTSlideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTSlideView.h; sourceTree = "<group>"; };
 		180021D71FC2879800C5E414 /* TTSlideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTSlideView.m; sourceTree = "<group>"; };
 		180021DB1FC2DDC200C5E414 /* YYDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDiskCache.m; sourceTree = "<group>"; };
@@ -448,18 +448,10 @@
 		180022DC1FC2DE1C00C5E414 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		180022DE1FC2DE4C00C5E414 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		180022E01FC2DE6300C5E414 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		180048E31FFC817F0071E46D /* AnimationKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationKitViewController.h; sourceTree = "<group>"; };
-		180048E41FFC817F0071E46D /* AnimationKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationKitViewController.m; sourceTree = "<group>"; };
-		180048E61FFC81B30071E46D /* PathAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathAnimationViewController.h; sourceTree = "<group>"; };
-		180048E71FFC81B30071E46D /* PathAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathAnimationViewController.m; sourceTree = "<group>"; };
-		180048E91FFC85210071E46D /* FloatAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloatAnimationViewController.h; sourceTree = "<group>"; };
-		180048EA1FFC85210071E46D /* FloatAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatAnimationViewController.m; sourceTree = "<group>"; };
 		18065EC71FF5F36000B984A0 /* imageNotification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = imageNotification.entitlements; sourceTree = "<group>"; };
 		1818E98C1FBC49FA00C35A8A /* TTKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1818E98F1FBC49FA00C35A8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1818E9901FBC49FA00C35A8A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1818E9921FBC49FA00C35A8A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1818E9931FBC49FA00C35A8A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1818E9961FBC49FA00C35A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1818E9981FBC49FA00C35A8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1818E99B1FBC49FA00C35A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -592,7 +584,6 @@
 		187769DF2005B1BC00CDD115 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187769E02005B1BC00CDD115 /* CountdownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownLabel.h; sourceTree = "<group>"; };
 		187769E12005B1BC00CDD115 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		187769FA2005C0E800CDD115 /* TTCountdownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTCountdownCell.swift; sourceTree = "<group>"; };
 		187769FE2005C35F00CDD115 /* Bridge_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge_Header.h; sourceTree = "<group>"; };
 		187F4DCE20084BD300DB1AEA /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
 		187F4DCF20084BD300DB1AEA /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
@@ -602,6 +593,25 @@
 		187F4DD420084BD300DB1AEA /* AppDelegate+JPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JPush.h"; sourceTree = "<group>"; };
 		187F4DD520084BD300DB1AEA /* CoreJPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreJPush.m; sourceTree = "<group>"; };
 		187F4DD620084BD300DB1AEA /* AppDelegate+JPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+JPush.m"; sourceTree = "<group>"; };
+		189AF36420089FA1009A26E5 /* TTCountdownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTCountdownCell.swift; sourceTree = "<group>"; };
+		189AF36620089FA1009A26E5 /* SlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController.h; sourceTree = "<group>"; };
+		189AF36720089FA1009A26E5 /* PathAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathAnimationViewController.h; sourceTree = "<group>"; };
+		189AF36820089FA1009A26E5 /* AnimationKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationKitViewController.h; sourceTree = "<group>"; };
+		189AF36920089FA1009A26E5 /* FloatAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatAnimationViewController.m; sourceTree = "<group>"; };
+		189AF36A20089FA1009A26E5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		189AF36B20089FA1009A26E5 /* CountdownListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownListViewController.m; sourceTree = "<group>"; };
+		189AF36C20089FA1009A26E5 /* PathAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathAnimationViewController.m; sourceTree = "<group>"; };
+		189AF36D20089FA1009A26E5 /* SlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
+		189AF36E20089FA1009A26E5 /* AnimationKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationKitViewController.m; sourceTree = "<group>"; };
+		189AF36F20089FA1009A26E5 /* CountdownListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownListViewController.h; sourceTree = "<group>"; };
+		189AF37020089FA1009A26E5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		189AF37120089FA1009A26E5 /* FloatAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatAnimationViewController.h; sourceTree = "<group>"; };
+		189AF37320089FA2009A26E5 /* CellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellModel.m; sourceTree = "<group>"; };
+		189AF37420089FA2009A26E5 /* CellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellModel.h; sourceTree = "<group>"; };
+		189AF37D2008A004009A26E5 /* PresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentViewController.h; sourceTree = "<group>"; };
+		189AF37E2008A004009A26E5 /* PresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentViewController.m; sourceTree = "<group>"; };
+		189AF3802008A597009A26E5 /* OpenDoorAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenDoorAnimator.h; sourceTree = "<group>"; };
+		189AF3812008A597009A26E5 /* OpenDoorAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenDoorAnimator.m; sourceTree = "<group>"; };
 		189E28DC1FBD26E1008D9027 /* ZTCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTCountdownButton.m; sourceTree = "<group>"; };
 		189E28DD1FBD26E1008D9027 /* ZTCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTCountdownButton.h; sourceTree = "<group>"; };
 		189E28E01FBD2B57008D9027 /* LaunchIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchIntroductionView.m; sourceTree = "<group>"; };
@@ -727,10 +737,6 @@
 		18D6D0B41FC563C8005305ED /* BaseListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseListModel.m; sourceTree = "<group>"; };
 		18E372D61FCCF1CC00EF45FC /* UIView+TTKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+TTKit.h"; sourceTree = "<group>"; };
 		18E372D71FCCF1CC00EF45FC /* UIView+TTKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+TTKit.m"; sourceTree = "<group>"; };
-		18F2A8371FFF6AE800D1CB29 /* CountdownListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountdownListViewController.h; sourceTree = "<group>"; };
-		18F2A8381FFF6AE800D1CB29 /* CountdownListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountdownListViewController.m; sourceTree = "<group>"; };
-		18F2A83D1FFF742600D1CB29 /* CellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellModel.h; sourceTree = "<group>"; };
-		18F2A83E1FFF742600D1CB29 /* CellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellModel.m; sourceTree = "<group>"; };
 		18FAC7401FD546BE0024A4D2 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
 		18FAC7411FD546BE0024A4D2 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
 		18FAC7421FD546BE0024A4D2 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
@@ -1114,21 +1120,9 @@
 				187704671FC7F6C10021C3CB /* TTKitDemo.entitlements */,
 				1818E98F1FBC49FA00C35A8A /* AppDelegate.h */,
 				1818E9901FBC49FA00C35A8A /* AppDelegate.m */,
-				1818E9921FBC49FA00C35A8A /* ViewController.h */,
-				1818E9931FBC49FA00C35A8A /* ViewController.m */,
-				180021D31FC283BB00C5E414 /* SlideViewController.h */,
-				180021D41FC283BB00C5E414 /* SlideViewController.m */,
-				180048E31FFC817F0071E46D /* AnimationKitViewController.h */,
-				180048E41FFC817F0071E46D /* AnimationKitViewController.m */,
-				180048E61FFC81B30071E46D /* PathAnimationViewController.h */,
-				180048E71FFC81B30071E46D /* PathAnimationViewController.m */,
-				180048E91FFC85210071E46D /* FloatAnimationViewController.h */,
-				180048EA1FFC85210071E46D /* FloatAnimationViewController.m */,
-				18F2A8371FFF6AE800D1CB29 /* CountdownListViewController.h */,
-				18F2A8381FFF6AE800D1CB29 /* CountdownListViewController.m */,
-				187769FA2005C0E800CDD115 /* TTCountdownCell.swift */,
-				18F2A83D1FFF742600D1CB29 /* CellModel.h */,
-				18F2A83E1FFF742600D1CB29 /* CellModel.m */,
+				189AF36520089FA1009A26E5 /* Controller */,
+				189AF37220089FA2009A26E5 /* Model */,
+				189AF36320089FA1009A26E5 /* View */,
 				1818E9951FBC49FA00C35A8A /* Main.storyboard */,
 				1818E9981FBC49FA00C35A8A /* Assets.xcassets */,
 				1818E99A1FBC49FA00C35A8A /* LaunchScreen.storyboard */,
@@ -1449,6 +1443,46 @@
 				187F4DD120084BD300DB1AEA /* jcore-ios-1.1.6.a */,
 			);
 			path = Lib;
+			sourceTree = "<group>";
+		};
+		189AF36320089FA1009A26E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				189AF36420089FA1009A26E5 /* TTCountdownCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		189AF36520089FA1009A26E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				189AF37020089FA1009A26E5 /* ViewController.h */,
+				189AF36A20089FA1009A26E5 /* ViewController.m */,
+				189AF36620089FA1009A26E5 /* SlideViewController.h */,
+				189AF36D20089FA1009A26E5 /* SlideViewController.m */,
+				189AF36720089FA1009A26E5 /* PathAnimationViewController.h */,
+				189AF36C20089FA1009A26E5 /* PathAnimationViewController.m */,
+				189AF36820089FA1009A26E5 /* AnimationKitViewController.h */,
+				189AF36E20089FA1009A26E5 /* AnimationKitViewController.m */,
+				189AF36920089FA1009A26E5 /* FloatAnimationViewController.m */,
+				189AF37120089FA1009A26E5 /* FloatAnimationViewController.h */,
+				189AF36B20089FA1009A26E5 /* CountdownListViewController.m */,
+				189AF36F20089FA1009A26E5 /* CountdownListViewController.h */,
+				189AF37D2008A004009A26E5 /* PresentViewController.h */,
+				189AF37E2008A004009A26E5 /* PresentViewController.m */,
+				189AF3802008A597009A26E5 /* OpenDoorAnimator.h */,
+				189AF3812008A597009A26E5 /* OpenDoorAnimator.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		189AF37220089FA2009A26E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				189AF37320089FA2009A26E5 /* CellModel.m */,
+				189AF37420089FA2009A26E5 /* CellModel.h */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		189E28DA1FBD26E1008D9027 /* CustomView */ = {
@@ -1928,9 +1962,11 @@
 			files = (
 				18A94BC41FC41E8D00032B5B /* AFURLSessionManager.m in Sources */,
 				180021CE1FC282F200C5E414 /* DLScrollTabbarView.m in Sources */,
+				189AF37A20089FA2009A26E5 /* SlideViewController.m in Sources */,
 				187769EE2005B1BC00CDD115 /* LTStringDiffResult.swift in Sources */,
 				180022AF1FC2DDC200C5E414 /* YYTextArchiver.m in Sources */,
 				1800228F1FC2DDC200C5E414 /* YYWebImageManager.m in Sources */,
+				189AF37B20089FA2009A26E5 /* AnimationKitViewController.m in Sources */,
 				18A94BFE1FC4307F00032B5B /* BaseNavigationController.m in Sources */,
 				187769E62005B1BC00CDD115 /* LTCharacterLimbo.swift in Sources */,
 				189E28F31FBD37CB008D9027 /* ESAccountManager.m in Sources */,
@@ -1956,9 +1992,7 @@
 				185BD7381FF24E6A002F77F9 /* QRCScanner.m in Sources */,
 				180022961FC2DDC200C5E414 /* UIImageView+YYWebImage.m in Sources */,
 				187769EC2005B1BC00CDD115 /* LTCharacterDiffResult.swift in Sources */,
-				180048EB1FFC85210071E46D /* FloatAnimationViewController.m in Sources */,
 				189E29201FBD3A27008D9027 /* LocationManager.m in Sources */,
-				180021D51FC283BB00C5E414 /* SlideViewController.m in Sources */,
 				180022B41FC2DDC200C5E414 /* UIDevice+YYAdd.m in Sources */,
 				180022991FC2DDC200C5E414 /* YYAnimatedImageView.m in Sources */,
 				180022CC1FC2DDC200C5E414 /* NSObject+YYAddForKVO.m in Sources */,
@@ -2014,7 +2048,6 @@
 				189E29621FBD9743008D9027 /* WSDatePickerView.m in Sources */,
 				189E291D1FBD3A27008D9027 /* TableViewAnimationKit.m in Sources */,
 				187769E22005B1BC00CDD115 /* CountdownLabel.swift in Sources */,
-				1818E9941FBC49FA00C35A8A /* ViewController.m in Sources */,
 				1818EA1C1FBC4D1B00C35A8A /* UIButton+BackgroundColor.m in Sources */,
 				1818EA221FBC4D1B00C35A8A /* UIButton+TouchAreaInsets.m in Sources */,
 				189E29501FBD8CF9008D9027 /* NSString+RegexValidate.m in Sources */,
@@ -2023,11 +2056,12 @@
 				180022BD1FC2DDC200C5E414 /* UIControl+YYAdd.m in Sources */,
 				180022D01FC2DDC200C5E414 /* YYAsyncLayer.m in Sources */,
 				180022BF1FC2DDC200C5E414 /* NSArray+YYAdd.m in Sources */,
+				189AF3822008A597009A26E5 /* OpenDoorAnimator.m in Sources */,
 				187F4DDA20084BD300DB1AEA /* CoreJPush.m in Sources */,
 				1800228D1FC2DDC200C5E414 /* YYMemoryCache.m in Sources */,
 				185B0D721FBED45A00FC5072 /* UIBarButtonItem+Badge.m in Sources */,
+				189AF37C20089FA2009A26E5 /* CellModel.m in Sources */,
 				1818EA271FBC4D1B00C35A8A /* NSArray+SafeAccess.m in Sources */,
-				187769FB2005C0E800CDD115 /* TTCountdownCell.swift in Sources */,
 				189E292D1FBD3BD3008D9027 /* AppVersionManager.m in Sources */,
 				1800229D1FC2DDC200C5E414 /* YYTextView.m in Sources */,
 				186D792C1FF33DF5000F7B4F /* UIView+GlowView.m in Sources */,
@@ -2038,7 +2072,6 @@
 				18A94BC51FC41E8D00032B5B /* AFURLRequestSerialization.m in Sources */,
 				180022D11FC2DDC200C5E414 /* YYThreadSafeDictionary.m in Sources */,
 				189E292A1FBD3A27008D9027 /* PresentAnimator.m in Sources */,
-				180048E81FFC81B30071E46D /* PathAnimationViewController.m in Sources */,
 				180022B31FC2DDC200C5E414 /* UIColor+YYAdd.m in Sources */,
 				1818EA191FBC4D1B00C35A8A /* NSDictionary+SafeAccess.m in Sources */,
 				18D6D0B51FC563C8005305ED /* BaseListModel.m in Sources */,
@@ -2053,6 +2086,7 @@
 				189E29241FBD3A27008D9027 /* LewPopupViewAnimationSpring.m in Sources */,
 				180022D21FC2DDC200C5E414 /* YYSentinel.m in Sources */,
 				180022A31FC2DDC200C5E414 /* YYTextLine.m in Sources */,
+				189AF37520089FA2009A26E5 /* TTCountdownCell.swift in Sources */,
 				18E89F391FD6479000A77EA7 /* WRCustomNavigationBar.m in Sources */,
 				18A94C011FC430B100032B5B /* BaseTabBarViewController.m in Sources */,
 				1818EA291FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.m in Sources */,
@@ -2065,6 +2099,7 @@
 				18A94BE41FC420AF00032B5B /* UIWebView+AFNetworking.m in Sources */,
 				180022C51FC2DDC200C5E414 /* NSKeyedUnarchiver+YYAdd.m in Sources */,
 				18A94BC21FC41E8D00032B5B /* AFURLResponseSerialization.m in Sources */,
+				189AF37720089FA2009A26E5 /* ViewController.m in Sources */,
 				18A94BC61FC41E8D00032B5B /* AFNetworkReachabilityManager.m in Sources */,
 				180022AB1FC2DDC200C5E414 /* YYTextParser.m in Sources */,
 				1800229B1FC2DDC200C5E414 /* NSObject+YYModel.m in Sources */,
@@ -2078,13 +2113,13 @@
 				185B0D651FBE8A4B00FC5072 /* STPickerView.m in Sources */,
 				180021CF1FC282F200C5E414 /* DLFixedTabbarView.m in Sources */,
 				187769F02005B1BC00CDD115 /* LTMorphingLabel.swift in Sources */,
-				180048E51FFC817F0071E46D /* AnimationKitViewController.m in Sources */,
 				18D6D0B21FC56393005305ED /* BaseTableViewController.m in Sources */,
 				1862EBF51FFB85AE0072F306 /* TTAnimationKit.m in Sources */,
 				187F4DDB20084BD300DB1AEA /* AppDelegate+JPush.m in Sources */,
 				187769F22005B1BC00CDD115 /* LTMorphingLabel+Sparkle.swift in Sources */,
 				1800229E1FC2DDC200C5E414 /* YYTextMagnifier.m in Sources */,
 				18A94BDF1FC420AF00032B5B /* UIRefreshControl+AFNetworking.m in Sources */,
+				189AF37620089FA2009A26E5 /* FloatAnimationViewController.m in Sources */,
 				185B0D641FBE8A4B00FC5072 /* STPickerArea.m in Sources */,
 				189E28E81FBD3288008D9027 /* NSDictionary+Log.m in Sources */,
 				180022AE1FC2DDC200C5E414 /* YYTextAttribute.m in Sources */,
@@ -2092,8 +2127,8 @@
 				180022971FC2DDC200C5E414 /* MKAnnotationView+YYWebImage.m in Sources */,
 				1818EA211FBC4D1B00C35A8A /* UIButton+Submitting.m in Sources */,
 				18E372D81FCCF1CC00EF45FC /* UIView+TTKit.m in Sources */,
-				18F2A8391FFF6AE800D1CB29 /* CountdownListViewController.m in Sources */,
 				1862EBF21FFB2D990072F306 /* ZTProgressHUD.m in Sources */,
+				189AF37820089FA2009A26E5 /* CountdownListViewController.m in Sources */,
 				180021D21FC282F200C5E414 /* DLSlideView.m in Sources */,
 				18A94BB21FC41DB900032B5B /* PPNetworkHelper.m in Sources */,
 				189E29251FBD3A27008D9027 /* LewPopupViewAnimationDrop.m in Sources */,
@@ -2102,6 +2137,7 @@
 				180022BA1FC2DDC200C5E414 /* UIBarButtonItem+YYAdd.m in Sources */,
 				180022D61FC2DDC200C5E414 /* YYGestureRecognizer.m in Sources */,
 				189E29491FBD7F1E008D9027 /* BDImagePicker.m in Sources */,
+				189AF37F2008A004009A26E5 /* PresentViewController.m in Sources */,
 				187769E42005B1BC00CDD115 /* LTEasing.swift in Sources */,
 				180022941FC2DDC200C5E414 /* _YYWebImageSetter.m in Sources */,
 				180022BC1FC2DDC200C5E414 /* UIImage+YYAdd.m in Sources */,
@@ -2128,9 +2164,9 @@
 				180022CA1FC2DDC200C5E414 /* NSNotificationCenter+YYAdd.m in Sources */,
 				180022CB1FC2DDC200C5E414 /* NSDictionary+YYAdd.m in Sources */,
 				180022BE1FC2DDC200C5E414 /* UIFont+YYAdd.m in Sources */,
+				189AF37920089FA2009A26E5 /* PathAnimationViewController.m in Sources */,
 				180022CE1FC2DDC200C5E414 /* CALayer+YYAdd.m in Sources */,
 				180022D41FC2DDC200C5E414 /* YYDispatchQueuePool.m in Sources */,
-				18F2A83F1FFF742600D1CB29 /* CellModel.m in Sources */,
 				18A94BE61FC420AF00032B5B /* AFImageDownloader.m in Sources */,
 				180022A21FC2DDC200C5E414 /* YYTextLayout.m in Sources */,
 				180022BB1FC2DDC200C5E414 /* UIGestureRecognizer+YYAdd.m in Sources */,

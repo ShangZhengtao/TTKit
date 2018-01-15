@@ -65,20 +65,20 @@
                                             <action selector="PagedControllerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UTZ-R9-lnk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfD-Yh-YEo">
-                                        <rect key="frame" x="251" y="12" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="扫一扫"/>
-                                        <connections>
-                                            <action selector="scannerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5S-ay-EKz"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhE-aR-47Z">
                                         <rect key="frame" x="148" y="11" width="35" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Push"/>
                                         <connections>
                                             <segue destination="7ik-yn-AkZ" kind="show" id="S1I-Ot-P1d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ho-Tc-eGg">
+                                        <rect key="frame" x="241" y="8" width="53" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Present"/>
+                                        <connections>
+                                            <action selector="presentButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mdx-to-7AW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -105,6 +105,14 @@
                                         <state key="normal" title="popover"/>
                                         <connections>
                                             <action selector="popoverButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="raO-o0-YNo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfD-Yh-YEo">
+                                        <rect key="frame" x="252" y="12" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="扫一扫"/>
+                                        <connections>
+                                            <action selector="scannerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5S-ay-EKz"/>
                                         </connections>
                                     </button>
                                 </subviews>
