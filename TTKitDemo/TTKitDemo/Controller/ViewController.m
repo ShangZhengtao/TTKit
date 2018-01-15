@@ -20,6 +20,7 @@
 #import "WRNavigationBar.h"
 #import "ZTProgressHUD.h"
 #import "UIButton+Event.h"
+#import "UIViewController+TTModalTransition.h"
 @interface ViewController ()
 <
 QRCodeScannerViewControllerDelegate,
@@ -35,7 +36,7 @@ STPickerAreaDelegate
     [super viewDidLoad];
     self.title = @"Demo";
 //    self.areaPickerButton.eventTimeInterval = 3;
-    self.modalPresentationStyle =  UIModalPresentationCustom;
+//    self.modalPresentationStyle =  UIModalPresentationPopover;
 }
 
 - (IBAction)scannerButtonTapped:(UIButton *)sender {
@@ -124,6 +125,7 @@ STPickerAreaDelegate
 
 - (IBAction)presentButtonTapped:(UIButton *)sender {
     PresentViewController *vc = [[PresentViewController alloc]init];
+    vc.tt_modalTransitionStyle = TTModalTransitionStyleGradient;
     [self presentViewController:vc animated:YES completion:nil];
 }
 

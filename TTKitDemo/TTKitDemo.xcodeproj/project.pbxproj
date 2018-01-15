@@ -145,6 +145,9 @@
 		1862EBF51FFB85AE0072F306 /* TTAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EBF41FFB85AE0072F306 /* TTAnimationKit.m */; };
 		186D682C2004BFF500E256EB /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D682B2004BFF500E256EB /* YYFPSLabel.m */; };
 		186D792C1FF33DF5000F7B4F /* UIView+GlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D792B1FF33DF5000F7B4F /* UIView+GlowView.m */; };
+		186FC135200C5CAB00699A10 /* UIViewController+TTModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 186FC134200C5CAB00699A10 /* UIViewController+TTModalTransition.m */; };
+		186FC138200C7CBC00699A10 /* TTModalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 186FC137200C7CBC00699A10 /* TTModalAnimator.m */; };
+		186FC13B200C7E7600699A10 /* TTModalDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 186FC13A200C7E7600699A10 /* TTModalDelegate.m */; };
 		187704661FC7BB170021C3CB /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704651FC7BB170021C3CB /* libresolv.tbd */; };
 		187769E22005B1BC00CDD115 /* CountdownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769C92005B1BC00CDD115 /* CountdownLabel.swift */; };
 		187769E32005B1BC00CDD115 /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769CB2005B1BC00CDD115 /* LTMorphingLabel+Fall.swift */; };
@@ -557,6 +560,12 @@
 		186D682B2004BFF500E256EB /* YYFPSLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		186D792A1FF33DF5000F7B4F /* UIView+GlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GlowView.h"; sourceTree = "<group>"; };
 		186D792B1FF33DF5000F7B4F /* UIView+GlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GlowView.m"; sourceTree = "<group>"; };
+		186FC133200C5CAB00699A10 /* UIViewController+TTModalTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TTModalTransition.h"; sourceTree = "<group>"; };
+		186FC134200C5CAB00699A10 /* UIViewController+TTModalTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TTModalTransition.m"; sourceTree = "<group>"; };
+		186FC136200C7CBC00699A10 /* TTModalAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTModalAnimator.h; sourceTree = "<group>"; };
+		186FC137200C7CBC00699A10 /* TTModalAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTModalAnimator.m; sourceTree = "<group>"; };
+		186FC139200C7E7600699A10 /* TTModalDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTModalDelegate.h; sourceTree = "<group>"; };
+		186FC13A200C7E7600699A10 /* TTModalDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTModalDelegate.m; sourceTree = "<group>"; };
 		187704621FC7BAD60021C3CB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		187704631FC7BAED0021C3CB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		187704651FC7BB170021C3CB /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
@@ -1142,6 +1151,7 @@
 				189E28ED1FBD37CB008D9027 /* Account */,
 				1818E9E81FBC4D1B00C35A8A /* Categories */,
 				189E28FF1FBD3A26008D9027 /* Tools */,
+				186FC132200C5C1A00699A10 /* TTTransition */,
 				185B0D6D1FBED45900FC5072 /* Badge */,
 				189E29021FBD3A26008D9027 /* UICollectionView */,
 				189E28F41FBD3A26008D9027 /* UITableView */,
@@ -1366,6 +1376,19 @@
 				185BD7491FF24F2A002F77F9 /* NJKWebViewProgressView.m */,
 			);
 			path = NJKWebViewProgress;
+			sourceTree = "<group>";
+		};
+		186FC132200C5C1A00699A10 /* TTTransition */ = {
+			isa = PBXGroup;
+			children = (
+				186FC133200C5CAB00699A10 /* UIViewController+TTModalTransition.h */,
+				186FC134200C5CAB00699A10 /* UIViewController+TTModalTransition.m */,
+				186FC139200C7E7600699A10 /* TTModalDelegate.h */,
+				186FC13A200C7E7600699A10 /* TTModalDelegate.m */,
+				186FC136200C7CBC00699A10 /* TTModalAnimator.h */,
+				186FC137200C7CBC00699A10 /* TTModalAnimator.m */,
+			);
+			path = TTTransition;
 			sourceTree = "<group>";
 		};
 		187769C82005B1BC00CDD115 /* CountdownLabel */ = {
@@ -2033,6 +2056,7 @@
 				187769F42005B1BC00CDD115 /* LTMorphingEffect.swift in Sources */,
 				189E29581FBD91EB008D9027 /* UIViewController+EmptyBackButton.m in Sources */,
 				1818EA1A1FBC4D1B00C35A8A /* NSDictionary+JSONString.m in Sources */,
+				186FC135200C5CAB00699A10 /* UIViewController+TTModalTransition.m in Sources */,
 				189E29641FBD9743008D9027 /* UIView+Extension.m in Sources */,
 				180022AA1FC2DDC200C5E414 /* NSParagraphStyle+YYText.m in Sources */,
 				1818EA251FBC4D1B00C35A8A /* UIColor+ESExtensions.m in Sources */,
@@ -2102,6 +2126,7 @@
 				189AF37720089FA2009A26E5 /* ViewController.m in Sources */,
 				18A94BC61FC41E8D00032B5B /* AFNetworkReachabilityManager.m in Sources */,
 				180022AB1FC2DDC200C5E414 /* YYTextParser.m in Sources */,
+				186FC13B200C7E7600699A10 /* TTModalDelegate.m in Sources */,
 				1800229B1FC2DDC200C5E414 /* NSObject+YYModel.m in Sources */,
 				180022A61FC2DDC200C5E414 /* YYTextDebugOption.m in Sources */,
 				180022A51FC2DDC200C5E414 /* YYTextKeyboardManager.m in Sources */,
@@ -2171,6 +2196,7 @@
 				180022A21FC2DDC200C5E414 /* YYTextLayout.m in Sources */,
 				180022BB1FC2DDC200C5E414 /* UIGestureRecognizer+YYAdd.m in Sources */,
 				180022981FC2DDC200C5E414 /* CALayer+YYWebImage.m in Sources */,
+				186FC138200C7CBC00699A10 /* TTModalAnimator.m in Sources */,
 				1800229A1FC2DDC200C5E414 /* YYWebImageOperation.m in Sources */,
 				180022C81FC2DDC200C5E414 /* NSDate+YYAdd.m in Sources */,
 				1800228B1FC2DDC200C5E414 /* YYCache.m in Sources */,

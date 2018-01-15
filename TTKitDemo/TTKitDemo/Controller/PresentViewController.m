@@ -8,10 +8,12 @@
 
 #import "PresentViewController.h"
 #import "OpenDoorAnimator.h"
-
-@interface PresentViewController ()<UIViewControllerTransitioningDelegate>
+#import "UIViewController+TTModalTransition.h"
+@interface PresentViewController ()
 
 @property (nonatomic, strong)UIButton *backButton;
+
+@property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
@@ -19,6 +21,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.imageView = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.imageView.image = [UIImage imageNamed:@"img01"];
+    [self.view addSubview:self.imageView];
+    
     self.backButton = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 80, 50)];
     [self.backButton setTitle:@"dismiss" forState:UIControlStateNormal];
     [self.backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -26,19 +33,13 @@
     self.view.backgroundColor = [UIColor darkGrayColor];
     [self.view addSubview:self.backButton];
     
-    self.transitioningDelegate =  self;
+    
+//    self.tt_modalTransitionStyle = TTModalTransitionStyleOpenDoor;
 }
 
 - (void)backButtonTapped:(UIButton *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-    return [OpenDoorAnimator new];
-}
-
-- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    return [OpenDoorAnimator new];
-}
 
 @end
