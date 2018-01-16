@@ -33,7 +33,6 @@
     self.view.backgroundColor = [UIColor darkGrayColor];
     [self.view addSubview:self.backButton];
     
-    
 //    self.tt_modalTransitionStyle = TTModalTransitionStyleOpenDoor;
 }
 

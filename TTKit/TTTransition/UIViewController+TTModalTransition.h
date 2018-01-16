@@ -18,5 +18,4 @@ typedef NS_ENUM(NSUInteger, TTModalTransitionStyle) {
 
 @property (nonatomic, assign) TTModalTransitionStyle  tt_modalTransitionStyle;
 
-
 @end

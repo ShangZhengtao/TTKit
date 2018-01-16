@@ -61,7 +61,7 @@
         
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"locations"];
         animation.removedOnCompletion = NO;
-        animation.autoreverses = NO; //默认就是NO，设置成Yes之后下面fillMode就不起作用了
+        animation.autoreverses = NO;
         animation.fillMode = kCAFillModeForwards;
         animation.duration = transitionDuration;
         animation.byValue = @[@(2),@(2)];
@@ -93,7 +93,7 @@
         
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"locations"];
         animation.removedOnCompletion = NO;
-        animation.autoreverses = NO; //默认就是NO，设置成Yes之后下面fillMode就不起作用了
+        animation.autoreverses = NO;
         animation.fillMode = kCAFillModeForwards;
         animation.duration = transitionDuration;
         animation.byValue = @[@(2),@(2)];
