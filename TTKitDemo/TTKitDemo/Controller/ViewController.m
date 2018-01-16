@@ -125,8 +125,9 @@ STPickerAreaDelegate
 
 - (IBAction)presentButtonTapped:(UIButton *)sender {
     PresentViewController *vc = [[PresentViewController alloc]init];
-    vc.tt_modalTransitionStyle = TTModalTransitionStyleGradient;
+    vc.tt_modalTransitionStyle = TTModalTransitionStyleCircleZoom;
     [self presentViewController:vc animated:YES completion:nil];
 }
+
 
 @end

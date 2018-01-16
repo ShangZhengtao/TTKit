@@ -8,7 +8,9 @@
 
 #import "TTModalAnimator.h"
 
+
 @implementation TTModalAnimator
+
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     return 0.9;
 }
@@ -19,10 +21,106 @@
             [self animateTransitionOpenDoorEffect:transitionContext]; break;
         case TTModalTransitionStyleGradient:
             [self animateTransitionGradientEffect:transitionContext]; break;
+        case TTModalTransitionStyleCircleZoom:
+            [self animateTransitionCircleZoomEffect:transitionContext circleCenter:CGPointMake(100, 200)]; break;
         default:
             [self animateTransitionOpenDoorEffect:transitionContext];
     }
 }
+
+- (void)animateTransitionCircleZoomEffect:(id<UIViewControllerContextTransitioning>)transitionContext circleCenter:(CGPoint)center {
+    
+    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    
+    UIView *containerView = transitionContext.containerView;
+    NSTimeInterval transitionDuration = [self transitionDuration:transitionContext];
+    UIView *fromView = fromVC.view;
+    UIView *toView = toVC.view;
+    fromView.frame = [transitionContext initialFrameForViewController:fromVC];
+    toView.frame = [transitionContext finalFrameForViewController:toVC];
+    CGFloat screenW = [UIScreen mainScreen].bounds.size.width;
+    CGFloat screenH = [UIScreen mainScreen].bounds.size.height;
+    //计算半径
+    CGFloat a, b;
+    a = center.x < screenW * 0.5 ? screenW  - center.x : center.x;
+    b = center.y < screenH * 0.5 ? screenH  - center.y : center.y;
+    CGFloat radius = hypotf(a,b);
+    if (toVC.isBeingPresented) {
+        
+        [containerView addSubview:toView]; //require
+        
+        CAShapeLayer *maskLayer = [CAShapeLayer layer];
+        maskLayer.shadowOpacity = 1;
+        maskLayer.shadowColor = [UIColor blackColor].CGColor;
+        maskLayer.shadowRadius = 5;
+        maskLayer.frame = [UIScreen mainScreen].bounds;
+        
+        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:0.1 startAngle:0 endAngle:M_PI *2 clockwise:YES];
+        maskLayer.path = path.CGPath;
+        maskLayer.fillColor = [UIColor whiteColor].CGColor;
+        toView.layer.mask = maskLayer;
+        
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"path"];
+        animation.duration = transitionDuration;
+        animation.repeatCount = 1;
+        animation.removedOnCompletion = NO;
+        animation.fillMode = kCAFillModeForwards;
+        animation.autoreverses = NO;
+        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+        
+        UIBezierPath *beginPath = [UIBezierPath bezierPathWithArcCenter:center radius:0.1 startAngle:0 endAngle:M_PI *2 clockwise:YES];
+        UIBezierPath *finalPath = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:0 endAngle:M_PI *2 clockwise:YES];
+        animation.fromValue = (__bridge id)beginPath.CGPath;
+        animation.toValue   = (__bridge id)finalPath.CGPath;
+        [maskLayer addAnimation:animation forKey:@""];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(transitionDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [transitionContext completeTransition:YES];
+            fromView.hidden = NO;
+            toView.layer.mask = nil;
+            [maskLayer removeFromSuperlayer];
+        });
+    }
+    
+    if (fromVC.isBeingDismissed) {
+        
+        [containerView addSubview:toView]; //require
+        [containerView addSubview:fromView];
+        
+        CAShapeLayer *maskLayer = [CAShapeLayer layer];
+        maskLayer.shadowOpacity = 1;
+        maskLayer.shadowColor = [UIColor blackColor].CGColor;
+        maskLayer.shadowRadius = 5;
+        maskLayer.frame = [UIScreen mainScreen].bounds;
+        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:0 endAngle:M_PI *2 clockwise:YES];
+        maskLayer.path = path.CGPath;
+        maskLayer.fillColor = [UIColor whiteColor].CGColor;
+        fromView.layer.mask = maskLayer;
+        
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"path"];
+        animation.duration = transitionDuration;
+        animation.repeatCount = 1;
+        animation.removedOnCompletion = NO;
+        animation.fillMode = kCAFillModeForwards;
+        animation.autoreverses = NO;
+        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+        
+        UIBezierPath *beginPath = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:0 endAngle:M_PI *2 clockwise:YES];
+        UIBezierPath *finalPath = [UIBezierPath bezierPathWithArcCenter:center radius:0.1 startAngle:0 endAngle:M_PI *2 clockwise:YES];
+        
+        animation.fromValue = (__bridge id)beginPath.CGPath;
+        animation.toValue   = (__bridge id)finalPath.CGPath;
+        [maskLayer addAnimation:animation forKey:@""];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(transitionDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [transitionContext completeTransition:YES];
+            fromView.hidden = NO;
+            fromView.layer.mask = nil;
+        });
+    }
+}
+
 
 - (void)animateTransitionGradientEffect:(id<UIViewControllerContextTransitioning>)transitionContext {
     
@@ -67,7 +165,7 @@
         animation.byValue = @[@(2),@(2)];
         animation.repeatCount = 1;
         animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-       [maskLayer addAnimation:animation forKey:@""];
+        [maskLayer addAnimation:animation forKey:@""];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(transitionDuration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [transitionContext completeTransition:YES];
             [tempView removeFromSuperview];
@@ -186,7 +284,7 @@
             toView.hidden = NO;
         }];
     }
-
+    
     if (fromVC.isBeingDismissed) { //dismiss 关门
         UIView *leftView = [toView snapshotViewAfterScreenUpdates:YES];
         UIView *rightView = [toView snapshotViewAfterScreenUpdates:YES];

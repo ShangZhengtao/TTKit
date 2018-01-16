@@ -11,7 +11,8 @@
 typedef NS_ENUM(NSUInteger, TTModalTransitionStyle) {
     TTModalTransitionStyleDefault = 0,
     TTModalTransitionStyleOpenDoor,
-    TTModalTransitionStyleGradient
+    TTModalTransitionStyleGradient,
+    TTModalTransitionStyleCircleZoom
 };
 
 @interface UIViewController (TTModalTransition)
