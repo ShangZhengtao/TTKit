@@ -26,9 +26,9 @@
     self.imageView.image = [UIImage imageNamed:@"img01"];
     [self.view addSubview:self.imageView];
     
-    self.backButton = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 80, 50)];
+    self.backButton = [[UIButton alloc]initWithFrame:CGRectMake(100, 300, 80, 50)];
     [self.backButton setTitle:@"dismiss" forState:UIControlStateNormal];
-    [self.backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.backButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [self.backButton addTarget:self action:@selector(backButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     self.view.backgroundColor = [UIColor darkGrayColor];
     [self.view addSubview:self.backButton];

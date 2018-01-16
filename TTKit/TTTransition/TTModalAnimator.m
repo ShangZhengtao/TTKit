@@ -22,7 +22,13 @@
         case TTModalTransitionStyleGradient:
             [self animateTransitionGradientEffect:transitionContext]; break;
         case TTModalTransitionStyleCircleZoom:
-            [self animateTransitionCircleZoomEffect:transitionContext circleCenter:CGPointMake(100, 200)]; break;
+        {
+            CGFloat x = [[[NSUserDefaults standardUserDefaults] valueForKey:kTTTouchEventPointXKey] doubleValue];
+            CGFloat y = [[[NSUserDefaults standardUserDefaults] valueForKey:kTTTouchEventPointYKey] doubleValue];
+         [self animateTransitionCircleZoomEffect:transitionContext circleCenter:CGPointMake(x, y)];
+            break;
+        }
+            
         default:
             [self animateTransitionOpenDoorEffect:transitionContext];
     }
@@ -104,7 +110,7 @@
         animation.removedOnCompletion = NO;
         animation.fillMode = kCAFillModeForwards;
         animation.autoreverses = NO;
-        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
         
         UIBezierPath *beginPath = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:0 endAngle:M_PI *2 clockwise:YES];
         UIBezierPath *finalPath = [UIBezierPath bezierPathWithArcCenter:center radius:0.1 startAngle:0 endAngle:M_PI *2 clockwise:YES];
@@ -187,7 +193,6 @@
         maskLayer.startPoint = CGPointMake(0.5, 0);
         maskLayer.endPoint = CGPointMake(0.5, 1);
         maskLayer.locations = @[@(-1),@(0)];
-        
         
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"locations"];
         animation.removedOnCompletion = NO;

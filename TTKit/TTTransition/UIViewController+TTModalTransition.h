@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+UIKIT_EXTERN NSString *const kTTTouchEventPointXKey;
+UIKIT_EXTERN NSString *const kTTTouchEventPointYKey;
+
 typedef NS_ENUM(NSUInteger, TTModalTransitionStyle) {
     TTModalTransitionStyleDefault = 0,
     TTModalTransitionStyleOpenDoor,
