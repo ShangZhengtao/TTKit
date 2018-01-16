@@ -25,7 +25,7 @@
         {
             CGFloat x = [[[NSUserDefaults standardUserDefaults] valueForKey:kTTTouchEventPointXKey] doubleValue];
             CGFloat y = [[[NSUserDefaults standardUserDefaults] valueForKey:kTTTouchEventPointYKey] doubleValue];
-         [self animateTransitionCircleZoomEffect:transitionContext circleCenter:CGPointMake(x, y)];
+            [self animateTransitionCircleZoomEffect:transitionContext circleCenter:CGPointMake(x, y)];
             break;
         }
             

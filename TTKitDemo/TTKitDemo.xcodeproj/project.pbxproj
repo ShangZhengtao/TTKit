@@ -96,6 +96,9 @@
 		180022D81FC2DDC200C5E414 /* YYTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 180022861FC2DDC200C5E414 /* YYTimer.m */; };
 		180022D91FC2DDC200C5E414 /* YYThreadSafeArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 180022871FC2DDC200C5E414 /* YYThreadSafeArray.m */; };
 		180022DA1FC2DDC200C5E414 /* YYReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 180022881FC2DDC200C5E414 /* YYReachability.m */; };
+		18026E07200DFD7600730C4A /* PresentOpenDoorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18026E06200DFD7600730C4A /* PresentOpenDoorViewController.m */; };
+		18026E0A200DFDA100730C4A /* PresentGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18026E09200DFDA100730C4A /* PresentGradientViewController.m */; };
+		18026E0D200DFDBB00730C4A /* PresentCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18026E0C200DFDBB00730C4A /* PresentCircleViewController.m */; };
 		1818E9911FBC49FA00C35A8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818E9901FBC49FA00C35A8A /* AppDelegate.m */; };
 		1818E9971FBC49FA00C35A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1818E9951FBC49FA00C35A8A /* Main.storyboard */; };
 		1818E9991FBC49FA00C35A8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1818E9981FBC49FA00C35A8A /* Assets.xcassets */; };
@@ -181,7 +184,6 @@
 		189AF37B20089FA2009A26E5 /* AnimationKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AF36E20089FA1009A26E5 /* AnimationKitViewController.m */; };
 		189AF37C20089FA2009A26E5 /* CellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AF37320089FA2009A26E5 /* CellModel.m */; };
 		189AF37F2008A004009A26E5 /* PresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AF37E2008A004009A26E5 /* PresentViewController.m */; };
-		189AF3822008A597009A26E5 /* OpenDoorAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AF3812008A597009A26E5 /* OpenDoorAnimator.m */; };
 		189E28DE1FBD26E1008D9027 /* ZTCountdownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28DC1FBD26E1008D9027 /* ZTCountdownButton.m */; };
 		189E28E21FBD2B57008D9027 /* LaunchIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28E01FBD2B57008D9027 /* LaunchIntroductionView.m */; };
 		189E28E81FBD3288008D9027 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E28E71FBD3288008D9027 /* NSDictionary+Log.m */; };
@@ -451,6 +453,12 @@
 		180022DC1FC2DE1C00C5E414 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		180022DE1FC2DE4C00C5E414 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		180022E01FC2DE6300C5E414 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		18026E05200DFD7600730C4A /* PresentOpenDoorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentOpenDoorViewController.h; sourceTree = "<group>"; };
+		18026E06200DFD7600730C4A /* PresentOpenDoorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentOpenDoorViewController.m; sourceTree = "<group>"; };
+		18026E08200DFDA100730C4A /* PresentGradientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentGradientViewController.h; sourceTree = "<group>"; };
+		18026E09200DFDA100730C4A /* PresentGradientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentGradientViewController.m; sourceTree = "<group>"; };
+		18026E0B200DFDBB00730C4A /* PresentCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentCircleViewController.h; sourceTree = "<group>"; };
+		18026E0C200DFDBB00730C4A /* PresentCircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentCircleViewController.m; sourceTree = "<group>"; };
 		18065EC71FF5F36000B984A0 /* imageNotification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = imageNotification.entitlements; sourceTree = "<group>"; };
 		1818E98C1FBC49FA00C35A8A /* TTKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1818E98F1FBC49FA00C35A8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -619,8 +627,6 @@
 		189AF37420089FA2009A26E5 /* CellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellModel.h; sourceTree = "<group>"; };
 		189AF37D2008A004009A26E5 /* PresentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentViewController.h; sourceTree = "<group>"; };
 		189AF37E2008A004009A26E5 /* PresentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentViewController.m; sourceTree = "<group>"; };
-		189AF3802008A597009A26E5 /* OpenDoorAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenDoorAnimator.h; sourceTree = "<group>"; };
-		189AF3812008A597009A26E5 /* OpenDoorAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenDoorAnimator.m; sourceTree = "<group>"; };
 		189E28DC1FBD26E1008D9027 /* ZTCountdownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZTCountdownButton.m; sourceTree = "<group>"; };
 		189E28DD1FBD26E1008D9027 /* ZTCountdownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZTCountdownButton.h; sourceTree = "<group>"; };
 		189E28E01FBD2B57008D9027 /* LaunchIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchIntroductionView.m; sourceTree = "<group>"; };
@@ -1493,8 +1499,12 @@
 				189AF36F20089FA1009A26E5 /* CountdownListViewController.h */,
 				189AF37D2008A004009A26E5 /* PresentViewController.h */,
 				189AF37E2008A004009A26E5 /* PresentViewController.m */,
-				189AF3802008A597009A26E5 /* OpenDoorAnimator.h */,
-				189AF3812008A597009A26E5 /* OpenDoorAnimator.m */,
+				18026E05200DFD7600730C4A /* PresentOpenDoorViewController.h */,
+				18026E06200DFD7600730C4A /* PresentOpenDoorViewController.m */,
+				18026E08200DFDA100730C4A /* PresentGradientViewController.h */,
+				18026E09200DFDA100730C4A /* PresentGradientViewController.m */,
+				18026E0B200DFDBB00730C4A /* PresentCircleViewController.h */,
+				18026E0C200DFDBB00730C4A /* PresentCircleViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1993,6 +2003,7 @@
 				18A94BFE1FC4307F00032B5B /* BaseNavigationController.m in Sources */,
 				187769E62005B1BC00CDD115 /* LTCharacterLimbo.swift in Sources */,
 				189E28F31FBD37CB008D9027 /* ESAccountManager.m in Sources */,
+				18026E07200DFD7600730C4A /* PresentOpenDoorViewController.m in Sources */,
 				180022DA1FC2DDC200C5E414 /* YYReachability.m in Sources */,
 				18A94BE31FC420AF00032B5B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				18A94BB31FC41DB900032B5B /* PPNetworkCache.m in Sources */,
@@ -2080,7 +2091,6 @@
 				180022BD1FC2DDC200C5E414 /* UIControl+YYAdd.m in Sources */,
 				180022D01FC2DDC200C5E414 /* YYAsyncLayer.m in Sources */,
 				180022BF1FC2DDC200C5E414 /* NSArray+YYAdd.m in Sources */,
-				189AF3822008A597009A26E5 /* OpenDoorAnimator.m in Sources */,
 				187F4DDA20084BD300DB1AEA /* CoreJPush.m in Sources */,
 				1800228D1FC2DDC200C5E414 /* YYMemoryCache.m in Sources */,
 				185B0D721FBED45A00FC5072 /* UIBarButtonItem+Badge.m in Sources */,
@@ -2196,7 +2206,9 @@
 				180022A21FC2DDC200C5E414 /* YYTextLayout.m in Sources */,
 				180022BB1FC2DDC200C5E414 /* UIGestureRecognizer+YYAdd.m in Sources */,
 				180022981FC2DDC200C5E414 /* CALayer+YYWebImage.m in Sources */,
+				18026E0D200DFDBB00730C4A /* PresentCircleViewController.m in Sources */,
 				186FC138200C7CBC00699A10 /* TTModalAnimator.m in Sources */,
+				18026E0A200DFDA100730C4A /* PresentGradientViewController.m in Sources */,
 				1800229A1FC2DDC200C5E414 /* YYWebImageOperation.m in Sources */,
 				180022C81FC2DDC200C5E414 /* NSDate+YYAdd.m in Sources */,
 				1800228B1FC2DDC200C5E414 /* YYCache.m in Sources */,
