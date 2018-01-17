@@ -12,7 +12,16 @@
 @implementation TTModalAnimator
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return 0.9;
+    switch (self.style) {
+        case TTModalTransitionStyleDefault:
+            return 0.7;
+        case TTModalTransitionStyleOpenDoor:
+            return 0.9;
+        case TTModalTransitionStyleGradient:
+            return 0.7;
+        case TTModalTransitionStyleCircleZoom:
+            return 0.7;
+    }
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
@@ -28,7 +37,6 @@
             [self animateTransitionCircleZoomEffect:transitionContext circleCenter:CGPointMake(x, y)];
             break;
         }
-            
         default:
             [self animateTransitionOpenDoorEffect:transitionContext];
     }
@@ -73,8 +81,8 @@
         animation.removedOnCompletion = NO;
         animation.fillMode = kCAFillModeForwards;
         animation.autoreverses = NO;
-        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-        
+        animation.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.70 :0.20 :1.00 :0.00];
+        //https://yq.aliyun.com/articles/29568
         UIBezierPath *beginPath = [UIBezierPath bezierPathWithArcCenter:center radius:0.1 startAngle:0 endAngle:M_PI *2 clockwise:YES];
         UIBezierPath *finalPath = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:0 endAngle:M_PI *2 clockwise:YES];
         animation.fromValue = (__bridge id)beginPath.CGPath;
@@ -110,7 +118,7 @@
         animation.removedOnCompletion = NO;
         animation.fillMode = kCAFillModeForwards;
         animation.autoreverses = NO;
-        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+        animation.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.20 :1.00 :1.00 :0.60];
         
         UIBezierPath *beginPath = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:0 endAngle:M_PI *2 clockwise:YES];
         UIBezierPath *finalPath = [UIBezierPath bezierPathWithArcCenter:center radius:0.1 startAngle:0 endAngle:M_PI *2 clockwise:YES];
@@ -263,7 +271,7 @@
         toTransform = CATransform3DScale(toTransform, 0, 0, 1);
         toView.layer.transform = toTransform;
         
-        [UIView animateWithDuration:transitionDuration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        [UIView animateWithDuration:transitionDuration delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
             CATransform3D transform = CATransform3DMakeRotation(M_PI*0.5, 0, 1, 0);
             transform = CATransform3DScale(transform, 1, 0.9, 1);
             leftView.layer.transform = _CATransform3DPerspect(transform, CGPointZero, 1000);
@@ -276,7 +284,7 @@
             
         }];
         
-        [UIView animateWithDuration:transitionDuration *(1-0.3) delay:transitionDuration *0.3 options:UIViewAnimationOptionCurveEaseOut  animations:^{
+        [UIView animateWithDuration:transitionDuration *(1-0.35) delay:transitionDuration *0.35 options:UIViewAnimationOptionCurveEaseIn  animations:^{
             
             toView.layer.transform = CATransform3DIdentity;
             
