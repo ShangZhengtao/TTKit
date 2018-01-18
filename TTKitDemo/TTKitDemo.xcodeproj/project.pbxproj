@@ -123,6 +123,8 @@
 		1818EA281FBC4D1B00C35A8A /* NSArray+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818EA0F1FBC4D1B00C35A8A /* NSArray+Block.m */; };
 		1818EA291FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818EA121FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.m */; };
 		1818EA2A1FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818EA151FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m */; };
+		18436C3F20107D5700273557 /* TTDynamicSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C3B20107D5700273557 /* TTDynamicSession.m */; };
+		18436C4020107D5700273557 /* TTCollisionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C3E20107D5700273557 /* TTCollisionView.m */; };
 		184E56161FFDBE6400E5EB41 /* UIButton+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E56151FFDBE6400E5EB41 /* UIButton+Event.m */; };
 		185084C91FF4CE1300931509 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 185084C81FF4CE1300931509 /* NotificationService.m */; };
 		185084CD1FF4CE1300931509 /* imageNotification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 185084C51FF4CE1300931509 /* imageNotification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -506,6 +508,10 @@
 		1818EA141FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+SafeAccess.h"; sourceTree = "<group>"; };
 		1818EA151FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+iCloudSync.m"; sourceTree = "<group>"; };
 		1818EA161FBC4D1B00C35A8A /* UIColor+ESExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ESExtensions.h"; sourceTree = "<group>"; };
+		18436C3B20107D5700273557 /* TTDynamicSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDynamicSession.m; sourceTree = "<group>"; };
+		18436C3C20107D5700273557 /* TTCollisionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCollisionView.h; sourceTree = "<group>"; };
+		18436C3D20107D5700273557 /* TTDynamicSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDynamicSession.h; sourceTree = "<group>"; };
+		18436C3E20107D5700273557 /* TTCollisionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCollisionView.m; sourceTree = "<group>"; };
 		184E56141FFDBE6400E5EB41 /* UIButton+Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Event.h"; sourceTree = "<group>"; };
 		184E56151FFDBE6400E5EB41 /* UIButton+Event.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Event.m"; sourceTree = "<group>"; };
 		185084C51FF4CE1300931509 /* imageNotification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = imageNotification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1158,6 +1164,7 @@
 				1818E9E81FBC4D1B00C35A8A /* Categories */,
 				189E28FF1FBD3A26008D9027 /* Tools */,
 				186FC132200C5C1A00699A10 /* TTTransition */,
+				18436C3A20107D5700273557 /* TTDynamic */,
 				185B0D6D1FBED45900FC5072 /* Badge */,
 				189E29021FBD3A26008D9027 /* UICollectionView */,
 				189E28F41FBD3A26008D9027 /* UITableView */,
@@ -1281,6 +1288,17 @@
 				1818EA151FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m */,
 			);
 			path = NSUserDefaults;
+			sourceTree = "<group>";
+		};
+		18436C3A20107D5700273557 /* TTDynamic */ = {
+			isa = PBXGroup;
+			children = (
+				18436C3D20107D5700273557 /* TTDynamicSession.h */,
+				18436C3B20107D5700273557 /* TTDynamicSession.m */,
+				18436C3C20107D5700273557 /* TTCollisionView.h */,
+				18436C3E20107D5700273557 /* TTCollisionView.m */,
+			);
+			path = TTDynamic;
 			sourceTree = "<group>";
 		};
 		185084C61FF4CE1300931509 /* imageNotification */ = {
@@ -2087,6 +2105,7 @@
 				1818EA221FBC4D1B00C35A8A /* UIButton+TouchAreaInsets.m in Sources */,
 				189E29501FBD8CF9008D9027 /* NSString+RegexValidate.m in Sources */,
 				180022C71FC2DDC200C5E414 /* NSObject+YYAddForARC.m in Sources */,
+				18436C3F20107D5700273557 /* TTDynamicSession.m in Sources */,
 				1800229F1FC2DDC200C5E414 /* YYTextContainerView.m in Sources */,
 				180022BD1FC2DDC200C5E414 /* UIControl+YYAdd.m in Sources */,
 				180022D01FC2DDC200C5E414 /* YYAsyncLayer.m in Sources */,
@@ -2112,6 +2131,7 @@
 				185BD7571FF24F3F002F77F9 /* UIImage+TOWebViewControllerIcons.m in Sources */,
 				187769E52005B1BC00CDD115 /* LTEmitterView.swift in Sources */,
 				1818EA1E1FBC4D1B00C35A8A /* UIButton+CountDown.m in Sources */,
+				18436C4020107D5700273557 /* TTCollisionView.m in Sources */,
 				189E29231FBD3A27008D9027 /* LewPopupViewAnimationFade.m in Sources */,
 				180022D31FC2DDC200C5E414 /* YYTransaction.m in Sources */,
 				18A94BDE1FC420AF00032B5B /* UIProgressView+AFNetworking.m in Sources */,
