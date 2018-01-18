@@ -125,6 +125,21 @@
 		1818EA2A1FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818EA151FBC4D1B00C35A8A /* NSUserDefaults+iCloudSync.m */; };
 		18436C3F20107D5700273557 /* TTDynamicSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C3B20107D5700273557 /* TTDynamicSession.m */; };
 		18436C4020107D5700273557 /* TTCollisionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C3E20107D5700273557 /* TTCollisionView.m */; };
+		18436C442010820F00273557 /* NSBundle+AppIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C432010820E00273557 /* NSBundle+AppIcon.m */; };
+		18436C54201083DF00273557 /* NSData+APNSToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C46201083DF00273557 /* NSData+APNSToken.m */; };
+		18436C55201083DF00273557 /* NSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C47201083DF00273557 /* NSData+zlib.m */; };
+		18436C56201083DF00273557 /* NSData+SDDataCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C48201083DF00273557 /* NSData+SDDataCache.m */; };
+		18436C57201083DF00273557 /* NSData+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C4B201083DF00273557 /* NSData+Hash.m */; };
+		18436C58201083DF00273557 /* NSData+Gzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C4F201083DF00273557 /* NSData+Gzip.m */; };
+		18436C59201083DF00273557 /* NSData+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C52201083DF00273557 /* NSData+Encrypt.m */; };
+		18436C5A201083DF00273557 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C53201083DF00273557 /* NSData+Base64.m */; };
+		18436C69201087E900273557 /* NSDateTimeAgo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18436C5E201087E900273557 /* NSDateTimeAgo.bundle */; };
+		18436C6A201087E900273557 /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C60201087E900273557 /* NSDate+Formatter.m */; };
+		18436C6B201087E900273557 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C61201087E900273557 /* NSDate+Utilities.m */; };
+		18436C6C201087E900273557 /* NSDate+Reporting.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C62201087E900273557 /* NSDate+Reporting.m */; };
+		18436C6D201087E900273557 /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C63201087E900273557 /* NSDate+InternetDateTime.m */; };
+		18436C6E201087E900273557 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C64201087E900273557 /* NSDate+Extension.m */; };
+		18436C6F201087E900273557 /* NSDate+TimeAgo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C65201087E900273557 /* NSDate+TimeAgo.m */; };
 		184E56161FFDBE6400E5EB41 /* UIButton+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E56151FFDBE6400E5EB41 /* UIButton+Event.m */; };
 		185084C91FF4CE1300931509 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 185084C81FF4CE1300931509 /* NotificationService.m */; };
 		185084CD1FF4CE1300931509 /* imageNotification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 185084C51FF4CE1300931509 /* imageNotification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -512,6 +527,35 @@
 		18436C3C20107D5700273557 /* TTCollisionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCollisionView.h; sourceTree = "<group>"; };
 		18436C3D20107D5700273557 /* TTDynamicSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDynamicSession.h; sourceTree = "<group>"; };
 		18436C3E20107D5700273557 /* TTCollisionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCollisionView.m; sourceTree = "<group>"; };
+		18436C422010820E00273557 /* NSBundle+AppIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+AppIcon.h"; sourceTree = "<group>"; };
+		18436C432010820E00273557 /* NSBundle+AppIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+AppIcon.m"; sourceTree = "<group>"; };
+		18436C46201083DF00273557 /* NSData+APNSToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+APNSToken.m"; sourceTree = "<group>"; };
+		18436C47201083DF00273557 /* NSData+zlib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+zlib.m"; sourceTree = "<group>"; };
+		18436C48201083DF00273557 /* NSData+SDDataCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SDDataCache.m"; sourceTree = "<group>"; };
+		18436C49201083DF00273557 /* NSData+Gzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Gzip.h"; sourceTree = "<group>"; };
+		18436C4A201083DF00273557 /* NSData+Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encrypt.h"; sourceTree = "<group>"; };
+		18436C4B201083DF00273557 /* NSData+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Hash.m"; sourceTree = "<group>"; };
+		18436C4C201083DF00273557 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		18436C4D201083DF00273557 /* NSData+zlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+zlib.h"; sourceTree = "<group>"; };
+		18436C4E201083DF00273557 /* NSData+APNSToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+APNSToken.h"; sourceTree = "<group>"; };
+		18436C4F201083DF00273557 /* NSData+Gzip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Gzip.m"; sourceTree = "<group>"; };
+		18436C50201083DF00273557 /* NSData+SDDataCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SDDataCache.h"; sourceTree = "<group>"; };
+		18436C51201083DF00273557 /* NSData+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Hash.h"; sourceTree = "<group>"; };
+		18436C52201083DF00273557 /* NSData+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encrypt.m"; sourceTree = "<group>"; };
+		18436C53201083DF00273557 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		18436C5C201087E900273557 /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		18436C5D201087E900273557 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		18436C5E201087E900273557 /* NSDateTimeAgo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NSDateTimeAgo.bundle; sourceTree = "<group>"; };
+		18436C5F201087E900273557 /* NSDate+TimeAgo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TimeAgo.h"; sourceTree = "<group>"; };
+		18436C60201087E900273557 /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
+		18436C61201087E900273557 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		18436C62201087E900273557 /* NSDate+Reporting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Reporting.m"; sourceTree = "<group>"; };
+		18436C63201087E900273557 /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		18436C64201087E900273557 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		18436C65201087E900273557 /* NSDate+TimeAgo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TimeAgo.m"; sourceTree = "<group>"; };
+		18436C66201087E900273557 /* NSDate+Reporting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Reporting.h"; sourceTree = "<group>"; };
+		18436C68201087E900273557 /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
+		18436C702010887000273557 /* NSDate+Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		184E56141FFDBE6400E5EB41 /* UIButton+Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Event.h"; sourceTree = "<group>"; };
 		184E56151FFDBE6400E5EB41 /* UIButton+Event.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Event.m"; sourceTree = "<group>"; };
 		185084C51FF4CE1300931509 /* imageNotification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = imageNotification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1165,6 +1209,7 @@
 				189E28FF1FBD3A26008D9027 /* Tools */,
 				186FC132200C5C1A00699A10 /* TTTransition */,
 				18436C3A20107D5700273557 /* TTDynamic */,
+				189E29591FBD9743008D9027 /* WSDaePickerView */,
 				185B0D6D1FBED45900FC5072 /* Badge */,
 				189E29021FBD3A26008D9027 /* UICollectionView */,
 				189E28F41FBD3A26008D9027 /* UITableView */,
@@ -1184,6 +1229,9 @@
 		1818E9E81FBC4D1B00C35A8A /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				18436C5B201087E900273557 /* NSDate */,
+				18436C45201083DF00273557 /* NSData */,
+				18436C412010820E00273557 /* NSBundle */,
 				18D6D0AB1FC5626C005305ED /* UITableView */,
 				18D6D0AC1FC5626C005305ED /* UICollectionView */,
 				189E28E91FBD336C008D9027 /* NSObjcet */,
@@ -1195,7 +1243,6 @@
 				1818EA111FBC4D1B00C35A8A /* NSUserDefaults */,
 				189E29511FBD9000008D9027 /* UITextView */,
 				189E29551FBD91EB008D9027 /* UIViewConroller */,
-				189E29591FBD9743008D9027 /* WSDaePickerView */,
 				1818EA161FBC4D1B00C35A8A /* UIColor+ESExtensions.h */,
 				1818EA081FBC4D1B00C35A8A /* UIColor+ESExtensions.m */,
 				189E294C1FBD8C11008D9027 /* TTNullSafe.m */,
@@ -1299,6 +1346,56 @@
 				18436C3E20107D5700273557 /* TTCollisionView.m */,
 			);
 			path = TTDynamic;
+			sourceTree = "<group>";
+		};
+		18436C412010820E00273557 /* NSBundle */ = {
+			isa = PBXGroup;
+			children = (
+				18436C422010820E00273557 /* NSBundle+AppIcon.h */,
+				18436C432010820E00273557 /* NSBundle+AppIcon.m */,
+			);
+			path = NSBundle;
+			sourceTree = "<group>";
+		};
+		18436C45201083DF00273557 /* NSData */ = {
+			isa = PBXGroup;
+			children = (
+				18436C4E201083DF00273557 /* NSData+APNSToken.h */,
+				18436C46201083DF00273557 /* NSData+APNSToken.m */,
+				18436C4C201083DF00273557 /* NSData+Base64.h */,
+				18436C53201083DF00273557 /* NSData+Base64.m */,
+				18436C51201083DF00273557 /* NSData+Hash.h */,
+				18436C4B201083DF00273557 /* NSData+Hash.m */,
+				18436C4A201083DF00273557 /* NSData+Encrypt.h */,
+				18436C52201083DF00273557 /* NSData+Encrypt.m */,
+				18436C50201083DF00273557 /* NSData+SDDataCache.h */,
+				18436C48201083DF00273557 /* NSData+SDDataCache.m */,
+				18436C49201083DF00273557 /* NSData+Gzip.h */,
+				18436C4F201083DF00273557 /* NSData+Gzip.m */,
+				18436C4D201083DF00273557 /* NSData+zlib.h */,
+				18436C47201083DF00273557 /* NSData+zlib.m */,
+			);
+			path = NSData;
+			sourceTree = "<group>";
+		};
+		18436C5B201087E900273557 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				18436C68201087E900273557 /* NSDate+Formatter.h */,
+				18436C60201087E900273557 /* NSDate+Formatter.m */,
+				18436C5D201087E900273557 /* NSDate+Extension.h */,
+				18436C64201087E900273557 /* NSDate+Extension.m */,
+				18436C5C201087E900273557 /* NSDate+InternetDateTime.h */,
+				18436C63201087E900273557 /* NSDate+InternetDateTime.m */,
+				18436C66201087E900273557 /* NSDate+Reporting.h */,
+				18436C62201087E900273557 /* NSDate+Reporting.m */,
+				18436C5F201087E900273557 /* NSDate+TimeAgo.h */,
+				18436C65201087E900273557 /* NSDate+TimeAgo.m */,
+				18436C5E201087E900273557 /* NSDateTimeAgo.bundle */,
+				18436C702010887000273557 /* NSDate+Utilities.h */,
+				18436C61201087E900273557 /* NSDate+Utilities.m */,
+			);
+			path = NSDate;
 			sourceTree = "<group>";
 		};
 		185084C61FF4CE1300931509 /* imageNotification */ = {
@@ -1748,8 +1845,7 @@
 				189E295C1FBD9743008D9027 /* UIView+Extension.h */,
 				189E29601FBD9743008D9027 /* UIView+Extension.m */,
 			);
-			name = WSDaePickerView;
-			path = ../WSDaePickerView;
+			path = WSDaePickerView;
 			sourceTree = "<group>";
 		};
 		189E29651FBD9A3B008D9027 /* LRDPopAlert */ = {
@@ -1988,6 +2084,7 @@
 				1818E99C1FBC49FA00C35A8A /* LaunchScreen.storyboard in Resources */,
 				1818E9991FBC49FA00C35A8A /* Assets.xcassets in Resources */,
 				189E29611FBD9743008D9027 /* WSDatePickerView.xib in Resources */,
+				18436C69201087E900273557 /* NSDateTimeAgo.bundle in Resources */,
 				187769E92005B1BC00CDD115 /* Fragment.png in Resources */,
 				187769E72005B1BC00CDD115 /* Fire.png in Resources */,
 				1818E9971FBC49FA00C35A8A /* Main.storyboard in Resources */,
@@ -2037,10 +2134,12 @@
 				189E294D1FBD8C11008D9027 /* TTNullSafe.m in Sources */,
 				180022921FC2DDC200C5E414 /* YYImageCoder.m in Sources */,
 				185BD7561FF24F3A002F77F9 /* TOActivitySafari.m in Sources */,
+				18436C54201083DF00273557 /* NSData+APNSToken.m in Sources */,
 				180022A01FC2DDC200C5E414 /* YYTextEffectWindow.m in Sources */,
 				180022D81FC2DDC200C5E414 /* YYTimer.m in Sources */,
 				180022A41FC2DDC200C5E414 /* YYTextSelectionView.m in Sources */,
 				180022B21FC2DDC200C5E414 /* UIBezierPath+YYAdd.m in Sources */,
+				18436C55201083DF00273557 /* NSData+zlib.m in Sources */,
 				185BD7381FF24E6A002F77F9 /* QRCScanner.m in Sources */,
 				180022961FC2DDC200C5E414 /* UIImageView+YYWebImage.m in Sources */,
 				187769EC2005B1BC00CDD115 /* LTCharacterDiffResult.swift in Sources */,
@@ -2076,6 +2175,7 @@
 				180022A71FC2DDC200C5E414 /* YYLabel.m in Sources */,
 				1818EA201FBC4D1B00C35A8A /* UIButton+MiddleAligning.m in Sources */,
 				180022C41FC2DDC200C5E414 /* NSThread+YYAdd.m in Sources */,
+				18436C442010820F00273557 /* NSBundle+AppIcon.m in Sources */,
 				1800228A1FC2DDC200C5E414 /* YYDiskCache.m in Sources */,
 				180022B61FC2DDC200C5E414 /* UITableView+YYAdd.m in Sources */,
 				180022B51FC2DDC200C5E414 /* UIApplication+YYAdd.m in Sources */,
@@ -2093,6 +2193,7 @@
 				180022951FC2DDC200C5E414 /* UIButton+YYWebImage.m in Sources */,
 				185B0D631FBE8A4B00FC5072 /* STPickerDate.m in Sources */,
 				180022AD1FC2DDC200C5E414 /* UIPasteboard+YYText.m in Sources */,
+				18436C6A201087E900273557 /* NSDate+Formatter.m in Sources */,
 				180021D01FC282F200C5E414 /* DLUtility.m in Sources */,
 				1818EA1F1FBC4D1B00C35A8A /* UIButton+Block.m in Sources */,
 				18A94BC71FC41E8D00032B5B /* AFSecurityPolicy.m in Sources */,
@@ -2104,6 +2205,7 @@
 				1818EA1C1FBC4D1B00C35A8A /* UIButton+BackgroundColor.m in Sources */,
 				1818EA221FBC4D1B00C35A8A /* UIButton+TouchAreaInsets.m in Sources */,
 				189E29501FBD8CF9008D9027 /* NSString+RegexValidate.m in Sources */,
+				18436C6C201087E900273557 /* NSDate+Reporting.m in Sources */,
 				180022C71FC2DDC200C5E414 /* NSObject+YYAddForARC.m in Sources */,
 				18436C3F20107D5700273557 /* TTDynamicSession.m in Sources */,
 				1800229F1FC2DDC200C5E414 /* YYTextContainerView.m in Sources */,
@@ -2142,6 +2244,7 @@
 				180022A31FC2DDC200C5E414 /* YYTextLine.m in Sources */,
 				189AF37520089FA2009A26E5 /* TTCountdownCell.swift in Sources */,
 				18E89F391FD6479000A77EA7 /* WRCustomNavigationBar.m in Sources */,
+				18436C57201083DF00273557 /* NSData+Hash.m in Sources */,
 				18A94C011FC430B100032B5B /* BaseTabBarViewController.m in Sources */,
 				1818EA291FBC4D1B00C35A8A /* NSUserDefaults+SafeAccess.m in Sources */,
 				189E29271FBD3A27008D9027 /* UIViewController+LewPopupViewController.m in Sources */,
@@ -2153,6 +2256,7 @@
 				18A94BE41FC420AF00032B5B /* UIWebView+AFNetworking.m in Sources */,
 				180022C51FC2DDC200C5E414 /* NSKeyedUnarchiver+YYAdd.m in Sources */,
 				18A94BC21FC41E8D00032B5B /* AFURLResponseSerialization.m in Sources */,
+				18436C56201083DF00273557 /* NSData+SDDataCache.m in Sources */,
 				189AF37720089FA2009A26E5 /* ViewController.m in Sources */,
 				18A94BC61FC41E8D00032B5B /* AFNetworkReachabilityManager.m in Sources */,
 				180022AB1FC2DDC200C5E414 /* YYTextParser.m in Sources */,
@@ -2161,6 +2265,7 @@
 				180022A61FC2DDC200C5E414 /* YYTextDebugOption.m in Sources */,
 				180022A51FC2DDC200C5E414 /* YYTextKeyboardManager.m in Sources */,
 				18E89F381FD6478D00A77EA7 /* WRNavigationBar.m in Sources */,
+				18436C58201083DF00273557 /* NSData+Gzip.m in Sources */,
 				189E29221FBD3A27008D9027 /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				180021CC1FC282F200C5E414 /* DLLRUCache.m in Sources */,
 				189E29291FBD3A27008D9027 /* ZTPopUpViewController.m in Sources */,
@@ -2178,10 +2283,12 @@
 				185B0D641FBE8A4B00FC5072 /* STPickerArea.m in Sources */,
 				189E28E81FBD3288008D9027 /* NSDictionary+Log.m in Sources */,
 				180022AE1FC2DDC200C5E414 /* YYTextAttribute.m in Sources */,
+				18436C6F201087E900273557 /* NSDate+TimeAgo.m in Sources */,
 				180022A11FC2DDC200C5E414 /* YYTextInput.m in Sources */,
 				180022971FC2DDC200C5E414 /* MKAnnotationView+YYWebImage.m in Sources */,
 				1818EA211FBC4D1B00C35A8A /* UIButton+Submitting.m in Sources */,
 				18E372D81FCCF1CC00EF45FC /* UIView+TTKit.m in Sources */,
+				18436C6D201087E900273557 /* NSDate+InternetDateTime.m in Sources */,
 				1862EBF21FFB2D990072F306 /* ZTProgressHUD.m in Sources */,
 				189AF37820089FA2009A26E5 /* CountdownListViewController.m in Sources */,
 				180021D21FC282F200C5E414 /* DLSlideView.m in Sources */,
@@ -2195,6 +2302,7 @@
 				189AF37F2008A004009A26E5 /* PresentViewController.m in Sources */,
 				187769E42005B1BC00CDD115 /* LTEasing.swift in Sources */,
 				180022941FC2DDC200C5E414 /* _YYWebImageSetter.m in Sources */,
+				18436C59201083DF00273557 /* NSData+Encrypt.m in Sources */,
 				180022BC1FC2DDC200C5E414 /* UIImage+YYAdd.m in Sources */,
 				180022B81FC2DDC200C5E414 /* UIScreen+YYAdd.m in Sources */,
 				1818EA1D1FBC4D1B00C35A8A /* UIButton+LXMImagePosition.m in Sources */,
@@ -2205,7 +2313,9 @@
 				180022B01FC2DDC200C5E414 /* YYTextRubyAnnotation.m in Sources */,
 				180021D11FC282F200C5E414 /* DLCustomSlideView.m in Sources */,
 				180022D91FC2DDC200C5E414 /* YYThreadSafeArray.m in Sources */,
+				18436C6B201087E900273557 /* NSDate+Utilities.m in Sources */,
 				185BD7581FF24F43002F77F9 /* TOActivityChrome.m in Sources */,
+				18436C6E201087E900273557 /* NSDate+Extension.m in Sources */,
 				180022C31FC2DDC200C5E414 /* NSData+YYAdd.m in Sources */,
 				189E29631FBD9743008D9027 /* NSDate+Extension.m in Sources */,
 				185BD7591FF24F48002F77F9 /* TOWebViewController.m in Sources */,
@@ -2226,6 +2336,7 @@
 				180022A21FC2DDC200C5E414 /* YYTextLayout.m in Sources */,
 				180022BB1FC2DDC200C5E414 /* UIGestureRecognizer+YYAdd.m in Sources */,
 				180022981FC2DDC200C5E414 /* CALayer+YYWebImage.m in Sources */,
+				18436C5A201083DF00273557 /* NSData+Base64.m in Sources */,
 				18026E0D200DFDBB00730C4A /* PresentCircleViewController.m in Sources */,
 				186FC138200C7CBC00699A10 /* TTModalAnimator.m in Sources */,
 				18026E0A200DFDA100730C4A /* PresentGradientViewController.m in Sources */,
