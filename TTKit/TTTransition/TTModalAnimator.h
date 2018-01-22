@@ -13,6 +13,4 @@
 
 @property (nonatomic, assign) TTModalTransitionStyle  style;
 
-
-
 @end
