@@ -31,5 +31,7 @@ pod 'DZNEmptyDataSet'
 #pod "SkeletonView" //类似支付宝的占位View
 #pod "Koloda" //卡片view
 #pod 'Harpy' // 提示更新app
+#pod 'JDStatusBarNotification' 
+
 end
 
