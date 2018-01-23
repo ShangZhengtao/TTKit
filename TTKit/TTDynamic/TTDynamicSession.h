@@ -11,11 +11,11 @@
 
 @class TTCollisionView;@interface TTDynamicSession : NSObject
 
-/**
-  使多个view在指定容器view范围内 具备重力感应效果
-
- @param items 具备重力感应效果的view集合
- @param view  重力场容器view
+/**                                               __________________
+  使多个view在指定容器view范围内 具备重力感应效果        |   🎾           |
+                                                  |   🎾           |
+ @param items 具备重力感应效果的view集合              | 🎾 🎾          |
+ @param view  重力场容器view                        |___🎾___🎾______|
  */
 - (void)addGravityBehaviorItems:(NSArray<__kindof UIView *>*)items intoContainerView:(UIView *)view;
 

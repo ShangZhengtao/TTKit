@@ -12,16 +12,16 @@
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     if (self.transitionStyle == TTModalTransitionStyleDefault)  return nil;
-    TTModalAnimator *animatior = [[TTModalAnimator alloc]init];
-    animatior.style = self.transitionStyle;
-    return animatior;
+    TTModalAnimator *animator = [[TTModalAnimator alloc]init];
+    animator.style = self.transitionStyle;
+    return animator;
 }
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     if (self.transitionStyle == TTModalTransitionStyleDefault)  return nil;
-    TTModalAnimator *animatior = [[TTModalAnimator alloc]init];
-    animatior.style = self.transitionStyle;
-    return animatior;
+    TTModalAnimator *animator = [[TTModalAnimator alloc]init];
+    animator.style = self.transitionStyle;
+    return animator;
 }
 
 
