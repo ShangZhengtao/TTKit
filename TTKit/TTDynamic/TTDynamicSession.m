@@ -25,7 +25,7 @@ static const double         kTTStrength = 2; //加速度倍数加成
 
 @implementation TTDynamicSession
 
-- (void)addGravityBehaviorItems:(NSArray<__kindof UIView *> *)items intoContainerView:(UIView *)view {
+- (void)addGravityBehaviorItems:(NSArray<__kindof UIView *> *)items toContainerView:(UIView *)view {
     
     self.animator = [[UIDynamicAnimator alloc]initWithReferenceView:view];
     self.gravity = [[UIGravityBehavior alloc]initWithItems:items];
@@ -44,7 +44,7 @@ static const double         kTTStrength = 2; //加速度倍数加成
     }
     return _motionManager;
 }
-
+//开启加速计
 - (void)startUpdateAccelerometer {
     if (self.motionManager.accelerometerAvailable) {
         self.motionManager.accelerometerUpdateInterval = kTTUpdateInterval;

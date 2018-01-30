@@ -17,6 +17,6 @@
  @param items 具备重力感应效果的view集合              | 🎾 🎾          |
  @param view  重力场容器view                        |___🎾___🎾______|
  */
-- (void)addGravityBehaviorItems:(NSArray<__kindof UIView *>*)items intoContainerView:(UIView *)view;
+- (void)addGravityBehaviorItems:(NSArray<__kindof UIView *>*)items toContainerView:(UIView *)view;
 
 @end

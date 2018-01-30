@@ -302,6 +302,7 @@
 		18A94BFE1FC4307F00032B5B /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A94BFD1FC4307F00032B5B /* BaseNavigationController.m */; };
 		18A94C011FC430B100032B5B /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A94C001FC430B100032B5B /* BaseTabBarViewController.m */; };
 		18B12E131FE26A280031D757 /* AFHTTPSessionManager+Synchronous.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B12E121FE26A270031D757 /* AFHTTPSessionManager+Synchronous.m */; };
+		18CA9C1E20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA9C1C20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.m */; };
 		18D6D0B21FC56393005305ED /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D0B11FC56393005305ED /* BaseTableViewController.m */; };
 		18D6D0B51FC563C8005305ED /* BaseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D0B41FC563C8005305ED /* BaseListModel.m */; };
 		18E89F381FD6478D00A77EA7 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7401FD546BE0024A4D2 /* WRNavigationBar.m */; };
@@ -942,6 +943,8 @@
 		18A94C001FC430B100032B5B /* BaseTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarViewController.m; sourceTree = "<group>"; };
 		18B12E111FE26A270031D757 /* AFHTTPSessionManager+Synchronous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+Synchronous.h"; sourceTree = "<group>"; };
 		18B12E121FE26A270031D757 /* AFHTTPSessionManager+Synchronous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPSessionManager+Synchronous.m"; sourceTree = "<group>"; };
+		18CA9C1C20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASHSpringyCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		18CA9C1D20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASHSpringyCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		18D6D0B01FC56393005305ED /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		18D6D0B11FC56393005305ED /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		18D6D0B31FC563C8005305ED /* BaseListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseListModel.h; sourceTree = "<group>"; };
@@ -2123,6 +2126,8 @@
 		189E29031FBD3A26008D9027 /* UICollectionViewLayout */ = {
 			isa = PBXGroup;
 			children = (
+				18CA9C1D20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.h */,
+				18CA9C1C20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.m */,
 				189E29041FBD3A26008D9027 /* UICollectionViewLeftAlignedLayout.h */,
 				189E29061FBD3A26008D9027 /* UICollectionViewLeftAlignedLayout.m */,
 				189E29071FBD3A26008D9027 /* FJWaterfallFlowLayout.h */,
@@ -2732,6 +2737,7 @@
 				18A94BE61FC420AF00032B5B /* AFImageDownloader.m in Sources */,
 				1883AC0220159AA7006311D7 /* UIColor+ESExtensions.m in Sources */,
 				1883AC2220159AA8006311D7 /* NSString+RegexValidate.m in Sources */,
+				18CA9C1E20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.m in Sources */,
 				180022A21FC2DDC200C5E414 /* YYTextLayout.m in Sources */,
 				1883AC2A20159AA8006311D7 /* NSString+Matcher.m in Sources */,
 				180022BB1FC2DDC200C5E414 /* UIGestureRecognizer+YYAdd.m in Sources */,
