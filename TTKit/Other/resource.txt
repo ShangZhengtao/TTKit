@@ -6,3 +6,6 @@ http://blog.csdn.net/delphiwcdj/article/details/45225889
 
 // 动画时间函数测试工具
 https://yq.aliyun.com/articles/29568
+
+// 审核规则
+https://developer.apple.com/app-store/review/guidelines/cn/#data-collection-and-storage

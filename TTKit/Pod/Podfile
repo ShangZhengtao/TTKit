@@ -32,6 +32,6 @@ pod 'DZNEmptyDataSet'
 #pod "Koloda" //卡片view
 #pod 'Harpy' // 提示更新app
 #pod 'JDStatusBarNotification' 
-
+pod 'FLEX', '~> 2.0', :configurations => ['Debug'] //DEBUG 调试
 end
 
