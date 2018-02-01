@@ -1571,8 +1571,8 @@
 			children = (
 				187F4DCC20084BD300DB1AEA /* jpush-ios-3.0.7 */,
 				187F4DD320084BD300DB1AEA /* CoreJPush.h */,
-				187F4DD420084BD300DB1AEA /* AppDelegate+JPush.h */,
 				187F4DD520084BD300DB1AEA /* CoreJPush.m */,
+				187F4DD420084BD300DB1AEA /* AppDelegate+JPush.h */,
 				187F4DD620084BD300DB1AEA /* AppDelegate+JPush.m */,
 			);
 			path = CoreJPush;

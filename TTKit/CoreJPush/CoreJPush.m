@@ -147,11 +147,11 @@ static id _instace;
 #pragma clang diagnostic pop
 }
 
-+ (void)setAlias:(NSString *)alias completionHandler:(JPUSHAliasOperationCompletion)hander {
++ (void)setAlias:(NSString *)alias completionHandler:(_Nullable JPUSHAliasOperationCompletion)hander {
     [JPUSHService setAlias:alias completion:hander seq:666];
 }
 
-+ (void)setTags:(NSSet<NSString *> *)tags completionHandler:(JPUSHTagsOperationCompletion)hander {
++ (void)setTags:(NSSet<NSString *> *)tags completionHandler:(_Nullable JPUSHTagsOperationCompletion)hander {
     [JPUSHService setTags:tags completion:hander seq:666];
 }
 

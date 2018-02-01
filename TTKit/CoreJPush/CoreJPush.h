@@ -23,7 +23,7 @@ UIKIT_EXTERN NSString *const kHandleActionUserTextKey; //通知交互时用户�
  
  @param userInfo 通知信息
  */
--(void)didReceiveRemoteNotification:(NSDictionary *)userInfo __IOS_AVAILABLE(3.0);
+-(void)didReceiveRemoteNotification:(NSDictionary *)userInfo __IOS_AVAILABLE(3_0);
 
 @optional
 /**
@@ -32,7 +32,7 @@ UIKIT_EXTERN NSString *const kHandleActionUserTextKey; //通知交互时用户�
  @param userInfo 通知信息. 用户输入的内容 key -> kHandleActionUserTextKey
  @param identifier 注册时指定的Action id
  */
--(void)handleAction:(NSDictionary *)userInfo actionIdentifier:(NSString *)identifier __IOS_AVAILABLE(9.0);
+-(void)handleAction:(NSDictionary *)userInfo actionIdentifier:(NSString *)identifier __IOS_AVAILABLE(9_0);
 
 @end
 
@@ -75,8 +75,8 @@ UIKIT_EXTERN NSString *const kHandleActionUserTextKey; //通知交互时用户�
 + (void)removeJPushObserver:(id<CoreJPushProtocal>)observer;
 
 /** 设置alias、tags */
-+ (void)setAlias:(NSString *)alias completionHandler:(JPUSHAliasOperationCompletion)hander;
-+ (void)setTags:(NSSet<NSString *>*)tags completionHandler:(JPUSHTagsOperationCompletion)hander;
++ (void)setAlias:(NSString *)alias completionHandler:(_Nullable JPUSHAliasOperationCompletion)hander;
++ (void)setTags:(NSSet<NSString *>*)tags completionHandler:(_Nullable JPUSHTagsOperationCompletion)hander;
 
 + (void)handleWithBadge:(NSInteger)badge;
 
