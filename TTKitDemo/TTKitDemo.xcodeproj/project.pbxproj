@@ -130,9 +130,6 @@
 		1862EBF21FFB2D990072F306 /* ZTProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EBF01FFB2D990072F306 /* ZTProgressHUD.m */; };
 		1862EBF51FFB85AE0072F306 /* TTAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EBF41FFB85AE0072F306 /* TTAnimationKit.m */; };
 		186D682C2004BFF500E256EB /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D682B2004BFF500E256EB /* YYFPSLabel.m */; };
-		186FC135200C5CAB00699A10 /* UIViewController+TTModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 186FC134200C5CAB00699A10 /* UIViewController+TTModalTransition.m */; };
-		186FC138200C7CBC00699A10 /* TTModalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 186FC137200C7CBC00699A10 /* TTModalAnimator.m */; };
-		186FC13B200C7E7600699A10 /* TTModalDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 186FC13A200C7E7600699A10 /* TTModalDelegate.m */; };
 		187704661FC7BB170021C3CB /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704651FC7BB170021C3CB /* libresolv.tbd */; };
 		187769E22005B1BC00CDD115 /* CountdownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769C92005B1BC00CDD115 /* CountdownLabel.swift */; };
 		187769E32005B1BC00CDD115 /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769CB2005B1BC00CDD115 /* LTMorphingLabel+Fall.swift */; };
@@ -282,6 +279,12 @@
 		189E29631FBD9743008D9027 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E295F1FBD9743008D9027 /* NSDate+Extension.m */; };
 		189E29641FBD9743008D9027 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E29601FBD9743008D9027 /* UIView+Extension.m */; };
 		189E29681FBD9A3B008D9027 /* LrdOutputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189E29661FBD9A3B008D9027 /* LrdOutputView.m */; };
+		18A3EF3720283AD700CDA187 /* TTBaseNavigationAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3EF2C20283AD700CDA187 /* TTBaseNavigationAnimator.m */; };
+		18A3EF3820283AD700CDA187 /* TTGestureDepthOfFieldAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3EF2D20283AD700CDA187 /* TTGestureDepthOfFieldAnimator.m */; };
+		18A3EF3920283AD700CDA187 /* TTGesture3DAlternateAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3EF2E20283AD700CDA187 /* TTGesture3DAlternateAnimator.m */; };
+		18A3EF3A20283AD700CDA187 /* TTModalDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3EF3220283AD700CDA187 /* TTModalDelegate.m */; };
+		18A3EF3B20283AD700CDA187 /* TTModalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3EF3420283AD700CDA187 /* TTModalAnimator.m */; };
+		18A3EF3C20283AD700CDA187 /* UIViewController+TTModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3EF3620283AD700CDA187 /* UIViewController+TTModalTransition.m */; };
 		18A94BB21FC41DB900032B5B /* PPNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A94BAE1FC41DB900032B5B /* PPNetworkHelper.m */; };
 		18A94BB31FC41DB900032B5B /* PPNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A94BB11FC41DB900032B5B /* PPNetworkCache.m */; };
 		18A94BC21FC41E8D00032B5B /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A94BB91FC41E8D00032B5B /* AFURLResponseSerialization.m */; };
@@ -598,12 +601,6 @@
 		1862EBF41FFB85AE0072F306 /* TTAnimationKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAnimationKit.m; sourceTree = "<group>"; };
 		186D682A2004BFF500E256EB /* YYFPSLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
 		186D682B2004BFF500E256EB /* YYFPSLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
-		186FC133200C5CAB00699A10 /* UIViewController+TTModalTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TTModalTransition.h"; sourceTree = "<group>"; };
-		186FC134200C5CAB00699A10 /* UIViewController+TTModalTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TTModalTransition.m"; sourceTree = "<group>"; };
-		186FC136200C7CBC00699A10 /* TTModalAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTModalAnimator.h; sourceTree = "<group>"; };
-		186FC137200C7CBC00699A10 /* TTModalAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTModalAnimator.m; sourceTree = "<group>"; };
-		186FC139200C7E7600699A10 /* TTModalDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTModalDelegate.h; sourceTree = "<group>"; };
-		186FC13A200C7E7600699A10 /* TTModalDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTModalDelegate.m; sourceTree = "<group>"; };
 		187704621FC7BAD60021C3CB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		187704631FC7BAED0021C3CB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		187704651FC7BB170021C3CB /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
@@ -890,6 +887,18 @@
 		189E29601FBD9743008D9027 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		189E29661FBD9A3B008D9027 /* LrdOutputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LrdOutputView.m; sourceTree = "<group>"; };
 		189E29671FBD9A3B008D9027 /* LrdOutputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LrdOutputView.h; sourceTree = "<group>"; };
+		18A3EF2A20283AD700CDA187 /* TTGesture3DAlternateAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGesture3DAlternateAnimator.h; sourceTree = "<group>"; };
+		18A3EF2B20283AD700CDA187 /* TTGestureDepthOfFieldAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGestureDepthOfFieldAnimator.h; sourceTree = "<group>"; };
+		18A3EF2C20283AD700CDA187 /* TTBaseNavigationAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBaseNavigationAnimator.m; sourceTree = "<group>"; };
+		18A3EF2D20283AD700CDA187 /* TTGestureDepthOfFieldAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGestureDepthOfFieldAnimator.m; sourceTree = "<group>"; };
+		18A3EF2E20283AD700CDA187 /* TTGesture3DAlternateAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGesture3DAlternateAnimator.m; sourceTree = "<group>"; };
+		18A3EF2F20283AD700CDA187 /* TTBaseNavigationAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBaseNavigationAnimator.h; sourceTree = "<group>"; };
+		18A3EF3120283AD700CDA187 /* TTModalAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTModalAnimator.h; sourceTree = "<group>"; };
+		18A3EF3220283AD700CDA187 /* TTModalDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTModalDelegate.m; sourceTree = "<group>"; };
+		18A3EF3320283AD700CDA187 /* UIViewController+TTModalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TTModalTransition.h"; sourceTree = "<group>"; };
+		18A3EF3420283AD700CDA187 /* TTModalAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTModalAnimator.m; sourceTree = "<group>"; };
+		18A3EF3520283AD700CDA187 /* TTModalDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTModalDelegate.h; sourceTree = "<group>"; };
+		18A3EF3620283AD700CDA187 /* UIViewController+TTModalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TTModalTransition.m"; sourceTree = "<group>"; };
 		18A94B9E1FC40A3400032B5B /* TTMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTMacros.h; sourceTree = "<group>"; };
 		18A94BAE1FC41DB900032B5B /* PPNetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPNetworkHelper.m; sourceTree = "<group>"; };
 		18A94BAF1FC41DB900032B5B /* PPNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPNetworkCache.h; sourceTree = "<group>"; };
@@ -1510,12 +1519,8 @@
 		186FC132200C5C1A00699A10 /* TTTransition */ = {
 			isa = PBXGroup;
 			children = (
-				186FC133200C5CAB00699A10 /* UIViewController+TTModalTransition.h */,
-				186FC134200C5CAB00699A10 /* UIViewController+TTModalTransition.m */,
-				186FC139200C7E7600699A10 /* TTModalDelegate.h */,
-				186FC13A200C7E7600699A10 /* TTModalDelegate.m */,
-				186FC136200C7CBC00699A10 /* TTModalAnimator.h */,
-				186FC137200C7CBC00699A10 /* TTModalAnimator.m */,
+				18A3EF3020283AD700CDA187 /* Modal */,
+				18A3EF2920283AD700CDA187 /* Navigation */,
 			);
 			path = TTTransition;
 			sourceTree = "<group>";
@@ -2238,6 +2243,32 @@
 			path = LRDPopAlert;
 			sourceTree = "<group>";
 		};
+		18A3EF2920283AD700CDA187 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				18A3EF2F20283AD700CDA187 /* TTBaseNavigationAnimator.h */,
+				18A3EF2C20283AD700CDA187 /* TTBaseNavigationAnimator.m */,
+				18A3EF2B20283AD700CDA187 /* TTGestureDepthOfFieldAnimator.h */,
+				18A3EF2D20283AD700CDA187 /* TTGestureDepthOfFieldAnimator.m */,
+				18A3EF2A20283AD700CDA187 /* TTGesture3DAlternateAnimator.h */,
+				18A3EF2E20283AD700CDA187 /* TTGesture3DAlternateAnimator.m */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		18A3EF3020283AD700CDA187 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				18A3EF3520283AD700CDA187 /* TTModalDelegate.h */,
+				18A3EF3220283AD700CDA187 /* TTModalDelegate.m */,
+				18A3EF3120283AD700CDA187 /* TTModalAnimator.h */,
+				18A3EF3420283AD700CDA187 /* TTModalAnimator.m */,
+				18A3EF3320283AD700CDA187 /* UIViewController+TTModalTransition.h */,
+				18A3EF3620283AD700CDA187 /* UIViewController+TTModalTransition.m */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		18A94BA21FC41AC600032B5B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -2491,6 +2522,7 @@
 				1883AC1F20159AA8006311D7 /* NSData+Encrypt.m in Sources */,
 				18A94BE31FC420AF00032B5B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				18A94BB31FC41DB900032B5B /* PPNetworkCache.m in Sources */,
+				18A3EF3B20283AD700CDA187 /* TTModalAnimator.m in Sources */,
 				187769F32005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift in Sources */,
 				1883AC1420159AA8006311D7 /* NSDictionary+JSONString.m in Sources */,
 				189E29261FBD3A27008D9027 /* LewPopupViewAnimationSlide.m in Sources */,
@@ -2562,8 +2594,8 @@
 				18A94BE11FC420AF00032B5B /* UIImageView+AFNetworking.m in Sources */,
 				185B0D691FBE8A4B00FC5072 /* NSCalendar+STPicker.m in Sources */,
 				1883AC3620159AA8006311D7 /* NSObject+KVOBlocks.m in Sources */,
+				18A3EF3720283AD700CDA187 /* TTBaseNavigationAnimator.m in Sources */,
 				187769F42005B1BC00CDD115 /* LTMorphingEffect.swift in Sources */,
-				186FC135200C5CAB00699A10 /* UIViewController+TTModalTransition.m in Sources */,
 				189E29641FBD9743008D9027 /* UIView+Extension.m in Sources */,
 				1883AC3720159AA8006311D7 /* NSObject+AppInfo.m in Sources */,
 				1883AC5D2015CBEC006311D7 /* UIView+Nib.m in Sources */,
@@ -2643,12 +2675,13 @@
 				180022C51FC2DDC200C5E414 /* NSKeyedUnarchiver+YYAdd.m in Sources */,
 				18A94BC21FC41E8D00032B5B /* AFURLResponseSerialization.m in Sources */,
 				1883AC4A2015C264006311D7 /* SYSafeCategory.m in Sources */,
+				18A3EF3A20283AD700CDA187 /* TTModalDelegate.m in Sources */,
 				1883AC1320159AA8006311D7 /* NSDictionary+SafeAccess.m in Sources */,
 				189AF37720089FA2009A26E5 /* ViewController.m in Sources */,
 				18A94BC61FC41E8D00032B5B /* AFNetworkReachabilityManager.m in Sources */,
 				180022AB1FC2DDC200C5E414 /* YYTextParser.m in Sources */,
+				18A3EF3C20283AD700CDA187 /* UIViewController+TTModalTransition.m in Sources */,
 				1883AC2120159AA8006311D7 /* NSString+URL.m in Sources */,
-				186FC13B200C7E7600699A10 /* TTModalDelegate.m in Sources */,
 				1883AC662015D088006311D7 /* UIWebView+Load.m in Sources */,
 				1800229B1FC2DDC200C5E414 /* NSObject+YYModel.m in Sources */,
 				180022A61FC2DDC200C5E414 /* YYTextDebugOption.m in Sources */,
@@ -2680,9 +2713,11 @@
 				180021D21FC282F200C5E414 /* DLSlideView.m in Sources */,
 				1883AC0120159AA7006311D7 /* UIButton+Event.m in Sources */,
 				1883AC4320159AA8006311D7 /* NSDate+Extension.m in Sources */,
+				18A3EF3920283AD700CDA187 /* TTGesture3DAlternateAnimator.m in Sources */,
 				18A94BB21FC41DB900032B5B /* PPNetworkHelper.m in Sources */,
 				189E29251FBD3A27008D9027 /* LewPopupViewAnimationDrop.m in Sources */,
 				189E28E21FBD2B57008D9027 /* LaunchIntroductionView.m in Sources */,
+				18A3EF3820283AD700CDA187 /* TTGestureDepthOfFieldAnimator.m in Sources */,
 				1883AC4B2015C264006311D7 /* JRSwizzle.m in Sources */,
 				185BD7391FF24E6D002F77F9 /* QRCScannerViewController.m in Sources */,
 				1883AC1B20159AA8006311D7 /* NSData+zlib.m in Sources */,
@@ -2748,7 +2783,6 @@
 				18026E0D200DFDBB00730C4A /* PresentCircleViewController.m in Sources */,
 				1883AC1720159AA8006311D7 /* NSBundle+AppIcon.m in Sources */,
 				1883AC2D20159AA8006311D7 /* NSInvocation+Block.m in Sources */,
-				186FC138200C7CBC00699A10 /* TTModalAnimator.m in Sources */,
 				1883AC1920159AA8006311D7 /* NSFileHandle+readLine.m in Sources */,
 				18026E0A200DFDA100730C4A /* PresentGradientViewController.m in Sources */,
 				1800229A1FC2DDC200C5E414 /* YYWebImageOperation.m in Sources */,
