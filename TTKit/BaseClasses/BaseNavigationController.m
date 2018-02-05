@@ -9,8 +9,12 @@
 #import "BaseNavigationController.h"
 #import "TTMacros.h"
 #import "WRNavigationBar.h"
+#import "TTBaseNavigationAnimator.h"
+#import "TTGestureDepthOfFieldAnimator.h"
 
 @interface BaseNavigationController ()<UINavigationControllerDelegate>
+
+@property (nonatomic ,strong) TTBaseNavigationAnimator *animator;
 
 @end
 
@@ -41,6 +45,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.delegate = self;
+    self.animator = [[TTGestureDepthOfFieldAnimator alloc]init];
 }
 
 //push时隐藏tabbar
@@ -59,6 +64,21 @@
 
 - (void)back {
     [self popViewControllerAnimated:YES];
+}
+
+#pragma mark - navigationDelegate
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
+    //给toVC 添加手势
+    if (toVC != navigationController.childViewControllers.firstObject) {
+        [self.animator interactionForViewController:toVC];
+    }
+    self.animator.operation = operation;
+    return self.animator;
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
+    return self.animator.interactionInProgress ? self.animator : nil;
 }
 
 @end

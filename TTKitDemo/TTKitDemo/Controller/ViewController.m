@@ -24,7 +24,8 @@
 @interface ViewController ()
 <
 QRCodeScannerViewControllerDelegate,
-STPickerAreaDelegate
+STPickerAreaDelegate,
+UINavigationControllerDelegate
 >
 @property (weak, nonatomic) IBOutlet UIButton *areaPickerButton;
 
@@ -127,6 +128,15 @@ STPickerAreaDelegate
     PresentViewController *vc = [[PresentViewController alloc]init];
     vc.tt_modalTransitionStyle = TTModalTransitionStyleCircleZoom;
     [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (IBAction)pushButtonTapped:(UIButton *)sender {
+    
+    UIViewController *vc = [[UIViewController alloc]init];
+    vc.title = @"标题";
+    vc.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 @end

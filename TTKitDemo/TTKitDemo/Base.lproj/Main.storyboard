@@ -70,7 +70,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Push"/>
                                         <connections>
-                                            <segue destination="7ik-yn-AkZ" kind="show" id="S1I-Ot-P1d"/>
+                                            <action selector="pushButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qbn-wZ-oVz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ho-Tc-eGg">
@@ -248,54 +248,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G32-mp-oFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1508" y="831.63418290854577"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="fBr-jx-Ek6">
-            <objects>
-                <viewController id="7ik-yn-AkZ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hOm-om-Wcp"/>
-                        <viewControllerLayoutGuide type="bottom" id="LGg-U3-HS3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="z0t-iF-uR6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mko-t5-ssQ">
-                                <rect key="frame" x="135" y="318" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="push">
-                                    <color key="titleColor" red="0.019607843137254902" green="0.68235294117647061" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="oDy-ab-9eT" kind="show" id="3bG-6p-T4j"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F7a-2L-FSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1473" y="46"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="RjU-MF-KgE">
-            <objects>
-                <viewController id="oDy-ab-9eT" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qb3-IH-nGM"/>
-                        <viewControllerLayoutGuide type="bottom" id="Cnd-CJ-xIV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="n4i-HP-kSj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xEz-DQ-M2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2311" y="45"/>
         </scene>
         <!--Item-->
         <scene sceneID="Flr-E5-IXe">
