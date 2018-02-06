@@ -27,12 +27,12 @@
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    //子类去实现
-    return 0;
+    return self.transitionDuration;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     //子类去实现
+    
 }
 
 #pragma mark - 添加手势

@@ -9,9 +9,6 @@
 #import "TTGesture3DAlternateAnimator.h"
 
 @implementation TTGesture3DAlternateAnimator
-- (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
-    return self.transitionDuration;
-}
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -28,7 +25,7 @@
 
 #pragma mark push
 
--(void)pushViewControllerAnimation:(id<UIViewControllerContextTransitioning>)transitionContext fromVC:(UIViewController *)fromVC toVC:(UIViewController *)toVC fromView:(UIView *)fromView toView:(UIView *)toView {
+- (void)pushViewControllerAnimation:(id<UIViewControllerContextTransitioning>)transitionContext fromVC:(UIViewController *)fromVC toVC:(UIViewController *)toVC fromView:(UIView *)fromView toView:(UIView *)toView {
     CGRect fromFrame = [transitionContext initialFrameForViewController:fromVC];
     CGRect toFrame = [transitionContext finalFrameForViewController:toVC];
     NSTimeInterval duration = [self transitionDuration:transitionContext];
@@ -87,7 +84,8 @@
 }
 
 #pragma mark pop
--(void)popViewControllerAnimation:(id<UIViewControllerContextTransitioning>)transitionContext fromVC:(UIViewController *)fromVC toVC:(UIViewController *)toVC fromView:(UIView *)fromView toView:(UIView *)toView {
+
+- (void)popViewControllerAnimation:(id<UIViewControllerContextTransitioning>)transitionContext fromVC:(UIViewController *)fromVC toVC:(UIViewController *)toVC fromView:(UIView *)fromView toView:(UIView *)toView {
     CGRect fromFrame = [transitionContext initialFrameForViewController:fromVC];
     CGRect toFrame = [transitionContext finalFrameForViewController:toVC];
     NSTimeInterval duration = [self transitionDuration:transitionContext];
