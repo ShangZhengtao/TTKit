@@ -54,7 +54,7 @@
     
     UIView *tempFromView = [fromVC.tabBarController.view snapshotViewAfterScreenUpdates:NO]; //截取全屏图
     tempFromView.frame = [UIScreen mainScreen].bounds;
-    UIView *tempView = [[UIView alloc]initWithFrame:fromView.bounds];//灰色蒙版
+    UIView *tempView = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];//灰色蒙版
     tempView.backgroundColor = [UIColor clearColor];
     [tempFromView addSubview:tempView];
     fromView.hidden = YES; //截图代替fromview

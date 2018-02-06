@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tt_modalTransitionStyle = TTModalTransitionStyleOpenDoor;
     self.imageView = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.imageView.image = [UIImage imageNamed:@"img02"];
     [self.view addSubview:self.imageView];

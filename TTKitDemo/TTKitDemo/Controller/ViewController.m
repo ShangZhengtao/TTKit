@@ -21,6 +21,7 @@
 #import "ZTProgressHUD.h"
 #import "UIButton+Event.h"
 #import "UIViewController+TTModalTransition.h"
+
 @interface ViewController ()
 <
 QRCodeScannerViewControllerDelegate,
@@ -126,6 +127,7 @@ UINavigationControllerDelegate
 
 - (IBAction)presentButtonTapped:(UIButton *)sender {
     PresentViewController *vc = [[PresentViewController alloc]init];
+//    TestViewController *vc = [[TestViewController alloc]init];
     vc.tt_modalTransitionStyle = TTModalTransitionStyleCircleZoom;
     [self presentViewController:vc animated:YES completion:nil];
 }
