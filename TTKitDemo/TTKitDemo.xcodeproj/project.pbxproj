@@ -104,6 +104,7 @@
 		1818E9991FBC49FA00C35A8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1818E9981FBC49FA00C35A8A /* Assets.xcassets */; };
 		1818E99C1FBC49FA00C35A8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1818E99A1FBC49FA00C35A8A /* LaunchScreen.storyboard */; };
 		1818E99F1FBC49FA00C35A8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818E99E1FBC49FA00C35A8A /* main.m */; };
+		183FAE9F202BE84D00BAC6D9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FAE9E202BE84D00BAC6D9 /* BaseViewController.m */; };
 		18436C3F20107D5700273557 /* TTDynamicSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C3B20107D5700273557 /* TTDynamicSession.m */; };
 		18436C4020107D5700273557 /* TTCollisionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C3E20107D5700273557 /* TTCollisionView.m */; };
 		185084C91FF4CE1300931509 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 185084C81FF4CE1300931509 /* NotificationService.m */; };
@@ -537,6 +538,8 @@
 		1818E99B1FBC49FA00C35A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1818E99D1FBC49FA00C35A8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1818E99E1FBC49FA00C35A8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		183FAE9D202BE84D00BAC6D9 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		183FAE9E202BE84D00BAC6D9 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		18436C3B20107D5700273557 /* TTDynamicSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDynamicSession.m; sourceTree = "<group>"; };
 		18436C3C20107D5700273557 /* TTCollisionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCollisionView.h; sourceTree = "<group>"; };
 		18436C3D20107D5700273557 /* TTDynamicSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDynamicSession.h; sourceTree = "<group>"; };
@@ -2347,6 +2350,8 @@
 				18A94C001FC430B100032B5B /* BaseTabBarViewController.m */,
 				18D6D0B01FC56393005305ED /* BaseTableViewController.h */,
 				18D6D0B11FC56393005305ED /* BaseTableViewController.m */,
+				183FAE9D202BE84D00BAC6D9 /* BaseViewController.h */,
+				183FAE9E202BE84D00BAC6D9 /* BaseViewController.m */,
 				18D6D0B31FC563C8005305ED /* BaseListModel.h */,
 				18D6D0B41FC563C8005305ED /* BaseListModel.m */,
 			);
@@ -2577,6 +2582,7 @@
 				187769ED2005B1BC00CDD115 /* LTMorphingLabel+Evaporate.swift in Sources */,
 				1800228C1FC2DDC200C5E414 /* YYKVStorage.m in Sources */,
 				180022911FC2DDC200C5E414 /* YYImage.m in Sources */,
+				183FAE9F202BE84D00BAC6D9 /* BaseViewController.m in Sources */,
 				1883AC0F20159AA7006311D7 /* CAAnimation+Blocks.m in Sources */,
 				180022CD1FC2DDC200C5E414 /* YYCGUtilities.m in Sources */,
 				1883AC5B2015CBEC006311D7 /* UIView+CustomBorder.m in Sources */,
