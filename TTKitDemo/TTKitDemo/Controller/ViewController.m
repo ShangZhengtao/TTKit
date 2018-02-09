@@ -21,7 +21,7 @@
 #import "ZTProgressHUD.h"
 #import "UIButton+Event.h"
 #import "UIViewController+TTModalTransition.h"
-
+#import "ZHNTopHud.h"
 
 @interface ViewController ()
 <
@@ -119,10 +119,14 @@ UINavigationControllerDelegate
 
 - (IBAction)hudButtonTapped:(UIButton *)sender {
     UIAlertController *alertvc = [UIAlertController alertControllerWithTitle:@"提示" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"样式一" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [ZTProgressHUD showInfo:@"在iOS当中，所有的视图都从一个叫做UIView的基类派生而来，UIView可以处理触摸事件，可以支持基于Core Graphics绘图，可以做仿射变换（例如旋转或者缩放），或者简单的类似于滑动或者渐变的动画"];
     }];
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"样式二" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [ZHNTopHud showSuccess: @"hello world!"];
+    }];
     [alertvc addAction:action];
+    [alertvc addAction:action2];
     [self presentViewController:alertvc animated:YES completion:nil];
 }
 

@@ -122,7 +122,7 @@
     fromVC.tabBarController.tabBar.alpha = 0;
     fromVC.navigationController.navigationBar.alpha = 0;
     
-    [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         tempView.backgroundColor = [UIColor clearColor];
         tempToView.transform = CGAffineTransformIdentity;
         tempFromView.transform = CGAffineTransformMakeTranslation([UIScreen mainScreen].bounds.size.width, 0);

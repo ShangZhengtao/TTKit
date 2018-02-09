@@ -131,6 +131,10 @@
 		1862EBF21FFB2D990072F306 /* ZTProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EBF01FFB2D990072F306 /* ZTProgressHUD.m */; };
 		1862EBF51FFB85AE0072F306 /* TTAnimationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EBF41FFB85AE0072F306 /* TTAnimationKit.m */; };
 		186D682C2004BFF500E256EB /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D682B2004BFF500E256EB /* YYFPSLabel.m */; };
+		18766E83202D390400DFC912 /* notice_type_error.png in Resources */ = {isa = PBXBuildFile; fileRef = 18766E7F202D390400DFC912 /* notice_type_error.png */; };
+		18766E84202D390400DFC912 /* ZHNTopHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 18766E80202D390400DFC912 /* ZHNTopHud.m */; };
+		18766E85202D390400DFC912 /* notice_type_warnning.png in Resources */ = {isa = PBXBuildFile; fileRef = 18766E81202D390400DFC912 /* notice_type_warnning.png */; };
+		18766E86202D390400DFC912 /* notice_type_success.png in Resources */ = {isa = PBXBuildFile; fileRef = 18766E82202D390400DFC912 /* notice_type_success.png */; };
 		187704661FC7BB170021C3CB /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704651FC7BB170021C3CB /* libresolv.tbd */; };
 		187769E22005B1BC00CDD115 /* CountdownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769C92005B1BC00CDD115 /* CountdownLabel.swift */; };
 		187769E32005B1BC00CDD115 /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769CB2005B1BC00CDD115 /* LTMorphingLabel+Fall.swift */; };
@@ -605,6 +609,11 @@
 		1862EBF41FFB85AE0072F306 /* TTAnimationKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTAnimationKit.m; sourceTree = "<group>"; };
 		186D682A2004BFF500E256EB /* YYFPSLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
 		186D682B2004BFF500E256EB /* YYFPSLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		18766E7E202D390400DFC912 /* ZHNTopHud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNTopHud.h; sourceTree = "<group>"; };
+		18766E7F202D390400DFC912 /* notice_type_error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notice_type_error.png; sourceTree = "<group>"; };
+		18766E80202D390400DFC912 /* ZHNTopHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNTopHud.m; sourceTree = "<group>"; };
+		18766E81202D390400DFC912 /* notice_type_warnning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notice_type_warnning.png; sourceTree = "<group>"; };
+		18766E82202D390400DFC912 /* notice_type_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notice_type_success.png; sourceTree = "<group>"; };
 		187704621FC7BAD60021C3CB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		187704631FC7BAED0021C3CB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		187704651FC7BB170021C3CB /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
@@ -1531,6 +1540,18 @@
 			path = TTTransition;
 			sourceTree = "<group>";
 		};
+		18766E7D202D390400DFC912 /* ZHNTopHud */ = {
+			isa = PBXGroup;
+			children = (
+				18766E7E202D390400DFC912 /* ZHNTopHud.h */,
+				18766E80202D390400DFC912 /* ZHNTopHud.m */,
+				18766E7F202D390400DFC912 /* notice_type_error.png */,
+				18766E81202D390400DFC912 /* notice_type_warnning.png */,
+				18766E82202D390400DFC912 /* notice_type_success.png */,
+			);
+			path = ZHNTopHud;
+			sourceTree = "<group>";
+		};
 		187769C82005B1BC00CDD115 /* CountdownLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -2064,6 +2085,7 @@
 			children = (
 				180021D61FC2879800C5E414 /* TTSlideView.h */,
 				180021D71FC2879800C5E414 /* TTSlideView.m */,
+				18766E7D202D390400DFC912 /* ZHNTopHud */,
 				187ED101202C5528005E29D2 /* ZHNShineButton */,
 				187769C82005B1BC00CDD115 /* CountdownLabel */,
 				189E28DB1FBD26E1008D9027 /* CountDownBtn */,
@@ -2496,13 +2518,16 @@
 			files = (
 				187769EB2005B1BC00CDD115 /* tvOS-Info.plist in Resources */,
 				1818E99C1FBC49FA00C35A8A /* LaunchScreen.storyboard in Resources */,
+				18766E85202D390400DFC912 /* notice_type_warnning.png in Resources */,
 				1818E9991FBC49FA00C35A8A /* Assets.xcassets in Resources */,
 				189E29611FBD9743008D9027 /* WSDatePickerView.xib in Resources */,
 				1883AC3E20159AA8006311D7 /* NSDateTimeAgo.bundle in Resources */,
 				187769E92005B1BC00CDD115 /* Fragment.png in Resources */,
 				187769E72005B1BC00CDD115 /* Fire.png in Resources */,
 				1818E9971FBC49FA00C35A8A /* Main.storyboard in Resources */,
+				18766E83202D390400DFC912 /* notice_type_error.png in Resources */,
 				187769E82005B1BC00CDD115 /* Sparkle.png in Resources */,
+				18766E86202D390400DFC912 /* notice_type_success.png in Resources */,
 				185B0D6B1FBE8A4B00FC5072 /* area.plist in Resources */,
 				187769EA2005B1BC00CDD115 /* Smoke.png in Resources */,
 			);
@@ -2606,6 +2631,7 @@
 				1883AC2820159AA8006311D7 /* NSString+Contains.m in Sources */,
 				1800228A1FC2DDC200C5E414 /* YYDiskCache.m in Sources */,
 				1883AC4120159AA8006311D7 /* NSDate+Reporting.m in Sources */,
+				18766E84202D390400DFC912 /* ZHNTopHud.m in Sources */,
 				180022B61FC2DDC200C5E414 /* UITableView+YYAdd.m in Sources */,
 				1883AC3F20159AA8006311D7 /* NSDate+Formatter.m in Sources */,
 				180022B51FC2DDC200C5E414 /* UIApplication+YYAdd.m in Sources */,
