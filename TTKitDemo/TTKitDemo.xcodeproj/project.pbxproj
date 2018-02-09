@@ -151,6 +151,7 @@
 		187769F22005B1BC00CDD115 /* LTMorphingLabel+Sparkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DC2005B1BC00CDD115 /* LTMorphingLabel+Sparkle.swift */; };
 		187769F32005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DD2005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift */; };
 		187769F42005B1BC00CDD115 /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DE2005B1BC00CDD115 /* LTMorphingEffect.swift */; };
+		187ED104202C5528005E29D2 /* ZHNShineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 187ED103202C5528005E29D2 /* ZHNShineButton.m */; };
 		187F4DD720084BD300DB1AEA /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F4DD020084BD300DB1AEA /* jpush-ios-3.0.7.a */; };
 		187F4DD820084BD300DB1AEA /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F4DD120084BD300DB1AEA /* jcore-ios-1.1.6.a */; };
 		187F4DDA20084BD300DB1AEA /* CoreJPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 187F4DD520084BD300DB1AEA /* CoreJPush.m */; };
@@ -632,6 +633,8 @@
 		187769E02005B1BC00CDD115 /* CountdownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownLabel.h; sourceTree = "<group>"; };
 		187769E12005B1BC00CDD115 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187769FE2005C35F00CDD115 /* Bridge_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge_Header.h; sourceTree = "<group>"; };
+		187ED102202C5528005E29D2 /* ZHNShineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNShineButton.h; sourceTree = "<group>"; };
+		187ED103202C5528005E29D2 /* ZHNShineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNShineButton.m; sourceTree = "<group>"; };
 		187F4DCE20084BD300DB1AEA /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
 		187F4DCF20084BD300DB1AEA /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		187F4DD020084BD300DB1AEA /* jpush-ios-3.0.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.7.a"; sourceTree = "<group>"; };
@@ -1574,6 +1577,15 @@
 			path = Particles;
 			sourceTree = "<group>";
 		};
+		187ED101202C5528005E29D2 /* ZHNShineButton */ = {
+			isa = PBXGroup;
+			children = (
+				187ED102202C5528005E29D2 /* ZHNShineButton.h */,
+				187ED103202C5528005E29D2 /* ZHNShineButton.m */,
+			);
+			path = ZHNShineButton;
+			sourceTree = "<group>";
+		};
 		187F4DCB20084BD300DB1AEA /* CoreJPush */ = {
 			isa = PBXGroup;
 			children = (
@@ -2052,6 +2064,7 @@
 			children = (
 				180021D61FC2879800C5E414 /* TTSlideView.h */,
 				180021D71FC2879800C5E414 /* TTSlideView.m */,
+				187ED101202C5528005E29D2 /* ZHNShineButton */,
 				187769C82005B1BC00CDD115 /* CountdownLabel */,
 				189E28DB1FBD26E1008D9027 /* CountDownBtn */,
 			);
@@ -2585,6 +2598,7 @@
 				183FAE9F202BE84D00BAC6D9 /* BaseViewController.m in Sources */,
 				1883AC0F20159AA7006311D7 /* CAAnimation+Blocks.m in Sources */,
 				180022CD1FC2DDC200C5E414 /* YYCGUtilities.m in Sources */,
+				187ED104202C5528005E29D2 /* ZHNShineButton.m in Sources */,
 				1883AC5B2015CBEC006311D7 /* UIView+CustomBorder.m in Sources */,
 				1883AC0720159AA7006311D7 /* UITextView+Select.m in Sources */,
 				180022A71FC2DDC200C5E414 /* YYLabel.m in Sources */,

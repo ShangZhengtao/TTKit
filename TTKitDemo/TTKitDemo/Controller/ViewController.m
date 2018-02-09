@@ -22,6 +22,7 @@
 #import "UIButton+Event.h"
 #import "UIViewController+TTModalTransition.h"
 
+
 @interface ViewController ()
 <
 QRCodeScannerViewControllerDelegate,
@@ -39,6 +40,7 @@ UINavigationControllerDelegate
     self.title = @"Demo";
 //    self.areaPickerButton.eventTimeInterval = 3;
 //    self.modalPresentationStyle =  UIModalPresentationPopover;
+ 
 }
 
 - (IBAction)scannerButtonTapped:(UIButton *)sender {
