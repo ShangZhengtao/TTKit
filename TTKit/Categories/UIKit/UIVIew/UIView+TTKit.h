@@ -39,4 +39,18 @@ typedef NS_OPTIONS(NSUInteger, TTMotionEffectOptions) {
  */
 - (void)addMotionEffectWithRelativeValue:(CGFloat)value effectOptions:(TTMotionEffectOptions)options;
 
+/**
+  移动锚点而不改变本身在父视图的位置 方便view状态变化
+ 
+ 1、position是layer中的anchorPoint在superLayer中的位置坐标。
+ 2、互不影响原则：单独修改position与anchorPoint中任何一个属性都不影响另一个属性。
+ 3、frame、position与anchorPoint有以下关系：
+ 
+ frame.origin.x = position.x - anchorPoint.x * bounds.size.width；
+ frame.origin.y = position.y - anchorPoint.y * bounds.size.height；
+ 
+ @param anchorpoint 锚点
+ */
+- (void)setAnchorPointWithoutMove:(CGPoint)anchorpoint;
+
 @end

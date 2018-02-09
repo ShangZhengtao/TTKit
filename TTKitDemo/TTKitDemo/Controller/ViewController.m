@@ -23,6 +23,7 @@
 #import "UIViewController+TTModalTransition.h"
 #import "ZHNTopHud.h"
 
+
 @interface ViewController ()
 <
 QRCodeScannerViewControllerDelegate,
@@ -128,6 +129,7 @@ UINavigationControllerDelegate
     [alertvc addAction:action];
     [alertvc addAction:action2];
     [self presentViewController:alertvc animated:YES completion:nil];
+        
 }
 
 

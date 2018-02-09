@@ -135,6 +135,7 @@
 		18766E84202D390400DFC912 /* ZHNTopHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 18766E80202D390400DFC912 /* ZHNTopHud.m */; };
 		18766E85202D390400DFC912 /* notice_type_warnning.png in Resources */ = {isa = PBXBuildFile; fileRef = 18766E81202D390400DFC912 /* notice_type_warnning.png */; };
 		18766E86202D390400DFC912 /* notice_type_success.png in Resources */ = {isa = PBXBuildFile; fileRef = 18766E82202D390400DFC912 /* notice_type_success.png */; };
+		18766E8A202D483900DFC912 /* UIView+ZHNFirework.m in Sources */ = {isa = PBXBuildFile; fileRef = 18766E88202D483900DFC912 /* UIView+ZHNFirework.m */; };
 		187704661FC7BB170021C3CB /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 187704651FC7BB170021C3CB /* libresolv.tbd */; };
 		187769E22005B1BC00CDD115 /* CountdownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769C92005B1BC00CDD115 /* CountdownLabel.swift */; };
 		187769E32005B1BC00CDD115 /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769CB2005B1BC00CDD115 /* LTMorphingLabel+Fall.swift */; };
@@ -614,6 +615,8 @@
 		18766E80202D390400DFC912 /* ZHNTopHud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNTopHud.m; sourceTree = "<group>"; };
 		18766E81202D390400DFC912 /* notice_type_warnning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notice_type_warnning.png; sourceTree = "<group>"; };
 		18766E82202D390400DFC912 /* notice_type_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notice_type_success.png; sourceTree = "<group>"; };
+		18766E88202D483900DFC912 /* UIView+ZHNFirework.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZHNFirework.m"; sourceTree = "<group>"; };
+		18766E89202D483900DFC912 /* UIView+ZHNFirework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZHNFirework.h"; sourceTree = "<group>"; };
 		187704621FC7BAD60021C3CB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		187704631FC7BAED0021C3CB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		187704651FC7BB170021C3CB /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
@@ -1552,6 +1555,15 @@
 			path = ZHNTopHud;
 			sourceTree = "<group>";
 		};
+		18766E87202D483900DFC912 /* ZHNFirework */ = {
+			isa = PBXGroup;
+			children = (
+				18766E89202D483900DFC912 /* UIView+ZHNFirework.h */,
+				18766E88202D483900DFC912 /* UIView+ZHNFirework.m */,
+			);
+			path = ZHNFirework;
+			sourceTree = "<group>";
+		};
 		187769C82005B1BC00CDD115 /* CountdownLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1714,6 +1726,7 @@
 		1883AB6020159AA7006311D7 /* UIVIew */ = {
 			isa = PBXGroup;
 			children = (
+				18766E87202D483900DFC912 /* ZHNFirework */,
 				1883AC532015CBEB006311D7 /* UIView+BlockGesture.h */,
 				1883AC502015CBEB006311D7 /* UIView+BlockGesture.m */,
 				1883AC522015CBEB006311D7 /* UIView+CustomBorder.h */,
@@ -2692,6 +2705,7 @@
 				18D6D0B51FC563C8005305ED /* BaseListModel.m in Sources */,
 				185BD7571FF24F3F002F77F9 /* UIImage+TOWebViewControllerIcons.m in Sources */,
 				187769E52005B1BC00CDD115 /* LTEmitterView.swift in Sources */,
+				18766E8A202D483900DFC912 /* UIView+ZHNFirework.m in Sources */,
 				1883AC4020159AA8006311D7 /* NSDate+Utilities.m in Sources */,
 				1883AC3920159AA8006311D7 /* NSObject+Blocks.m in Sources */,
 				1883AC3220159AA8006311D7 /* NSUserDefaults+iCloudSync.m in Sources */,

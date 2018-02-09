@@ -51,4 +51,11 @@
     }
 }
 
+
+- (void)setAnchorPointWithoutMove:(CGPoint)anchorpoint{
+    CGRect oldFrame = self.frame;
+    self.layer.anchorPoint = anchorpoint;
+    self.frame = oldFrame;
+}
+
 @end
