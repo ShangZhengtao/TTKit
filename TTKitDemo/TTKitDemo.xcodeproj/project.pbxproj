@@ -104,7 +104,6 @@
 		1818E9991FBC49FA00C35A8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1818E9981FBC49FA00C35A8A /* Assets.xcassets */; };
 		1818E99C1FBC49FA00C35A8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1818E99A1FBC49FA00C35A8A /* LaunchScreen.storyboard */; };
 		1818E99F1FBC49FA00C35A8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1818E99E1FBC49FA00C35A8A /* main.m */; };
-		183FAE9F202BE84D00BAC6D9 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FAE9E202BE84D00BAC6D9 /* BaseViewController.m */; };
 		18436C3F20107D5700273557 /* TTDynamicSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C3B20107D5700273557 /* TTDynamicSession.m */; };
 		18436C4020107D5700273557 /* TTCollisionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18436C3E20107D5700273557 /* TTCollisionView.m */; };
 		185084C91FF4CE1300931509 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 185084C81FF4CE1300931509 /* NotificationService.m */; };
@@ -309,12 +308,15 @@
 		18A94BE41FC420AF00032B5B /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A94BDA1FC420AE00032B5B /* UIWebView+AFNetworking.m */; };
 		18A94BE51FC420AF00032B5B /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A94BDB1FC420AE00032B5B /* AFAutoPurgingImageCache.m */; };
 		18A94BE61FC420AF00032B5B /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A94BDD1FC420AE00032B5B /* AFImageDownloader.m */; };
-		18A94BFE1FC4307F00032B5B /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A94BFD1FC4307F00032B5B /* BaseNavigationController.m */; };
-		18A94C011FC430B100032B5B /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A94C001FC430B100032B5B /* BaseTabBarViewController.m */; };
 		18B12E131FE26A280031D757 /* AFHTTPSessionManager+Synchronous.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B12E121FE26A270031D757 /* AFHTTPSessionManager+Synchronous.m */; };
+		18C64526202FEA6000416A29 /* UITableViewCell+TTAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C64525202FEA6000416A29 /* UITableViewCell+TTAdd.m */; };
+		18C645392030216900416A29 /* BaseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6452E2030216900416A29 /* BaseListModel.m */; };
+		18C6453A2030216900416A29 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C645312030216900416A29 /* BaseTabBarViewController.m */; };
+		18C6453B2030216900416A29 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C645322030216900416A29 /* BaseTableViewController.m */; };
+		18C6453C2030216900416A29 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C645332030216900416A29 /* BaseViewController.m */; };
+		18C6453D2030216900416A29 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C645342030216900416A29 /* BaseNavigationController.m */; };
+		18C64540203021E100416A29 /* BaseTouchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6453F203021E100416A29 /* BaseTouchTableViewCell.m */; };
 		18CA9C1E20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA9C1C20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.m */; };
-		18D6D0B21FC56393005305ED /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D0B11FC56393005305ED /* BaseTableViewController.m */; };
-		18D6D0B51FC563C8005305ED /* BaseListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D6D0B41FC563C8005305ED /* BaseListModel.m */; };
 		18E89F381FD6478D00A77EA7 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7401FD546BE0024A4D2 /* WRNavigationBar.m */; };
 		18E89F391FD6479000A77EA7 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7431FD546BE0024A4D2 /* WRCustomNavigationBar.m */; };
 /* End PBXBuildFile section */
@@ -544,8 +546,6 @@
 		1818E99B1FBC49FA00C35A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1818E99D1FBC49FA00C35A8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1818E99E1FBC49FA00C35A8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		183FAE9D202BE84D00BAC6D9 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		183FAE9E202BE84D00BAC6D9 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		18436C3B20107D5700273557 /* TTDynamicSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDynamicSession.m; sourceTree = "<group>"; };
 		18436C3C20107D5700273557 /* TTCollisionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCollisionView.h; sourceTree = "<group>"; };
 		18436C3D20107D5700273557 /* TTDynamicSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDynamicSession.h; sourceTree = "<group>"; };
@@ -964,18 +964,24 @@
 		18A94BF41FC422B300032B5B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		18A94BF51FC422BF00032B5B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		18A94BF91FC422F600032B5B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		18A94BFC1FC4307F00032B5B /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
-		18A94BFD1FC4307F00032B5B /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
-		18A94BFF1FC430B100032B5B /* BaseTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabBarViewController.h; sourceTree = "<group>"; };
-		18A94C001FC430B100032B5B /* BaseTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarViewController.m; sourceTree = "<group>"; };
 		18B12E111FE26A270031D757 /* AFHTTPSessionManager+Synchronous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+Synchronous.h"; sourceTree = "<group>"; };
 		18B12E121FE26A270031D757 /* AFHTTPSessionManager+Synchronous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPSessionManager+Synchronous.m"; sourceTree = "<group>"; };
+		18C64524202FEA6000416A29 /* UITableViewCell+TTAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+TTAdd.h"; sourceTree = "<group>"; };
+		18C64525202FEA6000416A29 /* UITableViewCell+TTAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+TTAdd.m"; sourceTree = "<group>"; };
+		18C6452E2030216900416A29 /* BaseListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseListModel.m; sourceTree = "<group>"; };
+		18C6452F2030216900416A29 /* BaseListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseListModel.h; sourceTree = "<group>"; };
+		18C645312030216900416A29 /* BaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarViewController.m; sourceTree = "<group>"; };
+		18C645322030216900416A29 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		18C645332030216900416A29 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		18C645342030216900416A29 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		18C645352030216900416A29 /* BaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarViewController.h; sourceTree = "<group>"; };
+		18C645362030216900416A29 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		18C645372030216900416A29 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		18C645382030216900416A29 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		18C6453E203021E100416A29 /* BaseTouchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTouchTableViewCell.h; sourceTree = "<group>"; };
+		18C6453F203021E100416A29 /* BaseTouchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTouchTableViewCell.m; sourceTree = "<group>"; };
 		18CA9C1C20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASHSpringyCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		18CA9C1D20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASHSpringyCollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		18D6D0B01FC56393005305ED /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
-		18D6D0B11FC56393005305ED /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
-		18D6D0B31FC563C8005305ED /* BaseListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseListModel.h; sourceTree = "<group>"; };
-		18D6D0B41FC563C8005305ED /* BaseListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseListModel.m; sourceTree = "<group>"; };
 		18FAC7401FD546BE0024A4D2 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
 		18FAC7411FD546BE0024A4D2 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
 		18FAC7421FD546BE0024A4D2 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
@@ -1662,6 +1668,7 @@
 		1883AB4220159AA7006311D7 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				18C64523202FEA2300416A29 /* UITableViewCell */,
 				1883AC5E2015D088006311D7 /* UIWebView */,
 				1883AB4320159AA7006311D7 /* UIScrollView */,
 				1883AB4A20159AA7006311D7 /* UIButton */,
@@ -2070,8 +2077,8 @@
 				189AF36E20089FA1009A26E5 /* AnimationKitViewController.m */,
 				189AF36920089FA1009A26E5 /* FloatAnimationViewController.m */,
 				189AF37120089FA1009A26E5 /* FloatAnimationViewController.h */,
-				189AF36B20089FA1009A26E5 /* CountdownListViewController.m */,
 				189AF36F20089FA1009A26E5 /* CountdownListViewController.h */,
+				189AF36B20089FA1009A26E5 /* CountdownListViewController.m */,
 				189AF37D2008A004009A26E5 /* PresentViewController.h */,
 				189AF37E2008A004009A26E5 /* PresentViewController.m */,
 				18026E05200DFD7600730C4A /* PresentOpenDoorViewController.h */,
@@ -2392,16 +2399,9 @@
 		18A94BFB1FC4305400032B5B /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
-				18A94BFC1FC4307F00032B5B /* BaseNavigationController.h */,
-				18A94BFD1FC4307F00032B5B /* BaseNavigationController.m */,
-				18A94BFF1FC430B100032B5B /* BaseTabBarViewController.h */,
-				18A94C001FC430B100032B5B /* BaseTabBarViewController.m */,
-				18D6D0B01FC56393005305ED /* BaseTableViewController.h */,
-				18D6D0B11FC56393005305ED /* BaseTableViewController.m */,
-				183FAE9D202BE84D00BAC6D9 /* BaseViewController.h */,
-				183FAE9E202BE84D00BAC6D9 /* BaseViewController.m */,
-				18D6D0B31FC563C8005305ED /* BaseListModel.h */,
-				18D6D0B41FC563C8005305ED /* BaseListModel.m */,
+				18C6452D2030216900416A29 /* BaseModel */,
+				18C6452C2030216900416A29 /* BaseView */,
+				18C645302030216900416A29 /* BaseViewController */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -2413,6 +2413,48 @@
 				18B12E121FE26A270031D757 /* AFHTTPSessionManager+Synchronous.m */,
 			);
 			path = Synchronous;
+			sourceTree = "<group>";
+		};
+		18C64523202FEA2300416A29 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				18C64524202FEA6000416A29 /* UITableViewCell+TTAdd.h */,
+				18C64525202FEA6000416A29 /* UITableViewCell+TTAdd.m */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		18C6452C2030216900416A29 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				18C6453E203021E100416A29 /* BaseTouchTableViewCell.h */,
+				18C6453F203021E100416A29 /* BaseTouchTableViewCell.m */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		18C6452D2030216900416A29 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				18C6452F2030216900416A29 /* BaseListModel.h */,
+				18C6452E2030216900416A29 /* BaseListModel.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		18C645302030216900416A29 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18C645362030216900416A29 /* BaseTableViewController.h */,
+				18C645322030216900416A29 /* BaseTableViewController.m */,
+				18C645352030216900416A29 /* BaseTabBarViewController.h */,
+				18C645312030216900416A29 /* BaseTabBarViewController.m */,
+				18C645382030216900416A29 /* BaseViewController.h */,
+				18C645332030216900416A29 /* BaseViewController.m */,
+				18C645372030216900416A29 /* BaseNavigationController.h */,
+				18C645342030216900416A29 /* BaseNavigationController.m */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 		18FAC73F1FD546BE0024A4D2 /* WRNavigationBar */ = {
@@ -2568,7 +2610,6 @@
 				180022AF1FC2DDC200C5E414 /* YYTextArchiver.m in Sources */,
 				1800228F1FC2DDC200C5E414 /* YYWebImageManager.m in Sources */,
 				189AF37B20089FA2009A26E5 /* AnimationKitViewController.m in Sources */,
-				18A94BFE1FC4307F00032B5B /* BaseNavigationController.m in Sources */,
 				187769E62005B1BC00CDD115 /* LTCharacterLimbo.swift in Sources */,
 				1883AC1E20159AA8006311D7 /* NSData+Gzip.m in Sources */,
 				189E28F31FBD37CB008D9027 /* ESAccountManager.m in Sources */,
@@ -2579,6 +2620,7 @@
 				18A94BE31FC420AF00032B5B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				18A94BB31FC41DB900032B5B /* PPNetworkCache.m in Sources */,
 				18A3EF3B20283AD700CDA187 /* TTModalAnimator.m in Sources */,
+				18C64526202FEA6000416A29 /* UITableViewCell+TTAdd.m in Sources */,
 				187769F32005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift in Sources */,
 				1883AC1420159AA8006311D7 /* NSDictionary+JSONString.m in Sources */,
 				189E29261FBD3A27008D9027 /* LewPopupViewAnimationSlide.m in Sources */,
@@ -2610,6 +2652,7 @@
 				1883AC1A20159AA8006311D7 /* NSData+APNSToken.m in Sources */,
 				1883AC1520159AA8006311D7 /* NSDictionary+Merge.m in Sources */,
 				189E29211FBD3A27008D9027 /* FJWaterfallFlowLayout.m in Sources */,
+				18C645392030216900416A29 /* BaseListModel.m in Sources */,
 				18A94BC31FC41E8D00032B5B /* AFHTTPSessionManager.m in Sources */,
 				180022C61FC2DDC200C5E414 /* NSTimer+YYAdd.m in Sources */,
 				18B12E131FE26A280031D757 /* AFHTTPSessionManager+Synchronous.m in Sources */,
@@ -2633,7 +2676,6 @@
 				187769ED2005B1BC00CDD115 /* LTMorphingLabel+Evaporate.swift in Sources */,
 				1800228C1FC2DDC200C5E414 /* YYKVStorage.m in Sources */,
 				180022911FC2DDC200C5E414 /* YYImage.m in Sources */,
-				183FAE9F202BE84D00BAC6D9 /* BaseViewController.m in Sources */,
 				1883AC0F20159AA7006311D7 /* CAAnimation+Blocks.m in Sources */,
 				180022CD1FC2DDC200C5E414 /* YYCGUtilities.m in Sources */,
 				187ED104202C5528005E29D2 /* ZHNShineButton.m in Sources */,
@@ -2685,6 +2727,7 @@
 				1883AC3320159AA8006311D7 /* TTNullSafe.m in Sources */,
 				187F4DDA20084BD300DB1AEA /* CoreJPush.m in Sources */,
 				1800228D1FC2DDC200C5E414 /* YYMemoryCache.m in Sources */,
+				18C64540203021E100416A29 /* BaseTouchTableViewCell.m in Sources */,
 				1883AC0B20159AA7006311D7 /* UIBezierPath+Symbol.m in Sources */,
 				185B0D721FBED45A00FC5072 /* UIBarButtonItem+Badge.m in Sources */,
 				189AF37C20089FA2009A26E5 /* CellModel.m in Sources */,
@@ -2702,7 +2745,6 @@
 				189E292A1FBD3A27008D9027 /* PresentAnimator.m in Sources */,
 				180022B31FC2DDC200C5E414 /* UIColor+YYAdd.m in Sources */,
 				1883AC3120159AA8006311D7 /* NSUserDefaults+SafeAccess.m in Sources */,
-				18D6D0B51FC563C8005305ED /* BaseListModel.m in Sources */,
 				185BD7571FF24F3F002F77F9 /* UIImage+TOWebViewControllerIcons.m in Sources */,
 				187769E52005B1BC00CDD115 /* LTEmitterView.swift in Sources */,
 				18766E8A202D483900DFC912 /* UIView+ZHNFirework.m in Sources */,
@@ -2724,7 +2766,6 @@
 				189AF37520089FA2009A26E5 /* TTCountdownCell.swift in Sources */,
 				1883ABF620159AA7006311D7 /* UIScrollView+Pages.m in Sources */,
 				18E89F391FD6479000A77EA7 /* WRCustomNavigationBar.m in Sources */,
-				18A94C011FC430B100032B5B /* BaseTabBarViewController.m in Sources */,
 				189E29271FBD3A27008D9027 /* UIViewController+LewPopupViewController.m in Sources */,
 				180022B11FC2DDC200C5E414 /* UITextField+YYAdd.m in Sources */,
 				180022B91FC2DDC200C5E414 /* UIView+YYAdd.m in Sources */,
@@ -2734,6 +2775,7 @@
 				18A94BE41FC420AF00032B5B /* UIWebView+AFNetworking.m in Sources */,
 				180022C51FC2DDC200C5E414 /* NSKeyedUnarchiver+YYAdd.m in Sources */,
 				18A94BC21FC41E8D00032B5B /* AFURLResponseSerialization.m in Sources */,
+				18C6453D2030216900416A29 /* BaseNavigationController.m in Sources */,
 				1883AC4A2015C264006311D7 /* SYSafeCategory.m in Sources */,
 				18A3EF3A20283AD700CDA187 /* TTModalDelegate.m in Sources */,
 				1883AC1320159AA8006311D7 /* NSDictionary+SafeAccess.m in Sources */,
@@ -2754,9 +2796,9 @@
 				185B0D651FBE8A4B00FC5072 /* STPickerView.m in Sources */,
 				180021CF1FC282F200C5E414 /* DLFixedTabbarView.m in Sources */,
 				187769F02005B1BC00CDD115 /* LTMorphingLabel.swift in Sources */,
-				18D6D0B21FC56393005305ED /* BaseTableViewController.m in Sources */,
 				1862EBF51FFB85AE0072F306 /* TTAnimationKit.m in Sources */,
 				187F4DDB20084BD300DB1AEA /* AppDelegate+JPush.m in Sources */,
+				18C6453B2030216900416A29 /* BaseTableViewController.m in Sources */,
 				187769F22005B1BC00CDD115 /* LTMorphingLabel+Sparkle.swift in Sources */,
 				1800229E1FC2DDC200C5E414 /* YYTextMagnifier.m in Sources */,
 				18A94BDF1FC420AF00032B5B /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -2764,6 +2806,7 @@
 				185B0D641FBE8A4B00FC5072 /* STPickerArea.m in Sources */,
 				1883AC2520159AA8006311D7 /* NSString+Emoji.m in Sources */,
 				1883AC1C20159AA8006311D7 /* NSData+SDDataCache.m in Sources */,
+				18C6453C2030216900416A29 /* BaseViewController.m in Sources */,
 				180022AE1FC2DDC200C5E414 /* YYTextAttribute.m in Sources */,
 				180022A11FC2DDC200C5E414 /* YYTextInput.m in Sources */,
 				180022971FC2DDC200C5E414 /* MKAnnotationView+YYWebImage.m in Sources */,
@@ -2840,6 +2883,7 @@
 				1883AC0C20159AA7006311D7 /* UIBezierPath+LxThroughPointsBezier.m in Sources */,
 				1883ABFF20159AA7006311D7 /* UIButton+TouchAreaInsets.m in Sources */,
 				1883AC0020159AA7006311D7 /* UIButton+Indicator.m in Sources */,
+				18C6453A2030216900416A29 /* BaseTabBarViewController.m in Sources */,
 				18026E0D200DFDBB00730C4A /* PresentCircleViewController.m in Sources */,
 				1883AC1720159AA8006311D7 /* NSBundle+AppIcon.m in Sources */,
 				1883AC2D20159AA8006311D7 /* NSInvocation+Block.m in Sources */,

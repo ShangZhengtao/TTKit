@@ -9,5 +9,5 @@
 #ifndef Bridge_Header_h
 #define Bridge_Header_h
 #import "CellModel.h"
-
+#import "BaseTouchTableViewCell.h"
 #endif /* Bridge_Header_h */

@@ -248,6 +248,8 @@
     return endtmp;
 }
 
+#pragma mark - color Percent
+
 + (UIColor *)es_transitionStartColor:(UIColor *)startColor
                             endColor:(UIColor *)endColor
                          coefficient:(double)coefficient {
@@ -271,6 +273,30 @@
     
     UIColor *transitionColor = [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
     return transitionColor;
+}
+
+- (UIColor *)tt_lightTypeHighlightForPercent:(CGFloat)percent {
+    percent = MIN(1, percent);
+    percent = MAX(0, percent);
+    CGFloat h,s,b,a;
+    [self getHue:&h saturation:&s brightness:&b alpha:&a];
+    return [UIColor colorWithHue:h saturation:s - percent brightness:b alpha:a];
+}
+
+- (UIColor *)tt_lightTypeHighlight {
+    return [self tt_lightTypeHighlightForPercent:0.4];
+}
+
+- (UIColor *)tt_darkTypeHighlightForPercent:(CGFloat)percent {
+    percent = MIN(1, percent);
+    percent = MAX(0, percent);
+    CGFloat h,s,b,a;
+    [self getHue:&h saturation:&s brightness:&b alpha:&a];
+    return [UIColor colorWithHue:h saturation:s brightness:b - percent alpha:a];
+}
+
+- (UIColor *)tt_darkTypeHighlight {
+    return [self tt_darkTypeHighlightForPercent:0.2];
 }
 
 @end

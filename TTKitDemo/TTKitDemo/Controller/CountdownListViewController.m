@@ -13,6 +13,7 @@
 #import "TTKitDemo-Swift.h"
 #import "TTMacros.h"
 #import "TableViewAnimationKit.h"
+#import "UITableViewCell+TTAdd.h"
 @interface CountdownListViewController ()
 
 @end
@@ -39,12 +40,16 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TTCountdownCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TTCountdownCell" forIndexPath:indexPath];
+//    TTCountdownCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TTCountdownCell" forIndexPath:indexPath];
+    TTCountdownCell *cell = [TTCountdownCell tt_reusableCellWithTableView:tableView isFromXIB:NO];
     cell.model  =  self.model.allListModels[indexPath.row];
-    cell.backgroundColor = [kRandomColor colorWithAlphaComponent:0.5];
+    cell.backgroundColor = [kRandomColor colorWithAlphaComponent:0.5];    
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+     NSLog(@"%s",__func__);
+}
 
 
 @end

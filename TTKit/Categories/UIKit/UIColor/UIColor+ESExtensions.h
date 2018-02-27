@@ -88,4 +88,22 @@
                             endColor:(UIColor *)endColor
                          coefficient:(double)coefficient;
 
+
+/**
+ 降低颜色饱和度
+
+ @param percent 比例
+ @return 修改后的颜色
+ */
+- (UIColor *)tt_lightTypeHighlightForPercent:(CGFloat)percent;
+- (UIColor *)tt_lightTypeHighlight;
+
+/**
+ 降低颜色亮度
+ 
+ @param percent 比例
+ @return 修改后的颜色
+ */
+- (UIColor *)tt_darkTypeHighlightForPercent:(CGFloat)percent;
+- (UIColor *)tt_darkTypeHighlight;
 @end

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TTCountdownCell: UITableViewCell {
+class TTCountdownCell: BaseTouchTableViewCell {
     
     let countLabel = CountdownLabel()
     @objc var model: CellModel? {
