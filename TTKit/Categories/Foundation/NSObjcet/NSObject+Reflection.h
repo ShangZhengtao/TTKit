@@ -31,8 +31,8 @@
 + (NSArray *)propertiesWithCodeFormat;
 
 //方法列表
--(NSArray*)methodList;
-+(NSArray*)methodList;
+- (NSArray*)methodList;
++ (NSArray*)methodList;
 
 -(NSArray*)methodListInfo;
 
@@ -42,7 +42,7 @@
 + (NSArray *)instanceVariable;
 
 //协议列表
--(NSDictionary *)protocolList;
+- (NSDictionary *)protocolList;
 + (NSDictionary *)protocolList;
 
 

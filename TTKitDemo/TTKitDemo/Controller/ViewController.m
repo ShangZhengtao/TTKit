@@ -126,8 +126,17 @@ UINavigationControllerDelegate
     UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"样式二" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [ZHNTopHud showSuccess: @"hello world!"];
     }];
+    
+    UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"样式三" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [ZTProgressHUD show];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [ZTProgressHUD dismiss];
+        });
+    }];
+    
     [alertvc addAction:action];
     [alertvc addAction:action2];
+    [alertvc addAction:action3];
     [self presentViewController:alertvc animated:YES completion:nil];
         
 }

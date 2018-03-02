@@ -12,12 +12,17 @@
 
 /**
  Exchange methods' implementations.
+ for example
+ + (void)load {
+ [self exchangeInstanceMethod:(SEL)originalSelector withMethod:(SEL)swizzledSelector];
+ }
  
- @param originalMethod Method to exchange.
- @param newMethod Method to exchange.
+ @param originalSelector Method to exchange.
+ @param swizzledSelector Method to exchange.
  */
-+ (void)swizzleMethod:(SEL)originalMethod withMethod:(SEL)newMethod;
++ (void)exchangeInstanceMethod:(SEL)originalSelector withMethod:(SEL)swizzledSelector;
 
++ (void)exchangeClassMethod:(SEL)originalSelector withMethod:(SEL)swizzledSelector;
 /**
  Append a new method to an object.
  

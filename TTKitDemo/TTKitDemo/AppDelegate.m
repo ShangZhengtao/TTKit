@@ -25,6 +25,26 @@
     [CoreJPush registerJPush:launchOptions];
     //    [self setupNotification:launchOptions];
     [self setupFPSLable]; //测试FPS
+    
+    
+    UIView  *launchView = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    launchView.backgroundColor = [UIColor whiteColor];
+    UILabel *lab = [[UILabel alloc]init];
+    lab.font = [UIFont systemFontOfSize:22];
+    lab.textColor = [UIColor blackColor];
+    lab.text = @"TTKitDemo";
+    [lab sizeToFit];
+    lab.frame = CGRectMake(133, [UIScreen mainScreen].bounds.size.height - lab.bounds.size.height - 50 , lab.bounds.size.width, lab.bounds.size.height);
+    [launchView addSubview:lab];
+//    launchView.backgroundColor = [UIColor lightGrayColor];
+    [self.window addSubview:launchView];
+    
+    [UIView animateWithDuration:2 delay:0.5 options:UIViewAnimationOptionCurveLinear animations:^{
+        lab.transform = CGAffineTransformTranslate(lab.transform, 0, -200);
+    } completion:^(BOOL finished) {
+        [launchView removeFromSuperview];
+    }];
+
     return YES;
 }
 

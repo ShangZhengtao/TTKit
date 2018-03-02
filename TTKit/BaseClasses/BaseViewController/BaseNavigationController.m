@@ -27,7 +27,7 @@
     [navBar setBackgroundImage:[UIImage imageNamed:@""] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
     //导航栏主题 title文字属性
     navBar.barTintColor = kThemeColor;
-    navBar.barStyle = UIBarStyleBlack;
+    navBar.barStyle = UIBarStyleDefault;
     navBar.tintColor = [UIColor whiteColor];
     [navBar setTitleTextAttributes:@{
                                      NSForegroundColorAttributeName :[UIColor whiteColor],
@@ -39,7 +39,7 @@
     [WRNavigationBar wr_setDefaultNavBarBarTintColor:kThemeColor];
     [WRNavigationBar wr_setDefaultNavBarTintColor:[UIColor whiteColor]];
     [WRNavigationBar wr_setDefaultNavBarTitleColor:[UIColor whiteColor]];
-    [WRNavigationBar wr_setDefaultStatusBarStyle:UIStatusBarStyleLightContent];
+    [WRNavigationBar wr_setDefaultStatusBarStyle:UIStatusBarStyleDefault];
 }
 
 - (void)viewDidLoad {

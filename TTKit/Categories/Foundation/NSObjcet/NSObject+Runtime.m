@@ -8,66 +8,66 @@
 
 #import "NSObject+Runtime.h"
 #import <objc/runtime.h>
-BOOL method_swizzle(Class klass, SEL origSel, SEL altSel)
-{
-    if (!klass)
-        return NO;
-    
-    Method __block origMethod, __block altMethod;
-    
-    void (^find_methods)(void) = ^
-    {
-        unsigned methodCount = 0;
-        Method *methodList = class_copyMethodList(klass, &methodCount);
-        
-        origMethod = altMethod = NULL;
-        
-        if (methodList)
-            for (unsigned i = 0; i < methodCount; ++i)
-            {
-                if (method_getName(methodList[i]) == origSel)
-                    origMethod = methodList[i];
-                
-                if (method_getName(methodList[i]) == altSel)
-                    altMethod = methodList[i];
-            }
-        
-        free(methodList);
-    };
-    
-    find_methods();
-    
-    if (!origMethod)
-    {
-        origMethod = class_getInstanceMethod(klass, origSel);
-        
-        if (!origMethod)
-            return NO;
-        
-        if (!class_addMethod(klass, method_getName(origMethod), method_getImplementation(origMethod), method_getTypeEncoding(origMethod)))
-            return NO;
-    }
-    
-    if (!altMethod)
-    {
-        altMethod = class_getInstanceMethod(klass, altSel);
-        
-        if (!altMethod)
-            return NO;
-        
-        if (!class_addMethod(klass, method_getName(altMethod), method_getImplementation(altMethod), method_getTypeEncoding(altMethod)))
-            return NO;
-    }
-    
-    find_methods();
-    
-    if (!origMethod || !altMethod)
-        return NO;
-    
-    method_exchangeImplementations(origMethod, altMethod);
-    
-    return YES;
-}
+//BOOL method_swizzle(Class klass, SEL origSel, SEL altSel)
+//{
+//    if (!klass)
+//        return NO;
+//
+//    Method __block origMethod, __block altMethod;
+//
+//    void (^find_methods)(void) = ^
+//    {
+//        unsigned methodCount = 0;
+//        Method *methodList = class_copyMethodList(klass, &methodCount);
+//
+//        origMethod = altMethod = NULL;
+//
+//        if (methodList)
+//            for (unsigned i = 0; i < methodCount; ++i)
+//            {
+//                if (method_getName(methodList[i]) == origSel)
+//                    origMethod = methodList[i];
+//
+//                if (method_getName(methodList[i]) == altSel)
+//                    altMethod = methodList[i];
+//            }
+//
+//        free(methodList);
+//    };
+//
+//    find_methods();
+//
+//    if (!origMethod)
+//    {
+//        origMethod = class_getInstanceMethod(klass, origSel);
+//
+//        if (!origMethod)
+//            return NO;
+//
+//        if (!class_addMethod(klass, method_getName(origMethod), method_getImplementation(origMethod), method_getTypeEncoding(origMethod)))
+//            return NO;
+//    }
+//
+//    if (!altMethod)
+//    {
+//        altMethod = class_getInstanceMethod(klass, altSel);
+//
+//        if (!altMethod)
+//            return NO;
+//
+//        if (!class_addMethod(klass, method_getName(altMethod), method_getImplementation(altMethod), method_getTypeEncoding(altMethod)))
+//            return NO;
+//    }
+//
+//    find_methods();
+//
+//    if (!origMethod || !altMethod)
+//        return NO;
+//
+//    method_exchangeImplementations(origMethod, altMethod);
+//
+//    return YES;
+//}
 
 void method_append(Class toClass, Class fromClass, SEL selector)
 {
@@ -97,10 +97,39 @@ void method_replace(Class toClass, Class fromClass, SEL selector)
 
 @implementation NSObject (Runtime)
 
-+ (void)swizzleMethod:(SEL)originalMethod withMethod:(SEL)newMethod
-{
-    method_swizzle(self.class, originalMethod, newMethod);
+//+ (void)swizzleMethod:(SEL)originalMethod withMethod:(SEL)newMethod
+//{
+//    method_swizzle(self.class, originalMethod, newMethod);
+//}
++ (void)exchangeInstanceMethod:(SEL)originalSelector withMethod:(SEL)swizzledSelector {
+    Class class = [self class]; // 这个地方要注意
+    //https://www.jianshu.com/p/e7be0407f000
+    Method originalMethod = class_getInstanceMethod(class, originalSelector);
+    Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+    
+    BOOL didAddMethod = class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+    
+    if (didAddMethod) {
+        class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+    }
 }
+
++ (void)exchangeClassMethod:(SEL)originalSelector withMethod:(SEL)swizzledSelector
+{
+    Class class = object_getClass(self); // 这个地方要注意
+    Method originalMethod = class_getClassMethod(class, originalSelector);
+    Method swizzledMethod = class_getClassMethod(class, swizzledSelector);
+    
+    BOOL didAddMethod = class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+    if (didAddMethod) {
+        class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+    }
+}
+
 
 + (void)appendMethod:(SEL)newMethod fromClass:(Class)klass
 {

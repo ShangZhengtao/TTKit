@@ -8,19 +8,42 @@
 
 #import "ZTProgressHUD.h"
 //#import "SVProgressHUD.h"
+#import "DGActivityIndicatorView.h"
 @implementation ZTProgressHUD
+
+static  CGFloat indicatorSize = 60;
 
 + (void)show {
     //    [SVProgressHUD show];
+    [self dismiss];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIWindow *win = [UIApplication sharedApplication].delegate.window;
+        DGActivityIndicatorView *indicatorView = [[DGActivityIndicatorView alloc]initWithType:DGActivityIndicatorAnimationTypeBallClipRotateMultiple tintColor:[UIColor blueColor] size:indicatorSize];
+      
+        indicatorView.frame = CGRectMake(win.center.x - indicatorSize*0.5, win.center.y - indicatorSize*0.5, indicatorSize, indicatorSize);
+        indicatorView.tag = 10089;
+        [indicatorView startAnimating];
+        
+        [win addSubview:indicatorView];
+    });
+    
 }
 
 + (void)dismiss {
     //    [SVProgressHUD dismiss];
+    [self hide];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIWindow *win = [UIApplication sharedApplication].delegate.window;
+        UIView *indicatorView = [win viewWithTag:10089];
+        if (indicatorView) {
+            [indicatorView removeFromSuperview];
+        }
+    });
 }
 
 + (void)showInfo:(NSString *)text {
+    [self dismiss];
     dispatch_async(dispatch_get_main_queue(), ^{
-        
         UIWindow *win = [UIApplication sharedApplication].delegate.window;
         UIView *hub = [win viewWithTag:10088];
         if (hub) {
