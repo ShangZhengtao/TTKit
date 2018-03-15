@@ -251,6 +251,7 @@
 		1883AC652015D088006311D7 /* UIWebView+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883AC5F2015D088006311D7 /* UIWebView+Style.m */; };
 		1883AC662015D088006311D7 /* UIWebView+Load.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883AC602015D088006311D7 /* UIWebView+Load.m */; };
 		1883AC672015D089006311D7 /* UIWebView+JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883AC612015D088006311D7 /* UIWebView+JS.m */; };
+		188885AA204CE9010021E55B /* TTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 188885A9204CE9010021E55B /* TTNavigationBar.m */; };
 		1892B7DB2047FF99002BD96F /* DGActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892B7942047FF98002BD96F /* DGActivityIndicatorView.m */; };
 		1892B7DC2047FF99002BD96F /* DGActivityIndicatorTriangleSkewSpinAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892B7982047FF98002BD96F /* DGActivityIndicatorTriangleSkewSpinAnimation.m */; };
 		1892B7DD2047FF99002BD96F /* DGActivityIndicatorTripleRingsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1892B7992047FF98002BD96F /* DGActivityIndicatorTripleRingsAnimation.m */; };
@@ -869,6 +870,8 @@
 		1883AC622015D088006311D7 /* UIWebView+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Style.h"; sourceTree = "<group>"; };
 		1883AC632015D088006311D7 /* UIWebView+load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+load.h"; sourceTree = "<group>"; };
 		1883AC642015D088006311D7 /* UIWebView+JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JS.h"; sourceTree = "<group>"; };
+		188885A8204CE9010021E55B /* TTNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTNavigationBar.h; sourceTree = "<group>"; };
+		188885A9204CE9010021E55B /* TTNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTNavigationBar.m; sourceTree = "<group>"; };
 		1892B7932047FF98002BD96F /* DGActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGActivityIndicatorView.h; sourceTree = "<group>"; };
 		1892B7942047FF98002BD96F /* DGActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGActivityIndicatorView.m; sourceTree = "<group>"; };
 		1892B7952047FF98002BD96F /* DGActivityIndicatorAnimationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGActivityIndicatorAnimationProtocol.h; sourceTree = "<group>"; };
@@ -2163,6 +2166,15 @@
 			path = UIWebView;
 			sourceTree = "<group>";
 		};
+		188885A7204CE8D60021E55B /* CustomNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				188885A8204CE9010021E55B /* TTNavigationBar.h */,
+				188885A9204CE9010021E55B /* TTNavigationBar.m */,
+			);
+			path = CustomNavigationBar;
+			sourceTree = "<group>";
+		};
 		1892B7922047FF98002BD96F /* DGActivityIndicatorView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2296,6 +2308,7 @@
 		189E28DA1FBD26E1008D9027 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				188885A7204CE8D60021E55B /* CustomNavigationBar */,
 				180021D61FC2879800C5E414 /* TTSlideView.h */,
 				180021D71FC2879800C5E414 /* TTSlideView.m */,
 				18766E7D202D390400DFC912 /* ZHNTopHud */,
@@ -3106,6 +3119,7 @@
 				1883AC2A20159AA8006311D7 /* NSString+Matcher.m in Sources */,
 				180022BB1FC2DDC200C5E414 /* UIGestureRecognizer+YYAdd.m in Sources */,
 				180022981FC2DDC200C5E414 /* CALayer+YYWebImage.m in Sources */,
+				188885AA204CE9010021E55B /* TTNavigationBar.m in Sources */,
 				1883AC0C20159AA7006311D7 /* UIBezierPath+LxThroughPointsBezier.m in Sources */,
 				1883ABFF20159AA7006311D7 /* UIButton+TouchAreaInsets.m in Sources */,
 				1883AC0020159AA7006311D7 /* UIButton+Indicator.m in Sources */,
