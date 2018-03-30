@@ -49,7 +49,7 @@
 }
 
 - (UIViewController *)slideView:(TTSlideView *)slideView controllerAtPageIndex:(NSInteger)pageIndex {
-    UIViewController *orderVC = [[UIViewController alloc]init];
+    UITableViewController *orderVC = [[UITableViewController alloc]init];
         orderVC.view.backgroundColor = [UIColor colorWithWhite:0 alpha:arc4random() % 100 *0.01];
         return orderVC;
 }

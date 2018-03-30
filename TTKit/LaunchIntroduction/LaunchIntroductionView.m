@@ -143,7 +143,7 @@ NSString *storyboard;
     page.backgroundColor = [UIColor clearColor];
     page.currentPage = 0;
     page.defersCurrentPageDisplay = YES;
-//    [self addSubview:page];
+    [self addSubview:page];
 }
 #pragma mark - 进入按钮
 -(void)enterBtnClick{

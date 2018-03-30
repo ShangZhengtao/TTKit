@@ -108,7 +108,7 @@ _Pragma("clang diagnostic pop") \
 } while (0)
 
 /**
- 属性转字符串 辅助有代码提示 keyPath(model, date) as @"date"
+ 属性转字符串 辅助有代码提示 keyPath(model, date) 同 @"date"
 
  @param objc 实例对象
  @param keyPath 属性名

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "QRCScannerViewController.h"
+//#import "QRCScannerViewController.h"
 #import "PresentViewController.h"
 #import "BDImagePicker.h"
 #import "LrdOutputView.h"
@@ -26,7 +26,7 @@
 
 @interface ViewController ()
 <
-QRCodeScannerViewControllerDelegate,
+//QRCodeScannerViewControllerDelegate,
 STPickerAreaDelegate,
 UINavigationControllerDelegate
 >
@@ -45,9 +45,9 @@ UINavigationControllerDelegate
 }
 
 - (IBAction)scannerButtonTapped:(UIButton *)sender {
-    QRCScannerViewController *scannerVC = [[QRCScannerViewController alloc]init];
-    scannerVC.delegate = self;
-    [self presentViewController:scannerVC animated:YES completion:nil];
+//    QRCScannerViewController *scannerVC = [[QRCScannerViewController alloc]init];
+//    scannerVC.delegate = self;
+//    [self presentViewController:scannerVC animated:YES completion:nil];
 }
 
 - (IBAction)ImagePickerTapped:(UIButton *)sender {

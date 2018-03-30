@@ -119,8 +119,6 @@
 		185B0D6B1FBE8A4B00FC5072 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 185B0D621FBE8A4B00FC5072 /* area.plist */; };
 		185B0D721FBED45A00FC5072 /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0D6F1FBED45900FC5072 /* UIBarButtonItem+Badge.m */; };
 		185B0D731FBED45A00FC5072 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B0D701FBED45900FC5072 /* UIButton+Badge.m */; };
-		185BD7381FF24E6A002F77F9 /* QRCScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD7351FF24E50002F77F9 /* QRCScanner.m */; };
-		185BD7391FF24E6D002F77F9 /* QRCScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD7361FF24E50002F77F9 /* QRCScannerViewController.m */; };
 		185BD7561FF24F3A002F77F9 /* TOActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD7421FF24F2A002F77F9 /* TOActivitySafari.m */; };
 		185BD7571FF24F3F002F77F9 /* UIImage+TOWebViewControllerIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD7431FF24F2A002F77F9 /* UIImage+TOWebViewControllerIcons.m */; };
 		185BD7581FF24F43002F77F9 /* TOActivityChrome.m in Sources */ = {isa = PBXBuildFile; fileRef = 185BD74C1FF24F2A002F77F9 /* TOActivityChrome.m */; };
@@ -611,10 +609,6 @@
 		185B0D6F1FBED45900FC5072 /* UIBarButtonItem+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Badge.m"; sourceTree = "<group>"; };
 		185B0D701FBED45900FC5072 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
 		185B0D711FBED45900FC5072 /* UIBarButtonItem+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Badge.h"; sourceTree = "<group>"; };
-		185BD7341FF24E50002F77F9 /* QRCScannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCScannerViewController.h; sourceTree = "<group>"; };
-		185BD7351FF24E50002F77F9 /* QRCScanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCScanner.m; sourceTree = "<group>"; };
-		185BD7361FF24E50002F77F9 /* QRCScannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCScannerViewController.m; sourceTree = "<group>"; };
-		185BD7371FF24E50002F77F9 /* QRCScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCScanner.h; sourceTree = "<group>"; };
 		185BD73C1FF24F2A002F77F9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
 		185BD73D1FF24F2A002F77F9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TOWebViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		185BD73E1FF24F2A002F77F9 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TOWebViewControllerLocalizable.strings; sourceTree = "<group>"; };
@@ -1609,18 +1603,6 @@
 			path = Badge;
 			sourceTree = "<group>";
 		};
-		185BD7331FF24E50002F77F9 /* QRCodeScanner */ = {
-			isa = PBXGroup;
-			children = (
-				185BD7371FF24E50002F77F9 /* QRCScanner.h */,
-				185BD7351FF24E50002F77F9 /* QRCScanner.m */,
-				185BD7341FF24E50002F77F9 /* QRCScannerViewController.h */,
-				185BD7361FF24E50002F77F9 /* QRCScannerViewController.m */,
-			);
-			name = QRCodeScanner;
-			path = "../../../Desktop/闪购商城/Code/SeaGoldMall/SeaGoldMall/Vendor/QRCodeScanner";
-			sourceTree = "<group>";
-		};
 		185BD73A1FF24F2A002F77F9 /* TOWebViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2467,7 +2449,6 @@
 		189E29321FBD6F4B008D9027 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				185BD7331FF24E50002F77F9 /* QRCodeScanner */,
 				189E29461FBD7F1E008D9027 /* BDImagePicker */,
 				18A94B9E1FC40A3400032B5B /* TTMacros.h */,
 				187769FE2005C35F00CDD115 /* Bridge_Header.h */,
@@ -2851,7 +2832,6 @@
 				180022B21FC2DDC200C5E414 /* UIBezierPath+YYAdd.m in Sources */,
 				1892B7ED2047FF99002BD96F /* DGActivityIndicatorBallGridBeatAnimation.m in Sources */,
 				1883AC4220159AA8006311D7 /* NSDate+InternetDateTime.m in Sources */,
-				185BD7381FF24E6A002F77F9 /* QRCScanner.m in Sources */,
 				1883AC0920159AA7006311D7 /* UIBezierPath+SVG.m in Sources */,
 				180022961FC2DDC200C5E414 /* UIImageView+YYWebImage.m in Sources */,
 				187769EC2005B1BC00CDD115 /* LTCharacterDiffResult.swift in Sources */,
@@ -3054,7 +3034,6 @@
 				189E28E21FBD2B57008D9027 /* LaunchIntroductionView.m in Sources */,
 				18A3EF3820283AD700CDA187 /* TTGestureDepthOfFieldAnimator.m in Sources */,
 				1883AC4B2015C264006311D7 /* JRSwizzle.m in Sources */,
-				185BD7391FF24E6D002F77F9 /* QRCScannerViewController.m in Sources */,
 				1892B7EF2047FF99002BD96F /* DGActivityIndicatorBallTrianglePathAnimation.m in Sources */,
 				1883AC1B20159AA8006311D7 /* NSData+zlib.m in Sources */,
 				180022BA1FC2DDC200C5E414 /* UIBarButtonItem+YYAdd.m in Sources */,
