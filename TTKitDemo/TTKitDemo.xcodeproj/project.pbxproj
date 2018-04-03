@@ -351,6 +351,11 @@
 		18C6453D2030216900416A29 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C645342030216900416A29 /* BaseNavigationController.m */; };
 		18C64540203021E100416A29 /* BaseTouchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6453F203021E100416A29 /* BaseTouchTableViewCell.m */; };
 		18CA9C1E20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CA9C1C20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.m */; };
+		18E2124C2073815500967BEA /* TTPieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E212422073815400967BEA /* TTPieView.m */; };
+		18E2124D2073815500967BEA /* TTArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E212432073815400967BEA /* TTArcView.m */; };
+		18E2124E2073815500967BEA /* TTRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E212462073815400967BEA /* TTRulerView.m */; };
+		18E2124F2073815500967BEA /* CustomKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E212482073815500967BEA /* CustomKeyboard.m */; };
+		18E212502073815500967BEA /* UITextField+ExtentRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2124B2073815500967BEA /* UITextField+ExtentRange.m */; };
 		18E89F381FD6478D00A77EA7 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7401FD546BE0024A4D2 /* WRNavigationBar.m */; };
 		18E89F391FD6479000A77EA7 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7431FD546BE0024A4D2 /* WRCustomNavigationBar.m */; };
 /* End PBXBuildFile section */
@@ -1085,6 +1090,16 @@
 		18C6453F203021E100416A29 /* BaseTouchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTouchTableViewCell.m; sourceTree = "<group>"; };
 		18CA9C1C20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASHSpringyCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		18CA9C1D20201B8F00F8F1B2 /* ASHSpringyCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASHSpringyCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		18E212402073815400967BEA /* TTPieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPieView.h; sourceTree = "<group>"; };
+		18E212412073815400967BEA /* TTArcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTArcView.h; sourceTree = "<group>"; };
+		18E212422073815400967BEA /* TTPieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPieView.m; sourceTree = "<group>"; };
+		18E212432073815400967BEA /* TTArcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTArcView.m; sourceTree = "<group>"; };
+		18E212452073815400967BEA /* TTRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTRulerView.h; sourceTree = "<group>"; };
+		18E212462073815400967BEA /* TTRulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTRulerView.m; sourceTree = "<group>"; };
+		18E212482073815500967BEA /* CustomKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomKeyboard.m; sourceTree = "<group>"; };
+		18E212492073815500967BEA /* UITextField+ExtentRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ExtentRange.h"; sourceTree = "<group>"; };
+		18E2124A2073815500967BEA /* CustomKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomKeyboard.h; sourceTree = "<group>"; };
+		18E2124B2073815500967BEA /* UITextField+ExtentRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ExtentRange.m"; sourceTree = "<group>"; };
 		18FAC7401FD546BE0024A4D2 /* WRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRNavigationBar.m; sourceTree = "<group>"; };
 		18FAC7411FD546BE0024A4D2 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
 		18FAC7421FD546BE0024A4D2 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
@@ -2290,6 +2305,9 @@
 		189E28DA1FBD26E1008D9027 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				18E212472073815500967BEA /* CustomKeyboard */,
+				18E2123F2073815400967BEA /* TTPieView */,
+				18E212442073815400967BEA /* TTRulerView */,
 				188885A7204CE8D60021E55B /* CustomNavigationBar */,
 				180021D61FC2879800C5E414 /* TTSlideView.h */,
 				180021D71FC2879800C5E414 /* TTSlideView.m */,
@@ -2644,6 +2662,37 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
+		18E2123F2073815400967BEA /* TTPieView */ = {
+			isa = PBXGroup;
+			children = (
+				18E212402073815400967BEA /* TTPieView.h */,
+				18E212412073815400967BEA /* TTArcView.h */,
+				18E212422073815400967BEA /* TTPieView.m */,
+				18E212432073815400967BEA /* TTArcView.m */,
+			);
+			path = TTPieView;
+			sourceTree = "<group>";
+		};
+		18E212442073815400967BEA /* TTRulerView */ = {
+			isa = PBXGroup;
+			children = (
+				18E212452073815400967BEA /* TTRulerView.h */,
+				18E212462073815400967BEA /* TTRulerView.m */,
+			);
+			path = TTRulerView;
+			sourceTree = "<group>";
+		};
+		18E212472073815500967BEA /* CustomKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				18E2124A2073815500967BEA /* CustomKeyboard.h */,
+				18E212482073815500967BEA /* CustomKeyboard.m */,
+				18E212492073815500967BEA /* UITextField+ExtentRange.h */,
+				18E2124B2073815500967BEA /* UITextField+ExtentRange.m */,
+			);
+			path = CustomKeyboard;
+			sourceTree = "<group>";
+		};
 		18FAC73F1FD546BE0024A4D2 /* WRNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -2700,7 +2749,7 @@
 		1818E9841FBC49FA00C35A8A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = shang;
 				TargetAttributes = {
 					1818E98B1FBC49FA00C35A8A = {
@@ -2840,8 +2889,10 @@
 				180022B41FC2DDC200C5E414 /* UIDevice+YYAdd.m in Sources */,
 				180022991FC2DDC200C5E414 /* YYAnimatedImageView.m in Sources */,
 				180022CC1FC2DDC200C5E414 /* NSObject+YYAddForKVO.m in Sources */,
+				18E212502073815500967BEA /* UITextField+ExtentRange.m in Sources */,
 				1883AC4420159AA8006311D7 /* NSDate+TimeAgo.m in Sources */,
 				1883AC2B20159AA8006311D7 /* NSString+Size.m in Sources */,
+				18E2124D2073815500967BEA /* TTArcView.m in Sources */,
 				1883AC1A20159AA8006311D7 /* NSData+APNSToken.m in Sources */,
 				1883AC1520159AA8006311D7 /* NSDictionary+Merge.m in Sources */,
 				189E29211FBD3A27008D9027 /* FJWaterfallFlowLayout.m in Sources */,
@@ -2878,6 +2929,7 @@
 				1883AC0720159AA7006311D7 /* UITextView+Select.m in Sources */,
 				1892B7F22047FF99002BD96F /* DGActivityIndicatorBallPulseSyncAnimation.m in Sources */,
 				180022A71FC2DDC200C5E414 /* YYLabel.m in Sources */,
+				18E2124F2073815500967BEA /* CustomKeyboard.m in Sources */,
 				1892B7F92047FF99002BD96F /* DGActivityIndicatorBallZigZagDeflectAnimation.m in Sources */,
 				1892B7F62047FF99002BD96F /* DGActivityIndicatorNineDotsAnimation.m in Sources */,
 				180022C41FC2DDC200C5E414 /* NSThread+YYAdd.m in Sources */,
@@ -2932,6 +2984,7 @@
 				1883AC0B20159AA7006311D7 /* UIBezierPath+Symbol.m in Sources */,
 				185B0D721FBED45A00FC5072 /* UIBarButtonItem+Badge.m in Sources */,
 				1892B7F82047FF99002BD96F /* DGActivityIndicatorBallSpinFadeLoader.m in Sources */,
+				18E2124C2073815500967BEA /* TTPieView.m in Sources */,
 				189AF37C20089FA2009A26E5 /* CellModel.m in Sources */,
 				189E292D1FBD3BD3008D9027 /* AppVersionManager.m in Sources */,
 				1800229D1FC2DDC200C5E414 /* YYTextView.m in Sources */,
@@ -3042,6 +3095,7 @@
 				189E29491FBD7F1E008D9027 /* BDImagePicker.m in Sources */,
 				1883AC0820159AA7006311D7 /* UIBezierPath+Length.m in Sources */,
 				189AF37F2008A004009A26E5 /* PresentViewController.m in Sources */,
+				18E2124E2073815500967BEA /* TTRulerView.m in Sources */,
 				1883AC3A20159AA8006311D7 /* NSObject+GCD.m in Sources */,
 				1883AC1120159AA7006311D7 /* NSDictionary+XML.m in Sources */,
 				187769E42005B1BC00CDD115 /* LTEasing.swift in Sources */,
@@ -3193,6 +3247,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -3200,6 +3255,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -3249,6 +3305,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -3256,6 +3313,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
