@@ -23,7 +23,7 @@ UIKIT_EXTERN NSString *const kHandleActionUserTextKey; //通知交互时用户�
  
  @param userInfo 通知信息
  */
--(void)didReceiveRemoteNotification:(NSDictionary *)userInfo __IOS_AVAILABLE(3_0);
+- (void)didReceiveRemoteNotification:(NSDictionary *)userInfo __IOS_AVAILABLE(3_0);
 
 @optional
 /**
@@ -32,7 +32,7 @@ UIKIT_EXTERN NSString *const kHandleActionUserTextKey; //通知交互时用户�
  @param userInfo 通知信息. 用户输入的内容 key -> kHandleActionUserTextKey
  @param identifier 注册时指定的Action id
  */
--(void)handleAction:(NSDictionary *)userInfo actionIdentifier:(NSString *)identifier __IOS_AVAILABLE(9_0);
+- (void)handleAction:(NSDictionary *)userInfo actionIdentifier:(NSString *)identifier __IOS_AVAILABLE(9_0);
 
 @end
 

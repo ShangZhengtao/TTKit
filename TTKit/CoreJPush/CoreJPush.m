@@ -133,6 +133,7 @@ static id _instace;
 /** 处理badge */
 + (void)handleWithBadge:(NSInteger)badge {
 #pragma clang diagnostic push
+//http://fuckingclangwarnings.com/
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     NSInteger now = badge;
     if (@available(iOS 10,*)) {

@@ -154,8 +154,6 @@
 		187769F32005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DD2005B1BC00CDD115 /* LTMorphingLabel+Pixelate.swift */; };
 		187769F42005B1BC00CDD115 /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187769DE2005B1BC00CDD115 /* LTMorphingEffect.swift */; };
 		187ED104202C5528005E29D2 /* ZHNShineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 187ED103202C5528005E29D2 /* ZHNShineButton.m */; };
-		187F4DD720084BD300DB1AEA /* jpush-ios-3.0.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F4DD020084BD300DB1AEA /* jpush-ios-3.0.7.a */; };
-		187F4DD820084BD300DB1AEA /* jcore-ios-1.1.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F4DD120084BD300DB1AEA /* jcore-ios-1.1.6.a */; };
 		187F4DDA20084BD300DB1AEA /* CoreJPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 187F4DD520084BD300DB1AEA /* CoreJPush.m */; };
 		187F4DDB20084BD300DB1AEA /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 187F4DD620084BD300DB1AEA /* AppDelegate+JPush.m */; };
 		1883AB41201591D7006311D7 /* GHConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883AB3F201591D7006311D7 /* GHConsole.m */; };
@@ -358,6 +356,8 @@
 		18E212502073815500967BEA /* UITextField+ExtentRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E2124B2073815500967BEA /* UITextField+ExtentRange.m */; };
 		18E89F381FD6478D00A77EA7 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7401FD546BE0024A4D2 /* WRNavigationBar.m */; };
 		18E89F391FD6479000A77EA7 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAC7431FD546BE0024A4D2 /* WRCustomNavigationBar.m */; };
+		8B1F5C65207B6F0B000FA442 /* jcore-ios-1.1.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F5C61207B6F0B000FA442 /* jcore-ios-1.1.9.a */; };
+		8B1F5C66207B6F0B000FA442 /* jpush-ios-3.0.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F5C64207B6F0B000FA442 /* jpush-ios-3.0.9.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -682,10 +682,6 @@
 		187769FE2005C35F00CDD115 /* Bridge_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge_Header.h; sourceTree = "<group>"; };
 		187ED102202C5528005E29D2 /* ZHNShineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHNShineButton.h; sourceTree = "<group>"; };
 		187ED103202C5528005E29D2 /* ZHNShineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNShineButton.m; sourceTree = "<group>"; };
-		187F4DCE20084BD300DB1AEA /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
-		187F4DCF20084BD300DB1AEA /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
-		187F4DD020084BD300DB1AEA /* jpush-ios-3.0.7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.7.a"; sourceTree = "<group>"; };
-		187F4DD120084BD300DB1AEA /* jcore-ios-1.1.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.6.a"; sourceTree = "<group>"; };
 		187F4DD320084BD300DB1AEA /* CoreJPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreJPush.h; sourceTree = "<group>"; };
 		187F4DD420084BD300DB1AEA /* AppDelegate+JPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JPush.h"; sourceTree = "<group>"; };
 		187F4DD520084BD300DB1AEA /* CoreJPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreJPush.m; sourceTree = "<group>"; };
@@ -1104,6 +1100,10 @@
 		18FAC7411FD546BE0024A4D2 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
 		18FAC7421FD546BE0024A4D2 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
 		18FAC7431FD546BE0024A4D2 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
+		8B1F5C61207B6F0B000FA442 /* jcore-ios-1.1.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.9.a"; sourceTree = "<group>"; };
+		8B1F5C62207B6F0B000FA442 /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
+		8B1F5C63207B6F0B000FA442 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		8B1F5C64207B6F0B000FA442 /* jpush-ios-3.0.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.9.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1111,9 +1111,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B1F5C66207B6F0B000FA442 /* jpush-ios-3.0.9.a in Frameworks */,
 				187704661FC7BB170021C3CB /* libresolv.tbd in Frameworks */,
-				187F4DD820084BD300DB1AEA /* jcore-ios-1.1.6.a in Frameworks */,
-				187F4DD720084BD300DB1AEA /* jpush-ios-3.0.7.a in Frameworks */,
+				8B1F5C65207B6F0B000FA442 /* jcore-ios-1.1.9.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1735,32 +1735,13 @@
 		187F4DCB20084BD300DB1AEA /* CoreJPush */ = {
 			isa = PBXGroup;
 			children = (
-				187F4DCC20084BD300DB1AEA /* jpush-ios-3.0.7 */,
+				8B1F5C5F207B6F0B000FA442 /* jpush-ios-3.0.9 */,
 				187F4DD320084BD300DB1AEA /* CoreJPush.h */,
 				187F4DD520084BD300DB1AEA /* CoreJPush.m */,
 				187F4DD420084BD300DB1AEA /* AppDelegate+JPush.h */,
 				187F4DD620084BD300DB1AEA /* AppDelegate+JPush.m */,
 			);
 			path = CoreJPush;
-			sourceTree = "<group>";
-		};
-		187F4DCC20084BD300DB1AEA /* jpush-ios-3.0.7 */ = {
-			isa = PBXGroup;
-			children = (
-				187F4DCD20084BD300DB1AEA /* Lib */,
-			);
-			path = "jpush-ios-3.0.7";
-			sourceTree = "<group>";
-		};
-		187F4DCD20084BD300DB1AEA /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				187F4DCE20084BD300DB1AEA /* JPushNotificationExtensionService.h */,
-				187F4DCF20084BD300DB1AEA /* JPUSHService.h */,
-				187F4DD020084BD300DB1AEA /* jpush-ios-3.0.7.a */,
-				187F4DD120084BD300DB1AEA /* jcore-ios-1.1.6.a */,
-			);
-			path = Lib;
 			sourceTree = "<group>";
 		};
 		1883AB3E201591D7006311D7 /* GHConsole */ = {
@@ -2704,6 +2685,25 @@
 			path = WRNavigationBar;
 			sourceTree = "<group>";
 		};
+		8B1F5C5F207B6F0B000FA442 /* jpush-ios-3.0.9 */ = {
+			isa = PBXGroup;
+			children = (
+				8B1F5C60207B6F0B000FA442 /* Lib */,
+			);
+			path = "jpush-ios-3.0.9";
+			sourceTree = "<group>";
+		};
+		8B1F5C60207B6F0B000FA442 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				8B1F5C61207B6F0B000FA442 /* jcore-ios-1.1.9.a */,
+				8B1F5C64207B6F0B000FA442 /* jpush-ios-3.0.9.a */,
+				8B1F5C62207B6F0B000FA442 /* JPushNotificationExtensionService.h */,
+				8B1F5C63207B6F0B000FA442 /* JPUSHService.h */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3347,9 +3347,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_ENTITLEMENTS = TTKitDemo/TTKitDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Y8B7ULTGR;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = TTKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3358,6 +3362,8 @@
 				SWIFT_OBJC_BRIDGING_HEADER = ../TTKit/Other/Bridge_Header.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_CFLAGS = "";
+				WARNING_LDFLAGS = "";
 			};
 			name = Debug;
 		};
@@ -3365,9 +3371,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_ENTITLEMENTS = TTKitDemo/TTKitDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Y8B7ULTGR;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = TTKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -3376,6 +3386,8 @@
 				SWIFT_OBJC_BRIDGING_HEADER = ../TTKit/Other/Bridge_Header.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_CFLAGS = "";
+				WARNING_LDFLAGS = "";
 			};
 			name = Release;
 		};
