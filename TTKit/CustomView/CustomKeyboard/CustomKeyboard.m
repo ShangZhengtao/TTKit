@@ -16,8 +16,7 @@
 
 @implementation CustomKeyboard
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor groupTableViewBackgroundColor];
@@ -33,6 +32,11 @@
     }
     return self;
 }
+
+- (BOOL) enableInputClicksWhenVisible {
+    return YES;
+}
+
 //UI
 - (void)addButton {
     CGFloat margin = 10;
@@ -61,6 +65,8 @@
         }
         if (i == 11) {
             [btn setTitle:@"删除" forState:UIControlStateNormal];
+            UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPressDelete)];
+            [btn addGestureRecognizer:longPressGR];
         }
         btn.tag = i;
         [btn addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
@@ -91,7 +97,7 @@
 }
 
 - (void)buttonTapped:(UIButton *)sender{
-    
+    [[UIDevice currentDevice] playInputClick];//按键音
     if (sender.tag == 9) { //完成
         [self.textField resignFirstResponder];
         return ;
@@ -115,6 +121,10 @@
     UITextRange* range = self.textField.selectedTextRange;
     NSString *str = [sender titleForState:UIControlStateNormal];
     [self.textField replaceRange:range withText:str];
+}
+
+- (void)longPressDelete{
+    self.textField.text = @"";
 }
 
 @end

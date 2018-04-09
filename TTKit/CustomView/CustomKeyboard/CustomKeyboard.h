@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@interface CustomKeyboard : UIView
+@interface CustomKeyboard : UIView <UIInputViewAudioFeedback>
 
 - (instancetype)initWithTargetView:(UITextField * _Nonnull )view;
 
