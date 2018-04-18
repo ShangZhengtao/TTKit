@@ -22,7 +22,7 @@
 }
 
 - (void)setIsIgnoreEvent:(BOOL)isIgnoreEvent {
-    objc_setAssociatedObject(self, @selector(isIgnoreEvent), @(isIgnoreEvent), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(isIgnoreEvent), @(isIgnoreEvent), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSTimeInterval)eventTimeInterval {
@@ -30,7 +30,7 @@
 }
 
 - (void)setEventTimeInterval:(NSTimeInterval)eventTimeInterval {
-    objc_setAssociatedObject(self, @selector(eventTimeInterval), @(eventTimeInterval), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(eventTimeInterval), @(eventTimeInterval), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 + (void)load {

@@ -11,7 +11,8 @@
 @interface NSObject (EasyCopy)
 
 /**
- *  浅复制目标的所有属性
+ *  相同类型的类的实例变量才能复制。
+ *  浅复制目标的所有属性(复制后属性和目标对象属性指针地址相同)
  *
  *  @param instance 目标对象
  *
@@ -20,7 +21,7 @@
 - (BOOL)easyShallowCopy:(NSObject *)instance;
 
 /**
- *  深复制目标的所有属性
+ *  深复制目标的所有属性 (复制后目标对象属性指针地址不相同)
  *
  *  @param instance 目标对象
  *
