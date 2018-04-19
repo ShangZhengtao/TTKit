@@ -358,6 +358,7 @@
 		8B0E9A9D2085EAA7003F8D90 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0E9A9B2085EAA7003F8D90 /* JRSwizzle.m */; };
 		8B1F5C65207B6F0B000FA442 /* jcore-ios-1.1.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F5C61207B6F0B000FA442 /* jcore-ios-1.1.9.a */; };
 		8B1F5C66207B6F0B000FA442 /* jpush-ios-3.0.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1F5C64207B6F0B000FA442 /* jpush-ios-3.0.9.a */; };
+		8B37468620883D3E004F069B /* UILabel+Wonderful.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B37468520883D3E004F069B /* UILabel+Wonderful.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1104,6 +1105,8 @@
 		8B1F5C62207B6F0B000FA442 /* JPushNotificationExtensionService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPushNotificationExtensionService.h; sourceTree = "<group>"; };
 		8B1F5C63207B6F0B000FA442 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		8B1F5C64207B6F0B000FA442 /* jpush-ios-3.0.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.9.a"; sourceTree = "<group>"; };
+		8B37468420883D3E004F069B /* UILabel+Wonderful.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Wonderful.h"; sourceTree = "<group>"; };
+		8B37468520883D3E004F069B /* UILabel+Wonderful.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Wonderful.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1760,6 +1763,7 @@
 				1883AC5E2015D088006311D7 /* UIWebView */,
 				1883AB4320159AA7006311D7 /* UIScrollView */,
 				1883AB4A20159AA7006311D7 /* UIButton */,
+				8B37468320883D3E004F069B /* UILabel */,
 				1883AB5D20159AA7006311D7 /* UIColor */,
 				1883AB6020159AA7006311D7 /* UIVIew */,
 				1883AB6520159AA7006311D7 /* UITextView */,
@@ -2704,6 +2708,15 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		8B37468320883D3E004F069B /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				8B37468420883D3E004F069B /* UILabel+Wonderful.h */,
+				8B37468520883D3E004F069B /* UILabel+Wonderful.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3038,6 +3051,7 @@
 				1892B7E52047FF99002BD96F /* DGActivityIndicatorBallRotateAnimation.m in Sources */,
 				18C6453D2030216900416A29 /* BaseNavigationController.m in Sources */,
 				1883AC4A2015C264006311D7 /* SYSafeCategory.m in Sources */,
+				8B37468620883D3E004F069B /* UILabel+Wonderful.m in Sources */,
 				18A3EF3A20283AD700CDA187 /* TTModalDelegate.m in Sources */,
 				1883AC1320159AA8006311D7 /* NSDictionary+SafeAccess.m in Sources */,
 				189AF37720089FA2009A26E5 /* ViewController.m in Sources */,
@@ -3352,7 +3366,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_ENTITLEMENTS = TTKitDemo/TTKitDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Y8B7ULTGR;
+				DEVELOPMENT_TEAM = "";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = TTKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
@@ -3376,7 +3390,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_ENTITLEMENTS = TTKitDemo/TTKitDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Y8B7ULTGR;
+				DEVELOPMENT_TEAM = "";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = TTKitDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10;

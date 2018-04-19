@@ -22,7 +22,7 @@
 #import "UIButton+Event.h"
 #import "UIViewController+TTModalTransition.h"
 #import "ZHNTopHud.h"
-
+#import "UILabel+Wonderful.h"
 
 @interface ViewController ()
 <
@@ -31,6 +31,7 @@ STPickerAreaDelegate,
 UINavigationControllerDelegate
 >
 @property (weak, nonatomic) IBOutlet UIButton *areaPickerButton;
+@property (weak, nonatomic) IBOutlet UILabel *colorLabel;
 
 @end
 
@@ -39,9 +40,12 @@ UINavigationControllerDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Demo";
-//    self.areaPickerButton.eventTimeInterval = 3;
+    self.areaPickerButton.eventTimeInterval = 3;
 //    self.modalPresentationStyle =  UIModalPresentationPopover;
- 
+    id str = @"100.0123";
+    [self.colorLabel setAnotherColor:[UIColor blueColor]];
+    [self.colorLabel setColorFontText:[NSString stringWithFormat:@"需要支付：<[%@]元>, 限额<10-200元>",str]];
+    
 }
 
 - (IBAction)scannerButtonTapped:(UIButton *)sender {
