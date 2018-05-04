@@ -23,7 +23,7 @@
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     [CoreJPush registerJPush:launchOptions];
-    //    [self setupNotification:launchOptions];
+//        [self setupNotification:launchOptions];
     [self setupFPSLable]; //测试FPS
     
     

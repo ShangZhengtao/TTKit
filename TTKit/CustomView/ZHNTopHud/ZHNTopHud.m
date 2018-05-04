@@ -102,6 +102,11 @@
 
 + (void)showMessage:(NSString *)message withIconImagename:(NSString *)imagename {
     dispatch_async(dispatch_get_main_queue(), ^{
+        if (imagename.length != 0) {
+            [ZHNTopHud shareinstance].titleLabel.frame =  CGRectMake(40, KStatusBarFitHeight, K_SCREEN_WIDTH - 50, KHudContentHeight);
+        }else {
+           [ZHNTopHud shareinstance].titleLabel.frame =  CGRectMake(10, KStatusBarFitHeight, K_SCREEN_WIDTH - 30, KHudContentHeight);
+        }
         [ZHNTopHud shareinstance].iconImageView.image = [UIImage imageNamed:imagename];
         [ZHNTopHud shareinstance].titleLabel.text = message;
         [ZHNTopHud p_delayDismissAnimate];

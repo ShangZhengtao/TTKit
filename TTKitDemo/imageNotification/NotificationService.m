@@ -8,8 +8,6 @@
 
 #import "NotificationService.h"
 #import <UIKit/UIKit.h>
-#import "UIImageView+YYWebImage.h"
-
 @interface NotificationService ()
 
 @property (nonatomic, strong) void (^contentHandler)(UNNotificationContent *contentToDeliver);

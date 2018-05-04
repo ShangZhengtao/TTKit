@@ -23,7 +23,8 @@
 #import "UIViewController+TTModalTransition.h"
 #import "ZHNTopHud.h"
 #import "UILabel+Wonderful.h"
-
+#import "NSAttributedString+YYText.h"
+#import "YYKit.h"
 @interface ViewController ()
 <
 //QRCodeScannerViewControllerDelegate,
@@ -32,8 +33,10 @@ UINavigationControllerDelegate
 >
 @property (weak, nonatomic) IBOutlet UIButton *areaPickerButton;
 @property (weak, nonatomic) IBOutlet UILabel *colorLabel;
+@property (weak, nonatomic) IBOutlet YYLabel *protocolLable;
 
 @end
+
 
 @implementation ViewController
 
@@ -41,17 +44,27 @@ UINavigationControllerDelegate
     [super viewDidLoad];
     self.title = @"Demo";
     self.areaPickerButton.eventTimeInterval = 3;
-//    self.modalPresentationStyle =  UIModalPresentationPopover;
+    //    self.modalPresentationStyle =  UIModalPresentationPopover;
     id str = @"100.0123";
+    
     [self.colorLabel setAnotherColor:[UIColor blueColor]];
     [self.colorLabel setColorFontText:[NSString stringWithFormat:@"需要支付：<[%@]元>, 限额<10-200元>",str]];
-    
+    NSString *string = @"注册代表同意《协议》";
+    NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc]initWithString:string];
+    [attStr setTextHighlightRange:[string rangeOfString:@"《协议》"] color:[UIColor redColor] backgroundColor:nil tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+        [ZTProgressHUD showInfo:[text.string substringWithRange:range]];
+    }];
+    [attStr setTextHighlightRange:[string rangeOfString:@"注册"] color:[UIColor redColor] backgroundColor:nil tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+        [ZTProgressHUD showInfo:[text.string substringWithRange:range]];
+    }];
+    attStr.font = [UIFont systemFontOfSize:15];
+    self.protocolLable.attributedText = attStr;
 }
 
 - (IBAction)scannerButtonTapped:(UIButton *)sender {
-//    QRCScannerViewController *scannerVC = [[QRCScannerViewController alloc]init];
-//    scannerVC.delegate = self;
-//    [self presentViewController:scannerVC animated:YES completion:nil];
+    //    QRCScannerViewController *scannerVC = [[QRCScannerViewController alloc]init];
+    //    scannerVC.delegate = self;
+    //    [self presentViewController:scannerVC animated:YES completion:nil];
 }
 
 - (IBAction)ImagePickerTapped:(UIButton *)sender {
@@ -115,7 +128,7 @@ UINavigationControllerDelegate
     LrdCellModel *model1 = [[LrdCellModel alloc]initWithTitle:@"扫一扫" imageName:@"tabbar_icon_shop"];
     LrdCellModel *model2 = [[LrdCellModel alloc]initWithTitle:@"添加好友" imageName:@"tabbar_icon_shop"];
     NSArray *items = @[model1, model2];
-   
+    
     CGRect frame = [sender.superview convertRect:sender.frame toView:nil];
     CGPoint point = CGPointMake(CGRectGetMidX(frame), CGRectGetMaxY(frame));
     LrdOutputView *view = [[LrdOutputView alloc]initWithDataArray:items origin:point width:120 rowHeight:44 direction:kLrdOutputViewDirectionRight];
@@ -123,12 +136,13 @@ UINavigationControllerDelegate
 }
 
 - (IBAction)hudButtonTapped:(UIButton *)sender {
+    
     UIAlertController *alertvc = [UIAlertController alertControllerWithTitle:@"提示" message:@"" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"样式一" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [ZTProgressHUD showInfo:@"在iOS当中，所有的视图都从一个叫做UIView的基类派生而来，UIView可以处理触摸事件，可以支持基于Core Graphics绘图，可以做仿射变换（例如旋转或者缩放），或者简单的类似于滑动或者渐变的动画"];
+        [ZTProgressHUD showInfo:@"在iOS当中"];
     }];
     UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"样式二" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [ZHNTopHud showSuccess: @"hello world!"];
+        [ZHNTopHud showSuccess: @"在iOS当中，所有的视图都从一个叫做UIView的基类派生而来，UIView可以处理触摸事件，可以支持基于Core Graphics绘图，可以做仿射变换（例如旋转或者缩放），或者简单的类似于滑动或者渐变的动画"];
     }];
     
     UIAlertAction *action3 = [UIAlertAction actionWithTitle:@"样式三" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -142,13 +156,13 @@ UINavigationControllerDelegate
     [alertvc addAction:action2];
     [alertvc addAction:action3];
     [self presentViewController:alertvc animated:YES completion:nil];
-        
+    
 }
 
 
 - (IBAction)presentButtonTapped:(UIButton *)sender {
     PresentViewController *vc = [[PresentViewController alloc]init];
-//    TestViewController *vc = [[TestViewController alloc]init];
+    //    TestViewController *vc = [[TestViewController alloc]init];
     vc.tt_modalTransitionStyle = TTModalTransitionStyleCircleZoom;
     [self presentViewController:vc animated:YES completion:nil];
 }
