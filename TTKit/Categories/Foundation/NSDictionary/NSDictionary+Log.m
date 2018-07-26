@@ -9,54 +9,90 @@
 
 @implementation NSDictionary (Log)
 
-- (NSString *)descriptionWithLocale:(id)locale
++ (void)load
 {
-    NSMutableString *str = [NSMutableString string];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dictionary_swizzleSelector([self class], @selector(descriptionWithLocale:indent:), @selector(zx_descriptionWithLocale:indent:));
+    });
+}
+- (NSString *)zx_descriptionWithLocale:(id)locale indent:(NSUInteger)level
+{
+    return [self stringByReplaceUnicode:[self zx_descriptionWithLocale:locale indent:level]];
+}
+- (NSString *)stringByReplaceUnicode:(NSString *)unicodeString
+{
+    NSMutableString *convertedString = [unicodeString mutableCopy];
+    [convertedString replaceOccurrencesOfString:@"\\U" withString:@"\\u" options:0 range:NSMakeRange(0, convertedString.length)];
+    CFStringRef transform = CFSTR("Any-Hex/Java");
+    CFStringTransform((__bridge CFMutableStringRef)convertedString, NULL, transform, YES);
     
-    [str appendString:@"{\n"];
+    return convertedString;
+}
+static inline void dictionary_swizzleSelector(Class theClass, SEL originalSelector, SEL swizzledSelector)
+{
+    Method originalMethod = class_getInstanceMethod(theClass, originalSelector);
+    Method swizzledMethod = class_getInstanceMethod(theClass, swizzledSelector);
     
-    // 遍历字典的所有键值对
-    [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        [str appendFormat:@"\t%@ = %@,\n", key, obj];
-    }];
+    BOOL didAddMethod =
+    class_addMethod(theClass,
+                    originalSelector,
+                    method_getImplementation(swizzledMethod),
+                    method_getTypeEncoding(swizzledMethod));
     
-    [str appendString:@"}"];
-    
-    // 查出最后一个,的范围
-    NSRange range = [str rangeOfString:@"," options:NSBackwardsSearch];
-    if (range.length) {
-        // 删掉最后一个,
-        [str deleteCharactersInRange:range];
+    if (didAddMethod) {
+        class_replaceMethod(theClass,
+                            swizzledSelector,
+                            method_getImplementation(originalMethod),
+                            method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
     }
-    
-    return str;
 }
 
 @end
 
 @implementation NSArray (Log)
 
-- (NSString *)descriptionWithLocale:(id)locale
++ (void)load
 {
-    NSMutableString *str = [NSMutableString string];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        array_swizzleSelector([self class], @selector(descriptionWithLocale:indent:), @selector(zx_descriptionWithLocale:indent:));
+    });
+}
+- (NSString *)zx_descriptionWithLocale:(id)locale indent:(NSUInteger)level
+{
+    return [self stringByReplaceUnicode:[self zx_descriptionWithLocale:locale indent:level]];
+}
+- (NSString *)stringByReplaceUnicode:(NSString *)unicodeString
+{
+    NSMutableString *convertedString = [unicodeString mutableCopy];
+    [convertedString replaceOccurrencesOfString:@"\\U" withString:@"\\u" options:0 range:NSMakeRange(0, convertedString.length)];
+    CFStringRef transform = CFSTR("Any-Hex/Java");
+    CFStringTransform((__bridge CFMutableStringRef)convertedString, NULL, transform, YES);
     
-    [str appendString:@"[\n"];
+    return convertedString;
+}
+static inline void array_swizzleSelector(Class theClass, SEL originalSelector, SEL swizzledSelector)
+{
+    Method originalMethod = class_getInstanceMethod(theClass, originalSelector);
+    Method swizzledMethod = class_getInstanceMethod(theClass, swizzledSelector);
     
-    // 遍历数组的所有元素
-    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [str appendFormat:@"%@,\n", obj];
-    }];
+    BOOL didAddMethod =
+    class_addMethod(theClass,
+                    originalSelector,
+                    method_getImplementation(swizzledMethod),
+                    method_getTypeEncoding(swizzledMethod));
     
-    [str appendString:@"]"];
-    
-    // 查出最后一个,的范围
-    NSRange range = [str rangeOfString:@"," options:NSBackwardsSearch];
-    if (range.length) {
-        // 删掉最后一个,
-        [str deleteCharactersInRange:range];
+    if (didAddMethod) {
+        class_replaceMethod(theClass,
+                            swizzledSelector,
+                            method_getImplementation(originalMethod),
+                            method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
     }
-    
-    return str;
 }
 
 @end

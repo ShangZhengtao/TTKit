@@ -2405,11 +2405,11 @@
 			isa = PBXGroup;
 			children = (
 				189E290A1FBD3A26008D9027 /* UIViewController+LewPopupViewController.h */,
+				189E29151FBD3A26008D9027 /* UIViewController+LewPopupViewController.m */,
 				189E290B1FBD3A26008D9027 /* Animation */,
 				189E29141FBD3A26008D9027 /* LewPopupBackgroundView.h */,
-				189E29151FBD3A26008D9027 /* UIViewController+LewPopupViewController.m */,
-				189E29161FBD3A26008D9027 /* LewPopupViewController.h */,
 				189E29171FBD3A26008D9027 /* LewPopupBackgroundView.m */,
+				189E29161FBD3A26008D9027 /* LewPopupViewController.h */,
 			);
 			path = PopupViewController;
 			sourceTree = "<group>";

@@ -23,7 +23,6 @@
 #import "UIViewController+TTModalTransition.h"
 #import "ZHNTopHud.h"
 #import "UILabel+Wonderful.h"
-#import "NSAttributedString+YYText.h"
 #import "YYKit.h"
 @interface ViewController ()
 <
