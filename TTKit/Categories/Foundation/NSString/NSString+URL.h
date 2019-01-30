@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 @interface NSString (URL)
 
 /**
@@ -15,6 +16,14 @@
 
  @return 参数键值对
  */
-- (NSMutableDictionary *)getURLParameters;
+- ( NSMutableDictionary * _Nullable)getURLParameters;
 
+/**
+ 用指定键值对，替换url中所有参数（空字典会删除url参数）
+
+ @param paramters 需要替换的url参数
+ @return 替换完成的url
+ */
+- (NSString *)stringByReplaceURLParameters:( NSDictionary<NSString *,NSString *> * _Nullable )paramters;
 @end
+NS_ASSUME_NONNULL_END

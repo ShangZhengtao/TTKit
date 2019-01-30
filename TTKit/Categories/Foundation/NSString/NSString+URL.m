@@ -39,7 +39,7 @@
                 if (componet.length ==0) { //参数中包含"="情况
                     componet = @"=";
                 }
-                 value = [value stringByAppendingString:componet];
+                value = [value stringByAppendingString:componet];
             }
             // Key不能为nil
             if (key == nil || value == nil) {
@@ -80,6 +80,30 @@
         [params setValue:value forKey:key];
     }
     return params;
+}
+
+
+- (NSString *)stringByReplaceURLParameters:( NSDictionary<NSString *,NSString *> * _Nullable )paramters {
+    NSMutableString *url = @"".mutableCopy;
+    if (self.length == 0) return url;
+    
+    if ([self containsString:@"?"]) {
+        url = [self substringToIndex:[self rangeOfString:@"?"].location].mutableCopy;
+    }else{
+        url = self.mutableCopy;
+    }
+    if (paramters.count == 0) return url;
+    [url appendString:@"?"];
+    [paramters enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, NSString * obj, BOOL * _Nonnull stop) {
+        if ([obj isKindOfClass:[NSString class]] && obj.length != 0) {
+            [url appendFormat:@"%@=%@&",key,obj];
+        }
+    }];
+    if ([url hasSuffix:@"&"] || [url hasSuffix:@"?"]) {
+        [url replaceCharactersInRange:NSMakeRange(url.length -1, 1) withString:@""];
+    }
+    
+    return url;
 }
 
 @end
